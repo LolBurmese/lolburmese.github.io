@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+
+
+header{
+font-family: sofia;
+font-size:20px;
+}
+
+</style>
+
+
+<title>Register</title>
+</head>
+
+
+
+<body style="background-color: lavender;">
+<header>
+<h2>You can register here!</h2>
+</header>
+
+
+<form method="GET">
+
+First name<input type="text" name="firstname"><br>
+
+Last name<input type="text" name="lastname"><br>
+
+Birthday<input type="date" name="birthday"><br>
+
+Email<input type="email"required name="email"><br>
+
+Password<input type="password" min="5" name="password"><br>
+
+Gender:<br>
+<input type="radio" name="gender" value="male">Male<br>
+<input type="radio" name="gender" value="female">Female<br>
+<input type="radio" name="gender" value="other">Other<br>
+
+Field:<br>
+
+<input type="checkbox" name="networking"> Networking<br>
+<input type="checkbox" name="control">Control<br>
+<input type="checkbox" name="programming">Programming<br>
+<input type="checkbox" name="imageprocessing">Image Processing<br>
+<input type="checkbox" name="other">Other<br>
+
+
+Year: <br>
+
+<select name="year">
+<option value="IEC" name="iec">IEC</option>
+
+<option value="IIEC" name="iiec">IIEC</option>
+
+<option value="IIIEC" name="iiiec">IIIEC</option>
+
+<option value="IVEC" name="ivec">IVEC</option>
+
+<option value="VEC" name="vec">VEC</option>
+
+<option value="VIEC" name="viec">VIEC</option>
+
+</select>
+<br><br>
+
+<input type="submit" value="register">
+<input type="reset">
+
+</form>
+</body>
+</html>
