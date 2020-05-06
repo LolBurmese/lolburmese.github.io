@@ -1,0 +1,145 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Home</title>
+
+<style>
+
+body{
+margin: 0;
+padding 0;
+font-family: montserrat, sans serif;
+background: black;}
+
+.centertext{
+width: 900px;
+margin: 200px auto;
+}
+.centertext h1{
+text-align: center;
+font-size: 80px;
+color: white;
+font-weight: bold;
+animation: textanimation 1s ease-in-out;
+}
+@keyframes textanimation{
+0%{
+letter-spacing: 20px;
+}
+100%{
+letter-spacing: 1px;
+}
+}
+.centertext p{
+text-align: center;
+font-size: 30px;
+color: gold;
+font-weight: bold;
+animation: textanimation2 1s ease-in-out;
+}
+@keyframes textanimation2{
+0%{
+transform: scale(0)
+}
+
+100%{
+letter-spacing: 1px;
+}
+}
+
+.animated-text{
+color: white;
+position: absolute;
+top: 10%;
+left: 50%;
+transform: translate(-50%,-50%);
+background: darkcyan;
+padding: 0 29px;
+height: 30px;
+overflow: hidden;
+}
+
+.line{
+text-transform: uppercase;
+text-align: center;
+font-size: 20px;
+line-height: 30px;
+}
+
+.line:first-child{
+animation: anim 12s infinite;
+}
+
+@keyframes anim{
+0%{
+margin-top: 0;
+}
+
+16%{
+margin-top: -30px;
+}
+
+33%{
+margin-top: -60px;
+}
+
+50%{
+margin-top: -90px;
+}
+
+66%{
+margin-top: -60px;
+}
+
+82%{
+margin-top: -30px;
+}
+
+100%{
+margin-top: 0px;
+}
+}
+
+
+
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+<div class="centertext">
+<h1>KaungSiThu</h1>
+<p>web based entertainment</p>
+
+</div>
+
+<div class="animated-text">
+
+<div class="line">Hi Guys</div>
+<div class="line">Welcome To</div>
+<div class="line">My</div>
+<div class="line">Website</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
