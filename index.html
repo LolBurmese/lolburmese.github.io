@@ -67,6 +67,37 @@ font-family: "Dokdo", cursive;
 }
 
 
+.flex_form input [type="submit"]{
+background-color: skyblue;
+border: 1px solid skyblue;
+color: white;
+padding: 0 30px;
+cursor: pointer;
+transition: 0.4s all;
+}
+.flex_form input [type="submit"]:hover{
+background-color: skyblue;
+border: 1px solid skyblue;
+}
+.flex_form{
+display: flex;
+z-index: 10;
+position: relative;
+width: 500px;
+box-shadow: 4px 8px 16px rgba(0,0,0,0.3);
+}
+.flex_form >*{
+border: 0;
+padding: 0 0 0 10px;
+background: skyblue;
+line-height: 50px;
+font-size: 1rem;
+border-radius: 0;
+outline: 0;
+}
+input[type="search"]{
+flex-basis: 500px;
+}
 .button{
 font-color: white;
 }
@@ -108,6 +139,17 @@ color: midnightblue;
 
 <div class="title">
 <h1>PHOTOGRAPHY by KAUNG</h1>
+
+<form class="flex_form">
+
+<input type="search" name="" placeholder="what do you want?">
+
+<input type="submit" name="" value="Search">
+
+<div>
+</div>
+
+</form>
 
 <div class="button">
 <a href="watchvideos.html" class="btn">Watch Videos</a><br><br><br>
