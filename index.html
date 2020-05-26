@@ -1,166 +1,208 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-<link rel="icon" type="image/png" href="pro.png">
-<link href="https://fonts.googleapis.com/css?family=Dokdo&display=swap" rel="stylesheet">
-<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?don't=GHKKengtung' />
+<meta charset ="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 <style>
 
-{
-margin:0;
-padding:0;
-font-family: Century-Gothic;
+*{
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+}
+li{
+ transition :0.6s;
+margin-bottom : 5px;
+text-align : left;
+padding-left: 20px;
 }
 
-header{
-background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(black1.jpg);
-height:100vh;
-background-size: cover;
-background-position: center;
+.sidebar{
+position: fixed;
+left: -250px;
+width: 250px;
+height: 100%;
+background: teal;
+transition: all .5s ease;
+}
+
+.sidebar header{
+font-size: 22px;
+color: white;
+text-align: center;
+line-height: 70px;
+background: #063146;
+user-select: none;
 }
 
 ul{
-float: right;
-list-style-type: none;
-margin-top: 25px;
+display: block;
+height: 100%;
+width: 100%;
+line-height: 65px;
+font-size: 20px;
+color: white;
+padding-left: 0;
+box-sizing: border-box;
+border-top: 1px solid rgba(255, 255, 255, .1);
+border-bottom: 1px solid black;
+transition: 1s ease-in;
 }
 
-ul li{
-display: inline-block;
+ul li:hover{
+transition: 0.6s;
+border-radius : 0;
+background-color : rgba(0,0,0,0.6);
+font-size : 23px;
 }
 
-ul li a{
-text-decoration: none;
-color: midnightblue;
-padding: 5px 20px;
-border: 1px solid transparent;
-transition: 0.6s ease;
+.sidebar ul i{
+margin-right: 16px;
 }
 
-ul li a:hover{
-background-color: grey;
-color: cyan;
+.achit h1{
+				color: white;
+				background: red;
+				font-size: 20px;
+				font-style: italic;
+				font-weight: bold;
+				text-align: center;
+				}
+
+.kaung{
+				background : -webkit-linear-gradient(red, yellow);
+				fint-size: 10px;
+				font-style: italic;
+				text-align: center;		
+				}
+
+
+
+
+#check{
+display: none;
 }
 
 
-ul li.active a{
-background-color: skyblue;
-color: midnightblue;
-}
-
-.logo img{
-float: left;
-width: 80px;
-height: auto;
-}
-
-.title{
+label #btn, label #cancel{
 position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
-}
-
-.title h1{
-color: white;
-font-size: 30px;
-font-family: 'GHK KengTung';
-}
-
-
-.flex_form input [type="submit"]{
-background-color: skyblue;
-border: 1px solid skyblue;
-color: white;
-padding: 0 30px;
 cursor: pointer;
-transition: 0.4s all;
-}
-.flex_form input [type="submit"]:hover{
-background-color: skyblue;
-border: 1px solid skyblue;
-}
-.flex_form{
-display: flex;
-z-index: 10;
-position: relative;
-width: 500px;
-box-shadow: 4px 8px 16px rgba(0,0,0,0.3);
-}
-.flex_form >*{
-border: 0;
-padding: 0 0 0 10px;
-background: skyblue;
-line-height: 50px;
-font-size: 1rem;
-border-radius: 0;
-outline: 0;
-}
-input[type="search"]{
-flex-basis: 500px;
-}
-.button{
-font-color: white;
-}
-
-.btn{
-border: 1px solid white;
-padding: 10px 30px;
-color: skyblue;
-text-decoration: none;
-transition: 0.6s ease;
-}
-
-.btn:hover{
-background-color: skyblue;
-color: midnightblue;
+background: #042331;
+border-radius: 3px;
 }
 
 
+label #btn{
+left: 40px;
+top: 25px;
+font-size: 20px;
+color: white;
+padding: 6px 12px;
+transition: all .5s;
+}
 
+
+label #cancel{
+z-index: 1111;
+left: -195px;
+top: 17px;
+font-size: 30px;
+color: #0a5275;
+padding: 4px 9px;
+transition: all .5s ease;
+}
+
+#check:checked ~ .sidebar{
+left: 0;
+}
+
+#check:checked ~ label #btn{
+left: 250px;
+opacity: 0;
+pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+left: 195px;
+}
+
+
+#check:checked ~ section{
+margin-left: 250px;
+}
+				
+body{
+				background-color : skyblue;
+				}
 </style>
 
-<title>photography by Kaung</title>
+
+
+
+
 
 </head>
+<body id="main">
 
-<body>
+<input type="checkbox" id="check">
+<label for="check">
+<i class="fas fa-bars" id="btn">
+</i>
+<i class="fas fa-times" id="cancel">
+</i>
 
-<header>
-<div class="main">
-<div class="logo">
-<img src="joker.png">
 
-</div>
+
+</label>
+
+<div class="sidebar">
+<header>Mingalarpar</header>
+
+
 <ul>
-<li class="active"><a href="#">Best friends</a></li>
-<li><a href="#">Gaming</a></li>
-<li><a href="gallary.html">Gallary</a></li>
+
+<li><a href="gallary.html"><i class="fas fa-link"></i>GALLARY</a></li>
+
+<li><a href="watchvideos.html"><i class="fas fa-qrcode">Watch Videos</i></a></li>
+
+<li><a href="register.html"><i class="fas fa-stream"></i>Register</a></li>
+
+<li><a href="#"><i class="fas fa-envelope"></i></a>contact</li>
+
+<li><a href="#"><i class="fas fa-question-circle"></i></a>about</li>
+
+</ul>
+</div><br>
+
+
+
+<div class="achit">
+<h1>Mingalarpar</h1>
 </div>
 
-<div class="title">
-<h1>ဘဝ က ဘာလဲ</h1>
-
-<form class="flex_form">
-
-<input type="search" name="" placeholder="what do you want?">
-
-<input type="submit" name="" value="Search">
-
-<div>
+<div class="kaung"> 
+<marquee><h5></h5></marquee>
 </div>
 
-</form>
-
-<div class="button">
-<a href="watchvideos.html" class="btn">Watch Videos</a><br><br><br>
-<a href="register.html" class="btn">Register</a>
 
 
-</div>
-</div>
-</header>
-
+<script>
+var body = document.getElementById("main");
+var blah = document.getElementsByTagName("header")[0];
+console.warn("Developer Kaung Si Thu Made with love");
+var a = prompt(" အကြိုက်ဆုံးအရောင်");
+var c = prompt(" အကြိုက်ဆုံးဒုတိယအရောင်");
+var b = prompt("မင်းနာမည်");
+			body.style.background = "linear-gradient(to right,"+a+","+c+")";
+blah.innerHTML = b;
+</script>
 </body>
-
 </html>
+
+
+
+
+    
