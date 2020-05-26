@@ -17,14 +17,25 @@ background: linear-gradient(to right, yellow, pink) ;
 
 .centertext h1{
 text-align: center;
-font-size: 28px;
+font-size: 35px;
+background : -webkit-linear-gradient(red,yellow);
+-webkit-background-clip :text;
+-webkit-text-fill-color : transparent;
 color: white;
 font-weight: bold;
 animation: textanimation 1s ease-in-out;
 }
 @keyframes textanimation{
 0%{
-letter-spacing: 20px;
+letter-spacing: 1px;
+25%{
+letter-spacing : 20px;
+}
+50%{
+letter-spacing :1px;
+}
+25%{
+letter-spacing : 20px;
 }
 100%{
 letter-spacing: 1px;
