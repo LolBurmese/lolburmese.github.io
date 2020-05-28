@@ -7,7 +7,9 @@ const qage = document.getElementById("qage");
 const about = document.getElementById("about");
 const song = document.getElementById("515");
 const fart = document.getElementById("fart");
+const rangeplay = document.getElementById("rangeplay");
 function rangefunction(){
+	rangeplay.play();
 	rangenum.innerHTML=rangebar.value;
 }
 rangebar.addEventListener("input",rangefunction);
