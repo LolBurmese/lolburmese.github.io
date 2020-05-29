@@ -1,12 +1,13 @@
 #one, #two, #three,
 #four, #five, #six,
 #seven, #eight, #nine,
-#zero, #reset1 {
+#zero, #reset1, #reseteach {
   height : 70px;
   width: 70px;
   font-size : 20px;
   border : 3px solid gold;
   border-radius : 12px;
+  font-weight: bold;
 }
 #mast{
   color : black;
