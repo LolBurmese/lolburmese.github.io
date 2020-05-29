@@ -1,17 +1,41 @@
-#selectname{
-  height : 30px;
+#one, #two, #three,
+#four, #five, #six,
+#seven, #eight, #nine,
+#zero,
+#firstnum, #secondnum,
+#thirdnum, #fourthnum, #reset1 {
+  height : 50px;
+  width: 50px;
+  font-size : 20px;
+  border : 3px solid gold;
+  border-radius : 12px;
 }
 #agebtn{
   width: 50px;
-  height : 40px;
+  height: 50px;
   border-radius: 25px;
+  background-color: red;
+  color: white;
+  font-size : 20px;
+  font-weight: bold;
+
+}
+#firstnum, #secondnum,
+#thirdnum, #fourthnum {
+  font-size : 23px;
+  text-align: center;
+  border-radius: 15px;
+  border-color : gold;
+}
+#selectname{
+  height : 30px;
 }
 #rangenum{
   font-weight: bold;
   font-size : 23px;
 }
 #qcolor{
-  background-color: purple;
+  background-color: rgb(164,227,199);
   padding : 40px;
   border-radius: 25px;
   color : white;
@@ -37,6 +61,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#headinglabel{
+  font-weight: bold;
+  font-size : 33px;
+  color : black;
 }
 #main{
   opacity: 0;

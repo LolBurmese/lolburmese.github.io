@@ -1,33 +1,233 @@
 const selectname = document.getElementById("selectname");
-const rangebar = document.getElementById("myrange");
 const rangenum = document.getElementById("rangenum");
 const button = document.getElementById("mainbtn");
 const QnA = document.getElementById("main");
 const qage = document.getElementById("qage");
 const about = document.getElementById("about");
 const song = document.getElementById("515");
-const fart = document.getElementById("fart");
+const fart = document.getElementById("negrefuse");
 const rangeplay = document.getElementById("rangeplay");
-function rangefunction(){
-	rangeplay.play();
-	rangenum.innerHTML=rangebar.value;
-}
-rangebar.addEventListener("input",rangefunction);
- 
+const firstnum = document.getElementById("firstnum");
+const secondnum = document.getElementById("secondnum");
+const thirdnum = document.getElementById("thirdnum");
+const fourthnum = document.getElementById("fourthnum");
 const agebtn = document.getElementById("agebtn");
-function QnAage(){
-	if(rangebar.value<18){
-		fart.play();
-		qage.style.display = "none";
-		about.innerHTML = "<div class='animated delay-2s hinge'><h1 align=center>Sorry, You're not allowed!</h1></div>";
+const one = document.getElementById("one");
+const two = document.getElementById("two");
+const three = document.getElementById("three");
+const four = document.getElementById("four");
+const five = document.getElementById("five");
+const six = document.getElementById("six");
+const seven = document.getElementById("seven");
+const eight = document.getElementById("eight");
+const nine = document.getElementById("nine");
+const zero = document.getElementById("zero");
+const forerror = document.getElementById("forerror");
+const clickadd = document.getElementById("clickadd");
+
+const clickone = () =>{
+	clickadd.play();
+	if(firstnum.value === ""){
+		return firstnum.value = "1";
 	}
-	if(rangebar.value >17){
+	if(firstnum.value !== "" && secondnum.value === ""){
+		return secondnum.value = "1";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		return thirdnum.value = "1";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		return fourthnum.value = "1";
+	}
+}
+one.addEventListener("click",clickone);
+
+const clicktwo = () =>{
+	clickadd.play();
+	if(firstnum.value === ""){
+		return firstnum.value = "2";
+	}
+	if(firstnum.value !== "" && secondnum.value === ""){
+		return secondnum.value = "2";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		return thirdnum.value = "2";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		return fourthnum.value = "2";
+	}
+}
+two.addEventListener("click",clicktwo);
+
+const clickthree = () =>{
+	clickadd.play();
+	if(firstnum.value === ""){
+		return firstnum.value = "3";
+	}
+	if(firstnum.value !== "" && secondnum.value === ""){
+		return secondnum.value = "3";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		return thirdnum.value = "3";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		return fourthnum.value = "3";
+	}
+}
+three.addEventListener("click",clickthree);
+
+const clickfour = () =>{
+	clickadd.play();
+	if(firstnum.value === ""){
+		return firstnum.value = "4";
+	}
+	if(firstnum.value !== "" && secondnum.value === ""){
+		return secondnum.value = "4";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		return thirdnum.value = "4";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		return fourthnum.value = "4";
+	}
+}
+four.addEventListener("click",clickfour);
+
+const clickfive = () =>{
+	clickadd.play();
+	if(firstnum.value === ""){
+		return firstnum.value = "5";
+	}
+	if(firstnum.value !== "" && secondnum.value === ""){
+		return secondnum.value = "5";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		return thirdnum.value = "5";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		return fourthnum.value = "5";
+	}
+}
+five.addEventListener("click",clickfive);
+
+const clicksix = () =>{
+	clickadd.play();
+	if(firstnum.value === ""){
+		return firstnum.value = "6";
+	}
+	if(firstnum.value !== "" && secondnum.value === ""){
+		return secondnum.value = "6";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		return thirdnum.value = "6";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		return fourthnum.value = "6";
+	}
+}
+six.addEventListener("click",clicksix);
+
+const clickseven = () =>{
+	clickadd.play();
+	if(firstnum.value === ""){
+		return firstnum.value = "7";
+	}
+	if(firstnum.value !== "" && secondnum.value === ""){
+		return secondnum.value = "7";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		return thirdnum.value = "7";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		return fourthnum.value = "7";
+	}
+}
+seven.addEventListener("click",clickseven);
+
+const clickeight = () =>{
+	clickadd.play();
+	if(firstnum.value === ""){
+		return firstnum.value = "8";
+	}
+	if(firstnum.value !== "" && secondnum.value === ""){
+		return secondnum.value = "8";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		return thirdnum.value = "8";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		return fourthnum.value = "8";
+	}
+}
+eight.addEventListener("click",clickeight);
+
+const clicknine = () =>{
+	clickadd.play();
+	if(firstnum.value === ""){
+		return firstnum.value = "9";
+	}
+	if(firstnum.value !== "" && secondnum.value === ""){
+		return secondnum.value = "9";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		return thirdnum.value = "9";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		return fourthnum.value = "9";
+	}
+}
+nine.addEventListener("click",clicknine);
+
+const clickzero = () =>{
+	clickadd.play();
+	if(firstnum.value === ""){
+		return firstnum.value = "0";
+	}
+	if(firstnum.value !== "" && secondnum.value === ""){
+		return secondnum.value = "0";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		return thirdnum.value = "0";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		return fourthnum.value = "0";
+	}
+}
+zero.addEventListener("click",clickzero);
+
+
+
+
+
+
+
+
+
+
+
+function shin(){
+	firstnum.value = "";
+	secondnum.value= "";
+	thirdnum.value = "";
+	fourthnum.value = "";
+}
+function QnAage(){
+	if(firstnum.value === "2" && secondnum.value === "4" && thirdnum.value === "6" && fourthnum.value === "8"){
 		song.loop = "true";
 		song.play();
 		qage.style.display = "none";
+		QnA.style.transition = "2s";
 		QnA.style.visibility = "visible";
 		QnA.style.opacity = "1";
-		QnA.style.transition = "2.5s";
+	}
+	else{
+		shin();
+		firstnum.style.borderColor = "red";
+		secondnum.style.borderColor = "red";
+		thirdnum.style.borderColor = "red";
+		fourthnum.style.borderColor = "red";
+		forerror.setAttribute("class","animated shake");
+		fart.play();
 	}
 }
 agebtn.addEventListener("click",QnAage);

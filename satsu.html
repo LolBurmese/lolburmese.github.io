@@ -4,11 +4,18 @@
 	<meta charset="utf-8">
 	<link rel="icon" type="image/png" href="https://cdn0.iconfinder.com/data/icons/emotion-20/96/emotion_confused-512.png">
 	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="universe.css">
 	<title>...</title>
 </head>
 <body>
+	<audio id="clickadd">
+		<source src="clickadd.mp3" type="audio/mp3">
+	</audio>
+	<audio id="negrefuse">
+		<source src="negrefuse.mp3" type="audio/mp3">
+	</audio>
 	<audio id="515">
 		<source src="515.mp3" type="audio/mp3">
 	</audio>
@@ -18,12 +25,57 @@
 	<audio id="rangeplay">
 		<source src="rangeplay.mp3" type="audio/mp3">
 		</audio>
+
+
 	<div id="qage" class="animated delay-1s jackInTheBox">
+	<div id="forerror">
 	<div id="qcolor" align="center">
-	အသက်ပြောပြပါ <input type="range" step="1" max="75" min="3" value="3" id="myrange">
-<span id="rangenum">-</span><br><br>
-<button id="agebtn">GO</button>
-	</div></div>
+	<span id="headinglabel">ENTER PIN</span><br>
+	<div>
+<table>
+<tr>
+<td><input type="text" id="firstnum" maxlength="1"></td>
+<td><input type="text" id="secondnum" maxlength="1"></td>
+<td><input type="text" id="thirdnum" maxlength="1"></td>
+<td><input type="text" id="fourthnum" maxlength="1"></td><br>
+</tr>
+</table>
+<div id="numrole">
+<table>
+<tr>
+<td><button id="one">1</button></td>
+<td><button id="two">2</button></td>
+<td><button id="three">3</button></td>
+</tr>
+<tr>
+<td><button id="four">4</button></td>
+<td><button id="five">5</button></td>
+<td><button id="six">6</button></td>
+
+</tr>
+<tr>
+<td><button id="seven">7</button></td>
+<td><button id="eight">8</button></td>
+<td><button id="nine">9</button></td>
+</tr>
+<tr>
+<td></td>
+<td><button id="zero">0</button></td>
+<td><button id="reset1" onclick="shin()">C</button></td>
+</tr>
+</table>
+</div>
+<table>
+<tr>
+<td colspan="3"><button id="agebtn">GO</button></td>
+</tr>
+</table>
+</div>
+	</div></div></div>
+
+
+
+
 	<div id="about" oncopy ="warninghey()"></div>
 	<div id="main">
 		<div id="comain">
