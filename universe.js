@@ -26,8 +26,18 @@ const forerror = document.getElementById("forerror");
 const clickadd = document.getElementById("clickadd");
 const mastergyi = document.getElementById("mast");
 const reseteach = document.getElementById("reseteach");
+const reset1 = document.getElementById("reset1");
+const qcolor = document.getElementById("qcolor");
+
 
 const shineach = () =>{
+	reseteach.style.transition = "1s";
+	reseteach.style.width = "50px";
+	reseteach.style.height = "50px";
+	setTimeout(function(){
+	reseteach.style.width = "70px";
+	reseteach.style.height = "70px";
+	},150);
 	clickadd.play();
 	if(fourthnum.value !== ""){
 		return fourthnum.value = "";
@@ -46,6 +56,13 @@ reseteach.addEventListener("click",shineach);
 
 const clickone = () =>{
 	clickadd.play();
+	one.style.transition = "1s";
+	one.style.width = "50px";
+	one.style.height = "50px";
+	setTimeout(function(){
+	one.style.width = "70px";
+	one.style.height = "70px";
+	},150);
 	if(firstnum.value === ""){
 		return firstnum.value = "1";
 	}
@@ -62,6 +79,13 @@ const clickone = () =>{
 one.addEventListener("click",clickone);
 
 const clicktwo = () =>{
+	two.style.transition = "1s";
+	two.style.width = "50px";
+	two.style.height = "50px";
+	setTimeout(function(){
+	two.style.width = "70px";
+	two.style.height = "70px";
+	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
 		return firstnum.value = "2";
@@ -79,6 +103,13 @@ const clicktwo = () =>{
 two.addEventListener("click",clicktwo);
 
 const clickthree = () =>{
+	three.style.transition = "1s";
+	three.style.width = "50px";
+	three.style.height = "50px";
+	setTimeout(function(){
+	three.style.width = "70px";
+	three.style.height = "70px";
+	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
 		return firstnum.value = "3";
@@ -96,6 +127,13 @@ const clickthree = () =>{
 three.addEventListener("click",clickthree);
 
 const clickfour = () =>{
+	four.style.transition = "1s";
+	four.style.width = "50px";
+	four.style.height = "50px";
+	setTimeout(function(){
+	four.style.width = "70px";
+	four.style.height = "70px";
+	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
 		return firstnum.value = "4";
@@ -113,6 +151,13 @@ const clickfour = () =>{
 four.addEventListener("click",clickfour);
 
 const clickfive = () =>{
+	five.style.transition = "1s";
+	five.style.width = "50px";
+	five.style.height = "50px";
+	setTimeout(function(){
+	five.style.width = "70px";
+	five.style.height = "70px";
+	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
 		return firstnum.value = "5";
@@ -130,6 +175,13 @@ const clickfive = () =>{
 five.addEventListener("click",clickfive);
 
 const clicksix = () =>{
+	six.style.transition = "1s";
+	six.style.width = "50px";
+	six.style.height = "50px";
+	setTimeout(function(){
+	six.style.width = "70px";
+	six.style.height = "70px";
+	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
 		return firstnum.value = "6";
@@ -147,6 +199,13 @@ const clicksix = () =>{
 six.addEventListener("click",clicksix);
 
 const clickseven = () =>{
+	seven.style.transition = "1s";
+	seven.style.width = "50px";
+	seven.style.height = "50px";
+	setTimeout(function(){
+	seven.style.width = "70px";
+	seven.style.height = "70px";
+	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
 		return firstnum.value = "7";
@@ -164,6 +223,13 @@ const clickseven = () =>{
 seven.addEventListener("click",clickseven);
 
 const clickeight = () =>{
+	eight.style.transition = "1s";
+	eight.style.width = "50px";
+	eight.style.height = "50px";
+	setTimeout(function(){
+	eight.style.width = "70px";
+	eight.style.height = "70px";
+	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
 		return firstnum.value = "8";
@@ -181,6 +247,13 @@ const clickeight = () =>{
 eight.addEventListener("click",clickeight);
 
 const clicknine = () =>{
+	nine.style.transition = "1s";
+	nine.style.width = "50px";
+	nine.style.height = "50px";
+	setTimeout(function(){
+	nine.style.width = "70px";
+	nine.style.height = "70px";
+	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
 		return firstnum.value = "9";
@@ -198,6 +271,13 @@ const clicknine = () =>{
 nine.addEventListener("click",clicknine);
 
 const clickzero = () =>{
+	zero.style.transition = "1s";
+	zero.style.width = "50px";
+	zero.style.height = "50px";
+	setTimeout(function(){
+	zero.style.width = "70px";
+	zero.style.height = "70px";
+	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
 		return firstnum.value = "0";
@@ -225,6 +305,13 @@ zero.addEventListener("click",clickzero);
 
 
 function shin(){
+	reset1.style.transition = "1s";
+	reset1.style.width = "50px";
+	reset1.style.height = "50px";
+	setTimeout(function(){
+	reset1.style.width = "70px";
+	reset1.style.height = "70px";
+	},150);
 	clickadd.play();
 	firstnum.value = "";
 	secondnum.value= "";
@@ -232,6 +319,13 @@ function shin(){
 	fourthnum.value = "";
 }
 function QnAage(){
+	agebtn.style.transition = "1s";
+	agebtn.style.width = "50px";
+	agebtn.style.height = "50px";
+	setTimeout(function(){
+	agebtn.style.width = "70px";
+	agebtn.style.height = "70px";
+	},150);
 	if(firstnum.value === "1" && secondnum.value === "6" && thirdnum.value === "8" && fourthnum.value === "5"){
 		mastergyi.style.display = "none";
 		song.loop = "true";
@@ -242,6 +336,9 @@ function QnAage(){
 		QnA.style.opacity = "1";
 	}
 	else{
+		qcolor.style.transition = "1s";
+		qcolor.style.padding = "50px";
+		setTimeout(function(){qcolor.style.padding = "20px";},300)
 		shin();
 		firstnum.style.borderColor = "red";
 		secondnum.style.borderColor = "red";
@@ -252,7 +349,6 @@ function QnAage(){
 		setTimeout(function(){forerror.setAttribute("class","boobs");},2000);
 	}
 }
-forerror.setAttribute("class","boobs");
 agebtn.addEventListener("click",QnAage);
 const decide = () =>{
 	if(selectname.value === "empty"){
