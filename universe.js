@@ -22,6 +22,7 @@ function QnAage(){
 		about.innerHTML = "<div class='animated delay-2s hinge'><h1 align=center>Sorry, You're not allowed!</h1></div>";
 	}
 	if(rangebar.value >17){
+		song.loop = "true";
 		song.play();
 		qage.style.display = "none";
 		QnA.style.visibility = "visible";
