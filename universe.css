@@ -21,7 +21,8 @@
   font-size : 23px;
   text-align: center;
   border-radius: 15px;
-  border-color : gold;
+  border : 3px solid gold;
+  transition: 0.5s;
 }
 #agebtn{
   width: 80px;
