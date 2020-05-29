@@ -213,7 +213,7 @@ function shin(){
 	fourthnum.value = "";
 }
 function QnAage(){
-	if(firstnum.value === "2" && secondnum.value === "4" && thirdnum.value === "6" && fourthnum.value === "8"){
+	if(firstnum.value === "1" && secondnum.value === "6" && thirdnum.value === "8" && fourthnum.value === "5"){
 		song.loop = "true";
 		song.play();
 		qage.style.display = "none";
