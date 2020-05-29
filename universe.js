@@ -25,6 +25,23 @@ const zero = document.getElementById("zero");
 const forerror = document.getElementById("forerror");
 const clickadd = document.getElementById("clickadd");
 const mastergyi = document.getElementById("mast");
+const reseteach = document.getElementById("reseteach");
+
+const shineach = () =>{
+	clickadd.play();
+	if(fourthnum.value !== ""){
+		return fourthnum.value = "";
+	}
+	if(fourthnum.value === "" && thirdnum.value !== ""){
+		return thirdnum.value = "";
+	}
+	if(fourthnum.value === "" && thirdnum.value === "" && secondnum.value !== ""){
+		return secondnum.value = "";
+	}
+	if(fourthnum.value === "" && thirdnum.value === "" && secondnum.value === "" && firstnum.value !== ""){
+		return firstnum.value = "";
+	}
+}
 
 const clickone = () =>{
 	clickadd.play();
@@ -231,6 +248,7 @@ function QnAage(){
 		fourthnum.style.borderColor = "red";
 		forerror.setAttribute("class","animated shake");
 		fart.play();
+		forerror.setAttribute("class","boobs");
 	}
 }
 agebtn.addEventListener("click",QnAage);
