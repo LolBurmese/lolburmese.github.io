@@ -65,7 +65,8 @@
   border-radius : 25px;
 }
 body{
-  background-color : rgb(231, 76, 60);
+  background-color : inherit;
+  animation: kstcolor infinite 20s;
 }
 
 
@@ -86,7 +87,21 @@ body{
  *
  * Copyright (c) 2019 Daniel Eden
  */
+@-webkit-keyframes kstcolor
+    {
+      0%   {background: red; color: cyan;}
+      33%  {background: green; color: magenta;}
+      66%  {background: blue; color: yellow;}
+      100% {background: red; color: cyan;}
+   }
 
+ @keyframes kstcolor
+    {
+      0%   {background: red; color: cyan;}
+      33%  {background: green; color: magenta;}
+      66%  {background: blue; color: yellow;}
+      100% {background: red; color: cyan;}
+   }
 @-webkit-keyframes bounce {
   from,
   20%,
