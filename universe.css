@@ -108,7 +108,7 @@
 }
 body{
   background-image : url("bgbg.jpg");
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
 }
 
