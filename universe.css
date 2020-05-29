@@ -8,6 +8,9 @@
   border : 3px solid gold;
   border-radius : 12px;
 }
+#mast{
+  font-family: 'Marck Script', cursive;
+}
 #firstnum, #secondnum,
 #thirdnum, #fourthnum
 {
@@ -73,6 +76,7 @@
   font-weight: bold;
   font-size : 33px;
   color : black;
+  font-family: 'Orbitron', sans-serif;
 }
 #main{
   opacity: 0;
