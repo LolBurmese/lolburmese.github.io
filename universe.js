@@ -206,6 +206,7 @@ zero.addEventListener("click",clickzero);
 
 
 function shin(){
+	clickadd.play();
 	firstnum.value = "";
 	secondnum.value= "";
 	thirdnum.value = "";
