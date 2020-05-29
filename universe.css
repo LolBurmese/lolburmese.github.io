@@ -78,9 +78,7 @@
   font-weight: bold;
   font-size : 33px;
   font-family: 'Orbitron', sans-serif;
-  background : -webkit-linear-gradient(red,yellow);
-  -webkit-background-clip : text;
-  -webkit-text-fill-color : transparent;
+  color : black;
 }
 #main{
   opacity: 0;
@@ -109,10 +107,11 @@
   border-radius : 25px;
 }
 body{
-  background-image : url("bgbg.jpg");
+  /*background-image : url("bgbg.jpg");
   background-size: auto;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center;*/
+  background-color: gold;
 }
 
 
