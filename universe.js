@@ -19,7 +19,7 @@ function QnAage(){
 	if(rangebar.value<18){
 		fart.play();
 		qage.style.display = "none";
-		about.innerHTML = "<div class="animated delay-2s hinge"><h1 align=center>Sorry, You're not allowed!</h1></div>";
+		about.innerHTML = "<div class='animated delay-2s hinge'><h1 align=center>Sorry, You're not allowed!</h1></div>";
 	}
 	if(rangebar.value >17){
 		song.play();
