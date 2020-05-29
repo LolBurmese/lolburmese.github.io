@@ -346,7 +346,7 @@ function QnAage(){
 		fourthnum.style.borderColor = "red";
 		forerror.setAttribute("class","animated shake");
 		fart.play();
-		setTimeout(function(){forerror.setAttribute("class","boobs");},2000);
+		setTimeout(function(){forerror.setAttribute("class","boobs");},200);
 	}
 }
 agebtn.addEventListener("click",QnAage);
