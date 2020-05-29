@@ -67,6 +67,7 @@
 body{
   background-color : inherit;
   animation: kstcolor infinite 20s;
+  -webkit-animation: kstcolor infinite 20s;
 }
 
 
