@@ -42,6 +42,7 @@ const shineach = () =>{
 		return firstnum.value = "";
 	}
 }
+reseteach.addEventListener("click",shineach);
 
 const clickone = () =>{
 	clickadd.play();
