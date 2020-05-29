@@ -24,6 +24,7 @@ const nine = document.getElementById("nine");
 const zero = document.getElementById("zero");
 const forerror = document.getElementById("forerror");
 const clickadd = document.getElementById("clickadd");
+const mastergyi = document.getElementById("mast");
 
 const clickone = () =>{
 	clickadd.play();
@@ -214,6 +215,7 @@ function shin(){
 }
 function QnAage(){
 	if(firstnum.value === "1" && secondnum.value === "6" && thirdnum.value === "8" && fourthnum.value === "5"){
+		mast.style.display = "none";
 		song.loop = "true";
 		song.play();
 		qage.style.display = "none";
