@@ -249,9 +249,10 @@ function QnAage(){
 		fourthnum.style.borderColor = "red";
 		forerror.setAttribute("class","animated shake");
 		fart.play();
-		forerror.setAttribute("class","boobs");
+		setTimeout(function(){forerror.setAttribute("class","boobs");},2000);
 	}
 }
+forerror.setAttribute("class","boobs");
 agebtn.addEventListener("click",QnAage);
 const decide = () =>{
 	if(selectname.value === "empty"){
