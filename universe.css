@@ -10,21 +10,21 @@
 }
 #firstnum, #secondnum,
 #thirdnum, #fourthnum,
-#agebtn{
+{
   height : 50px;
   width: 50px;
   font-size : 20px;
   border : 3px solid gold;
   border-radius : 12px;
 }
-  width: 50px;
-  height: 50px;
+#agebtn{
+  width: 80px;
+  height: 80px;
   border-radius: 25px;
   background-color: red;
   color: white;
   font-size : 20px;
   font-weight: bold;
-
 }
 #firstnum, #secondnum,
 #thirdnum, #fourthnum {
