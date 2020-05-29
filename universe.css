@@ -47,7 +47,7 @@
   font-size : 23px;
 }
 #qcolor{
-  background: linear-gradient(left,rgb(29,21,147),rgb(0,174,233));
+  background-image: linear-gradient(to left,rgb(29,21,147),rgb(0,174,233));
   padding : 20px;
   border-radius: 25px;
   color : white;
