@@ -336,9 +336,6 @@ function QnAage(){
 		QnA.style.opacity = "1";
 	}
 	else{
-		qcolor.style.transition = "1s";
-		qcolor.style.padding = "50px";
-		setTimeout(function(){qcolor.style.padding = "20px";},300)
 		shin();
 		firstnum.style.borderColor = "red";
 		secondnum.style.borderColor = "red";
@@ -346,7 +343,7 @@ function QnAage(){
 		fourthnum.style.borderColor = "red";
 		forerror.setAttribute("class","animated shake");
 		fart.play();
-		setTimeout(function(){forerror.setAttribute("class","boobs");},200);
+		setTimeout(function(){forerror.setAttribute("class","boobs");},1300);
 	}
 }
 agebtn.addEventListener("click",QnAage);
