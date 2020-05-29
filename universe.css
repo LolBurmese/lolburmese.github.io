@@ -1,16 +1,22 @@
 #one, #two, #three,
 #four, #five, #six,
 #seven, #eight, #nine,
-#zero,
-#firstnum, #secondnum,
-#thirdnum, #fourthnum, #reset1 {
-  height : 80px;
-  width: 80px;
+#zero, #reset1 {
+  height : 70px;
+  width: 70px;
   font-size : 20px;
   border : 3px solid gold;
   border-radius : 12px;
 }
+#firstnum, #secondnum,
+#thirdnum, #fourthnum,
 #agebtn{
+  height : 50px;
+  width: 50px;
+  font-size : 20px;
+  border : 3px solid gold;
+  border-radius : 12px;
+}
   width: 50px;
   height: 50px;
   border-radius: 25px;
