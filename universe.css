@@ -77,8 +77,10 @@
 #headinglabel{
   font-weight: bold;
   font-size : 33px;
-  color : black;
   font-family: 'Orbitron', sans-serif;
+  background : -webkit-linear-gradient(red,yellow);
+  -webkit-background-clip : text;
+  -webkit-text-fill-color : transparent;
 }
 #main{
   opacity: 0;
