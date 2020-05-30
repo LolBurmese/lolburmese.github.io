@@ -31,7 +31,7 @@ const qcolor = document.getElementById("qcolor");
 const headinglabel = document.getElementById("headinglabel");
 
 const checkValid = () =>{
-	if(firstnum.value === ""){
+	if(firstnum.value === ""  && secondnum.value === "" && thirdnum.value === "" && fourthnum.value === ""){
 		headinglabel.style.color = "red";
 		headinglabel.textContent = "TYPE 4 PIN!";
 		setTimeout(function(){
@@ -39,7 +39,7 @@ const checkValid = () =>{
 			headinglabel.textContent = "ENTER PIN";
 		},2000);
 	}
-	if(firstnum.value !== "" && secondnum.value === ""){
+	if(firstnum.value !== ""  && secondnum.value === "" && thirdnum.value === "" && fourthnum.value === ""){
 		headinglabel.style.color = "red";
 		headinglabel.textContent = "TYPE 4 PIN!";
 		setTimeout(function(){
@@ -47,7 +47,7 @@ const checkValid = () =>{
 			headinglabel.textContent = "ENTER PIN";
 		},2000);
 	}
-	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === "" && fourthnum.value === ""){
 		headinglabel.style.color = "red";
 		headinglabel.textContent = "TYPE 4 PIN!";
 		setTimeout(function(){
