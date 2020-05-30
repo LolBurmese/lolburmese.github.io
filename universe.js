@@ -77,21 +77,25 @@ const shineach = () =>{
 	},150);
 	clickadd.play();
 	if(fourthnum.value !== ""){
+		fourthnum.style.fontSize = "0px";
 		fourthnum.style.borderRadius = "15px";
 		fourthnum.style.border = "3px solid gold";
 		return fourthnum.value = "";
 	}
 	if(fourthnum.value === "" && thirdnum.value !== ""){
+		thirdnum.style.fontSize = "0px";
 		thirdnum.style.borderRadius = "15px";
 		thirdnum.style.border = "3px solid gold";
 		return thirdnum.value = "";
 	}
 	if(fourthnum.value === "" && thirdnum.value === "" && secondnum.value !== ""){
+		secondnum.style.fontSize = "0px";
 		secondnum.style.borderRadius = "15px";
 		secondnum.style.border = "3px solid gold";
 		return secondnum.value = "";
 	}
 	if(fourthnum.value === "" && thirdnum.value === "" && secondnum.value === "" && firstnum.value !== ""){
+		firstnum.style.fontSize = "0px";
 		firstnum.style.borderRadius = "15px";
 		firstnum.style.border = "3px solid gold";
 		return firstnum.value = "";
@@ -109,21 +113,25 @@ const clickone = () =>{
 	one.style.height = "70px";
 	},150);
 	if(firstnum.value === ""){
+		firstnum.style.fontSize = "23px";
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "1";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
+		secondnum.style.fontSize = "23px";
 		secondnum.style.borderRadius = "30px";
 		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "1";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		thirdnum.style.fontSize = "23px";
 		thirdnum.style.borderRadius = "30px";
 		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "1";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		fourthnum.style.fontSize = "23px";
 		fourthnum.style.borderRadius = "30px";
 		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "1";
@@ -141,21 +149,25 @@ const clicktwo = () =>{
 	two.style.height = "70px";
 	},150);
 	if(firstnum.value === ""){
+		firstnum.style.fontSize = "23px";
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "2";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
+		secondnum.style.fontSize = "23px";
 		secondnum.style.borderRadius = "30px";
 		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "2";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		thirdnum.style.fontSize = "23px";
 		thirdnum.style.borderRadius = "30px";
 		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "2";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		fourthnum.style.fontSize = "23px";
 		fourthnum.style.borderRadius = "30px";
 		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "2";
@@ -173,21 +185,25 @@ const clickthree = () =>{
 	three.style.height = "70px";
 	},150);
 	if(firstnum.value === ""){
+		firstnum.style.fontSize = "23px";
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "3";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
+		secondnum.style.fontSize = "23px";
 		secondnum.style.borderRadius = "30px";
 		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "3";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		thirdnum.style.fontSize = "23px";
 		thirdnum.style.borderRadius = "30px";
 		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "3";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		fourthnum.style.fontSize = "23px";
 		fourthnum.style.borderRadius = "30px";
 		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "3";
@@ -205,21 +221,25 @@ const clickfour = () =>{
 	four.style.height = "70px";
 	},150);
 	if(firstnum.value === ""){
+		firstnum.style.fontSize = "23px";
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "4";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
+		secondnum.style.fontSize = "23px";
 		secondnum.style.borderRadius = "30px";
 		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "4";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		thirdnum.style.fontSize = "23px";
 		thirdnum.style.borderRadius = "30px";
 		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "4";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		fourthnum.style.fontSize = "23px";
 		fourthnum.style.borderRadius = "30px";
 		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "4";
@@ -237,21 +257,25 @@ const clickfive = () =>{
 	five.style.height = "70px";
 	},150);
 	if(firstnum.value === ""){
+		firstnum.style.fontSize = "23px";
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "5";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
+		secondnum.style.fontSize = "23px";
 		secondnum.style.borderRadius = "30px";
 		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "5";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		thirdnum.style.fontSize = "23px";
 		thirdnum.style.borderRadius = "30px";
 		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "5";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		fourthnum.style.fontSize = "23px";
 		fourthnum.style.borderRadius = "30px";
 		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "5";
@@ -269,21 +293,25 @@ const clicksix = () =>{
 	six.style.height = "70px";
 	},150);
 	if(firstnum.value === ""){
+		firstnum.style.fontSize = "23px";
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "6";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
+		secondnum.style.fontSize = "23px";
 		secondnum.style.borderRadius = "30px";
 		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "6";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		thirdnum.style.fontSize = "23px";
 		thirdnum.style.borderRadius = "30px";
 		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "6";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		fourthnum.style.fontSize = "23px";
 		fourthnum.style.borderRadius = "30px";
 		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "6";
@@ -301,21 +329,25 @@ const clickseven = () =>{
 	seven.style.height = "70px";
 	},150);
 	if(firstnum.value === ""){
+		firstnum.style.fontSize = "23px";
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "7";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
+		secondnum.style.fontSize = "23px";
 		secondnum.style.borderRadius = "30px";
 		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "7";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		thirdnum.style.fontSize = "23px";
 		thirdnum.style.borderRadius = "30px";
 		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "7";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		fourthnum.style.fontSize = "23px";
 		fourthnum.style.borderRadius = "30px";
 		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "7";
@@ -333,21 +365,25 @@ const clickeight = () =>{
 	eight.style.height = "70px";
 	},150);
 	if(firstnum.value === ""){
+		firstnum.style.fontSize = "23px";
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "8";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
+		secondnum.style.fontSize = "23px";
 		secondnum.style.borderRadius = "30px";
 		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "8";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		thirdnum.style.fontSize = "23px";
 		thirdnum.style.borderRadius = "30px";
 		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "8";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		fourthnum.style.fontSize = "23px";
 		fourthnum.style.borderRadius = "30px";
 		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "8";
@@ -365,21 +401,25 @@ const clicknine = () =>{
 	nine.style.height = "70px";
 	},150);
 	if(firstnum.value === ""){
+		firstnum.style.fontSize = "23px";
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "9";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
+		secondnum.style.fontSize = "23px";
 		secondnum.style.borderRadius = "30px";
 		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "9";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		thirdnum.style.fontSize = "23px";
 		thirdnum.style.borderRadius = "30px";
 		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "9";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		fourthnum.style.fontSize = "23px";
 		fourthnum.style.borderRadius = "30px";
 		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "9";
@@ -397,21 +437,25 @@ const clickzero = () =>{
 	zero.style.height = "70px";
 	},150);
 	if(firstnum.value === ""){
+		firstnum.style.fontSize = "23px";
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "0";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
+		secondnum.style.fontSize = "23px";
 		secondnum.style.borderRadius = "30px";
 		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "0";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		thirdnum.style.fontSize = "23px";
 		thirdnum.style.borderRadius = "30px";
 		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "0";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		fourthnum.style.fontSize = "23px";
 		fourthnum.style.borderRadius = "30px";
 		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "0";
@@ -430,6 +474,14 @@ zero.addEventListener("click",clickzero);
 
 
 function shin(){
+	firstnum.style.transform = "rotate(30deg)";
+	secondnum.style.transform = "rotate(30deg)";
+	thirdnum.style.transform = "rotate(30deg)";
+	fourthnum.style.transform = "rotate(30deg)";
+	firstnum.style.fontSize = "0px";
+	secondnum.style.fontSize = "0px";
+	thirdnum.style.fontSize = "0px";
+	fourthnum.style.fontSize = "0px";
 	clickadd.play();
 	firstnum.style.borderRadius = "15px";
 	secondnum.style.borderRadius = "15px";
@@ -442,10 +494,16 @@ function shin(){
 	reset1.style.width = "70px";
 	reset1.style.height = "70px";
 	},150);
+	setTimeout(function(){
 	firstnum.value = "";
 	secondnum.value= "";
 	thirdnum.value = "";
 	fourthnum.value = "";
+	firstnum.style.transform = "none";
+	secondnum.style.transform = "none";
+	thirdnum.style.transform = "none";
+	fourthnum.style.transform = "none";
+},500);
 	firstnum.style.border = "3px solid gold";
 	secondnum.style.border = "3px solid gold";
 	thirdnum.style.border = "3px solid gold";
@@ -469,9 +527,12 @@ function QnAage(){
 		QnA.style.opacity = "1";
 	}
 	else{
-		shin();
-                headinglabel.textContent = "WRONG PIN";
-                        headinglabel.style.color = "red";
+		firstnum.style.fontSize = "0px";
+		secondnum.style.fontSize = "0px";
+		thirdnum.style.fontSize = "0px";
+		fourthnum.style.fontSize = "0px";
+        headinglabel.textContent = "WRONG PIN";
+        headinglabel.style.color = "red";
 		secondnum.style.borderRadius = "15px";
 		firstnum.style.borderRadius = "15px";
 		thirdnum.style.borderRadius = "15px";
@@ -481,8 +542,12 @@ function QnAage(){
 		thirdnum.style.borderColor = "red";
 		fourthnum.style.borderColor = "red";
 		setTimeout(function(){
-                        headinglabel.textContent = "ENTER PIN";
-                        headinglabel.style.color = "black";
+			firstnum.value = "";
+			secondnum.value = "";
+			thirdnum.value = "";
+			fourthnum.value = "";
+        	headinglabel.textContent = "ENTER PIN";
+        	headinglabel.style.color = "black";
 			firstnum.style.borderColor = "gold";
 			secondnum.style.borderColor = "gold";
 			thirdnum.style.borderColor = "gold";
