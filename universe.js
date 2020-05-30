@@ -30,6 +30,23 @@ const reset1 = document.getElementById("reset1");
 const qcolor = document.getElementById("qcolor");
 const headinglabel = document.getElementById("headinglabel");
 
+const checkValid = () =>{
+	if(firstnum.value === ""){
+		headinglabel.textContent = "TYPE 4 PIN!";
+	}
+	if(firstnum.value !== "" && secondnum.value === ""){
+		headinglabel.textContent = "TYPE 4 PIN!";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
+		headinglabel.textContent = "TYPE 4 PIN!";
+	}
+	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
+		headinglabel.textContent = "TYPE 4 PIN!";
+	}
+	else{
+		return QnAage;
+	}
+}
 headinglabel.contentEditable = "true";
 const shineach = () =>{
 	reseteach.style.transition = "1s";
@@ -480,7 +497,7 @@ function QnAage(){
 		setTimeout(function(){forerror.setAttribute("class","boobs");},1300);
 	}
 }
-agebtn.addEventListener("click",QnAage);
+agebtn.addEventListener("click",checkValid);
 const decide = () =>{
 	if(selectname.value === "empty"){
 		alert("\nနာမည်ကိုရွေးပေးပါဦးခင်ဗျ");
