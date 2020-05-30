@@ -48,7 +48,8 @@
   font-size : 23px;
 }
 #qcolor{
-  background-color: rgb(0,174,233);
+  /*background-color: rgb(0,174,233);*/
+  background-color: green;
   padding : 40px;
   border-radius: 25px;
   color : white;

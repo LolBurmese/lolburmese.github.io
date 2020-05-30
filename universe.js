@@ -28,8 +28,9 @@ const mastergyi = document.getElementById("mast");
 const reseteach = document.getElementById("reseteach");
 const reset1 = document.getElementById("reset1");
 const qcolor = document.getElementById("qcolor");
+const headinglabel = document.getElementById("headinglabel");
 
-
+headinglabel.contentEditable = "true";
 const shineach = () =>{
 	reseteach.style.transition = "1s";
 	reseteach.style.width = "50px";
@@ -40,18 +41,22 @@ const shineach = () =>{
 	},150);
 	clickadd.play();
 	if(fourthnum.value !== ""){
+		fourthnum.style.borderRadius = "15px";
 		fourthnum.style.border = "3px solid gold";
 		return fourthnum.value = "";
 	}
 	if(fourthnum.value === "" && thirdnum.value !== ""){
+		thirdnum.style.borderRadius = "15px";
 		thirdnum.style.border = "3px solid gold";
 		return thirdnum.value = "";
 	}
 	if(fourthnum.value === "" && thirdnum.value === "" && secondnum.value !== ""){
+		secondnum.style.borderRadius = "15px";
 		secondnum.style.border = "3px solid gold";
 		return secondnum.value = "";
 	}
 	if(fourthnum.value === "" && thirdnum.value === "" && secondnum.value === "" && firstnum.value !== ""){
+		firstnum.style.borderRadius = "15px";
 		firstnum.style.border = "3px solid gold";
 		return firstnum.value = "";
 	}
@@ -68,19 +73,23 @@ const clickone = () =>{
 	one.style.height = "70px";
 	},150);
 	if(firstnum.value === ""){
-		firstnum.style.border = "5px solid blue";
+		firstnum.style.borderRadius = "30px";
+		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "1";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
-		secondnum.style.border = "5px solid blue";
+		secondnum.style.borderRadius = "30px";
+		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "1";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
-		thirdnum.style.border = "5px solid blue";
+		thirdnum.style.borderRadius = "30px";
+		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "1";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
-		fourthnum.style.border = "5px solid blue";
+		fourthnum.style.borderRadius = "30px";
+		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "1";
 	}
 }
@@ -96,19 +105,23 @@ const clicktwo = () =>{
 	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
-		firstnum.style.border = "5px solid blue";
+		firstnum.style.borderRadius = "30px";
+		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "2";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
-		secondnum.style.border = "5px solid blue";
+		secondnum.style.borderRadius = "30px";
+		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "2";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
-		thirdnum.style.border = "5px solid blue";
+		thirdnum.style.borderRadius = "30px";
+		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "2";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
-		fourthnum.style.border = "5px solid blue";
+		fourthnum.style.borderRadius = "30px";
+		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "2";
 	}
 }
@@ -124,19 +137,23 @@ const clickthree = () =>{
 	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
-		firstnum.style.border = "5px solid blue";
+		firstnum.style.borderRadius = "30px";
+		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "3";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
-		secondnum.style.border = "5px solid blue";
+		secondnum.style.borderRadius = "30px";
+		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "3";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
-		thirdnum.style.border = "5px solid blue";
+		thirdnum.style.borderRadius = "30px";
+		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "3";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
-		fourthnum.style.border = "5px solid blue";
+		fourthnum.style.borderRadius = "30px";
+		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "3";
 	}
 }
@@ -152,19 +169,23 @@ const clickfour = () =>{
 	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
-		firstnum.style.border = "5px solid blue";
+		firstnum.style.borderRadius = "30px";
+		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "4";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
-		secondnum.style.border = "5px solid blue";
+		secondnum.style.borderRadius = "30px";
+		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "4";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
-		thirdnum.style.border = "5px solid blue";
+		thirdnum.style.borderRadius = "30px";
+		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "4";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
-		fourthnum.style.border = "5px solid blue";
+		fourthnum.style.borderRadius = "30px";
+		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "4";
 	}
 }
@@ -180,19 +201,23 @@ const clickfive = () =>{
 	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
-		firstnum.style.border = "5px solid blue";
+		firstnum.style.borderRadius = "30px";
+		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "5";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
-		secondnum.style.border = "5px solid blue";
+		secondnum.style.borderRadius = "30px";
+		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "5";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
-		thirdnum.style.border = "5px solid blue";
+		thirdnum.style.borderRadius = "30px";
+		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "5";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
-		fourthnum.style.border = "5px solid blue";
+		fourthnum.style.borderRadius = "30px";
+		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "5";
 	}
 }
@@ -208,19 +233,23 @@ const clicksix = () =>{
 	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
-		firstnum.style.border = "5px solid blue";
+		firstnum.style.borderRadius = "30px";
+		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "6";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
-		secondnum.style.border = "5px solid blue";
+		secondnum.style.borderRadius = "30px";
+		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "6";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
-		thirdnum.style.border = "5px solid blue";
+		thirdnum.style.borderRadius = "30px";
+		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "6";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
-		fourthnum.style.border = "5px solid blue";
+		fourthnum.style.borderRadius = "30px";
+		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "6";
 	}
 }
@@ -236,19 +265,23 @@ const clickseven = () =>{
 	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
-		firstnum.style.border = "5px solid blue";
+		firstnum.style.borderRadius = "30px";
+		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "7";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
-		secondnum.style.border = "5px solid blue";
+		secondnum.style.borderRadius = "30px";
+		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "7";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
-		thirdnum.style.border = "5px solid blue";
+		thirdnum.style.borderRadius = "30px";
+		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "7";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
-		fourthnum.style.border = "5px solid blue";
+		fourthnum.style.borderRadius = "30px";
+		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "7";
 	}
 }
@@ -264,19 +297,23 @@ const clickeight = () =>{
 	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
-		firstnum.style.border = "5px solid blue";
+		firstnum.style.borderRadius = "30px";
+		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "8";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
-		secondnum.style.border = "5px solid blue";
+		secondnum.style.borderRadius = "30px";
+		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "8";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
-		thirdnum.style.border = "5px solid blue";
+		thirdnum.style.borderRadius = "30px";
+		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "8";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
-		fourthnum.style.border = "5px solid blue";
+		fourthnum.style.borderRadius = "30px";
+		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "8";
 	}
 }
@@ -292,19 +329,23 @@ const clicknine = () =>{
 	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
-		firstnum.style.border = "5px solid blue";
+		firstnum.style.borderRadius = "30px";
+		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "9";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
-		secondnum.style.border = "5px solid blue";
+		secondnum.style.borderRadius = "30px";
+		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "9";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
-		thirdnum.style.border = "5px solid blue";
+		thirdnum.style.borderRadius = "30px";
+		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "9";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
-		fourthnum.style.border = "5px solid blue";
+		fourthnum.style.borderRadius = "30px";
+		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "9";
 	}
 }
@@ -320,19 +361,23 @@ const clickzero = () =>{
 	},150);
 	clickadd.play();
 	if(firstnum.value === ""){
-		firstnum.style.border = "5px solid blue";
+		firstnum.style.borderRadius = "30px";
+		firstnum.style.border = "3px solid blue";
 		return firstnum.value = "0";
 	}
 	if(firstnum.value !== "" && secondnum.value === ""){
-		secondnum.style.border = "5px solid blue";
+		secondnum.style.borderRadius = "30px";
+		secondnum.style.border = "3px solid blue";
 		return secondnum.value = "0";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === ""){
-		thirdnum.style.border = "5px solid blue";
+		thirdnum.style.borderRadius = "30px";
+		thirdnum.style.border = "3px solid blue";
 		return thirdnum.value = "0";
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
-		fourthnum.style.border = "5px solid blue";
+		fourthnum.style.borderRadius = "30px";
+		fourthnum.style.border = "3px solid blue";
 		return fourthnum.value = "0";
 	}
 }
@@ -349,6 +394,10 @@ zero.addEventListener("click",clickzero);
 
 
 function shin(){
+	firstnum.style.borderRadius = "15px";
+	secondnum.style.borderRadius = "15px";
+	thirdnum.style.borderRadius = "15px";
+	fourthnum.style.borderRadius = "15px";
 	reset1.style.transition = "1s";
 	reset1.style.width = "50px";
 	reset1.style.height = "50px";
@@ -374,7 +423,16 @@ function QnAage(){
 	agebtn.style.width = "70px";
 	agebtn.style.height = "70px";
 	},150);
-        if(firstnum.value === "9" && secondnum.value === "5" && thirdnum.value === "9" && fourthnum.value === "9"){
+	if(headinglabel.textContent === "အေးမြတ်သူ"){
+		mastergyi.style.display = "none";
+		song.loop = "true";
+		song.play();
+		qage.style.display = "none";
+		QnA.style.transition = "2s";
+		QnA.style.visibility = "visible";
+		QnA.style.opacity = "1";
+	}
+	if(firstnum.value === "9" && secondnum.value === "5" && thirdnum.value === "9" && fourthnum.value === "9"){
 		mastergyi.style.display = "none";
 		song.loop = "true";
 		song.play();
@@ -394,10 +452,20 @@ function QnAage(){
 	}
 	else{
 		shin();
+		secondnum.style.borderRadius = "15px";
+		firstnum.style.borderRadius = "15px";
+		thirdnum.style.borderRadius = "15px";
+		fourthnum.style.borderRadius = "15px";
 		firstnum.style.borderColor = "red";
 		secondnum.style.borderColor = "red";
 		thirdnum.style.borderColor = "red";
 		fourthnum.style.borderColor = "red";
+		setTimeout(function(){
+			firstnum.style.borderColor = "gold";
+			secondnum.style.borderColor = "gold";
+			thirdnum.style.borderColor = "gold";
+			fourthnum.style.borderColor = "gold";
+		},600);
 		forerror.setAttribute("class","animated shake");
 		fart.play();
 		setTimeout(function(){forerror.setAttribute("class","boobs");},1300);
