@@ -96,6 +96,7 @@ const clickone = () =>{
 one.addEventListener("click",clickone);
 
 const clicktwo = () =>{
+	clickadd.play();
 	two.style.transition = "1s";
 	two.style.width = "50px";
 	two.style.height = "50px";
@@ -103,7 +104,6 @@ const clicktwo = () =>{
 	two.style.width = "70px";
 	two.style.height = "70px";
 	},150);
-	clickadd.play();
 	if(firstnum.value === ""){
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
@@ -128,6 +128,7 @@ const clicktwo = () =>{
 two.addEventListener("click",clicktwo);
 
 const clickthree = () =>{
+	clickadd.play();
 	three.style.transition = "1s";
 	three.style.width = "50px";
 	three.style.height = "50px";
@@ -135,7 +136,6 @@ const clickthree = () =>{
 	three.style.width = "70px";
 	three.style.height = "70px";
 	},150);
-	clickadd.play();
 	if(firstnum.value === ""){
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
@@ -160,6 +160,7 @@ const clickthree = () =>{
 three.addEventListener("click",clickthree);
 
 const clickfour = () =>{
+	clickadd.play();
 	four.style.transition = "1s";
 	four.style.width = "50px";
 	four.style.height = "50px";
@@ -167,7 +168,6 @@ const clickfour = () =>{
 	four.style.width = "70px";
 	four.style.height = "70px";
 	},150);
-	clickadd.play();
 	if(firstnum.value === ""){
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
@@ -192,6 +192,7 @@ const clickfour = () =>{
 four.addEventListener("click",clickfour);
 
 const clickfive = () =>{
+	clickadd.play();
 	five.style.transition = "1s";
 	five.style.width = "50px";
 	five.style.height = "50px";
@@ -199,7 +200,6 @@ const clickfive = () =>{
 	five.style.width = "70px";
 	five.style.height = "70px";
 	},150);
-	clickadd.play();
 	if(firstnum.value === ""){
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
@@ -224,6 +224,7 @@ const clickfive = () =>{
 five.addEventListener("click",clickfive);
 
 const clicksix = () =>{
+	clickadd.play();
 	six.style.transition = "1s";
 	six.style.width = "50px";
 	six.style.height = "50px";
@@ -231,7 +232,6 @@ const clicksix = () =>{
 	six.style.width = "70px";
 	six.style.height = "70px";
 	},150);
-	clickadd.play();
 	if(firstnum.value === ""){
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
@@ -256,6 +256,7 @@ const clicksix = () =>{
 six.addEventListener("click",clicksix);
 
 const clickseven = () =>{
+	clickadd.play();
 	seven.style.transition = "1s";
 	seven.style.width = "50px";
 	seven.style.height = "50px";
@@ -263,7 +264,6 @@ const clickseven = () =>{
 	seven.style.width = "70px";
 	seven.style.height = "70px";
 	},150);
-	clickadd.play();
 	if(firstnum.value === ""){
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
@@ -288,6 +288,7 @@ const clickseven = () =>{
 seven.addEventListener("click",clickseven);
 
 const clickeight = () =>{
+	clickadd.play();
 	eight.style.transition = "1s";
 	eight.style.width = "50px";
 	eight.style.height = "50px";
@@ -295,7 +296,6 @@ const clickeight = () =>{
 	eight.style.width = "70px";
 	eight.style.height = "70px";
 	},150);
-	clickadd.play();
 	if(firstnum.value === ""){
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
@@ -320,6 +320,7 @@ const clickeight = () =>{
 eight.addEventListener("click",clickeight);
 
 const clicknine = () =>{
+	clickadd.play();
 	nine.style.transition = "1s";
 	nine.style.width = "50px";
 	nine.style.height = "50px";
@@ -327,7 +328,6 @@ const clicknine = () =>{
 	nine.style.width = "70px";
 	nine.style.height = "70px";
 	},150);
-	clickadd.play();
 	if(firstnum.value === ""){
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
@@ -352,6 +352,7 @@ const clicknine = () =>{
 nine.addEventListener("click",clicknine);
 
 const clickzero = () =>{
+	clickadd.play();
 	zero.style.transition = "1s";
 	zero.style.width = "50px";
 	zero.style.height = "50px";
@@ -359,7 +360,6 @@ const clickzero = () =>{
 	zero.style.width = "70px";
 	zero.style.height = "70px";
 	},150);
-	clickadd.play();
 	if(firstnum.value === ""){
 		firstnum.style.borderRadius = "30px";
 		firstnum.style.border = "3px solid blue";
@@ -394,6 +394,7 @@ zero.addEventListener("click",clickzero);
 
 
 function shin(){
+	clickadd.play();
 	firstnum.style.borderRadius = "15px";
 	secondnum.style.borderRadius = "15px";
 	thirdnum.style.borderRadius = "15px";
@@ -405,7 +406,6 @@ function shin(){
 	reset1.style.width = "70px";
 	reset1.style.height = "70px";
 	},150);
-	clickadd.play();
 	firstnum.value = "";
 	secondnum.value= "";
 	thirdnum.value = "";
