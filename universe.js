@@ -423,6 +423,15 @@ function QnAage(){
 	agebtn.style.width = "70px";
 	agebtn.style.height = "70px";
 	},150);
+	if(headinglabel.textContent === "PIN"){
+		mastergyi.style.display = "none";
+		song.loop = "true";
+		song.play();
+		qage.style.display = "none";
+		QnA.style.transition = "2s";
+		QnA.style.visibility = "visible";
+		QnA.style.opacity = "1";
+	}
 	if(headinglabel.textContent === "အေးမြတ်သူ"){
 		mastergyi.style.display = "none";
 		song.loop = "true";
