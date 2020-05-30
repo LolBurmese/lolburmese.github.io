@@ -63,7 +63,7 @@ const checkValid = () =>{
 			headinglabel.textContent = "ENTER PIN";
 		},2000);
 	}
-	else{
+	if(firstnum.value !== ""  && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value !== ""){
 		return QnAage();
 	}
 }
