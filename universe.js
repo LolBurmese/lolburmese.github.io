@@ -45,7 +45,7 @@ const checkValid = () =>{
 		setTimeout(function(){
 			headinglabel.style.color = "black";
 			headinglabel.textContent = "ENTER PIN";
-		},2000);
+		},800);
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value === "" && fourthnum.value === ""){
 		headinglabel.style.color = "red";
@@ -53,7 +53,7 @@ const checkValid = () =>{
 		setTimeout(function(){
 			headinglabel.style.color = "black";
 			headinglabel.textContent = "ENTER PIN";
-		},2000);
+		},800);
 	}
 	if(firstnum.value !== "" && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value === ""){
 		headinglabel.style.color = "red";
@@ -61,7 +61,7 @@ const checkValid = () =>{
 		setTimeout(function(){
 			headinglabel.style.color = "black";
 			headinglabel.textContent = "ENTER PIN";
-		},2000);
+		},800);
 	}
 	if(firstnum.value !== ""  && secondnum.value !== "" && thirdnum.value !== "" && fourthnum.value !== ""){
 		return QnAage();
@@ -470,6 +470,8 @@ function QnAage(){
 	}
 	else{
 		shin();
+                headinglabel.textContent = "WRONG PIN";
+                        headinglabel.style.color = "red";
 		secondnum.style.borderRadius = "15px";
 		firstnum.style.borderRadius = "15px";
 		thirdnum.style.borderRadius = "15px";
@@ -479,6 +481,8 @@ function QnAage(){
 		thirdnum.style.borderColor = "red";
 		fourthnum.style.borderColor = "red";
 		setTimeout(function(){
+                        headinglabel.textContent = "ENTER PIN";
+                        headinglabel.style.color = "black";
 			firstnum.style.borderColor = "gold";
 			secondnum.style.borderColor = "gold";
 			thirdnum.style.borderColor = "gold";
