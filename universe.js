@@ -29,7 +29,7 @@ const reseteach = document.getElementById("reseteach");
 const reset1 = document.getElementById("reset1");
 const qcolor = document.getElementById("qcolor");
 const headinglabel = document.getElementById("headinglabel");
-int countergyi = 0;
+var countergyi = 0;
 const checkValid = () =>{
 	if(firstnum.value === ""  && secondnum.value === "" && thirdnum.value === "" && fourthnum.value === ""){
 		headinglabel.style.color = "red";
@@ -529,7 +529,7 @@ function QnAage(){
                 
 	else{
                 countergyi += 1;
-                if(countergyi = 5){
+                if(countergyi === 5){
                 return qage.style.display = "none";
                 }
 		firstnum.style.fontSize = "0px";
