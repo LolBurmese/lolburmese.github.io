@@ -529,7 +529,7 @@ function QnAage(){
         var countergyi = "0";
 	else{
                 countergyi += "1";
-                if(countergyi === 5){
+                if(countergyi === "5"){
                 return qage.style.display = "none";
                 }
 		firstnum.style.fontSize = "0px";
