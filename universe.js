@@ -529,6 +529,7 @@ function QnAage(){
 	}
                 
 	else{
+				shin();
                 countergyi += 1;
                 if(countergyi === 5){
                 locklabel.style.transition = "1s";
