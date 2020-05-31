@@ -29,6 +29,7 @@ const reseteach = document.getElementById("reseteach");
 const reset1 = document.getElementById("reset1");
 const qcolor = document.getElementById("qcolor");
 const headinglabel = document.getElementById("headinglabel");
+const locklabel = document.getElementById("locklabel");
 var countergyi = 0;
 const checkValid = () =>{
 	if(firstnum.value === ""  && secondnum.value === "" && thirdnum.value === "" && fourthnum.value === ""){
@@ -530,6 +531,9 @@ function QnAage(){
 	else{
                 countergyi += 1;
                 if(countergyi === 5){
+                locklabel.style.transition = "1s";
+                locklabel.style.visibility = "visible";
+                locklabel.style.opacity = "1";
                 return qage.style.display = "none";
                 }
 		firstnum.style.fontSize = "0px";

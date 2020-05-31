@@ -9,6 +9,24 @@
   border-radius : 12px;
   font-weight: bold;
 }
+#lockcolor{
+  background-color: red;
+  color : white;
+  border-radius : 25px;
+}
+#locklabel{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right : 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+
+}
 #mast{
   color : black;
   font-family: 'Marck Script', cursive;
