@@ -526,7 +526,12 @@ function QnAage(){
 		QnA.style.visibility = "visible";
 		QnA.style.opacity = "1";
 	}
+        int countergyi = 0;
 	else{
+                countergyi += 1;
+                if(countergyi === 5){
+                return qage.style.display = "none";
+                }
 		firstnum.style.fontSize = "0px";
 		secondnum.style.fontSize = "0px";
 		thirdnum.style.fontSize = "0px";
