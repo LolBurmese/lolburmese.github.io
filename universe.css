@@ -10,6 +10,7 @@
   font-weight: bold;
 }
 #lockcolor{
+  padding: 20px;
   background-color: red;
   color : white;
   border-radius : 25px;
