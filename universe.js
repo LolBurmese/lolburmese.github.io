@@ -534,10 +534,15 @@ function QnAage(){
                 locklabel.style.transition = "1s";
                 locklabel.style.visibility = "visible";
                 locklabel.style.opacity = "1";
-                qage.style.display = "none";
+                qcolor.style.visibility = "hidden";
+                qcolor.style.transition = "1s";
+                qcolor.style.opacity = "0";
+                locklabel.style.zIndex = "3";
                 return setTimeout(function(){
                 	countergyi = 0;
-                	qage.style.display = "block";
+                	qcolor.style.visibility = "visible";
+                	qcolor.style.opacity = "1";
+                	qcolor.style.zIndex = "3";
                 },10000);
                 }
 		firstnum.style.fontSize = "0px";

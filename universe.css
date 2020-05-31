@@ -72,6 +72,8 @@
   padding : 40px;
   border-radius: 25px;
   color : white;
+  opacity: 1;
+  visibility: visible;
 }
 #qage{
   display:block;
