@@ -534,7 +534,11 @@ function QnAage(){
                 locklabel.style.transition = "1s";
                 locklabel.style.visibility = "visible";
                 locklabel.style.opacity = "1";
-                return qage.style.display = "none";
+                qage.style.display = "none";
+                return setTimeout(function(){
+                	countergyi = 0;
+                	qage.style.display = "block";
+                },10000);
                 }
 		firstnum.style.fontSize = "0px";
 		secondnum.style.fontSize = "0px";
