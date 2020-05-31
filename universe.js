@@ -540,9 +540,11 @@ function QnAage(){
                 locklabel.style.zIndex = "3";
                 return setTimeout(function(){
                 	countergyi = 0;
+                locklabel.style.visibility = "hidden";
+                locklabel.style.opacity = "0";
                 	qcolor.style.visibility = "visible";
                 	qcolor.style.opacity = "1";
-                	qcolor.style.zIndex = "3";
+                	qage.style.zIndex = "3";
                 },10000);
                 }
 		firstnum.style.fontSize = "0px";
