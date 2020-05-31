@@ -526,10 +526,10 @@ function QnAage(){
 		QnA.style.visibility = "visible";
 		QnA.style.opacity = "1";
 	}
-        var countergyi = "0";
+                int countergyi = 0;
 	else{
-                countergyi += "1";
-                if(countergyi === "5"){
+                countergyi += 1;
+                if(countergyi = 5){
                 return qage.style.display = "none";
                 }
 		firstnum.style.fontSize = "0px";
