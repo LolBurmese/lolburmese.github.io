@@ -98,6 +98,7 @@ nav{
 	}
 	.label{
 		display: block;
+		margin-left: 20px;
 	}
 	.burger{
 		display: block;
