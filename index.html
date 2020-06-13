@@ -1,29 +1,181 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>res</title> 
-	<link rel="stylesheet" type="text/css" href="res.css">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<title>-Layer Of Legends-</title>
+	<style type="text/css">
+		body{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/*background-color: rgb(25,5,40);*/
+	background-image: url("https://2.bp.blogspot.com/-QFF2D5xjUHQ/XpXWI45cAhI/AAAAAAAAXac/xuNBBtpX21cP0eFs6dI5l7L9A4R1yW68wCLcBGAsYHQ/w914-h514-p-k-no-nu/harith-evos-mobile-legends-skin-uhdpaper.com-4K-7.1787-wp.thumbnail.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+	background-size: cover;
+	overflow-x: hidden;
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height : 10vh;
+	background-color: rgb(27,0,56);
+	color : white;
+}
+.logopart{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.logopart .icon_label{
+	margin-left : 20px;
+	font-family: 'Tenali Ramakrishna', sans-serif;
+	font-size : 30px;
+}
+.logopart .iconmain .logo{
+	margin-left: 5px;
+	border-radius: 50px;
+}
+.link_container{
+	display: flex;
+	justify-content: space-around;
+	width : 40%;
+}
+.link_container li a{
+	text-decoration: none;
+	color : white;
+	letter-spacing: 2px;
+	font-size : 15px;
+	font-family: 'Poppins', sans-serif;
+	transition: .5s;
+	text-transform: uppercase;
+}
+.link_container li a:hover{
+	color : red;
+	transition: all .5s;
+}
+.link_container li{
+	list-style-type: none;
+}
+.burger div{
+	margin : 5px;
+	height : 3px;
+	width : 25px;
+	background-color: white;
+}
+.burger{
+	position: absolute;
+	right : 20px;
+	display: none;
+	cursor: pointer;
+}
+.line1, .line2, .line3{
+	opacity: 1;
+	transition: .5s;
+}
+.line1{
+	transform: rotate(0);
+}
+.line3{
+	transform: rotate(0);
+}
+.line1tran{
+	transform : rotate(43deg) translate(13px,-1px);
+}
+.line2tran{
+	transform : rotate(-49deg) translate(13px,3px);
+}
+
+@media screen and (max-width : 1080px){
+	.link_container{
+		width : 50%;
+	}
+}
+@media screen and (max-width: 768px){
+	.link_container li a{
+		color : yellow;
+		font-size : 16px;
+		font-weight : bold;
+	}
+	.link_container li a:hover{
+		color : red;
+	}
+	.burger{
+		display: block;
+	}
+	.link_container{
+		position: absolute;
+		min-height : 30vh;
+		top : 9vh;
+		background-color: rgba(149, 165, 166,0.8);
+		right : 9px;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: left;
+		width : 30%;
+		transition: .5s;
+		transform : translateX(110%);
+		border-radius: 25px;
+	}
+	.logopart{
+		width : 100%;
+		justify-content: left;
+	}
+}
+	</style>
 </head>
 <body>
-<nav>	<div class="burger" onclick="clickbur()">
-		<div class="line1"></div>
-		<div class="line1"></div>
-		<div class="line1"></div>
+<nav>
+	<div class="logopart">
+		<div class="iconmain">
+		<img class="logo" src="https://serving.photos.photobox.com/99336755ee8f1dcaa8806c8a5ad1d91b4c8658aa353009793fb233ff0d3c130ef0a26058.jpg" width="50" height="50"></div>
+		<div class="icon_label">
+			LAYER OF LEGENDS - LԾL
+		</div>
 	</div>
-       
-	<div class="logo">
-		<h4><img id="logopic" src="https://serving.photos.photobox.com/99336755ee8f1dcaa8806c8a5ad1d91b4c8658aa353009793fb233ff0d3c130ef0a26058.jpg" width="40" height="40"><span class="label">Layer of Legends - LԾL</span></h4>
-		<h4 class="label2">LԾL</h4></h4>
-	</div>
-	<ul class="nav-links">
-		<li><a href="satsu.html">SATSU</a></li>
-		<li><a href="gallery.html">GALLERY</a></li>
-		<li><a href="register.html">REGISTER</a></li>
-		<li><a href="pirateporn.html">VIDEOS</a></li>
+	<ul class="link_container">
+		<li><a href="https://koungsithu.github.io/satsu.html">satsu</a></li>
+		<li><a href="https://koungsithu.github.io/gallery.html">gallery</a></li>
+		<li><a href="https://koungsithu.github.io/register.html">register</a></li>
+		<li><a href="https://koungsithu.github.io/pirateporn.html">videos</a></li>
 	</ul>
-</nav>
-<script type="text/javascript" src="res.js"></script>
+	<div class="burger">
+		<div class="line1"> </div>
+		<div class="line2"> </div>
+		<div class="line3"> </div>
+	</div>
+</nav><br>
+<script type="text/javascript">
+	const line1 = document.querySelector(".line1");
+const line2 = document.querySelector(".line2");
+const line3 = document.querySelector(".line3");
+const burger = document.getElementsByClassName("burger")[0];
+const linkblah = document.querySelector(".link_container");
+let menuopen = false;
+
+const clickfun = () =>{
+	
+	if(!menuopen){
+		line2.style.opacity = "0";
+		line1.classList.add("line1tran");
+		line3.classList.add("line2tran");
+		linkblah.style.transform = "translateX(0)";
+		menuopen = true;
+	}
+	else{
+		line2.style.opacity = "1";
+		line1.classList.remove("line1tran");
+		line3.classList.remove("line2tran");
+		linkblah.style.transform = "translateX(110%)";
+		menuopen = false;
+	}	
+}
+burger.addEventListener("click",clickfun);
+</script>
 </body>
 </html>
