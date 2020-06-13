@@ -4,7 +4,7 @@
 	box-sizing : border-box;
 }
 body{
-	overflow-x : hidden;
+	overflow : hidden;
 }
 .bgimage{
 	background-image: url("https://img.freepik.com/free-photo/abstract-polygonal-space-low-poly-dark-background-3d-rendering_7247-223.jpg?size=626&ext=jpg");
