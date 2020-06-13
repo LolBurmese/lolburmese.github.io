@@ -86,6 +86,7 @@ nav{
 		transform: translateX(120%);
 		transition: transform 0.5s ease;
 		width : 50%;
+                justify-content : center;
 	}
 	.label2{
 		display: none;
