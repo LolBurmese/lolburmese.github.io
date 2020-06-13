@@ -1,18 +1,17 @@
-*{
-	padding: 0;
-	margin : 0;
-	box-sizing : border-box;
-}
 body{
 	overflow : hidden;
         background-color: #454545;
+        padding: 0;
+	margin : 0;
+	box-sizing : border-box;
+}
 }
 nav{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	background-color : rgba(0,0,0,0.7);
-	min-height: 8vh;
+	height: 8vh;
 	font-family: 'Poppins', sans-serif;
 }
 #logopic{
