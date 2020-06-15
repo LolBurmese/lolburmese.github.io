@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>...</title>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="size.css">
+	<style type="text/css">
+		body{
+	margin : 0;
+	padding : 0;
+	box-sizing: border-box;
+	background-color : #454545;
+	overflow-x : hidden;
+}
+.headpart .icon1{
+	height : 50px;
+	width : 50px;
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #C0C0C0;
+	height : 8vh;
+}
+.link_container{
+	display: flex;
+	justify-content: space-around;
+	width : 45%;
+}
+.headpart{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	font-family: 'Lobster', cursive;
+	font-size : 28px;
+}
+.headpart .icon1, .headpart .icon_label{
+	margin : 10px;
+}
+nav .link_container li a{
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-size : 14px;
+	font-family: sans-serif;
+	color : black;
+	transition: .4s;
+}
+nav .link_container li{
+	list-style-type: none;
+}
+nav .link_container li a:hover{
+	transition: .5s;
+	color : red;
+}
+.timesection{
+	display: none;
+}
+.burger div{
+	width : 25px;
+	height: 3px;
+	background-color: black;
+	margin : 5px;
+}
+.burger{
+	display: none;
+}
+.hori1{
+	border : 1px solid silver;
+}
+@media screen and (max-width: 4320px){
+	.link_container{
+		opacity: 1;
+	}
+	}
+@media screen and (max-width: 1080px){
+	.link_container{
+		width : 60%;
+	}
+	.timesection{
+		display: none;
+	}
+	.timestaticmain{
+		display: block;
+	}
+
+}
+@media screen and (max-width: 768px){
+	.link_container{
+		position: absolute;
+		height : 30vh;
+		background-color: rgb(255,255,255);
+		left : 2vh;
+		top : 7vh;
+		display: flex;
+		flex-direction: column;
+		width : 35%;
+		transition: transform .5s ease;
+		border-radius: 20px;
+		opacity: 0;
+		transform: translateX(-100%);
+		overflow: hidden;
+
+	}
+	.timesection{
+		display: block;
+	}
+	.timestaticmain{
+		display: none;
+	}
+	nav .link_container li a{
+		color : black;
+		font-weight: bold;
+	}
+	.headpart{
+		width : 100%;
+		display: flex;
+		justify-content: center;
+	}
+	nav .link_container li{
+		opacity: 0;
+	}
+	.burger{
+		display: block;
+		margin-left : 15px;
+	}
+	.link_container li:nth-child(1)::before{
+		content : "🇲🇲 ";
+	}
+	.link_container li:nth-child(2)::before{
+		content : "📷 ";
+	}
+	.link_container li:nth-child(3)::before{
+		content : "🌚 ";
+	}
+	.link_container li:nth-child(4)::before{
+		content : "✊ ";
+	}
+	.activelink{
+		transition: .5s;
+		transform: translateX(0%);
+		opacity: 1;
+	}
+	.wholesection{
+		position: absolute;
+		top : 3vh;
+		height: 100vh;
+		width : 100%;
+	}
+}
+@keyframes animateopacity {
+	from{
+		opacity: 0;
+		transform: translateY(2em);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+	</style>
+</head>
+<body>
+<nav>
+	<div class="burger">
+		<div class="link1"></div>
+		<div class="link2"></div>
+		<div class="link3"></div>
+	</div>
+	<div class="headpart">
+		<img class="icon1" src="https://cdn.iconscout.com/icon/free/png-512/pirate-1479929-1253052.png">
+	<span class="icon_label">
+		Pirate Porn
+	</span>
+</div>
+	<ul class="link_container">
+		<li class="myanmar"><a href="myanmar.html">Myanmar</a></li>
+		<li class="hiddencam"><a href="hiddencam.html">Hidden Cam</a></li>
+		<li class="hentai"><a href="hentai.html">Hentai</a></li>
+		<li class="nakedpics"><a href="nakedpics.html">Naked Pics</a></li>
+	</ul>
+</nav><br>
+<div class="timesection">
+<marquee class="datet">
+</marquee><hr>
+</div>
+<div class="timestaticmain">
+<div align="center" class="timestatic"></div>
+<hr>
+</div><br>
+<div class="container">
+<video src="no.1.mp4" controls></video>
+<video src="no.2.mp4" controls></video>
+<video src="no.3.mp4" controls></video>
+<video src="no.4.mp4" controls></video>
+<video src="no.5.mp4" controls ></video>
+<video src="no.6.mp4" controls></video>
+<video src="no.7.mp4" controls></video>
+<video src="no.8.mp4" controls></video>
+<video src="no.9.mp4" controls></video>
+<video src="no.10.mp4" controls></video>
+</div>
+<br>
+<div class="links_container">
+<a class="links" style="background-color: red" href="#">1</a>
+<a class="links" href="myanmarpage2.html">2</a>
+<a class="links" href="myanmarpage3.html">3</a>
+</div><br>
+
+
+
+<script type="text/javascript">
+	const menu = document.getElementsByClassName("burger")[0];
+const link = document.querySelector(".link_container");
+const myanmar = document.getElementsByClassName("myanmar")[0];
+const hentai = document.getElementsByClassName("hentai")[0];
+const hiddencam = document.getElementsByClassName("hiddencam")[0];
+const nakedpics = document.getElementsByClassName("nakedpics")[0];
+const wholesection = document.getElementsByClassName("wholesection")[0];
+const linkeach = document.querySelectorAll(".link_container li");
+const datet = document.getElementsByClassName("datet")[0];
+const timestatic = document.getElementsByClassName("timestatic")[0];
+var dategyi = new Date();
+timestatic.innerHTML = `Today is ${dategyi} .`;
+datet.innerHTML = `Today is ${dategyi} .`;
+const clickmenu = () => {
+	link.style.zIndex = "1";
+	link.classList.toggle("activelink");
+	link.style.transition = ".5s";
+	linkeach.forEach((link,index)=>{
+		if(link.style.animation){
+			link.style.animation = "";
+		}
+		else{
+			
+			link.style.animation =`animateopacity 0.5s ease forwards ${index/6}s`;
+		}
+	});
+}
+menu.addEventListener("click",clickmenu);
+
+</script>
+</body>
+</html>

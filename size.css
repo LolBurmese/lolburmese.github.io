@@ -1,0 +1,18 @@
+video{
+	width: 170px;
+	height: 225px;
+	margin: 5px;
+}
+
+.container{
+	display: flex;
+	flex-wrap: wrap;
+}
+.links{
+	margin : 10px;
+	text-decoration: none;
+	color : white;
+	background-color: black;
+	padding : 15px;
+	border-radius: 15px;
+}
