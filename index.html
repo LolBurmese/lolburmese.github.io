@@ -7,9 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>-Layer Of Legends-</title>
 	<style type="text/css">
-		*{
-			overflow-x : hidden;
-		}
 		body{
 	padding: 0;
 	margin: 0;
@@ -113,25 +110,26 @@ nav{
 	}
 	.burger{
 		display: block;
+		left : 5px;
 	}
 	.link_container{
 		position: absolute;
 		min-height : 30vh;
 		top : 9vh;
 		background-color: rgba(0, 0, 0,0.8);
-		right : 9px;
+		left : 9px;
 		display: flex;
 		flex-direction: column-reverse;
 		align-items: left;
 		width : 30%;
 		transition: .5s;
 		opacity: 0;
-		transform : translateX(100%);
+		transform : translateX(-100%);
 		border-radius: 25px;
 	}
 	.logopart{
 		width : 100%;
-		justify-content: left;
+		justify-content: center;
 	}
 }
 	</style>
@@ -179,7 +177,7 @@ const clickfun = () =>{
 		line2.style.opacity = "1";
 		line1.classList.remove("line1tran");
 		line3.classList.remove("line2tran");
-		linkblah.style.transform = "translateX(100%)";
+		linkblah.style.transform = "translateX(-100%)";
 		linkblah.style.opacity = "0";
 		menuopen = false;
 	}	
