@@ -12,23 +12,39 @@
 	margin: 0;
 	box-sizing: border-box;
 	/*background-color: rgb(25,5,40);*/
-	background-color : skyblue;
+	background-color : black;
 	overflow-x: hidden;
 
 }
+.fbpage{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none;
+				color: white;
+				letter-spacing: 2px;
+				}
+				
 .hrcolor{
 				border : 1px solid rgba(255,255,255,0.3);
 				}
 .names{
-				line-height: 150%;
-				background-color: #333;
+				line-height: 250%;
+				background-color: rgba(0,0,0,0.6);
+				overflow:hidden;
 				}
-
+.bgname{
+				background-image: url("bgname.jpg");
+				background-position: center;
+				}
 .names a{
 				text-decoration: none;
 				color: white;	
 				letter-spacing: 3px;
 			}
+			.names a:hover{
+							color: red;
+							}
 
 .person{
 				background-color : #ddd;
@@ -235,22 +251,25 @@ nav{
 		<div class="line3"> </div>
 	</div>
 </nav>
-<div id="mainnames" class="names" align="center"><hr class="hrcolor">
-  <a href="#pigbenis">Pig Benis</a> <hr class="hrcolor">
-  <a href="#kanieloutis">KANIEL OUTIS</a><hr class="hrcolor">
-  <a href="#shika">SHIKA</a><hr class="hrcolor">
-  <a href="#eric">E R I C</a> <hr class="hrcolor">
-  <a href="#legolas">Legolas</a> <hr class="hrcolor">
-  <a href="#appleshampoo">AppleShampoo</a><hr class="hrcolor"> 
-  <a href="#kobain">Ko Bain</a> <hr class="hrcolor">
-  <a href="#anoe">အေနိုး</a> <hr class="hrcolor">
-</div>
-<br>
+<div class="bgname">
+<div id="mainnames" class="names" align="center"> <br>
+  <a href="#pigbenis">Pig Benis</a> <br> 
+  <a href="#kanieloutis">KANIEL OUTIS</a> <br>
+  <a href="#shika">SHIKA</a> <br>
+  <a href="#eric">E R I C</a> <br>
+  <a href="#legolas">Legolas</a> <br>
+  <a href="#appleshampoo">AppleShampoo</a> <br>
+  <a href="#kobain">Ko Bain</a> <br>
+  <a href="#anoe">အေနိုး</a><br>
+</div></div>
+
 <div id="pigbenis" class="person" align="center">
 <img class="profileimg" src="https://images.unsplash.com/photo-1447710441604-5bdc41bc6517?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" width="250"
 height="250"> <br>
 <h2>Pig Benis</h2>
 <h4>Tank/Support Player(Leader)</h4>
+<a class="fbpage" href="https://www.facebook.com/kaungsithu1999"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="30"><h5 style="color: black;">Kaung Si Thu</h5></a>
+
 <p>
 Squad ရဲ့ leader - Pig Benis ပဲ ဖြစ်ပါတယ်။
 
@@ -271,7 +290,7 @@ Hyper flowမှာ အဓိကကျ တဲ့ role ဖြစ်တဲ့အ�
 လာမယ့် season သစ်မှာ Squad power တက်အောင် member တွေနဲ့ အတူတူ ကြိုးစားဖို့ အဆင်သင့်ဖြစ်နေပါပြီ။
 </p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br><br>
+</div>
 
 
 <div id="kanieloutis" class="person2" align="center">
@@ -299,7 +318,7 @@ Mythicမရောက်ဖူးသေးပါဘူး၊
 
 </p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br><br>
+</div>
 
 <div id="shika" class="person3" align="center">
 <img class="profileimgmini" src="https://images.unsplash.com/photo-1447710441604-5bdc41bc6517?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" width="200"
@@ -326,7 +345,7 @@ SHIKA လို playerတစ်ယောက် ရရှိတာဟာ Squad �
 
 </p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br><br>
+</div>
 
 <div id="eric" class="person4" align="center">
 <img class="profileimgmini" src="https://images.unsplash.com/photo-1447710441604-5bdc41bc6517?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" width="200"
@@ -353,7 +372,7 @@ Mlကို အပျော်ဆော့တဲ့ E R I C ဟာ accountပေ
 
 </p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br><br>
+</div>
 
 <div id="legolas" class="person5" align="center">
 <img class="profileimgmini" src="https://images.unsplash.com/photo-1447710441604-5bdc41bc6517?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" width="200"
@@ -376,7 +395,7 @@ Full partyမှာ အဆင်ပြေမယ့်သူဖြစ်ပါတ
 
 </p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br><br>
+</div>
 
 <div id="appleshampoo" class="person6" align="center">
 <img class="profileimgmini" src="https://images.unsplash.com/photo-1447710441604-5bdc41bc6517?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" width="200"
@@ -405,7 +424,7 @@ Ulti ခဏခဏလွဲပစ်တတ်တာတော့ သူ့အာ�
 PUBGလဲပစ်တတ်ပါတယ်၊ Mlbbမှာတော့ Haya pro ပေါ့။
 </p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br><br>
+</div>
 
 <div id="kobain" class="person7" align="center">
 <img class="profileimgmini" src="https://images.unsplash.com/photo-1447710441604-5bdc41bc6517?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" width="200"
@@ -414,7 +433,7 @@ height="200"> <br>
 <h4>Support Player</h4>
 <p></p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br><br>
+</div>
 
 <div id="anoe" class="person8" align="center">
 <img class="profileimgmini" src="https://images.unsplash.com/photo-1447710441604-5bdc41bc6517?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" width="200"
@@ -423,7 +442,10 @@ height="200"> <br>
 <h4>Manager/Coach</h4>
 <p></p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br><br>
+</div>
+
+<a class="fbpage" href="https://www.facebook.com/lolmandalay/"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="30"><h5>LAYER OF LEGENDS - LԾL</h5></a>
+
 
 
 
