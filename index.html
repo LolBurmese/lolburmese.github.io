@@ -1,91 +1,752 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="pro.png">
-  <link href="https://fonts.googleapis.com/css?family=Dokdo&display=swap" rel="stylesheet">
-<style>
+	<link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>-Layer Of Legends-</title>
+	<style type="text/css">
+		body{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/*background-color: rgb(25,5,40);*/
+	background-color : black;
+	overflow-x: hidden;
+}
+.para1, .para2, .para3, .para4, .para5, .para6, .para7, .para8{
+	height : 0;
+	overflow: scroll;
+	transition: 0.5s;
+}
+.sizefix{
+	height : 250px;
+}
+.imgfix{
+	height : 80px;
+	width: 80px;
+}
+.fbpage{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none;
+				color: white;
+				letter-spacing: 2px;
+				}
+				
+.hrcolor{
+				border : 1px solid rgba(255,255,255,0.3);
+				}
+.names{
+				line-height: 250%;
+				background-color: rgba(0,0,0,0.6);
+				overflow:hidden;
+				}
+.bgname{
+				background-image: url("bgname.jpg");
+				background-position: center;
+				}
+.names a{
+				text-decoration: none;
+				color: white;	
+				letter-spacing: 3px;
+			}
+			.names a:hover{
+							color: red;
+							}
 
-header{
-
-font-size:32px;
-font-family: "Dokdo", cursive;
-text-align: center;
+.person{
+				background-color : #ddd;
+				padding : 20px;
+				box-shadow: 0 0 17px red;
+				}
+				
+			.person2{
+				background-color : #ddd;
+				padding : 20px;
+				box-shadow: 0 0 17px orange;
+				}
+				
+				.person3{
+				background-color : #ddd;
+				padding : 20px;
+				box-shadow: 0 0 17px yellow;
+				}
+				
+			.person4{
+				background-color : #ddd;
+				padding : 20px;
+				box-shadow: 0 0 17px green;
+				}
+				
+					
+				.person5{
+				background-color : #ddd;
+				padding : 20px;
+				box-shadow: 0 0 17px blue;
+				}
+				
+				.person6{
+				background-color : #ddd;
+				padding : 20px;
+				box-shadow: 0 0 17px skyblue;
+				}
+				
+				.person7{
+				background-color : #ddd;
+				padding : 20px;
+				box-shadow: 0 0 17px violet;
+				}
+				
+			.person8{
+				background-color : #ddd;
+				padding : 20px;
+				box-shadow: 0 0 17px purple;
+				}	
+				
+				
+				.toplink{
+								text-decoration: none;
+								color: green;
+								}
+				
+				
+				
+				
+.profileimg{
+				border-radius :150px;
+				}
+				.profileimgmini1, .profileimgmini2, .profileimgmini3, .profileimgmini4, .profileimgmini5, .profileimgmini6, .profileimgmini7{
+				border-radius :100px;
+				}
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height : 10vh;
+	background-color: rgb(27,0,56);
+	color : white;
+}
+.logopart{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: 9px;
+}
+.logopart .icon_label{
+	margin-left : 20px;
+	font-family: 'Tenali Ramakrishna', sans-serif;
+	font-size : 30px;
+}
+.logopart .iconmain .logo{
+	margin-left: 5px;
+	border-radius: 50px;
+}
+.link_container{
+	display: flex;
+	justify-content: space-around;
+	width : 40%;
+}
+.link_container li a{
+	text-decoration: none;
+	color : white;
+	letter-spacing: 2px;
+	font-size : 15px;
+	font-family: 'Poppins', sans-serif;
+	transition: .5s;
+	text-transform: uppercase;
+}
+.link_container li a:hover{
+	color : red;
+	transition: all .5s;
+}
+.link_container li{
+	list-style-type: none;
+}
+.burger div{
+	margin : 5px;
+	height : 3px;
+	width : 25px;
+	background-color: white;
+}
+.burger{
+	position: absolute;
+	display: none;
+	cursor: pointer;
+}
+.line1, .line2, .line3{
+	opacity: 1;
+	transition: .5s;
+}
+.line1{
+	transform: rotate(0);
+}
+.line3{
+	transform: rotate(0);
+}
+.line1tran{
+	transform : rotate(43deg) translate(13px,-1px);
+}
+.line2tran{
+	transform : rotate(-49deg) translate(13px,3px);
 }
 
-.main{
-display : flex;
-flex-wrap : wrap;
-justify-content : center;
-align-items: center;
+@media screen and (max-width : 1080px){
+	body{
+		overflow-x: hidden;
+	}
+	.link_container{
+		width : 50%;
+	}
 }
-
-.box{
-width : 170px;
-height : 225px;
-margin : 5px;
-overflow: hidden;
-border-radius: 5px;
+@media screen and (max-width: 720px){
+	body{
+		overflow-x: hidden;
+	}
+	.link_container li a{
+		color : yellow;
+		font-size : 16px;
+		font-weight : bold;
+	}
+	.link_container li a:hover{
+		color : red;
+	}
+	.burger{
+		display: block;
+		left : 0;
+		z-index: 2;
+	}
+	.link_container{
+		position: absolute;
+		min-height : 30vh;
+		top : 9vh;
+		background-color: rgba(0, 0, 0,0.8);
+		left : 9px;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: left;
+		width : 30%;
+		transition: .5s;
+		opacity: 0;
+		transform : translateX(-100%);
+		border-radius: 25px;
+	}
+	.logopart{
+		width : 100%;
+		z-index: 1;
+		justify-content: center;
+	}
 }
-
-img{
-width: 100%;
-transition : 0.8s;
-}
-
-.box:hover img{
-transform: scale(1.2);
-border-radius: 12px;
-}
-
-
-
-
-
-
-
-
-</style>
-
-
-
-
-
-
-
-<title>Gallary</title>
-
+	</style>
 </head>
-
-
-
 <body>
-<header>
-<h1>My Gallary</h1>
-<p>During quarantine, you shoud make your hobby. If not, you are just a lazy person.</p>
+<nav>
+	<div class="logopart">
+		<div class="iconmain">
+		<img class="logo" src="https://serving.photos.photobox.com/99336755ee8f1dcaa8806c8a5ad1d91b4c8658aa353009793fb233ff0d3c130ef0a26058.jpg" width="50" height="50"></div>
+		<div class="icon_label">
+			LAYER OF LEGENDS - LԾL
+		</div>
+	</div>
+	<ul class="link_container">
+		<li><a href="satsu.html">satsu</a></li>
+		<li><a href="gallery.html">gallery</a></li>
+		<li><a href="register.html">register</a></li>
+		<li><a href="pirateporn.html">videos</a></li>
+	</ul>
+	<div class="burger">
+		<div class="line1"> </div>
+		<div class="line2"> </div>
+		<div class="line3"> </div>
+	</div>
+</nav>
+<div class="bgname">
+<div id="mainnames" class="names" align="center"> <br>
+  <a href="#pigbenis">Pig Benis</a> <br> 
+  <a href="#kanieloutis">KANIEL OUTIS</a> <br>
+  <a href="#shika">SHIKA</a> <br>
+  <a href="#eric">E R I C</a> <br>
+  <a href="#legolas">Legolas</a> <br>
+  <a href="#appleshampoo">AppleShampoo</a> <br>
+  <a href="#kobain">Ko Bain</a> <br>
+  <a href="#anoe">အေနိုး</a><br>
+</div></div>
 
-</header>
-<hr>
+<div id="pigbenis" class="person" align="center">
+<img class="profileimg" src="pigbenis.jpg" width="250"
+height="250"> <br>
+<h2>Pig Benis</h2>
+<h4>Tank/Support Player(Leader)</h4>
+<a class="fbpage" href="https://www.facebook.com/kaungsithu1999"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Kaung Si Thu</h5></a>
 
-<p class="back">
-<a href="https://lolburmese.github.io">Go back</a>
+<p class="para1">
+Squad ရဲ့ leader - Pig Benis ပဲ ဖြစ်ပါတယ်။
+
+marksman/assassin role ကလွဲပြီး
+ကျန် role တွေကို အကောင်းဆုံးဆော့ပေးနိုင်တဲ့သူပဲ ဖြစ်ပါတယ်၊
+Squad မှာ လိုအပ်တဲ့ roleကို ဖြည့်ကိုင်ပေးနေပြီး favorite roleကတော့ ဂိမ်းရဲ့အသက် တွေဖြစ်တဲ့ tank/support role ဖြစ်ပါတယ်၊ ဒီ season မှာ Atlas ကို ပိုမိုဦးစားပေးကိုင်ခဲ့ပေမယ့်လဲ လိုအပ်တဲ့အခါ
+Jawhead, silvana တို့နဲ့ offlane ဆော့ပေးနိုင်ပါသေးတယ်။
+
+Support ဆော့တဲ့အခါမှာဆိုရင်လဲ mmကို တစ်ဖက်ရန်သူတွေ ဝင်မနှိုက်နိုင်အောင်
+back up ပေးနိုင်သူလဲဖြစ်ပါတယ်။ 
+Popol and Kupa, Valir တို့နဲ့ enemy ကို နှောင့်နိုင်တဲ့အပြင် မိမိသေချင်သေပါစေ
+mm ကိုအသက်မပေးရအောင် ကြိုးစားပေးခဲ့တာလဲ အကြိမ်ကြိမ်ပါ။
+
+Hyper flowမှာ အဓိကကျ တဲ့ role ဖြစ်တဲ့အလျောက် squad မှာပါ leaderဖြစ်နေတဲ့အတွက် training ကိုလဲ ညဆယ်နာရီတိုင်းမှာ လုပ်ဆောင်‌စေလျက်ရှိပါတယ်။ 
+
+အသင်းရှုံးရင် တစ်ခါတစ်လေစိတ်ကောက်တတ်ပြီး base မှာ ရပ်နေတာတို့၊ AFK လုပ်ပစ်တာတို့ကတော့ မကောင်းတဲ့အချက်ပါပဲ၊
+အဲ့အကျင့်တွေကို ပယ်ဖျောက်ပြီးတော့
+လာမယ့် season သစ်မှာ Squad power တက်အောင် member တွေနဲ့ အတူတူ ကြိုးစားဖို့ အဆင်သင့်ဖြစ်နေပါပြီ။
 </p>
-
-
-<div class="main">
-
-<div class="box"><img src="img1.jpg"width="170" height="225">
+<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
 </div>
 
-<div class="box"><img src="alt1.jpg"width="170" height="225">
+
+<div id="kanieloutis" class="person2" align="center">
+<img class="profileimgmini1" src="ksw.jpg" width="200"
+height="200"> <br>
+<h2>KANIEL OUTIS</h2>
+<h4>Tank Player</h4>
+<a class="fbpage" href="https://web.facebook.com/kaung.kaung.7792"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Kyaw Swar Win</h5></a>
+<p class="para2">
+ဟိုးအရင် Season 3 ကတည်းက ဆော့ခဲ့တဲ့ KANIEL OUTIS ဖြစ်ပါတယ်ခင်ဗျ။
+
+အရင်ကတော့ Yi Sun Shin ကို proဆန်စွာဆော့ခဲ့ပေမယ့်လဲ အခု squad မှာ လိုအပ်နေတဲ့ Tank roleကို ဖြည့်ကိုင်ပေးနေပါတယ်။ Tank ကို leader လောက် မကိုင်တတ်‌သေးပေမယ့်လဲ marksman ကို
+back upပေးတဲ့နေရာမှာတော့ ဆရာတစ်ဆူပါပဲ။
+
+Favorite heroကတော့ francoပါ၊
+hookကတော့ ဆယ်ခါဆွဲရင် တစ်ခါတော့
+ကျိန်းသေပေါက်မိပါတယ်၊ တစ်ဖက်က
+Damage အထွက်ဆုံး hero ကို battleမှာ
+ဝင်ဝင်ရိုက်ပေးရင်း အသက်ပေးရတာလဲ
+ခဏခဏပါပဲ၊ ဒါပေမယ့် စိတ်မဆိုးပါဘူး၊
+သူသေ လဲ Savage for marksmam ပါ။
+
+တစ်ခါတစ်လေ Pro live တွေကြည့်ပြီး
+Yss, kagura တို့ကို support လိုဆော့ပါသေးတယ်၊ hero pool ကျယ်ပေမယ့်
+Mythicမရောက်ဖူးသေးပါဘူး၊ 
+
+</p>
+<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
 </div>
 
-<div class="box"><img src="alt2.jpg"width="170" height="225">
+<div id="shika" class="person3" align="center">
+<img class="profileimgmini2" src="shika.jpg" width="200"
+height="200"> <br>
+<h2>SHIKA</h2>
+<h4>Fighter Player</h4>
+<a class="fbpage" href="https://web.facebook.com/profile.php?id=100014823156764"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Aung Kyaw Phyo</h5></a>
+<p class="para3">
+Fighter role ကို တာဝန်ယူဆော့မယ့် SHIKA ဖြစ်ပါတယ်။
+
+SHIKAရဲ့ favorite heroကတော့ ၊Badang ပါ၊ Squadမရောက်ခင် လက်ရည်စမ်းတဲ့ပွဲမှာ Leader ကြီးရဲ့ Khufra ကို ချောကလက်ရစေခဲ့တဲ့ Minsitthar အား Support ပုံစံနဲ့
+ထုတ်ပြခဲ့ပါတယ်၊ ရံဖန်ရံခါ Selenaကိုင်ပီး 
+ဆေးထိုးတတ်ပါတယ်၊ hero pools ကျယ်ပြီး လက်ရှိ Mythic မှာပါ၊ 
+နောက် season မှာတော့ Gloryတက်ဖို့ စိတ်ကူးထားတဲ့သူပါ။
+
+ကိုယ့် lane ကို အကောင်းဆုံးထိန်းနိုင်ပြီး
+Battleမှာ enemy marksmanကို targetထားပြီး ဒဲ့ဝင်ကြုံးတာကတော့
+SHIKAရဲ့ အထာပေါ့၊ Trio Training ကာလမှာ 
+X Borg, Tharmuz တို့ကို 
+ထပ်မံ trainထားပါသေးတယ်၊ လိုအပ်ရင် လိုအပ်သလို တခြား role တွေကိုလဲ
+ဆော့ပေးနိုင်ပါတယ်၊ full party မကစားရသေးပေမယ့် Squad power မြှင့်တင်ပေးဖို့အတွက် အခုကတည်းက တာဆူနေသောသူ ဖြစ်ပါတယ်။
+
+Assassin metaဖြစ်တဲ့အလျောက် fighterတွေဟာ tank/support လို ဆော့ရတဲ့ အချိန်မှာ multiple role ပိုင်နိုင်တဲ့
+SHIKA လို playerတစ်ယောက် ရရှိတာဟာ Squad အတွက် အားတက်စရာပဲဖြစ်ပါတယ်။
+
+</p>
+<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
 </div>
 
-<div class="box"><img src="img1.jpg"width="170" height="225">
+<div id="eric" class="person4" align="center">
+<img class="profileimgmini3" src="eric.jpg" width="200"
+height="200"> <br>
+<h2>E R I C</h2>
+<h4>Marksman Player</h4>
+<a class="fbpage" href="https://web.facebook.com/minthwin.khant666"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Min Thwin Khant</h5></a>
+<p class="para4">သူကတော့ E R I C ဖြစ်ပါတယ်ခင်ဗျ။
+
+BG က တရုတ်ကြီးတော့ မဟုတ်ပါဘူး၊ ကျွန်တော်တို့ Squad ရဲ့ တရုတ်ကြီးပါ။
+Marksman role ကို အဓိကထားဆော့ပြီး
+လက်ရှိ Meta heroတွေနဲ့ မဆော့ပဲ Old heroတွေဖြစ်တဲ့ Clint, Hanabiနဲ့ အသင်းကို အကောင်းဆုံး carryပေးနေတာပဲဖြစ်ပါတယ်။ Granger pro
+ Ko Bain ရှိခဲ့စဉ်အခါက Leomord, Alucard, Chouတို့ ကိုင်ပြီး
+Offlane role ဆော့ပေးခဲ့ပါသေးတယ်။
+
+hero pools ကတော့ သူ့အတွက်အများကြီးလိုသေးပေမယ့်လဲ 
+Leaderရဲ့ တောင်းဆိုမှုအရ Claudeနဲ့ Kimmyကို grandmaster accountမှာ trainနေရင်းနဲ့ legendရောက်သွားခဲ့ပါသေးတယ်။
+
+Early ပိုင်းမှာ သွေးအေးတတ်ပြီး
+late gameမှာ Savageကတော့ သူ့အတွက်ပါပဲ။
+တစ်ခါတစ်ရံ Savageဖြတ်လုခံရရင်တော့ တစ်ဖက် tower ထဲ ပြေးပြေးဝင်တတ်တဲ့ ကစားသမားပါ။
+
+Mlကို အပျော်ဆော့တဲ့ E R I C ဟာ accountပေါင်းများစွာရှိ‌ခဲ့ပါသေးတယ်၊ 
+မှတ်မိသလောက်ကတော့ koopl, lord bully, Dr.acula, May be Hope တို့ပဲဖြစ်ပါတယ်၊ ဒါပေမယ့်လဲ LOL Squadထဲရောက်မှ Mythic ရောက်ဖူးသူပါခင်ဗျ။
+
+</p>
+<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
 </div>
 
+<div id="legolas" class="person5" align="center">
+<img class="profileimgmini4" src="swh.jpg" width="200"
+height="200"> <br>
+<h2>Legolas</h2>
+<h4>Mage Player</h4>
+<a class="fbpage" href="https://web.facebook.com/ohsoewinhtun/"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Soe Win Htun</h5></a>
+<p class="para5">
+Mid-laner မကောင်းရင် ပွဲရှုံးဖို့က 65%ကျော် သေချာသလောက်ရှိနေပါပြီ၊ ဒီပြဿနာကို
+ဖြေရှင်းဖို့အတွက် Legolas ရှိပါတယ်။
+
+Legolas ပါရင် Marksman က free farming
+ပါပဲ၊အပေါ်အောက်တင်မက jungle တွေထဲပါ roam တတ်တဲ့ mid-laner တစ်ယောက်ကတော့ Legolasပဲ ဖြစ်ပါတယ်။
+
+Mage role မှာ အစုံကိုင်တတ်သူဖြစ်ပြီးတော့၊ 1-3-1 (hyper) အတွက် pure mage တွေကို Supportလို ဆော့တတ်တဲ့
+Playerတစ်ယောက်လဲဖြစ်ပါတယ်၊  
+1-2-2 အတွက်လဲ Chang'e, Pharsa, lunox, Lylia, Harley စသဖြင့် ကိုင်လေ့ရှိပါတယ်၊
+
+Squadမရောက်ခင် (Epic) မှာ ကျင်လည်ခဲ့စဉ်ကတည်းက Odette နဲ့ savage ခဏခဏယူခဲ့သူပါ၊ Coverပေးရင် ပေးသလောက် performance ထွက်တဲ့သူလဲဖြစ်ပါတယ်။ Memberတွေနဲ့ training တော့ မလုပ်ရသေးပေမယ့်လဲ solo lifeမှာတင် experience ကောင်းကောင်းရရှိထားသူဖြစ်တဲ့အတွက်
+Full partyမှာ အဆင်ပြေမယ့်သူဖြစ်ပါတယ်။
+
+</p>
+<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
 </div>
 
+<div id="appleshampoo" class="person6" align="center">
+<img class="profileimgmini5" src="appleshampoo.jpg" width="200"
+height="200"> <br>
+<h2>AppleShampoo</h2>
+<h4>Assassin Player</h4>
+<a class="fbpage" href="https://web.facebook.com/profile.php?id=100012108916305"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Aung Thurein Htun</h5></a>
+<p class="para6">သူကတော့
+AppleShampooပဲ ဖြစ်ပါတယ်။
+
+Assassin playerဖြစ်ပြီး သူ့ရဲ့ favorite heroကတော့ Hayabusa ပါ။
+ဘယ်လောက်ထိ Hayabusa ကို proကျသလဲဆိုရင်တော့ counter hero (Helcurt) ကိုတောင် By one တွေ ခဏခဏမေးတတ်တဲ့ထိပါခင်ဗျ။
+
+Earlyသာရင်တော့ သူ့အတွက် mage/marksmanတွေက သားကောင်လေးတွေလိုပါပဲ၊ Early မသာပြန်ရင်လဲ lane creep အကောင်းဆုံးရှင်းပေးပြီး laneသာအောင်လုပ်ပေးနိုင်သလို၊အရေးကြီးတဲ့ Tower လဲ push နိုင်ပါတယ်ခင်ဗျ၊ 
+တစ်ခါကတော့ Tower ခိုးချိုးရင်း
+Baseမှာဝိုင်းဖြုတ်ခံလိုက်ရတာ‌တော့
+အမှတ်တရ Defeat ပေါ့။
+ဒါပေမယ့်လဲ ရှုံးလဲအတူတူ၊နိုင်လဲအတူတူပါပဲခင်ဗျာ။
+ 
+တစ်ခါတစ်ရံ squadလိုအပ်ချက်အရ Aurora ကို Support ဆော့ပေးပါတယ်၊
+ဘာကိုင်ကိုင်သူ့မျက်လုံးထဲမြင်တာကတော့
+Enemy marksmanပါ။
+
+AppleShampooပါရင် enemy marksmanတွေ ဖင်တုန်အောင်ကြောက်နေရတာ Map hack လို့ပြောခံရတဲ့ထိပါပဲ။
+
+Ulti ခဏခဏလွဲပစ်တတ်တာတော့ သူ့အားနည်းချက်ပါ၊
+PUBGလဲပစ်တတ်ပါတယ်၊ Mlbbမှာတော့ Haya pro ပေါ့။
+</p>
+<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
+</div>
+
+<div id="kobain" class="person7" align="center">
+<img class="profileimgmini6" src="kobain.jpg" width="200"
+height="200"> <br>
+<h2>Ko Bain</h2>
+<h4>Support Player</h4>
+<a class="fbpage" href="https://web.facebook.com/kyaw.htake.92"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Kyaw Htake Tin Maung</h5></a>
+<p class="para7"></p>
+<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
+</div>
+
+<div id="anoe" class="person8" align="center">
+<img class="profileimgmini7" src="mkko.jpg" width="200"
+height="200"> <br>
+<h2>အေနိုး</h2>
+<h4>Manager/Coach</h4>
+<a class="fbpage" href="https://web.facebook.com/komaeda.nagito.3"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Myint Ko Ko Oo</h5></a>
+<p class="para8"></p>
+<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
+</div>
+
+<a class="fbpage" href="https://www.facebook.com/lolmandalay/"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="30"><h5>LAYER OF LEGENDS - LԾL</h5></a>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	const line1 = document.querySelector(".line1");
+const line2 = document.querySelector(".line2");
+const line3 = document.querySelector(".line3");
+const burger = document.getElementsByClassName("burger")[0];
+const linkblah = document.querySelector(".link_container");
+let menuopen = false;
+
+const clickfun = () =>{
+	
+	if(!menuopen){
+		line2.style.opacity = "0";
+		line1.classList.add("line1tran");
+		line3.classList.add("line2tran");
+		linkblah.style.transform = "translateX(0)";
+		linkblah.style.opacity = "1";
+		menuopen = true;
+	}
+	else{
+		line2.style.opacity = "1";
+		line1.classList.remove("line1tran");
+		line3.classList.remove("line2tran");
+		linkblah.style.transform = "translateX(-100%)";
+		linkblah.style.opacity = "0";
+		menuopen = false;
+	}	
+}
+burger.addEventListener("click",clickfun);
+
+
+
+const para1 = document.getElementsByClassName("para1")[0];
+const para2 = document.getElementsByClassName("para2")[0];
+const para3 = document.getElementsByClassName("para3")[0];
+const para4 = document.getElementsByClassName("para4")[0];
+const para5 = document.getElementsByClassName("para5")[0];
+const para6 = document.getElementsByClassName("para6")[0];
+const para7 = document.getElementsByClassName("para7")[0];
+const para8 = document.getElementsByClassName("para8")[0];
+const profileimg = document.getElementsByClassName("profileimg")[0];
+const profileimgmini1 = document.getElementsByClassName("profileimgmini1")[0];
+const profileimgmini2 = document.getElementsByClassName("profileimgmini2")[0];
+const profileimgmini3 = document.getElementsByClassName("profileimgmini3")[0];
+const profileimgmini4 = document.getElementsByClassName("profileimgmini4")[0];
+const profileimgmini5 = document.getElementsByClassName("profileimgmini5")[0];
+const profileimgmini6 = document.getElementsByClassName("profileimgmini6")[0];
+const profileimgmini7 = document.getElementsByClassName("profileimgmini7")[0];
+
+
+
+
+const shit1 = () =>{
+	profileimg.style.transition = "1s";
+
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
+
+		profileimg.classList.toggle("imgfix");
+		para1.classList.toggle("sizefix");
+
+
+	para2.classList.remove("sizefix");
+	para3.classList.remove("sizefix");
+	para4.classList.remove("sizefix");
+	para5.classList.remove("sizefix");
+	para6.classList.remove("sizefix");
+	para7.classList.remove("sizefix");
+	para8.classList.remove("sizefix");
+}
+
+
+const shit2 = () =>{
+	profileimgmini1.style.transition = "1s";
+
+	
+		profileimgmini1.classList.toggle("imgfix");
+		para2.classList.toggle("sizefix");
+	
+
+	profileimg.classList.remove("imgfix");
+
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
+	para1.classList.remove("sizefix");
+	para3.classList.remove("sizefix");
+	para4.classList.remove("sizefix");
+	para5.classList.remove("sizefix");
+	para6.classList.remove("sizefix");
+	para7.classList.remove("sizefix");
+	para8.classList.remove("sizefix");
+}
+
+
+const shit3 = () =>{
+	profileimgmini2.style.transition = "1s";
+
+	
+
+		profileimgmini2.classList.toggle("imgfix");
+		para3.classList.toggle("sizefix");
+	
+
+
+	profileimg.classList.remove("imgfix");
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
+	para1.classList.remove("sizefix");
+	para2.classList.remove("sizefix");
+	para4.classList.remove("sizefix");
+	para5.classList.remove("sizefix");
+	para6.classList.remove("sizefix");
+	para7.classList.remove("sizefix");
+	para8.classList.remove("sizefix");
+}
+
+
+const shit4 = () =>{
+	profileimgmini3.style.transition = "1s";
+
+	
+
+		profileimgmini3.classList.toggle("imgfix");
+		para4.classList.toggle("sizefix");
+		
+
+
+	profileimg.classList.remove("imgfix");
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
+	para1.classList.remove("sizefix");
+	para2.classList.remove("sizefix");
+	para3.classList.remove("sizefix");
+	para5.classList.remove("sizefix");
+	para6.classList.remove("sizefix");
+	para7.classList.remove("sizefix");
+	para8.classList.remove("sizefix");
+
+}
+
+
+const shit5 = () =>{
+	profileimgmini4.style.transition = "1s";
+
+	
+
+		profileimgmini4.classList.toggle("imgfix");
+		para5.classList.toggle("sizefix");
+		
+
+	
+	profileimg.classList.remove("imgfix");
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
+	para1.classList.remove("sizefix");
+	para2.classList.remove("sizefix");
+	para3.classList.remove("sizefix");
+	para4.classList.remove("sizefix");
+	para6.classList.remove("sizefix");
+	para7.classList.remove("sizefix");
+	para8.classList.remove("sizefix");
+}
+
+
+const shit6 = () =>{
+	profileimgmini5.style.transition = "1s";
+
+	
+	
+		profileimgmini5.classList.toggle("imgfix");
+		para6.classList.toggle("sizefix");
+		
+
+
+	profileimg.classList.remove("imgfix");
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
+	para1.classList.remove("sizefix");
+	para2.classList.remove("sizefix");
+	para3.classList.remove("sizefix");
+	para5.classList.remove("sizefix");
+	para4.classList.remove("sizefix");
+	para7.classList.remove("sizefix");
+	para8.classList.remove("sizefix");
+
+}
+
+
+const shit7 = () =>{
+	profileimgmini6.style.transition = "1s";
+
+	
+
+		profileimgmini6.classList.toggle("imgfix");
+		para7.classList.toggle("sizefix");
+	
+
+
+	profileimg.classList.remove("imgfix");
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
+	para1.classList.remove("sizefix");
+	para2.classList.remove("sizefix");
+	para3.classList.remove("sizefix");
+	para5.classList.remove("sizefix");
+	para4.classList.remove("sizefix");
+	para6.classList.remove("sizefix");
+		para8.classList.remove("sizefix");
+}
+
+
+const shit8 = () =>{
+	profileimgmini7.style.transition = "1s";
+
+	
+
+		profileimgmini7.classList.toggle("imgfix");
+		para8.classList.toggle("sizefix");
+		
+
+	
+	profileimg.classList.remove("imgfix");
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
+	para1.classList.remove("sizefix");
+	para2.classList.remove("sizefix");
+	para3.classList.remove("sizefix");
+	para5.classList.remove("sizefix");
+	para4.classList.remove("sizefix");
+	para6.classList.remove("sizefix");
+		para7.classList.remove("sizefix");
+}
+
+
+profileimg.addEventListener("click",shit1);
+profileimgmini1.addEventListener("click",shit2);
+profileimgmini2.addEventListener("click",shit3);
+profileimgmini3.addEventListener("click",shit4);
+profileimgmini4.addEventListener("click",shit5);
+profileimgmini5.addEventListener("click",shit6);
+profileimgmini6.addEventListener("click",shit7);
+profileimgmini7.addEventListener("click",shit8);
+</script>
 </body>
 </html>
