@@ -23,6 +23,9 @@
 .sizefix{
 	height : 250px;
 }
+.imgfix{
+	height : 0;
+}
 .sizereturn{
 	height : 0;
 }
@@ -500,6 +503,9 @@ const clickfun = () =>{
 	}	
 }
 burger.addEventListener("click",clickfun);
+
+
+
 const para1 = document.getElementsByClassName("para1")[0];
 const para2 = document.getElementsByClassName("para2")[0];
 const para3 = document.getElementsByClassName("para3")[0];
@@ -516,8 +522,31 @@ const profileimgmini4 = document.getElementsByClassName("profileimgmini4")[0];
 const profileimgmini5 = document.getElementsByClassName("profileimgmini5")[0];
 const profileimgmini6 = document.getElementsByClassName("profileimgmini6")[0];
 const profileimgmini7 = document.getElementsByClassName("profileimgmini7")[0];
+
+
+
+
 const shit1 = () =>{
-	para1.classList.toggle("sizefix");
+	profileimg.style.transition = "1s";
+	profileimg.style.transform = "rotate(360deg)";
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
+	setTimeout(()=>{
+		profileimg.classList.toggle("imgfix");
+		para1.classList.toggle("sizefix");
+	},800);
+	profileimgmini1.style.transform = "rotate(0deg)";
+	profileimgmini2.style.transform = "rotate(0deg)";
+	profileimgmini3.style.transform = "rotate(0deg)";
+	profileimgmini4.style.transform = "rotate(0deg)";
+	profileimgmini5.style.transform = "rotate(0deg)";
+	profileimgmini6.style.transform = "rotate(0deg)";
+	profileimgmini7.style.transform = "rotate(0deg)";
 	para2.classList.remove("sizefix");
 	para3.classList.remove("sizefix");
 	para4.classList.remove("sizefix");
@@ -526,8 +555,30 @@ const shit1 = () =>{
 	para7.classList.remove("sizefix");
 	para8.classList.remove("sizefix");
 }
+
+
 const shit2 = () =>{
-	para2.classList.toggle("sizefix");
+	profileimgmini1.style.transition = "1s";
+	profileimgmini1.style.transform = "rotate(360deg)";
+	setTimeout(()=>{
+		profileimgmini1.classList.toggle("imgfix");
+		para2.classList.toggle("sizefix");
+	},800);
+
+	profileimg.classList.remove("imgfix");
+	profileimg.style.transform = "rotate(0deg)";
+	profileimgmini2.style.transform = "rotate(0deg)";
+	profileimgmini3.style.transform = "rotate(0deg)";
+	profileimgmini4.style.transform = "rotate(0deg)";
+	profileimgmini5.style.transform = "rotate(0deg)";
+	profileimgmini6.style.transform = "rotate(0deg)";
+	profileimgmini7.style.transform = "rotate(0deg)";
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
 	para1.classList.remove("sizefix");
 	para3.classList.remove("sizefix");
 	para4.classList.remove("sizefix");
@@ -536,8 +587,31 @@ const shit2 = () =>{
 	para7.classList.remove("sizefix");
 	para8.classList.remove("sizefix");
 }
+
+
 const shit3 = () =>{
-	para3.classList.toggle("sizefix");
+	profileimgmini2.style.transition = "1s";
+	profileimgmini2.style.transform = "rotate(360deg)";
+	
+	setTimeout(()=>{
+		profileimgmini2.classList.toggle("imgfix");
+		para3.classList.toggle("sizefix");
+			},800);
+
+	profileimgmini1.style.transform = "rotate(0deg)";
+	profileimg.style.transform = "rotate(0deg)";
+	profileimgmini3.style.transform = "rotate(0deg)";
+	profileimgmini4.style.transform = "rotate(0deg)";
+	profileimgmini5.style.transform = "rotate(0deg)";
+	profileimgmini6.style.transform = "rotate(0deg)";
+	profileimgmini7.style.transform = "rotate(0deg)";
+	profileimg.classList.remove("imgfix");
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
 	para1.classList.remove("sizefix");
 	para2.classList.remove("sizefix");
 	para4.classList.remove("sizefix");
@@ -546,8 +620,31 @@ const shit3 = () =>{
 	para7.classList.remove("sizefix");
 	para8.classList.remove("sizefix");
 }
+
+
 const shit4 = () =>{
-	para4.classList.toggle("sizefix");
+	profileimgmini3.style.transition = "1s";
+	profileimgmini3.style.transform = "rotate(360deg)";
+	
+	setTimeout(()=>{
+		profileimgmini3.classList.toggle("imgfix");
+		para4.classList.toggle("sizefix");
+			},800);
+
+	profileimgmini1.style.transform = "rotate(0deg)";
+	profileimgmini2.style.transform = "rotate(0deg)";
+	profileimg.style.transform = "rotate(0deg)";
+	profileimgmini4.style.transform = "rotate(0deg)";
+	profileimgmini5.style.transform = "rotate(0deg)";
+	profileimgmini6.style.transform = "rotate(0deg)";
+	profileimgmini7.style.transform = "rotate(0deg)";
+	profileimg.classList.remove("imgfix");
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
 	para1.classList.remove("sizefix");
 	para2.classList.remove("sizefix");
 	para3.classList.remove("sizefix");
@@ -557,8 +654,31 @@ const shit4 = () =>{
 	para8.classList.remove("sizefix");
 
 }
+
+
 const shit5 = () =>{
-	para5.classList.toggle("sizefix");
+	profileimgmini4.style.transition = "1s";
+	profileimgmini4.style.transform = "rotate(360deg)";
+	
+	setTimeout(()=>{
+		profileimgmini4.classList.toggle("imgfix");
+		para5.classList.toggle("sizefix");
+			},800);
+
+	profileimgmini1.style.transform = "rotate(0deg)";
+	profileimgmini2.style.transform = "rotate(0deg)";
+	profileimgmini3.style.transform = "rotate(0deg)";
+	profileimg.style.transform = "rotate(0deg)";
+	profileimgmini5.style.transform = "rotate(0deg)";
+	profileimgmini6.style.transform = "rotate(0deg)";
+	profileimgmini7.style.transform = "rotate(0deg)";
+	profileimg.classList.remove("imgfix");
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
 	para1.classList.remove("sizefix");
 	para2.classList.remove("sizefix");
 	para3.classList.remove("sizefix");
@@ -567,8 +687,31 @@ const shit5 = () =>{
 	para7.classList.remove("sizefix");
 	para8.classList.remove("sizefix");
 }
+
+
 const shit6 = () =>{
-	para6.classList.toggle("sizefix");
+	profileimgmini5.style.transition = "1s";
+	profileimgmini5.style.transform = "rotate(360deg)";
+	
+	setTimeout(()=>{
+		profileimgmini5.classList.toggle("imgfix");
+		para6.classList.toggle("sizefix");
+			},800);
+
+	profileimgmini1.style.transform = "rotate(0deg)";
+	profileimgmini2.style.transform = "rotate(0deg)";
+	profileimgmini3.style.transform = "rotate(0deg)";
+	profileimgmini4.style.transform = "rotate(0deg)";
+	profileimg.style.transform = "rotate(0deg)";
+	profileimgmini6.style.transform = "rotate(0deg)";
+	profileimgmini7.style.transform = "rotate(0deg)";
+	profileimg.classList.remove("imgfix");
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
 	para1.classList.remove("sizefix");
 	para2.classList.remove("sizefix");
 	para3.classList.remove("sizefix");
@@ -578,8 +721,31 @@ const shit6 = () =>{
 	para8.classList.remove("sizefix");
 
 }
+
+
 const shit7 = () =>{
-	para7.classList.toggle("sizefix");
+	profileimgmini6.style.transition = "1s";
+	profileimgmini6.style.transform = "rotate(360deg)";
+	
+	setTimeout(()=>{
+		profileimgmini6.classList.toggle("imgfix");
+		para7.classList.toggle("sizefix");
+			},800);
+
+	profileimgmini1.style.transform = "rotate(0deg)";
+	profileimgmini2.style.transform = "rotate(0deg)";
+	profileimgmini3.style.transform = "rotate(0deg)";
+	profileimgmini4.style.transform = "rotate(0deg)";
+	profileimgmini5.style.transform = "rotate(0deg)";
+	profileimg.style.transform = "rotate(0deg)";
+	profileimgmini7.style.transform = "rotate(0deg)";
+	profileimg.classList.remove("imgfix");
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini7.classList.remove("imgfix");
 	para1.classList.remove("sizefix");
 	para2.classList.remove("sizefix");
 	para3.classList.remove("sizefix");
@@ -588,8 +754,31 @@ const shit7 = () =>{
 	para6.classList.remove("sizefix");
 		para8.classList.remove("sizefix");
 }
+
+
 const shit8 = () =>{
-	para8.classList.toggle("sizefix");
+	profileimgmini7.style.transition = "1s";
+	profileimgmini7.style.transform = "rotate(360deg)";
+	
+	setTimeout(()=>{
+		profileimgmini7.classList.toggle("imgfix");
+		para8.classList.toggle("sizefix");
+			},800);
+
+	profileimgmini1.style.transform = "rotate(0deg)";
+	profileimgmini2.style.transform = "rotate(0deg)";
+	profileimgmini3.style.transform = "rotate(0deg)";
+	profileimgmini4.style.transform = "rotate(0deg)";
+	profileimgmini5.style.transform = "rotate(0deg)";
+	profileimgmini6.style.transform = "rotate(0deg)";
+	profileimg.style.transform = "rotate(0deg)";
+	profileimg.classList.remove("imgfix");
+	profileimgmini1.classList.remove("imgfix");
+	profileimgmini2.classList.remove("imgfix");
+	profileimgmini3.classList.remove("imgfix");
+	profileimgmini4.classList.remove("imgfix");
+	profileimgmini5.classList.remove("imgfix");
+	profileimgmini6.classList.remove("imgfix");
 	para1.classList.remove("sizefix");
 	para2.classList.remove("sizefix");
 	para3.classList.remove("sizefix");
@@ -598,6 +787,8 @@ const shit8 = () =>{
 	para6.classList.remove("sizefix");
 		para7.classList.remove("sizefix");
 }
+
+
 profileimg.addEventListener("click",shit1);
 profileimgmini1.addEventListener("click",shit2);
 profileimgmini2.addEventListener("click",shit3);
