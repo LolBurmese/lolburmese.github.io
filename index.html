@@ -7,12 +7,79 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>-Layer Of Legends-</title>
 	<style type="text/css">
+		.darker{
+			background-color: rgb(36,37,38);
+		}
+		.mainoptionap{
+			z-index: 3;
+			opacity: 1;
+			transform: translateY(0);
+			transform : translateX(-2em);
+			
+		}
+		.mainoption{
+			position: sticky;
+			bottom : 28vh;
+			display: flex;
+			width: 100%;
+
+		}
+		.option_floatshit{
+			background-color : skyblue;
+		}
+		.colorss{
+			background-color: grey;
+		}
+		.option_float{
+			padding: 8px;
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: column;
+			position: absolute;
+			right : 0;
+			border-radius: 10px;
+			cursor: pointer;
+			transition: .5s;
+		}
+		.option_float div{
+			margin : 3px;
+			width : 25px;
+			height: 3px;
+			background-color: black;
+		}
+		.table_shitshit{
+			z-index: -1;
+			opacity: 0;
+			transform: translateY(5em);
+		}
+		.table_div{
+			transition: .5s;
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: column;
+			position: sticky;
+			bottom : 30vh;
+			width : 100%;
+			right : 0;
+		}
+		#sidebar_tool{
+			background-color: grey;
+			padding: 5px;
+			border-radius: 25px;
+			position: absolute;
+			right : 0;
+
+		}
+		.tool_label{
+			display: flex;
+			align-items: center;
+		}
 		body{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	/*background-color: rgb(25,5,40);*/
-	background-color : black;
+	background-color : rgb(5,56,56);
 	overflow-x: hidden;
 }
 .switch1{
@@ -69,8 +136,6 @@ input:checked[type="checkbox"]::before{
 }
 .fbpagemain{
 				display: flex;
-                                position : sticky;
-                                bottom : 0;
                                 background-color : black;
 				align-items: center;
 				justify-content: center;
@@ -116,54 +181,64 @@ input:checked[type="checkbox"]::before{
 							}
 
 .person{
-				background-color : #ddd;
+				
 				padding : 20px;
-				box-shadow: 0 0 17px darkcyan;
+				transition: .5s;
+				/*box-shadow: 0 0 17px darkcyan;*/
 				}
 				
 			.person2{
-				background-color : #ddd;
+			
 				padding : 20px;
-				box-shadow: 0 0 17px skyblue;
+				transition: .5s;
+				/*box-shadow: 0 0 17px skyblue;*/
 				}
 				
 				.person3{
-				background-color : #ddd;
+				
 				padding : 20px;
-				box-shadow: 0 0 17px skyblue;
+				transition: .5s;
+				/*box-shadow: 0 0 17px skyblue;*/
 				}
 				
 			.person4{
-				background-color : #ddd;
+				
 				padding : 20px;
-				box-shadow: 0 0 17px skyblue;
+				transition: .5s;
+				/*box-shadow: 0 0 17px skyblue;*/
 				}
 				
 					
 				.person5{
-				background-color : #ddd;
+				
 				padding : 20px;
-				box-shadow: 0 0 17px skyblue;
+				transition: .5s;
+				/*box-shadow: 0 0 17px skyblue;*/
 				}
 				
 				.person6{
-				background-color : #ddd;
+			
 				padding : 20px;
-				box-shadow: 0 0 17px skyblue;
+				transition: .5s;
+				/*box-shadow: 0 0 17px skyblue;*/
 				}
 				
 				.person7{
-				background-color : #ddd;
+			
 				padding : 20px;
-				box-shadow: 0 0 17px skyblue;
+				transition: .5s;
+				/*box-shadow: 0 0 17px skyblue;*/
 				}
 				
 			.person8{
-				background-color : #ddd;
-				padding : 20px;
-				box-shadow: 0 0 17px skyblue;
-				}	
 				
+				padding : 20px;
+				transition: .5s;
+				/*box-shadow: 0 0 17px skyblue;*/
+				}	
+				.perper{
+					background-color : #ddd;
+				}
 				
 				.toplink{
 								text-decoration: none;
@@ -253,7 +328,12 @@ nav{
 .line2tran{
 	transform : rotate(-49deg) translate(13px,3px);
 }
-
+.bgdark{
+	background-color: rgb(24,25,26);
+}
+.bobo{
+	color : white;
+}
 @media screen and (max-width : 1080px){
 	body{
 		overflow-x: hidden;
@@ -302,7 +382,7 @@ nav{
 }
 	</style>
 </head>
-<body>
+<body id="bodyhate">
 <nav>
 	<div class="logopart">
 		<div class="iconmain">
@@ -338,7 +418,7 @@ nav{
   <a href="#anoe">အေနိုး</a><br>
 </div></div>
 
-<div id="pigbenis" class="person" align="center">
+<div id="pigbenis" class="person perper" align="center">
 <img class="profileimg" src="pigbenis.jpg" width="250"
 height="250"> <br>
 <h2>Pig Benis</h2>
@@ -365,10 +445,10 @@ Hyper flowမှာ အဓိကကျ တဲ့ role ဖြစ်တဲ့အ�
 လာမယ့် season သစ်မှာ Squad power တက်အောင် member တွေနဲ့ အတူတူ ကြိုးစားဖို့ အဆင်သင့်ဖြစ်နေပါပြီ။
 </p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div>
+</div><br>
 
 
-<div id="kanieloutis" class="person2" align="center">
+<div id="kanieloutis" class="person2 perper" align="center">
 <img class="profileimgmini1" src="ksw.jpg" width="200"
 height="200"> <br>
 <h2>KANIEL OUTIS</h2>
@@ -394,9 +474,9 @@ Mythicမရောက်ဖူးသေးပါဘူး၊
 
 </p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div>
+</div><br>
 
-<div id="shika" class="person3" align="center">
+<div id="shika" class="person3 perper" align="center">
 <img class="profileimgmini2" src="shika.jpg" width="200"
 height="200"> <br>
 <h2>SHIKA</h2>
@@ -422,9 +502,9 @@ SHIKA လို playerတစ်ယောက် ရရှိတာဟာ Squad �
 
 </p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div>
+</div><br>
 
-<div id="eric" class="person4" align="center">
+<div id="eric" class="person4 perper" align="center">
 <img class="profileimgmini3" src="eric.jpg" width="200"
 height="200"> <br>
 <h2>E R I C</h2>
@@ -450,9 +530,9 @@ Mlကို အပျော်ဆော့တဲ့ E R I C ဟာ accountပေ
 
 </p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div>
+</div><br>
 
-<div id="legolas" class="person5" align="center">
+<div id="legolas" class="person5 perper" align="center">
 <img class="profileimgmini4" src="swh.jpg" width="200"
 height="200"> <br>
 <h2>Legolas</h2>
@@ -474,9 +554,9 @@ Full partyမှာ အဆင်ပြေမယ့်သူဖြစ်ပါတ
 
 </p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div>
+</div><br>
 
-<div id="appleshampoo" class="person6" align="center">
+<div id="appleshampoo" class="person6 perper" align="center">
 <img class="profileimgmini5" src="appleshampoo.jpg" width="200"
 height="200"> <br>
 <h2>AppleShampoo</h2>
@@ -504,9 +584,9 @@ Ulti ခဏခဏလွဲပစ်တတ်တာတော့ သူ့အာ�
 PUBGလဲပစ်တတ်ပါတယ်၊ Mlbbမှာတော့ Haya pro ပေါ့။
 </p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div>
+</div><br>
 
-<div id="kobain" class="person7" align="center">
+<div id="kobain" class="person7 perper" align="center">
 <img class="profileimgmini6" src="kobain.jpg" width="200"
 height="200"> <br>
 <h2>Ko Bain</h2>
@@ -514,9 +594,9 @@ height="200"> <br>
 <a class="fbpage" href="https://web.facebook.com/kyaw.htake.92"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Kyaw Htake Tin Maung</h5></a>
 <p class="para7"></p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div>
+</div><br>
 
-<div id="anoe" class="person8" align="center">
+<div id="anoe" class="person8 perper" align="center">
 <img class="profileimgmini7" src="mkko.jpg" width="200"
 height="200"> <br>
 <h2>အေနိုး</h2>
@@ -525,8 +605,25 @@ height="200"> <br>
 <p class="para8"></p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
 </div>
-
 <a class="fbpagemain" href="https://www.facebook.com/lolmandalay/"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="30"><h5>LAYER OF LEGENDS - LԾL</h5></a>
+<div class="table_div table_shitshit">
+<table id="sidebar_tool">
+	<tr>
+		<td class="tool_label"><img src="https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/moon_dark_mode_night-2-512.png" width="30" height="30">Dark mode</td>
+		<td><input type="checkbox" name="" id="darkmode1" onclick="darkworld()"></td>
+	</tr>
+	<tr>
+		<td class="tool_label"><img src="https://www.pngarts.com/files/3/Letter-T-PNG-Download-Image.png" width="30" height="30">Change text color</td>
+			<td><input type="checkbox" name="" id="textchange" onclick="txtfun()"></td>
+	</tr>
+</table></div>
+<div class="mainoption">
+<div class="option_float colorss" onclick="clickfloat()">
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+</div>
 
 
 
@@ -815,6 +912,7 @@ profileimgmini7.addEventListener("click",shit8);
 const askswitch = document.getElementById("askswitch");
 const bgname = document.getElementsByClassName("bgname")[0];
 const switch1 = document.getElementsByClassName("switch1")[0];
+const bodyhate = document.getElementById("bodyhate");
 const ask = () =>{
 if(askswitch.checked == true){
 	bgname.classList.toggle("bgsize");
@@ -826,6 +924,88 @@ else{
 	switch1.style.backgroundColor = "darkcyan";
 	switch1.style.color = "white";
 }
+}
+const person = document.getElementsByClassName("person")[0];
+const person2 = document.getElementsByClassName("person2")[0];
+const person3 = document.getElementsByClassName("person3")[0];
+const person4 = document.getElementsByClassName("person4")[0];
+const person5 = document.getElementsByClassName("person5")[0];
+const person6 = document.getElementsByClassName("person6")[0];
+const person7 = document.getElementsByClassName("person7")[0];
+const person8 = document.getElementsByClassName("person8")[0];
+const tablediv = document.getElementsByClassName("table_div")[0];
+const optionfloat = document.getElementsByClassName("option_float")[0];
+const clickfloat = () =>{
+	tablediv.classList.toggle("mainoptionap");
+	tablediv.classList.toggle("table_shitshit");
+	optionfloat.classList.toggle("option_floatshit");
+	optionfloat.classList.toggle("colorss");
+}
+const darkbtn = document.getElementById("darkmode1");
+const darkworld = () =>{
+	if(darkbtn.checked === true){
+		person.classList.toggle("darker");
+		person.classList.toggle("perper");
+
+		person2.classList.toggle("darker");
+		person2.classList.toggle("perper");
+		
+		person3.classList.toggle("darker");
+		person3.classList.toggle("perper");
+		
+		person4.classList.toggle("darker");
+		person4.classList.toggle("perper");
+		
+		person5.classList.toggle("darker");
+		person5.classList.toggle("perper");
+		
+		person6.classList.toggle("darker");
+		person6.classList.toggle("perper");
+		
+		person7.classList.toggle("darker");
+		person7.classList.toggle("perper");
+		
+		person8.classList.toggle("darker");
+		person8.classList.toggle("perper");
+		
+		bodyhate.classList.toggle("bgdark");
+	}
+	else{
+		person.classList.toggle("darker");
+		person.classList.toggle("perper");
+
+		person2.classList.toggle("darker");
+		person2.classList.toggle("perper");
+		
+		person3.classList.toggle("darker");
+		person3.classList.toggle("perper");
+		
+		person4.classList.toggle("darker");
+		person4.classList.toggle("perper");
+		
+		person5.classList.toggle("darker");
+		person5.classList.toggle("perper");
+		
+		person6.classList.toggle("darker");
+		person6.classList.toggle("perper");
+		
+		person7.classList.toggle("darker");
+		person7.classList.toggle("perper");
+		
+		person8.classList.toggle("darker");
+		person8.classList.toggle("perper");
+		
+		bodyhate.classList.toggle("bgdark");
+	}
+}
+const textchange = document.getElementById("textchange");
+const txtfun = () =>{
+	if(textchange.checked === true){
+		bodyhate.classList.toggle("bobo");
+	}
+	else{
+		bodyhate.classList.toggle("bobo");
+	}
 }
 </script>
 </body>
