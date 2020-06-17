@@ -15,6 +15,43 @@
 	background-color : black;
 	overflow-x: hidden;
 }
+.switch1{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color : white;
+	background-color: red;
+}
+input[type="checkbox"]{
+	position: relative;
+	height : 35px;
+	width: 65px;
+	-webkit-appearance : none;
+	background : #C9C9C9;
+	border-radius: 25px;
+	outline: none;
+	transition : .5s;
+}
+input:checked[type="checkbox"]{
+	background : #03a9f4;
+}
+input[type="checkbox"]::before{
+	position: absolute;
+	top : 0;
+	left: 0;
+	content: "";
+	height : 35px;
+	width: 35px;
+	background-color: #fff;
+	border-radius: 25px;
+	transform : scale(1.1);
+	transition: .5s;
+}
+input:checked[type="checkbox"]::before{
+	left : 30px;
+}
+
+
 .para1, .para2, .para3, .para4, .para5, .para6, .para7, .para8{
 	height : 0;
 	overflow: scroll;
@@ -47,6 +84,9 @@
 .bgname{
 				background-image: url("bgname.jpg");
 				background-position: center;
+				height: 0px;
+				overflow: scroll;
+				transition: .5s;
 				}
 .names a{
 				text-decoration: none;
@@ -162,6 +202,9 @@ nav{
 	color : red;
 	transition: all .5s;
 }
+.bgsize{
+	height: 360px;
+}
 .link_container li{
 	list-style-type: none;
 }
@@ -262,8 +305,11 @@ nav{
 		<div class="line3"> </div>
 	</div>
 </nav>
+<div class="switch1" id="mainnames">
+	Squad member names<input id="askswitch" onclick="ask()" type="checkbox" name="">
+</div>
 <div class="bgname">
-<div id="mainnames" class="names" align="center"> <br>
+<div class="names" align="center"> <br>
   <a href="#pigbenis">Pig Benis</a> <br> 
   <a href="#kanieloutis">KANIEL OUTIS</a> <br>
   <a href="#shika">SHIKA</a> <br>
@@ -747,6 +793,17 @@ profileimgmini4.addEventListener("click",shit5);
 profileimgmini5.addEventListener("click",shit6);
 profileimgmini6.addEventListener("click",shit7);
 profileimgmini7.addEventListener("click",shit8);
+
+const askswitch = document.getElementById("askswitch");
+const bgname = document.getElementsByClassName("bgname")[0];
+const ask = () =>{
+if(askswitch.checked == true){
+	bgname.classList.toggle("bgsize");
+}
+else{
+	bgname.classList.remove("bgsize");
+}
+}
 </script>
 </body>
 </html>
