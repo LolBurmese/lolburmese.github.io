@@ -10,6 +10,7 @@
     
     body{
     				background-color: sandybrown;
+    				transition: 0.6s;
     				}
     				
     .nake{
@@ -64,10 +65,50 @@
     									text-decoration: none;	   
     									color : white;
     									}		
+
+input[type="checkbox"]{
+				       position: relative;
+      				  width: 50px;
+      				  height: 25px;
+      			  -webkit-appearance: none;
+      				 background-color: white;
+      				 border-radius: 25px;
+      				 box-shadow: inset 0 0 5px black;
+      				 outline: none;
+      				 transition: 0.5s;
+        				} 
+        				 input:checked[type="checkbox"]{
+    		   background-color: skyblue;  				
+    				}
+    
+input[type="checkbox"]:before{
+				    position: absolute;
+				    content: "";
+				    width: 25px;
+				    height: 25px;
+				    left: 0;
+				    background-color: navy;
+				    box-shadow: 0 2px 5px #ddd;
+				    border-radius: 25px;	
+				    transition: 0.5s;		   
+}
+				 
+input:checked[type="checkbox"]:before{
+				    left: 25px;		 
+				}
+
+.heehee{
+				    display: flex;
+				    align-items: center;
+				    justify-content: flex-end;		
+				    color: white;	
+				}				
+				
+				
     
     </style>
 </head>
-<body>
+<body id="bodylay">
     
 
 <div class="nake">
@@ -80,31 +121,22 @@
 </marquee>
 <hr>
 
+<div class="heehee">
+Dark Mode<input id="ck" type="checkbox" onclick="Darkmode()">
+</div>
 
 <div class="container">
-<a href="nake2.jpg">
 <img class="pic" src="nake2.jpg" width="170"height="250">
-</a>
 
-<a href="nake1.jpg">
 <img class="pic" src="nake1.jpg" width="170"height="250">
-</a>
 
-<a href="nake3.jpg">
 <img class="pic" src="nake3.jpg" width="170"height="250">
-</a>
 
-<a href="nake4.jpg">
 <img class="pic" src="nake4.jpg" width="170"height="250">
-</a>
 
-<a href="nake5.jpg">
 <img class="pic" src="nake5.jpg" width="170"height="250">
-</a>
 
-<a href="nake6.jpg">
 <img class="pic" src="nake6.jpg" width="170"height="250">
-</a>
 
 </div> <br><br>
 
@@ -116,6 +148,21 @@
 <a class="links" href="nakedpicspage5.html">5</a>
 </div><br><br>
     
-    
+<script>
+
+var body=document.getElementById("bodylay");
+var ck=document.getElementById("ck");
+function Darkmode(){
+				
+if		(ck.checked===true){
+				body.style.backgroundColor="black";	
+				}
+		else{
+	body.style.backgroundColor="sandybrown"	;
+				}
+				}
+
+
+</script>    
 </body>
 </html>
