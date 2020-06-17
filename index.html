@@ -21,6 +21,7 @@
 	align-items: center;
 	color : white;
 	background-color: red;
+	transition: 1s;
 }
 input[type="checkbox"]{
 	position: relative;
@@ -796,12 +797,17 @@ profileimgmini7.addEventListener("click",shit8);
 
 const askswitch = document.getElementById("askswitch");
 const bgname = document.getElementsByClassName("bgname")[0];
+const switch1 = document.getElementsByClassName("switch1")[0];
 const ask = () =>{
 if(askswitch.checked == true){
 	bgname.classList.toggle("bgsize");
+	switch1.style.backgroundColor = "#ddd";
+	switch1.style.color = "black";
 }
 else{
 	bgname.classList.remove("bgsize");
+	switch1.style.backgroundColor = "red";
+	switch1.style.color = "white";
 }
 }
 </script>
