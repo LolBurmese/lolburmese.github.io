@@ -944,6 +944,7 @@ const clickfloat = () =>{
 const darkbtn = document.getElementById("darkmode1");
 const darkworld = () =>{
 	if(darkbtn.checked === true){
+                txtchange.checked = true;
 		person.classList.toggle("darker");
 		person.classList.toggle("perper");
 
@@ -971,6 +972,7 @@ const darkworld = () =>{
 		bodyhate.classList.toggle("bgdark");
 	}
 	else{
+                txtchange.checked = false;
 		person.classList.toggle("darker");
 		person.classList.toggle("perper");
 
@@ -1001,6 +1003,7 @@ const darkworld = () =>{
 const textchange = document.getElementById("textchange");
 const txtfun = () =>{
 	if(textchange.checked === true){
+               
 		bodyhate.classList.toggle("bobo");
 	}
 	else{
