@@ -1,0 +1,58 @@
+body{
+	box-sizing: border-box;
+	background-color: #C9C9C9;
+	margin: 0;
+	padding: 0;
+}
+#namebox, #phonebox{
+	outline: none;
+}
+.container2{
+	display: flex;
+	justify-content: center;
+	width: 350px;
+	height: 350px;
+	background-color: blue;
+	position: absolute;
+	top : 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: navy;
+	color : white;
+	border-radius: 25px;
+	transition: .5s;
+}
+.hrt{
+	boder : 1px solid black;
+}
+#opsubmit, #opclear{
+	width: 60px;
+	height: 40px;
+	border-radius: 15px;
+	outline: none;
+}
+#opshow{
+	width : 120px;
+	height: 40px;
+	outline: none;
+}
+#textboxs{
+	width : 300px;
+	background-color: #ddd;
+	overflow: scroll;
+	transition: .5s;
+	border-radius: 25px;
+}
+#sign{
+	transition: 1s;
+	opacity: 0;
+}
+.allheight{
+	height : 600px;
+}
+.orgtxtheight{
+	height: 0px;
+}
+.textheight{
+	height : 250px;
+}
