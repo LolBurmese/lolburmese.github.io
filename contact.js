@@ -326,7 +326,7 @@ const clickShow = () =>{
 	textboxs.classList.toggle("textheight");
 }
 const clickClear = () =>{
-	const askpass = prompt("Enter Password Password to clear all");
+	const askpass = prompt("Enter Password to clear all");
 	if(askpass === NaN || askpass === null || askpass === "" || askpass !== "2880"){
 		sign.style.opacity = "1";
 	sign.innerHTML = "❌ Wrong Password";
