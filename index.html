@@ -386,7 +386,7 @@ nav{
 		display: flex;
 		flex-direction: column;
 		align-items: left;
-		width : 30%;
+		width : 35%;
 		transition: .5s;
 		opacity: 0;
 		transform : translateX(-100%);
@@ -414,7 +414,7 @@ nav{
 		<li><a href="satsu.html">satsu</a></li>
 		<li><a href="gallery.html">gallery</a></li>
 		<li><a href="register.html">register</a></li>
-		<li><a href="news.html">news</a></li>
+		<!-- <li><a href="news.html">news</a></li> -->
 		<li><a href="pirateporn.html">videos</a></li>
 		<li><a href="contact.html">contact</a></li>
 	</ul>
@@ -999,6 +999,8 @@ if(askswitch.checked == true){
 	setTimeout(()=>{
 		bgname.classList.remove("bgsize");
 		askswitch.checked = false;
+		switch1.style.backgroundColor = "darkcyan";
+		switch1.style.color = "white";
 	},7000);
 }
 else{
