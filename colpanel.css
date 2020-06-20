@@ -1,15 +1,13 @@
-body{
-	background-color: rgba(0,0,0,0.9);
-}
 .thisbox{
 	display: flex;
 	justify-content: center;
+	transition: .5s;
 }
 .container{
 	height : 200px;
 	width : 400px;
 	display: flex;
-	overflow: scroll;
+	overflow: hidden;
 	background-color: #092c3e;
 	border-radius: 15px;
 }

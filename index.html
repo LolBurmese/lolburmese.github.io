@@ -4,9 +4,15 @@
 	<link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="colpanel.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>-Layer Of Legends-</title>
 	<style type="text/css">
+		#corename{
+			position: sticky;
+			top : 0;
+			z-index: 1;
+			}
 		.darker{
 			background-color: rgb(36,37,38);
 		}
@@ -383,7 +389,7 @@ nav{
 	</style>
 </head>
 <body id="bodyhate">
-<nav>
+<nav id="corename">
 	<div class="logopart">
 		<div class="iconmain">
 		<img class="logo" src="https://serving.photos.photobox.com/99336755ee8f1dcaa8806c8a5ad1d91b4c8658aa353009793fb233ff0d3c130ef0a26058.jpg" width="50" height="50"></div>
@@ -405,6 +411,7 @@ nav{
 		<div class="line3"> </div>
 	</div>
 </nav>
+
 <div class="switch1" id="mainnames">
 	Squad member names<input id="askswitch" onclick="ask()" type="checkbox" name="">
 </div>
@@ -419,6 +426,7 @@ nav{
   <a href="#kobain">Ko Bain</a> <br>
   <a href="#anoe">အေနိုး</a><br>
 </div></div>
+
 
 <div id="pigbenis" class="person perper" align="center">
 <img class="profileimg" src="pigbenis.jpg" width="250"
@@ -606,8 +614,61 @@ height="200"> <br>
 <a class="fbpage" href="https://web.facebook.com/komaeda.nagito.3"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Myint Ko Ko Oo</h5></a>
 <p class="para8"></p>
 <a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div>
+</div><br>
+<div class="thisbox perper">
+		<div>
+			<br>
+	<div class="container"> <!--  container start -->
+		<div class="tabbtn">
+			<button onclick="showPanel(0,'rgba(0,0,0,0.8)','#bbb')">MLBB</button>
+			<button onclick="showPanel(1,'skyblue','red')">PUBG</button>
+			<button onclick="showPanel(2,'lightgreen','')">PES20</button>
+			<button onclick="showPanel(3,'sandybrown','purple')">COC</button>
+		</div>
+
+		<div class="tabcontentbox tabno">
+		<div class="tabcontent">
+			<h3 align="center">Mobile Legends</h3>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="tabcontent">
+			<h3 align="center">PUBG</h3>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="tabcontent">
+			<h3 align="center">PES - 2020</h3>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="tabcontent">
+			<h3 align="center">Clash of Clans</h3>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+	</div>
+		</div> <!--  container end -->
+		<div align="center"><br><button id="closebtn" onclick="removeall()">close</button></div>
+	<br></div></div>
 <a class="fbpagemain" href="https://www.facebook.com/lolmandalay/"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="30"><h5>LAYER OF LEGENDS - LԾL</h5></a>
+
 <div class="table_div table_shitshit">
 <table id="sidebar_tool">
 	<tr>
@@ -937,6 +998,7 @@ const person7 = document.getElementsByClassName("person7")[0];
 const person8 = document.getElementsByClassName("person8")[0];
 const tablediv = document.getElementsByClassName("table_div")[0];
 const optionfloat = document.getElementsByClassName("option_float")[0];
+const thisbox = document.getElementsByClassName("thisbox")[0];
 const clickfloat = () =>{
 	tablediv.classList.toggle("mainoptionap");
 	tablediv.classList.toggle("table_shitshit");
@@ -946,6 +1008,9 @@ const clickfloat = () =>{
 const darkbtn = document.getElementById("darkmode1");
 const darkworld = () =>{
 	if(darkbtn.checked === true){
+		textchange.checked = true;
+		thisbox.classList.toggle("darker");
+		thisbox.classList.toggle("perper");
                 
 		person.classList.toggle("darker");
 		person.classList.toggle("perper");
@@ -974,7 +1039,11 @@ const darkworld = () =>{
 		bodyhate.classList.toggle("bgdark");
 	}
 	else{
-                
+        textchange.checked = false;
+
+        thisbox.classList.toggle("darker");
+		thisbox.classList.toggle("perper");
+		
 		person.classList.toggle("darker");
 		person.classList.toggle("perper");
 
@@ -1000,10 +1069,8 @@ const darkworld = () =>{
 		person8.classList.toggle("perper");
 		
 		bodyhate.classList.toggle("bgdark");
+
 	}
-}
-const textchange = document.getElementById("textchange");
-const txtfun = () =>{
 	if(textchange.checked === true){
                
 		bodyhate.classList.toggle("bobo");
@@ -1012,6 +1079,81 @@ const txtfun = () =>{
 		bodyhate.classList.toggle("bobo");
 	}
 }
+const textchange = document.getElementById("textchange");
+const txtfun = () =>{
+	
+	if(textchange.checked === true){
+        darkbtn.checked = true;
+		bodyhate.classList.toggle("bobo");
+	}
+	else{
+		darkbtn.checked = false;
+		bodyhate.classList.toggle("bobo");
+	}
+	if(darkbtn.checked === true){
+		thisbox.classList.toggle("darker");
+		thisbox.classList.toggle("perper");
+                
+		person.classList.toggle("darker");
+		person.classList.toggle("perper");
+
+		person2.classList.toggle("darker");
+		person2.classList.toggle("perper");
+		
+		person3.classList.toggle("darker");
+		person3.classList.toggle("perper");
+		
+		person4.classList.toggle("darker");
+		person4.classList.toggle("perper");
+		
+		person5.classList.toggle("darker");
+		person5.classList.toggle("perper");
+		
+		person6.classList.toggle("darker");
+		person6.classList.toggle("perper");
+		
+		person7.classList.toggle("darker");
+		person7.classList.toggle("perper");
+		
+		person8.classList.toggle("darker");
+		person8.classList.toggle("perper");
+		
+		bodyhate.classList.toggle("bgdark");
+	}
+	else{
+
+		thisbox.classList.toggle("darker");
+		thisbox.classList.toggle("perper");
+
+		person.classList.toggle("darker");
+		person.classList.toggle("perper");
+
+		person2.classList.toggle("darker");
+		person2.classList.toggle("perper");
+		
+		person3.classList.toggle("darker");
+		person3.classList.toggle("perper");
+		
+		person4.classList.toggle("darker");
+		person4.classList.toggle("perper");
+		
+		person5.classList.toggle("darker");
+		person5.classList.toggle("perper");
+		
+		person6.classList.toggle("darker");
+		person6.classList.toggle("perper");
+		
+		person7.classList.toggle("darker");
+		person7.classList.toggle("perper");
+		
+		person8.classList.toggle("darker");
+		person8.classList.toggle("perper");
+		
+		bodyhate.classList.toggle("bgdark");
+
+	}
+}
 </script>
+<script type="text/javascript" src="colpanel.js"></script>
 </body>
 </html>

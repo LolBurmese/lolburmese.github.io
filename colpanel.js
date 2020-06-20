@@ -1,8 +1,10 @@
 const btn = document.querySelectorAll(".container .tabbtn button");
 const panel = document.querySelectorAll(".container .tabcontentbox .tabcontent"); 
 const tabcontentbox = document.getElementsByClassName("tabcontentbox")[0];
+const container = document.getElementsByClassName("container")[0];
 
 const showPanel = (index,code,tcolor) =>{
+	container.style.overflow = "scroll";
 	tabcontentbox.classList.add("tabtoggle");
 	// tabcontentbox.classList.toggle("tabno");
 	btn.forEach((node)=>{
@@ -26,6 +28,7 @@ const showPanel = (index,code,tcolor) =>{
 
 }
 const removeall = () =>{
+	container.style.overflow = "hidden";
 	tabcontentbox.classList.remove("tabtoggle");
 	btn.forEach((node)=>{
 		node.style.backgroundColor = "";
