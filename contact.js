@@ -150,7 +150,7 @@ const phone70 = document.getElementsByClassName("phone70")[0];
 const clickSubmit = () =>{
 	if(namebox.value === "" || phonebox.value === ""){
 		sign.style.opacity = "1";
-	sign.innerHTML = "❌ Information is empty";
+	sign.innerHTML = "❌ Information is required";
 	setTimeout(()=>{
 		sign.style.opacity = "0";
 	},1000);
@@ -164,7 +164,18 @@ const clickSubmit = () =>{
 			localStorage.clickcount = 1;
 		}
 			sign.style.opacity = "1";
+			if(localStorage.clickcount == 1){
+				sign.innerHTML = `✅ ${localStorage.clickcount}st Contact saved!`;
+			}
+			else if(localStorage.clickcount == 2){
+				sign.innerHTML = `✅ ${localStorage.clickcount}nd Contact saved!`;
+			}
+			else if(localStorage.clickcount == 3){
+				sign.innerHTML = `✅ ${localStorage.clickcount}rd Contact saved!`;
+			}
+			else{
 	sign.innerHTML = `✅ ${localStorage.clickcount}th Contact saved!`;
+		}
 	setTimeout(()=>{
 		sign.style.opacity = "0";
 	},1000);
@@ -321,6 +332,8 @@ const clickSubmit = () =>{
 	}//typeofStorageUndefined
 }//main click function
 const clickShow = () =>{
+	opshow.classList.toggle("showcontact");
+	opshow.classList.toggle("hidecontact");
 	container2.classList.toggle("allheight");
 	textboxs.classList.toggle("orgtxtheight");
 	textboxs.classList.toggle("textheight");
