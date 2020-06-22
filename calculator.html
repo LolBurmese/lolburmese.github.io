@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+<meta name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<style>
+				
+body{
+				background-color: #ddd;		
+				margin:0;
+				padding:0;
+				box-sizing: border-box;
+				overflow: hidden;
+				}
+				
+				
+input[type="number"]{
+				width: 100%;
+				height: 270px;	
+				font-size: 40px;		
+				font-weight: bold;
+				text-align: right;
+				outline: none;
+				box-shadow: inset 0 0 17px #333;
+				background-color: black;
+		 color: white;
+		 margin: 0;
+		 padding: 0;
+				}
+
+
+.calcu .btngroup{
+				width: 100%;	
+				height: 500px;	
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				
+					}
+					
+	
+	
+.calcu .btn{
+				height:20%;
+				}			
+				
+				
+.calcu .btn button{
+			 width: 25%;
+			 float: left;
+		  height:100%;
+		  font-size: 25px;
+		  font-weight: bold;
+		  border: none;
+		  outline: none;	
+		  background-color: #ddd;
+		  
+				}
+	
+@keyframes Hi{
+			from{
+							background-color: #333;
+							}	
+				
+				to{
+								background-color: #ddd;
+								}
+			}
+				
+</style>   
+    
+    
+    
+    
+</head>
+<body>
+
+
+<div class="calcu">
+<input type="number" readonly>
+
+<div class="btngroup">
+<div class="btn">
+<button onclick="clickmal(0)">AC</button>
+<button onclick="clickmal(1)">DEL</button>
+<button onclick="clickmal(2)">%</button>
+<button onclick="clickmal(3)">÷</button>
+</div>
+
+
+<div class="btn">
+<button onclick="clickmal(4)">7</button>
+<button onclick="clickmal(5)">8</button>
+<button onclick="clickmal(6)">9</button>
+<button onclick="clickmal(7)">&times;</button>
+</div>
+
+<div class="btn">
+<button onclick="clickmal(8)">4</button>
+<button onclick="clickmal(9)">5</button>
+<button onclick="clickmal(10)">6</button>
+<button onclick="clickmal(11)">-</button>
+</div>
+
+<div class="btn">
+<button onclick="clickmal(12)">1</button>
+<button onclick="clickmal(13)">2</button>
+<button onclick="clickmal(14)">3</button>
+<button onclick="clickmal(15)">+</button>
+</div>
+
+
+<div class="btn">
+<button onclick="clickmal(16)">M</button>
+<button onclick="clickmal(17)">0</button>
+<button onclick="clickmal(18)">.</button>
+<button onclick="clickmal(19)">=</button>
+</div>
+</div>
+
+ </div>
+ 
+<script>
+
+const buttons=document.querySelectorAll(".calcu .btn button");
+function clickmal(index){
+			buttons.forEach((node)=>{							console.log(node.style.animation);
+							node.style.animation="";
+							});
+							buttons[index].style.animation="Hi 0.3s ease forwards";
+ setTimeout(()=>{
+ 				buttons[index].style.animation="";
+ 				},300);  
+   
+}
+
+</script>
+</body>
+</html>
