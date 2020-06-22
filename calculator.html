@@ -163,7 +163,7 @@ function clickmal(index){
  					disboard.style.color = "yellow";
  					disboard.value = eval(disboard.value);
  					setTimeout(()=>{
- 						disboard.style.color = "black";
+ 						disboard.style.color = "";
  					},600);
  				}
  				else if(buttons[index].value === "M"){
@@ -196,7 +196,7 @@ function clickmal(index){
  				else{
  					if(disboard.value.length === 11){
  					disboard.style.color = "red";
- 					setTimeout(()=>{disboard.style.color = "black";},500);
+ 					setTimeout(()=>{disboard.style.color = "";},500);
  				}
  					else{
  						disboard.value += buttons[index].value;
