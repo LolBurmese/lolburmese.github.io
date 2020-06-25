@@ -308,7 +308,7 @@ nav{
 .link_container{
 	display: flex;
 	justify-content: space-around;
-	width : 40%;
+	width : 60%;
 }
 .link_container li a{
 	text-decoration: none;
@@ -367,12 +367,18 @@ nav{
 		overflow-x: hidden;
 	}
 	.link_container{
-		width : 50%;
+		width :90%;
+	}
+	.icon_label{
+		display: none;
 	}
 }
 @media screen and (max-width: 720px){
 	body{
 		overflow-x: hidden;
+	}
+	.icon_label{
+		display: block;
 	}
 	.link_container li a{
 		color : yellow;
@@ -398,8 +404,7 @@ nav{
 		align-items: left;
 		width : 35%;
 		transition: .5s;
-		opacity: 0;
-		transform : translateX(-100%);
+		transform : translateX(-110%);
 		border-radius: 25px;
 	}
 	.logopart{
@@ -408,7 +413,13 @@ nav{
 		justify-content: center;
 	}
 }
+.linksave{
+	transform: translateX(0);
+}
+
+
 	</style>
+
 </head>
 <body id="bodyhate">
 	<!-- <div id="corename"> -->
@@ -417,7 +428,8 @@ nav{
 		<div class="iconmain">
 		<img class="logo" src="https://serving.photos.photobox.com/99336755ee8f1dcaa8806c8a5ad1d91b4c8658aa353009793fb233ff0d3c130ef0a26058.jpg" width="50" height="50"></div>
 		<div class="icon_label">
-			LAYER OF LEGENDS - LԾL
+			<span class="lp1">LAYER OF LEGENDS -</span>
+			<span class="lp2"> LԾL </span>
 		</div>
 	</div>
 	<ul class="link_container">
@@ -737,16 +749,14 @@ const clickfun = () =>{
 		line2.style.opacity = "0";
 		line1.classList.add("line1tran");
 		line3.classList.add("line2tran");
-		linkblah.style.transform = "translateX(0)";
-		linkblah.style.opacity = "1";
+		linkblah.classList.toggle("linksave");
 		menuopen = true;
 	}
 	else{
 		line2.style.opacity = "1";
 		line1.classList.remove("line1tran");
 		line3.classList.remove("line2tran");
-		linkblah.style.transform = "translateX(-100%)";
-		linkblah.style.opacity = "0";
+		linkblah.classList.toggle("linksave");
 		menuopen = false;
 	}	
 }
