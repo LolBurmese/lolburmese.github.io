@@ -44,7 +44,7 @@ body{
 				height: 0;
 				overflow: hidden;
 				transition: .6s;
-				background-color: rgba(255,255,255,0.9);
+				background-color: rgb(255,255,255);
 				opacity:0;
 				border-radius: 0 0 25px 25px;
 				box-shadow: 0 0 17px #333;
@@ -72,6 +72,7 @@ body{
 				position: relative;
 				margin: 5px;
 				overflow: hidden;
+				border-radius: 15px;
 				}				
 .imgdiv img{
 				height: 100%;
@@ -96,7 +97,7 @@ body{
 				
 .poppage{
 				height: 0;
-				background-color: lightgreen;
+				background-color: rgba(0,0,0,0.5);
 				overflow: scroll;
 				display:flex;
 				flex-wrap:wrap;
@@ -107,7 +108,7 @@ body{
 				}				
 .menpage{
 				height: 0;
-				background-color: wheat;
+				background-color: rgba(0,0,0,0.5);
 				position: absolute;
 				left: 0;
 				right: 0;
@@ -122,7 +123,7 @@ body{
 	
 .wopage{
 				height: 0;
-				background-color: pink;
+				background-color: rgba(0,0,0,0.5);
 				position: absolute;
 				left: 0;
 				right: 0;
@@ -220,7 +221,7 @@ items.classList.toggle("itad")	;
 				}
 
 function popu(){				
-bgbg.style.backgroundColor = "lightgreen";
+// bgbg.style.backgroundColor = "lightgreen";
 popage.classList.toggle("itz");
 items.classList.remove("itad");
 menpage.classList.remove("itz");
@@ -228,7 +229,7 @@ wopage.classList.remove("itz");
 				}
 
 function me(){			
-		bgbg.style.backgroundColor = "wheat";		
+		// bgbg.style.backgroundColor = "wheat";		
 menpage.classList.toggle("itz");
 items.classList.remove("itad");
 popage.classList.remove("itz");
@@ -236,7 +237,7 @@ wopage.classList.remove("itz");
 				}
 
 function wo(){
-		bgbg.style.backgroundColor = "pink";		
+		// bgbg.style.backgroundColor = "pink";		
 wopage.classList.toggle("itz");
 menpage.classList.remove("itz");
 items.classList.remove("itad");
@@ -244,7 +245,7 @@ popage.classList.remove("itz");
 				}
 
 function hom(){
-				bgbg.style.backgroundColor = "skyblue";		
+				// bgbg.style.backgroundColor = "skyblue";		
 wopage.classList.remove("itz");
 menpage.classList.remove("itz");
 items.classList.remove("itad");
