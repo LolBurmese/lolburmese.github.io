@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>...</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
+<style>
+body{
+				background-color: rgb(36,37,38);
+				}
+.container{
+position: relative;
+background-color : #333;
+border-radius: 25px;
+height: 50vh;
+padding-top : 15px;
+padding-bottom : 15px;
+display : flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+transition: 1s;
+}
+.cphoto{
+width : 200px;
+height : 200px;
+border-radius : 50%;
+}
+.cphoto img{
+width : 100%;
+height : 100%;
+border-radius : 50%;
+}
+.songname{
+color: white;
+}
+.kontrol button{
+-webkit-appearance: none;
+border: none;
+outline: none;
+width: 60px;
+height: 60px;
+background-color: transparent;
+cursor: pointer;
+}
+.kontrol{
+display: flex;
+}
+.playbtn{
+color: white;
+}
+.prebtn,.playbtn,.nextbtn{
+font-size: 20px; 
+}
+.prebtn,.nextbtn{
+color: red;
+}
+.menuicon div{
+width: 25px;
+height: 3px;
+margin: 5px;
+transition: .5s;
+}
+.tt{
+	background-color: white;
+}
+.songlist{
+height: 0;
+background-color: #333;
+overflow: scroll;
+transition: .5s;
+border-radius:25px;
+margin-top: 5px;
+}
+.songlist p{
+font-family: 'Poppins', sans-serif;
+padding-top: 5px;
+padding-left: 15px;
+margin-top: 0;
+transition:.4s;
+}
+.pcolor{
+	color: white;
+}
+.songlist p:hover{
+background-color: green;
+}
+.singer{
+font-size: 10px;
+color: #888;
+}
+.expanding{
+height: 320px;
+}
+
+.previousicon{
+	transform: rotateY(180deg);
+}
+.menubtn{
+	position: absolute;
+	right : 5px;
+	top : 20px;
+}
+.menucolor{
+	background-color : red;
+}
+.manu{
+	width : 60px;
+	height : 60px;
+	background-color: transparent;
+	-webkit-appearance : none;
+	border : none;
+	outline: none;
+	position: absolute;
+	top : 25px;
+	left : 10px;
+}
+.nowplaying{
+	color : white;
+	display: none;
+}
+.imgcache{
+	display: none;
+}
+.conbg{
+	background-color : #ddd;
+}
+.songlistbg{
+background-color : #ddd;
+}
+.blackmenu{
+	background-color: black;
+}
+.snamelabelcolor{
+	color : black;
+}
+</style>
+</head>
+<body>
+	<audio id="song0">
+		<source src="oldtownroad.mp3" type="audio/mp3">
+	</audio>
+	<audio id="song0">
+		<source src="yummy.mp3" type="audio/mp3">
+	</audio>
+	<audio id="song0">
+		<source src="takitaki.mp3" type="audio/mp3">
+	</audio>
+	<audio id="song0">
+		<source src="seeyouagain.mp3" type="audio/mp3">
+	</audio>
+	<audio id="song0">
+		<source src="platform.mp3" type="audio/mp3">
+	</audio>
+	<audio id="song0">
+		<source src="yearforty.mp3" type="audio/mp3">
+	</audio>
+	<audio id="song0">
+		<source src="face.mp3" type="audio/mp3">
+	</audio>
+	<audio id="song0">
+		<source src="neversaynever.mp3" type="audio/mp3">
+	</audio>
+	<audio id="song0">
+		<source src="malone.mp3" type="audio/mp3">
+	</audio>
+	<audio id="song0">
+		<source src="gangnamstyle.mp3" type="audio/mp3">
+	</audio>
+<div align="center">
+
+<div class="container">
+<div class="cphoto"><img src="https://cdn0.iconfinder.com/data/icons/internet-2020/1080/Applemusicandroid-512.png"></div>
+<div class="nowplaying">Now Playing</div>
+<div class="songname"><marquee>...</marquee></div>
+<div class="kontrol">
+<button class="prebtn" onclick="prebtnclick()"><img class="previousicon" src="https://cdn4.iconfinder.com/data/icons/ios-web-user-interface-multi-circle-flat-vol-4/512/Chapter_controls_forward_play_music_player_video_player_next-512.png" height="40" width="40"></button>
+<button class="playbtn"><img src="https://www.pinclipart.com/picdir/big/68-680780_vimeo-play-button-png-circle-logo-blue-clipart.png" height="40" width="40"></button>
+<button class="nextbtn" onclick="nextbtnclick()"><img src="https://cdn4.iconfinder.com/data/icons/ios-web-user-interface-multi-circle-flat-vol-4/512/Chapter_controls_forward_play_music_player_video_player_next-512.png" height="40" width="40"></button>
+<button class="menubtn" onclick="menubtnclick()">
+<span class="menuicon">
+<div class="tt"></div>
+<div class="tt"></div>
+<div class="tt"></div>
+</span>
+</button>
+</div>
+<button onclick="manuclick()" class="manu"><img src='https://icons.iconarchive.com/icons/giannis-zographos/british-football-club/128/Manchester-United-icon.png' height='50' width='50'></button>
+</div><!-- container div -->
+<div class="songlist">
+<p class="pcolor" onclick="clicksname(0)" align="left">OLD TOWN ROAD<br><span class="singer"> Lil Nas X ft. Billy Ray Cyrus
+</span></p>
+<p onclick="clicksname(1)" class="pcolor" align="left">Yammy<br><span class="singer"> Justin Bieber</span></p>
+<p class="pcolor" onclick="clicksname(2)" align="left">Taki Taki<br><span class="singer"> DJ Snake ft. Selena Gomez, Ozuna, Cardi B</span></p>
+<p class="pcolor" onclick="clicksname(3)" align="left">See you again<br><span class="singer"> Wiz Khalifa ft. Charlie Puth</span></p>
+<p class="pcolor" onclick="clicksname(4)" align="left">ပလက်ဖောင်းမင်းသား<br><span class="singer"> စိုင်းထီးဆိုင်</span></p>
+<p class="pcolor" onclick="clicksname(5)" align="left">အသက်လေးဆယ်<br><span class="singer"> မိုးမိုး</span></p>
+<p class="pcolor" onclick="clicksname(6)" align="left">မျက်နှာ<br><span class="singer"> IMP</span></p>
+<p class="pcolor" onclick="clicksname(7)" align="left">Never Say Never<br><span class="singer"> Justin Bieber ft. Jaden </span></p>
+<p class="pcolor" onclick="clicksname(8)" align="left">မလုံကုံကင်<br><span class="singer"> Unknown-Thai</span></p>
+<p class="pcolor" onclick="clicksname(9)" align="left">Gangnam Style<br><span class="singer"> PSY</span></p>
+</div>
+</div>
+<div class="imgcache">
+	<p><img src="https://pmcvariety.files.wordpress.com/2020/01/lil-nas-16x9-1000-3.jpg"></p>
+	<p><img src="https://imagez.tmz.com/image/1b/4by3/2020/06/25/1b83e84897b84873a818cd0db57969e3_md.jpg"></p>
+	<p><img src="https://www.livetracklist.com/wp-content/uploads/dj-snake-profile.jpg"></p>
+	<p><img src="https://asapland.com/wp-content/uploads/2020/05/Wiz-Khalifa-Net-Worth.jpg"></p>
+	<p><img src="https://i1.sndcdn.com/artworks-000009781397-4yj4nw-t500x500.jpg"></p>
+	<p><img src="https://www.shwengwegames.com/wp-content/uploads/2020/04/19-00-35-Screen-Shot-2020-04-18-at-1.55.47-PM.png"></p>
+	<p><img src="https://c-sf.smule.com/rs-s80/arr/93/9a/9a615422-9d02-4eac-b571-4f2ac9d15259_1024.jpg"></p>
+	<p><img src="https://imagez.tmz.com/image/1b/4by3/2020/06/25/1b83e84897b84873a818cd0db57969e3_md.jpg"></p>
+	<p><img src="malone.jpg"></p>
+	<p><img src="https://res.heraldm.com/content/image/2017/03/04/20170304000067_0.jpg"></p>
+</div>
+<script>
+var container = document.getElementsByClassName("container")[0];
+var menubtn=document.getElementsByClassName("menubtn")[0];
+var songlist=document.getElementsByClassName("songlist")[0];
+var menuicon = document.querySelectorAll(".menubtn .menuicon div");
+var ppp = document.querySelectorAll(".songlist p");
+var span = document.querySelectorAll(".songlist .singer");
+const song0 = document.querySelectorAll("#song0");
+const marmar = document.querySelector(".songname marquee");
+const imgcache = document.querySelectorAll(".imgcache p");
+const cphoto = document.getElementsByClassName("cphoto")[0];
+const nowplaying = document.getElementsByClassName("nowplaying")[0];
+const manu = document.querySelector(".manu img");
+const playimg = document.querySelector(".playbtn img");
+const playbtn = document.getElementsByClassName("playbtn")[0];
+
+function menubtnclick(){
+songlist.classList.toggle("expanding");
+
+menuicon.forEach((node)=>{
+	node.classList.toggle("menucolor");
+	node.classList.toggle("tt");
+});
+}
+const manuclick = () =>{
+	container.classList.toggle("conbg");
+	songlist.classList.toggle("songlistbg");
+	ppp.forEach((node)=>{
+		node.classList.toggle("pcolor");
+	});
+	menuicon.forEach((node)=>{
+		node.classList.toggle("blackmenu");
+	});
+	marmar.classList.toggle("snamelabelcolor");
+	nowplaying.classList.toggle("snamelabelcolor");
+	if(manu.src === "https://icons.iconarchive.com/icons/giannis-zographos/british-football-club/128/Manchester-United-icon.png"){
+	manu.src = "https://cdn.iconscout.com/icon/free/png-512/chelsea-569430.png";
+}
+	else{
+		manu.src = "https://icons.iconarchive.com/icons/giannis-zographos/british-football-club/128/Manchester-United-icon.png";
+	}
+}
+const clicksname = (index) =>{
+	song0.forEach((node)=>{
+		node.pause();
+	});
+	song0[index].play();
+	marmar.textContent = ppp[index].textContent;
+	cphoto.innerHTML = imgcache[index].innerHTML;
+	nowplaying.style.display = "block";
+	playimg.src = "https://lundmarkadvertising.com/wp-content/uploads/2019/07/blog_pause-icon_0719-1024x1024.png";
+}
+const playpauseclick = () =>{
+	if(marmar.textContent === "..."){
+
+	}
+	else{
+	if(playimg.src === "https://www.pinclipart.com/picdir/big/68-680780_vimeo-play-button-png-circle-logo-blue-clipart.png"){
+		//play action
+		playimg.src = "https://lundmarkadvertising.com/wp-content/uploads/2019/07/blog_pause-icon_0719-1024x1024.png";
+		for(var i=0; i<=9; i++){
+			if(marmar.textContent === ppp[i].textContent){
+				song0[i].play();
+			}
+			else{
+				
+			}
+		}
+	}
+	else{
+		//pause action
+		playimg.src = "https://www.pinclipart.com/picdir/big/68-680780_vimeo-play-button-png-circle-logo-blue-clipart.png"
+		for(var i=0; i<=9; i++){
+			if(marmar.textContent === ppp[i].textContent){
+				song0[i].pause();
+			}
+			else{
+
+			}
+		}
+	}
+}
+}
+playbtn.addEventListener("click",playpauseclick);
+
+const nextbtnclick = () =>{
+	for(var i=0; i<=9; i++){
+			if(marmar.textContent === ppp[i].textContent){
+				song0[i].pause();
+				song0[i+1].play();
+				marmar.textContent = ppp[i+1].textContent;
+				return cphoto.innerHTML = imgcache[i+1].innerHTML;
+			}
+			else{
+				
+			}
+		}
+	}
+
+const prebtnclick = () =>{
+	for(var i=0; i<=9; i++){
+			if(marmar.textContent === ppp[i].textContent){
+				song0[i].pause();
+				song0[i-1].play();
+				marmar.textContent = ppp[i-1].textContent;
+				return cphoto.innerHTML = imgcache[i-1].innerHTML;
+			}
+			else{
+				
+			}
+		}
+	}
+</script>
+</body>
+</html>
