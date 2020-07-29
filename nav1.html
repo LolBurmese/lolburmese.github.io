@@ -1,0 +1,392 @@
+<html>
+<head>
+<title>...</title>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+<style>
+body{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+background-color : skyblue;
+}
+
+.probar{
+width: 50%;
+height: 10px;
+background-color: white;
+position: absolute;
+top: 14%;
+border-radius:0 15px 15px 0;
+overflow: hidden;
+display: none;
+}
+.proline{
+height: 100%;
+width: 30%;
+transition: .6s;
+background-color: #001540;
+}
+.prorun{
+width: 100%;
+}
+.teaminfo{
+background-color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+height: 12vh;
+}
+.background{
+top : 0;
+position : absolute;
+width : 100%;
+min-height : 100vh;
+background-color : #333;
+z-index : -1;
+}
+.teaminfo p{
+font-size: 30px;
+color: #001540;
+font-family: 'Poppins', sans-serif;
+}
+
+nav{
+background-color: #001540;
+height: 6vh;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+nav ul{
+list-style: none;
+display: flex;
+justify-content: space-between;
+width: 90%;
+transition: .5s;
+}
+nav ul li a{
+text-decoration: none;
+font-size: 20px;
+color: white;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+nav ul li a:hover{
+color: gold;
+text-decoration: underline;
+transition: .5s;
+}
+
+nav .menu div{
+background-color: white;
+width: 30px;
+height: 4px;
+margin: 5px;
+}
+nav .menu{
+display: none;
+position: absolute;
+top: 13%;
+right: 0;
+}
+.appear{
+transform: translateX(0);
+z-index : 3;
+}
+
+.teaminfo p{
+font-size: 25px;
+}
+
+.info1{
+display: flex;
+flex-wrap: wrap;
+transition : .6s;
+justify-content: center;
+}
+
+
+.photo1{
+width: 250px;
+height: 200px;
+overflow: hidden;
+position: relative;
+margin : 5px;
+}
+
+.photo1 img{
+width: 100%;
+height: 100%;
+}
+
+.photo1 p{
+top: 0;
+left : 0;
+bottom : 0;
+right : 0;
+position: absolute;
+width : 100%;
+height : 100%;
+display: flex;
+flex-direction : column;
+background-color: rgba(0,0,0,0.4);
+justify-content: center;
+align-items: center;
+color: white;
+font-size: 20px;
+font-weight: bold;
+font-family: 'Poppins', sans-serif;
+transform: translateY(2em);
+transition: 1s;
+visibility: hidden;
+opacity: 0;
+}
+.photo1 p a{
+text-decoration: none;
+color: white;
+}
+.photo1img{
+transition: .5s;
+}
+.photo1:hover .photo1p{
+visibility: visible;
+opacity: 1;
+transform: translateY(0);
+}
+.photo1:hover .photo1img{
+transform: scale(1.1);
+}
+
+#semobtn{
+-webkit-appearance: none;
+outline: none;
+border: none;
+width: 85px;
+height: 35px;
+border-radius: 25px;
+font-size: 13px;
+font-weight:  bold;
+text-transform: uppercase;
+font-family: 'Poppins', sans-serif;
+display: none;
+}
+@media screen and (max-width:1020px){
+nav{
+background-color: #001540;
+height: 3px;
+}
+nav ul{
+flex-direction: column;
+position: absolute;
+background-color: rgba(255,255,255,0.8);
+top: 15vh;
+right: 0;
+height: 50vh;
+width: 35%;
+transform: translateX(100%);
+z-index: 1;
+}
+
+nav ul li a{
+color: navy;
+}
+
+nav ul li a:hover{
+color:black;
+font-size: 25px;
+}
+nav .menu{
+display: block;
+}
+}
+
+@media screen and (max-width:720px){
+nav{
+background-color: #001540;
+height: 5px;
+}
+
+nav ul{
+flex-direction: column;
+position: absolute;
+background-color: rgba(255,255,255,1);
+top: 16.5vh;
+right: 0;
+height: 60vh;
+width: 35%;
+padding-top: 15px;
+padding-bottom: 15px;
+transform: translateX(100%);
+z-index: 1;
+}
+
+nav ul li a{
+color: navy;
+}
+
+nav ul li a:hover{
+color:black;
+font-size: 25px;
+}
+nav .menu{
+display: block;
+}
+#semobtn{
+display: block;
+background-color : rgba(255,255,255,1);
+color : #001540;
+transition : .7s;
+}
+#semobtn:hover{
+background-color: #001540;
+color : white;
+}
+.info1{
+overflow: hidden;
+max-height: 205px;
+transition: .5s;
+}
+.photo1{
+width: 45%;
+}
+.probar{
+display: block;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<div class="teaminfo">
+<img src="ecteam.jpg" width="75" height="75">
+<p>ELECTRONIC TEAM - KTU</p>
+<img src="ktulogo.png" width="75" height="75">
+</div>
+
+
+<nav>
+<ul id="menulist">
+<li><a href="#">Home</a></li>
+<li><a href="#">Events</a></li>
+<li><a href="#">Activities</a></li>
+<li><a href="#">Knowledges</a></li>
+<li><a href="#">Contacts</a></li>
+<li><a href="#">More</a></li>
+<li><a href="#">Login</a></li>
+<li><a href="#">Sign up</a></li>
+</ul>
+
+<div class="menu" onclick="menuclick()">
+<div></div>
+<div></div>
+<div></div>
+</div>
+
+</nav>
+<br><br>
+
+
+
+<div class="info1">
+
+<div class="photo1">
+<img class="photo1img" src="einstein.jpg">
+<p class="photo1p"><a href="">Albert Einstein <br><span style="font-size:14px;">1879-1955</span></a></p>
+</div>
+<div class="photo1">
+<img class="photo1img" src="volta.jpg">
+<p class="photo1p"><a href="">Alessandro Volta  <br><span style="font-size:14px;">1745-1827</span></a></p>
+</div>
+<div class="photo1">
+<img class="photo1img" src="grahambell.jpg">
+<p class="photo1p"><a href="">Alexander Graham Bell <br><span style="font-size:14px;">1847-1922</span></a></p>
+</div>
+<div class="photo1">
+<img class="photo1img" src="ampere.jpg">
+<p class="photo1p"><a href="">André Marie Ampère<br><span style="font-size:14px;">1775-1836</span></a></p>
+</div>
+<div class="photo1">
+<img class="photo1img" src="coulomb.jpg">
+<p class="photo1p"><a href="">Charles Augustin de Coulomb<br><span style="font-size:14px;">1736-1806</span></a></p>
+</div>
+<div class="photo1">
+<img class="photo1img" src="ohm.jpg">
+<p class="photo1p"><a href="">Georg Simon Ohm<br><span style="font-size:14px;">1789-1854</span></a></p>
+</div>
+
+</div>
+
+<div class="semodiv" align="center">
+<button id="semobtn" onclick="semoclick()">see more</button>
+</div>
+<hr>
+<div class="probar">
+<div class="proline"></div>
+</div>
+<script>
+
+
+var info1=document.getElementsByClassName("info1")[0];
+var menulist=document.getElementById("menulist");
+var backgrounds = document.getElementsByClassName("background")[0];
+var semobtn=document.getElementById("semobtn");
+var proline= document.getElementsByClassName("proline")[0];
+function menuclick(){
+menulist.classList.toggle("appear");
+}
+function bgclick(){
+menulist.classList.remove("appear");
+}
+function semoclick(){
+proline.classList.toggle("prorun");
+if(info1.style.maxHeight){
+info1.style.maxHeight=null;
+semobtn.textContent="see more";
+}
+else{
+info1.style.maxHeight=info1.scrollHeight+"px";
+semobtn.textContent="see less";
+}
+
+}
+</script>
+</body>
+</html>
