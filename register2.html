@@ -87,6 +87,19 @@ right: 0;
 	padding-bottom: 80px;
 	border-radius: 0 0 230px 230px;
 }
+.see{
+	-webkit-transparent :none;
+	border : none;
+	outline: none;
+	width: 50px;
+	height : 50px;
+	text-align: center;
+	background-color: transparent;
+	position: absolute;
+	right:0;
+	top: 50%;
+	transform: translate(0,-50%);
+}
 
 .otherlink{
 background-color: #001540;
@@ -110,7 +123,9 @@ background-color: #001540;
 	<h2 class="label">Sign In</h2>
 <table>
 	<tr><td><div class="emaildiv"><input type="email" name="" class="email" placeholder=" Email"></div></td></tr>
-	<tr><td><div class="pwddiv"><input type="password" name="" class="password" placeholder="Password"></div></td></tr>
+	<tr><td><div class="pwddiv"><input type="password" name="" class="password" placeholder="Password">
+		<button class="see" onclick="seeclick()"><img class="eyeicon" src="https://cdn3.iconfinder.com/data/icons/show-and-hide-password/100/show_hide_password-09-512.png" width="20" height="20"></button>
+	</div></td></tr>
 </table><br>
 <button class="signinbtn">Sign In</button><br><br>
 <a class="forget" href="register.html">Create New Account</a>
@@ -129,6 +144,20 @@ background-color: #001540;
 </div>
 
 </div>
-
+<script type="text/javascript">
+	var password = document.getElementsByClassName("password")[0];
+	var see = document.getElementsByClassName("see")[0];
+	var eyeicon = document.getElementsByClassName("eyeicon")[0];
+	function seeclick(){
+		if(password.type == "password"){
+			password.type = "text";
+			eyeicon.src = "https://www.edulastic.com/blog/wp-content/uploads/2016/11/Icon-See-Answers.png";
+		}
+		else{
+			password.type = "password";
+			eyeicon.src = "https://cdn3.iconfinder.com/data/icons/show-and-hide-password/100/show_hide_password-09-512.png";
+		}
+	}
+</script>
 </body>
 </html>
