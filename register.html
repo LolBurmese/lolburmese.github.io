@@ -1,131 +1,390 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+	<title>register</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
 
-        <style>
-        body{
-        				background-repeat :no-repeat;
-        				background-size : cover;
-        				overflow:hidden;
-        				min-height : 100vh;
-        				background-position :center;
-        				}
-        
-            header {
-                background-color: rgba(0, 0, 0, 0.5);
-                font-family: sofia;
-                font-size: 10px;
-                color: white;
-                text-transform : uppercase;
-            }
+<style type="text/css">
+	body{
+	padding: 0;
+	margin: 0;
+}
+.container{
+	background-image: url("university.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: .5s;
+	background-size: cover;
+}
+.main{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+.info{
+	background-color: #001540;
+	position: absolute;
+	width: 320px;
+	height: 80%;
+	color: white;
+	transition: .5s;
+	opacity: 1;
+	visibility: visible;
+	border-radius: 25px;
+	font-family: 'Poppins', sans-serif;
+}
+.info p{
+	font-family: 'Rowdies', cursive;
+}
+
+.info2{
+	position: relative;
+	border : 1px solid black;
+	background-color: rgba(255,255,255,0.4);
+	width: 320px;
+	height: 80%;
+	border-radius: 25px;
+	font-family: 'Poppins', sans-serif;
+	transform: translateX(2em);
+	opacity: 0;
+	visibility: hidden;
+	transition: .5s;
+}
+.appear{
+	visibility: visible;
+	opacity: 1;
+	transform: translateX(0);
+}
+.info2 h2{
+	color:  #001540;
+	font-family: 'Poppins', sans-serif;
+}
+.fname, .email, .password, .bd{
+	border: none;
+	height: 30px;
+	color:white;
+	background-color: #001540;
+	border-radius: 10px;
+	padding-left: 5px;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	width: 142px;
+}
+
+.btn, .regbtn{
+	-webkit-appearance: none;
+	border: none;
+	width: 80px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: white;
+	color: #001540;
+	font-weight: bold;
+	outline: none;
+	transition: .5s;
+	font-family: 'Poppins', sans-serif;
+	animation: btnanimate 20s ease forwards infinite;
+}
+
+.btn:hover{
+	background-color: #001540;
+	color: white;
+}
+.regbtn:hover{
+	background-color: skyblue;
+	color: #001540;
+}
+.checkbox{
+	font-size: 10px;
+	color: #001540;
+}
+.field{
+	border: none;
+	background-color: #001540;
+	height: 30px;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+}
+.txtstuff{
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+}
+/*@media screen and (max-width: 720px){
+	.main{
+		flex-direction: column;
+	}
+	.info, .info2{
+		border-radius: 25px;
+	}
+}*/
+.bd{
+	width: 142px;
+}
+.gfy1{
+	padding-left: 30px;
+}
+.exitbtn, .exitalert{
+	color:white;
+	background-color: red;
+	-webkit-appearance: none;
+	width : 23px;
+	height: 23px;
+	position: absolute;
+	outline: none;
+	border : none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+}
+.exitalert{
+	top : 0;
+	right: 0;;
+}
+.exitbtn{
+	top : 20px;
+	right : 8px;
+}
+.disappear{
+	opacity: 0;
+	visibility: hidden;
+}
+@keyframes btnanimate {
+	0%{
+		background-color: black;
+		color: white ;
+	}
+	10%{
+		background-color: brown ;
+		color : black;
+	}
+	20%{
+		background-color: red;
+		color :white ;
+	}
+	30%{
+		background-color: darkorange;
+		color : black ;
+	}
+	40%{
+		background-color: yellow ;
+		color :black ;
+	}
+	50%{
+		background-color: limegreen;
+		color : black;
+	}
+	60%{
+		background-color:blue ;
+		color : white;
+	}
+	70%{
+		background-color:purple ;
+		color : white;
+	}
+	80%{
+		background-color: dimgrey ;
+		color : black;
+	}
+	90%{
+		background-color: white ;
+		color : black;
+	}
+	100%{
+		background-color: black ;
+		color : white;
+	}
+}
+.alertlabel{
+	z-index: -1;
+	visibility: hidden;
+	opacity: 0;
+	transition: .5s;
+	transform: translateY(-2em);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.alert{
+	background-color: white;
+	width: 250px;
+	height: 150px;
+	position: relative;
+	border-radius: 15px;
+	border : 1px solid black;
+	overflow: hidden;
+}
+.alertprompt{
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	position: absolute;
+	top : 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.alerttitle{
+	background-color: #001540;
+	color : white;
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	height: 23px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.alertappear{
+	opacity: 1;
+	z-index: 2;
+	visibility: visible;
+	transform: translateY(0);
+}
+.blurcontainer{
+	filter: blur(9px);
+}
+</style>
+</head>
+<body>
+<div class="container">
+	
+<div class="main">
+
+<div class="info" align="center">
+	<h2>Welcome!</h2>
+		<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you do not have EC-Team account, you can easily register here now.  </p>
+		<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Anyone who has never made a mistake has never tried anything new."<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i style="color: red;">-Albert Einstein-</i></p>
+		<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"A scientist can discover a new star but he cannot make one. He would have to ask an engineer to do for him."<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color: red;">-Gordon L. Glegg-</i></p>
+		<button class="regbtn" onclick="btnclick()">Register</button>
+</div>
+
+<div class="info2" align="center">
+
+<h2>REGISTER FORM</h2>
+<table>
+	<tr><td><input type="textbox" name="" placeholder="First Name" class="fname"></td>
+	<td> <input type="textbox" name="" placeholder="Last Name" class="fname"></td></tr>
+
+ 	<tr><td><input type="email" name="" placeholder="Your Email" class="email"></td>
+ 		<td><input type="date" name="" placeholder="Birthday" class="bd"></td></tr>
+
+
+	<tr><td><input type="password" name="" placeholder="password" class="password"></td>
+	<td><input type="password" name="" placeholder="Confirm password" class="password"></td></tr>
+</table><br>
+
+
+	<div class="gfy1" align="left">
+<span class="txtstuff">Gender:</span>
+    <input type="radio" name="gender" value="male" /><span class="txtstuff">Male</span>
+    <input type="radio" name="gender" value="female" /><span class="txtstuff">Female</span>
+    <input type="radio" name="gender" value="other" /><span class="txtstuff">Other</span><br>
+       <br> 
+<span class="txtstuff">Field:</span>
+    <select class="field" name="Field">
+                <option value="" name="">Networking</option>
+                <option value="" name="">Telecommunication</option>
+                <option value="" name="">C++/C Programming</option>
+                <option value="" name="">Digital Image Processing</option>
+                <option value="" name="">Matlab</option>
+                <option value="" name="">Power Electronics</option>
+                <option value="" name="">Material Science</option>
+                <option value="" name="">Embedded System</option>
+                <option value="" name="">Industrial Automation</option>
+                <option value="" name="">Other</option>
+    </select><br><br>
+
             
-            table{
-            				
-            				color:white;            			background-color: rgba(0, 0, 0, 0.5);
-            				padding: 10px;
-            				border-radius: 15px;
-            				box-shadow : 0 0 17px #333;
-            				}
-            				
-         				.containers{
-         								color:white;
-            			background-color: rgba(0, 0, 0, 0.5);
-            			
-box-shadow : 0 0 17px #333;
+<span class="txtstuff">Year:</span>
+    <select class="field" name="year">
 
-            			padding: 10px;
-            			border-radius: 15px;
-            			display:flex;
-            			align-items : center;
-            			justify-content : center;
-            								
-            								
-            								}
-            								.btn{
-            										width : 72px;
-            										height: 40px;
-            										background-color: rgba(0, 0, 0, 0.5);
-            										color: white;		
-            										
-            										border-radius : 15px;
-            												}
-        </style>
+                <option value="IIEC" name="iiec">Second Year</option>
 
-        <title>Register</title>
-    </head>
+                <option value="IIIEC" name="iiiec">Third Year</option>
 
-    <body style="background-image: url(https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);">
-        <header>
-           <h1 style="border-radius:15px;" align="center">You can register here!</h1> 
-        </header>
-        <br>
+                <option value="IVEC" name="ivec">Fourth Year</option>
 
-        <form method="GET">
-        <table align="center">
-        <tr>
-            <td>First name:</td>
-            <td><input type="text" name="firstname" /></td>
-            
-            </tr>
-            <tr>
-            <td>Last name:</td>
-            <td><input type="text" name="lastname" /></td>
-            </tr>
-            
-            <tr>
-            <td>Birthday:</td>
-            <td><input type="date" name="birthday" /></td>
-            </tr>
-            <tr>
-            <td>Email:</td>
-            <td><input type="email" required name="email" /></tr>
-            </tr>
-            
-            <tr>
-            <td>Password:</td>
-            <td><input type="password" min="5" name="password" />
-            </td>
-            </tr>
-            </table><br>
-            <div class="containers">
-            <div class="container">
-            
-            Gender:<br />
-            <input type="radio" name="gender" value="male" />Male<br />
-            <input type="radio" name="gender" value="female" />Female<br />
-            <input type="radio" name="gender" value="other" />Other<br />
-            <br />
-            Field:<br />
+                <option value="VEC" name="vec">Fifth Year</option>
 
-            <input type="checkbox" name="networking" /> Networking<br />
-            <input type="checkbox" name="control" />Control<br />
-            <input type="checkbox" name="programming" />Programming<br />
-            <input type="checkbox" name="imageprocessing" />Image Processing<br />
-            <input type="checkbox" name="other" />Other<br />
-            <br />
-            Year: <br />
+                <option value="VIEC" name="viec">Sixth Year</option>
+    </select>
 
-            <select name="year">
-                <option value="IEC" name="iec">IEC</option>
 
-                <option value="IIEC" name="iiec">IIEC</option>
 
-                <option value="IIIEC" name="iiiec">IIIEC</option>
+    <br><br>
+	<input class="agreecbox" type="checkbox" name="">I agree to the <a class="txtstuff" href="#">Terms and Conditions</a><br><br>
+	
 
-                <option value="IVEC" name="ivec">IVEC</option>
+</div>
 
-                <option value="VEC" name="vec">VEC</option>
+<button class="btn" onclick="alertclick()">Register</button>
 
-                <option value="VIEC" name="viec">VIEC</option>
-            </select>
-            </div></div>
-            <br />
-            <br />
-             <div align="center">
-            <button class="btn">Register!</button>
-            <button class="btn">CANCEL</button>
-            </div>
-        </form>
-    </body>
+
+<button class="exitbtn" onclick="btnclick()">X</button>
+</div>
+
+
+</div>
+
+</div>
+<div class="alertlabel">
+	<div class="alert">
+		<div class="alerttitle" align="center">Title here</div>
+<div class="alertprompt">hello</div>
+<button class="exitalert" onclick="alertclick()">X</button>
+</div>
+</div>
+
+<script>
+	var info=document.getElementsByClassName("info")[0];
+	var info2=document.getElementsByClassName("info2")[0];
+	var alertlabel=document.getElementsByClassName("alertlabel")[0];
+	var container=document.getElementsByClassName("container")[0];
+	var agreecbox=document.getElementsByClassName("agreecbox")[0];
+	var alerttitle=document.getElementsByClassName("alerttitle")[0];
+	var alertprompt=document.getElementsByClassName("alertprompt")[0];
+function btnclick(){
+	info2.classList.toggle("appear");
+	info.classList.toggle("disappear");
+}
+function alertclick(){
+	alertlabel.classList.toggle("alertappear");
+	container.classList.toggle("blurcontainer");
+	if(agreecbox.checked === false){
+		alerttitle.textContent = "Registration Failed";
+		alertprompt.textContent = "You need to agree T&C!";
+	}
+	else{
+		alerttitle.textContent = "Registration Completed";
+		alertprompt.innerHTML = "<p>You can now Sign in!</p><a href='https://lolburmese.github.io/register2.html'>Sign in here</a>";
+	}
+}
+
+
+</script>
+</body>
 </html>
