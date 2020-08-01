@@ -10,7 +10,7 @@ body{
 margin: 0;
 padding: 0;
 overflow-x: hidden;
-background-color : skyblue;
+background-color : #ddd;
 }
 
 .probar{
@@ -20,7 +20,6 @@ background-color: white;
 position: absolute;
 top: 14%;
 right: 0;
-margin-right: 10px;
 border-radius: 15px 0 0 15px;
 overflow: hidden;
 display: none;
@@ -35,7 +34,8 @@ background-color: #001540;
 width: 100%;
 }
 .teaminfo{
-background-color: white;
+background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Pictures-HD-Electronic-Download-PIC-WPB006922.jpg");
+background-size: cover;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -52,7 +52,9 @@ z-index : -1;
 }
 .teaminfo p{
 font-size: 50px;
-color: #001540;
+font-weight: bold;
+color: white;
+-webkit-text-stroke: 0.5px black;
 font-family: 'Poppins', sans-serif;
 }
 
@@ -110,7 +112,7 @@ justify-content: center;
 
 .photo1{
 width: 250px;
-height: 200px;
+height: 230px;
 overflow: hidden;
 position: relative;
 margin : 5px;
@@ -166,6 +168,7 @@ border: none;
 width: 85px;
 height: 35px;
 border-radius: 25px;
+box-shadow: 0 0 8px;
 font-size: 13px;
 font-weight:  bold;
 text-transform: uppercase;
@@ -183,16 +186,51 @@ right: 0;
 bottom: 0;
 }
 
+/*.info2{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+}
+.photo2{
+width: 350px;
+height: 250px;
+display: flex;
+align-items: center;
 
+}
 
+.photo2 img{
+width: 100%;
+height: 100%;
+transition: .5s;
+}
 
+.photo2 p{
+width: 350px;
+height: 100%;
+background-color: rgba(255,255,255,0.3);
+box-shadow: 0 0 10px;
+display: flex;
+align-items: center;
+font-size: 20px;
+font-weight: bold;
+font-family: 'Poppins', sans-serif;
+transition: .5s;
+visibility: hidden;
+opacity: 0;
+}
 
+.photo2 p a{
+text-decoration: none;
+color: black;
+}
 
-
-
-
-
-
+.photo2:hover .photo2p{
+visibility: visible;
+opacity: 1;
+transform: translateY(0);
+}*/
 
 @media screen and (max-width:1020px){
 .teaminfo p{
@@ -239,7 +277,8 @@ bottom: 0;
 
 @media screen and (max-width:720px){
 .teaminfo p{
-font-size: 14px;
+font-size: 20px;
+font-weight: 700px;
 }
 
 nav{
@@ -355,7 +394,7 @@ bottom: 0;
 <ul id="menulist">
 <li><a href="#">Home</a></li>
 <li><a href="#">Events</a></li>
-<li><a href="#">Activities</a></li>
+<li><a href="activities.html">Activities</a></li>
 <li><a href="#">Knowledges</a></li>
 <li><a href="#">Contacts</a></li>
 <li><a href="#">More</a></li>
@@ -403,14 +442,48 @@ bottom: 0;
 <img class="photo1img" src="ohm.jpg">
 <p class="photo1p"><a href="">Georg Simon Ohm<br><span style="font-size:14px;">1789-1854</span></a></p>
 </div>
-
+<div class="photo1">
+<img class="photo1img" src="kirchoff.jpg">
+<p class="photo1p"><a href="">Gustav Robert Kirchhoff<br><span style="font-size:14px;">1824-1887</span></a></p>
 </div>
+<div class="photo1">
+<img class="photo1img" src="bode.jpg">
+<p class="photo1p"><a href="">Hendrik Wade Bode<br><span style="font-size:14px;">1905-1982</span></a></p>
+</div>
+<div class="photo1">
+<img class="photo1img" src="hertz.jpg">
+<p class="photo1p"><a href="">Heinrich Hertz<br><span style="font-size:14px;">1857-1894</span></a></p>
+</div>
+<div class="photo1">
+<img class="photo1img" src="newton.jpg">
+<p class="photo1p"><a href="">Isaac Newton (Sir) <br><span style="font-size:14px;">1643-1727</span></a></p>
+</div>
+</div>
+
+
+
 <br>
 <div class="semodiv" align="center">
 <button id="semobtn" onclick="semoclick()">see more</button>
 </div>
 
 <hr>
+
+<!-- <div class="info2">
+<div class="photo2">
+<img class="photo2img" src="8tks.jpg">
+<p class="photo2p"><a href="#">(အဌမ) အကြိမ်မြောက် ဘာသာရပ်ဆိုင်ရာဟောပြောပွဲ </a></p>
+</div>
+<div class="photo2">
+<img class="photo2img" src="8tks.jpg">
+<p class="photo2p"><a href="#">(အဌမ) အကြိမ်မြောက် ဘာသာရပ်ဆိုင်ရာဟောပြောပွဲ </a></p>
+</div>
+</div> -->
+
+
+
+
+
 <div class="webinfo" align="center">
 <div>Made with &#10084; by Kaung Si Thu</div>
 </div>
