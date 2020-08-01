@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta charset="utf-8">
 	<title>Sign In</title>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
 	<style type="text/css">
@@ -43,8 +43,25 @@ right: 0;
 	-webkit-appearance: none;
 	font-family: 'Poppins', sans-serif;
 	background-color: rgba(255,255,255,0.4);
-	padding-left: 15px;
+	padding-left: 25px;
 	border-radius: 8px;
+}
+.emaildiv, .pwddiv{
+	position: relative;
+}
+.emaildiv::before{
+	content: '✉';
+	position: absolute;
+	left : 2px;
+	top: 50%;
+	transform: translate(0,-50%);
+}
+.pwddiv::before{
+	content: '🔒';
+	position: absolute;
+	left : 2px;
+	top: 50%;
+	transform: translate(0,-50%);
 }
 .signinbtn{
 	-webkit-appearance: none;
@@ -52,7 +69,17 @@ right: 0;
 	width: 80px;
 	height: 30px;
 	border-radius: 5px;
+	box-shadow: 0 0 8px;
+	background-color: white;
+	color: #001540;
+	font-weight: bold;
+	transition: .5s;
 }
+.signinbtn:hover{
+	background-color: #001540;
+	color: white;
+}
+
 .mainform{
 	background-color: skyblue;
 	padding-top: 30px;
@@ -78,11 +105,11 @@ background-color: #001540;
 <div class="main">
 <div class="container">
 	<div class="mainform" align="center">
-		<img src="ecteam2.png" width="70" height="70">
+		<img src="ecteam2.png" width="80" height="80">
 	<h2 class="label">Sign In</h2>
 <table>
-	<tr><td><input type="email" name="" class="email" placeholder="Email"></td></tr>
-	<tr><td><input type="password" name="" class="password" placeholder="Password"></td></tr>
+	<tr><td><div class="emaildiv"><input type="email" name="" class="email" placeholder=" Email"></div></td></tr>
+	<tr><td><div class="pwddiv"><input type="password" name="" class="password" placeholder="Password"></div></td></tr>
 </table><br>
 <button class="signinbtn">Sign In</button><br><br>
 <a class="forget" href="register.html">Create New Account</a>
