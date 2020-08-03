@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>messenger</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-sclae=1.0, user-scalable=0">
+<style type="text/css">
+
+body{
+	padding:0;
+	margin: 0;
+}
+
+.topinfo{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: sticky;
+	top: 0;
+	background-color: white;
+	box-shadow: 0 0.5px 3px gray;
+}
+.chatleft, .chatright{
+	display: flex;
+	align-items: center;
+	height : 9vh;
+	font-family: 'Poppins', sans-serif;
+}
+.chatleft img, .chatright img{
+	margin: 10px;
+	border-radius: 15px;
+	border: 1px solid #ddd;
+}
+.search{
+/*	position: absolute;
+	left: 50%;
+	transform: translate(-50%);*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+
+}
+.search input[type=search]{
+	width: 450px;
+	height: 35px;
+	border-radius: 25px;
+	border: 1px solid #ddd;
+	outline: none;
+	padding-left: 10px;
+	background-color: #ddd;
+}
+.contact{
+	overflow: auto;
+	white-space: nowrap;
+	
+}
+.contactinfo{
+	display: inline-block;
+	width : 50px;
+	overflow: hidden;
+	margin-right: 10px;
+}
+.contactinfo p{
+	margin : 0;
+	font-size: 12px;
+	font-family: 'Poppins', sans-serif;
+}
+.contactinfo img{
+	border : 1px solid black;
+	border-radius: 25px;
+}
+.contact::-webkit-scrollbar{
+	display: none;
+}
+.person{
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+	transition: .4s;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.person p, .person h4{
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+}
+.person .label{
+	padding-left: 10px;
+}
+.person img{
+	border-radius: 25px;
+}
+.person p{
+	color: gray;
+}
+
+.botinfo{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: sticky;
+	bottom: 0;
+	background-color: white;
+	box-shadow: 0 -0.5px 3px gray;
+	width: 100%;
+}
+
+.chats p, .people p{
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+}
+.chats, .people{
+	padding-top: 5px;
+	width: 50%;
+}
+.chats:hover{
+	animation: hoveranimate .5s ease forwards;
+}
+.people:hover{
+	animation: hoveranimate .5s ease forwards;
+}
+@keyframes hoveranimate{
+	from{
+		background-color: white;
+		color:black;
+	}
+	to{
+		background-color: gray;
+		color : white;
+	}
+}
+.person:hover{
+	background-color: skyblue;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="topinfo">
+	<div class="chatleft">
+		<img src="https://i.pinimg.com/236x/b9/58/2d/b9582d806f57b4d8aab0655759d3cb34--facebook-face-fb-profile.jpg" width="30" height="30">
+		<h2>Chats</h2>
+	</div>
+
+	<div class="chatright">
+		<img src="https://png.pngtree.com/png-vector/20190801/ourlarge/pngtree-camera-icon-png-image_1638978.jpg" width="30" height="30">
+		<img src="https://static.vecteezy.com/system/resources/thumbnails/000/331/919/small/48_Pencil.jpg" width="30" height="30">
+	</div>
+
+</div>
+<br>
+	
+<div class="search" align="center">
+
+	<input class="search1" type="search" placeholder=" 🔍 Search" name="" onfocus="focusml()">
+
+</div>
+
+<br>
+
+<div align="center" class="contact">
+
+<div class="contactinfo">	<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-person-512.png" width="40" height="40"><p>min thwin bully khant</p> </div>
+<div class="contactinfo">	<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-person-512.png" width="40" height="40"><p>Your Story</p> </div>
+<div class="contactinfo">	<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-person-512.png" width="40" height="40"><p>Your Story</p> </div>
+<div class="contactinfo">	<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-person-512.png" width="40" height="40"><p>Your Story</p> </div>
+<div class="contactinfo">	<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-person-512.png" width="40" height="40"><p>Your Story</p> </div>
+<div class="contactinfo">	<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-person-512.png" width="40" height="40"><p>Your Story</p> </div>
+<div class="contactinfo">	<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-person-512.png" width="40" height="40"><p>Your Story</p> </div>
+<div class="contactinfo">	<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-person-512.png" width="40" height="40"><p>Your Story</p> </div>
+<div class="contactinfo">	<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-person-512.png" width="40" height="40"><p>Your Story</p> </div>
+<div class="contactinfo">	<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-person-512.png" width="40" height="40"><p>Your Story</p> </div>
+<div class="contactinfo">	<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-person-512.png" width="40" height="40"><p>Your Story</p> </div>
+
+</div>
+
+<br>
+
+<div class="conversation">
+
+	<div class="person">
+	<img src="https://i.pinimg.com/736x/cc/aa/bd/ccaabd6932402ffb12e5db65f5de5c0e.jpg" width="50" height="50">
+	<div class="label">
+	<h4>Aye Myat Thu</h4>
+	<p>I love you.</p>
+	</div>
+	</div>
+
+	<div class="person">
+	<img src="https://i.pinimg.com/736x/cc/aa/bd/ccaabd6932402ffb12e5db65f5de5c0e.jpg" width="50" height="50">
+	<div class="label">
+	<h4>Aye Myat Thu</h4>
+	<p>I love you.</p>
+	</div>
+	</div>
+
+	<div class="person">
+	<img src="https://i.pinimg.com/736x/cc/aa/bd/ccaabd6932402ffb12e5db65f5de5c0e.jpg" width="50" height="50">
+	<div class="label">
+	<h4>Aye Myat Thu</h4>
+	<p>I love you.</p>
+	</div>
+	</div>
+
+	<div class="person">
+	<img src="https://i.pinimg.com/736x/cc/aa/bd/ccaabd6932402ffb12e5db65f5de5c0e.jpg" width="50" height="50">
+	<div class="label">
+	<h4>Aye Myat Thu</h4>
+	<p>I love you.</p>
+	</div>
+	</div>
+
+	<div class="person">
+	<img src="https://i.pinimg.com/736x/cc/aa/bd/ccaabd6932402ffb12e5db65f5de5c0e.jpg" width="50" height="50">
+	<div class="label">
+	<h4>Aye Myat Thu</h4>
+	<p>I love you.</p>
+	</div>
+	</div>
+
+	<div class="person">
+	<img src="https://i.pinimg.com/736x/cc/aa/bd/ccaabd6932402ffb12e5db65f5de5c0e.jpg" width="50" height="50">
+	<div class="label">
+	<h4>Aye Myat Thu</h4>
+	<p>I love you.</p>
+	</div>
+	</div>
+
+	<div class="person">
+	<img src="https://i.pinimg.com/736x/cc/aa/bd/ccaabd6932402ffb12e5db65f5de5c0e.jpg" width="50" height="50">
+	<div class="label">
+	<h4>Aye Myat Thu</h4>
+	<p>I love you.</p>
+	</div>
+	</div>
+
+	<div class="person">
+	<img src="https://i.pinimg.com/736x/cc/aa/bd/ccaabd6932402ffb12e5db65f5de5c0e.jpg" width="50" height="50">
+	<div class="label">
+	<h4>Aye Myat Thu</h4>
+	<p>I love you.</p>
+	</div>
+	</div>
+
+	<div class="person">
+	<img src="https://i.pinimg.com/736x/cc/aa/bd/ccaabd6932402ffb12e5db65f5de5c0e.jpg" width="50" height="50">
+	<div class="label">
+	<h4>Aye Myat Thu</h4>
+	<p>I love you.</p>
+	</div>
+	</div>
+
+</div>
+
+<div class="botinfo">
+	<div class="chats" align="center"><img src="https://static.thenounproject.com/png/32396-200.png" width="25" height="25"><br>
+	<p>Chats</p></div>
+	<div class="people" align="center"><img src="https://i.dlpng.com/static/png/4806117-users-people-men-humans-heads-persons-svg-png-icon-free-download-heads-of-people-png-980_838_preview.png" width="25" height="25"><br>
+	<p>People</p></div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	
+var search=document.getElementsByClassName("search1")[0];
+
+function focusml(){
+
+	search.placeholder = "Search";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
