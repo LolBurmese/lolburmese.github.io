@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<style type="text/css">
+body{
+	padding: 0;
+	margin: 0;
+	background-color: #001540;
+}
+h1{
+	background-color: red;
+	color: white;
+	margin: 0;
+	padding: 14px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.player{
+	width: 250px;
+	height: 190px;
+	margin: 5px;
+	display: inline-block;
+	border-radius: 15px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.player img{
+	width: 100%;
+	height: 100%;
+	transition: .5s;
+}
+.player img:hover{
+	transform: scale(1.1);
+}
+
+.info{
+	width : 0;
+	height : 0;
+	padding : 0;
+	overflow : hidden;
+	background-color: rgba(255,0,0,0.8);
+	font-family: 'Sriracha', cursive;
+	border-radius: 15px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(10%,-50%);
+	color: white;
+	transition: .3s;
+	z-index: -1;
+	opacity: 0;
+	visibility: hidden;
+	
+}
+.info::-webkit-scrollbar{
+	display: none;
+}
+.container{
+	overflow: scroll;
+	height : 550px;
+	transition: .5s;
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+.container::-webkit-scrollbar{
+	display: none;
+}
+.miniinfo{
+	position: relative;
+}
+.exitbtn{
+	-webkit-appearance: none;
+	outline: none;
+	border: none;
+	color: red;
+	font-weight: bolder;
+	position: absolute;
+	top: 0;
+	right: 15px;
+}
+.appear{
+	width: 380px;
+	height: 300px;
+	padding: 10px;
+	overflow: scroll;
+	z-index: 1;
+	transform: translate(-50%,-50%);
+	opacity: 1;
+	visibility: visible;
+}
+.playerdisband{
+	z-index: -1;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(2em);
+}
+	
+
+</style>
+
+</head>
+<body>
+
+<h1 align="center">Manchester United</h1>
+<div class="container" align="center">
+<div class="player" onclick="openplayer(0)">
+	<img src="https://i2-prod.dailyrecord.co.uk/incoming/article20058773.ece/ALTERNATES/s615/2_JS191295317.jpg">
+</div>
+<div class="player"  onclick="openplayer(1)">
+	<img src="https://resources.premierleague.com/photos/2019/08/05/87895801-664b-4b58-8513-7998dcc90ed8/Harry-Maguire-signs-for-Man-Utd.png?width=930&height=620">
+</div>
+<div class="player"  onclick="openplayer(2)">
+	<img src="https://img.bleacherreport.net/img/images/photos/003/830/429/hi-res-d7afd92615388e724d509af1026813fe_crop_north.jpg?1569667438&w=3072&h=2048">
+</div>
+<div class="player"  onclick="openplayer(3)">
+	<img src="https://images.daznservices.com/di/library/GOAL/13/b3/aaron-wan-bissaka-manchester-united-2019-20_77jspfdvt4nv1ee48fuglm546.jpg?t=-1992611252&quality=60&w=1200&h=800">
+</div>
+<div class="player"  onclick="openplayer(4)">
+	<img src="https://www.unitedinfocus.com/static/uploads/14/2019/12/GettyImages-1192550003.jpg">
+</div>
+<div class="player"  onclick="openplayer(5)">
+	<img src="https://images.daznservices.com/di/library/GOAL/b7/ed/scott-mctominay-manchester-united-2019-20_womuxm60nmc31sn7if5hoigzp.jpg?t=-1083012368&quality=60&w=1200&h=800">
+</div>
+<div class="player"  onclick="openplayer(6)">
+	<img src="https://en.as.com/en/imagenes/2020/03/19/football/1584616643_273546_noticia_normal.jpg">
+</div>
+<div class="player"  onclick="openplayer(7)">
+	<img src="https://i2-prod.manchestereveningnews.co.uk/incoming/article16427723.ece/ALTERNATES/s615/0_GettyImages-1149458434.jpg">
+</div>
+<div class="player"  onclick="openplayer(8)">
+	<img src="https://media.squawka.com/images/en/2020/02/03183511/bruno-fernandes-manchester-united-2020-940x530.jpg">
+</div>
+<div class="player"  onclick="openplayer(9)">
+	<img src="https://gmsrp.cachefly.net/images/20/03/15/c86887c1ba69d42a4776320aaa08c13a/960.jpg">
+</div>
+</div>
+
+<div class="info">
+<div class="miniinfo">
+	<div class="playername" align="center"></div>
+	<div class="playerdetail"></div>
+	<button class="exitbtn" onclick="exitclick()">X</button>
+	
+</div>
+</div>
+
+
+
+
+<script type="text/javascript">
+
+var info = document.getElementsByClassName("info")[0];
+var exitbtn = document.getElementsByClassName("exitbtn")[0];
+var players = document.querySelectorAll(".container .player");
+var container = document.getElementsByClassName("container")[0];
+var miniinfo = document.getElementsByClassName("miniinfo")[0];
+var playername =document.getElementsByClassName("playername")[0];
+var playerdetail = document.getElementsByClassName("playerdetail")[0];
+
+var details =[
+{
+	pname : "De Gea",
+	about : "Lorem"
+},
+{
+	pname : "Maguire",
+	about : "Lorem"
+},
+{
+	pname : "Lindelof",
+	about : "Lorem"
+},
+{
+	pname : "Wan Bissaka",
+	about : "Lorem"
+},
+{
+	pname : "Luke Shaw",
+	about : "Lorem"
+},
+{
+	pname : "McTominay",
+	about : "Lorem"
+},
+{
+	pname : "Paul Pogba",
+	about : "Lorem"
+},
+{
+	pname : "Den James",
+	about : "Ljbbd"
+},
+{
+	pname : "Fernandes",
+	about : "Lkksnkgkn"
+},
+{
+	pname : "Martial",
+	about : "Lorem"
+}
+
+
+];
+
+function exitclick(){
+	info.classList.remove("appear");
+	container.classList.remove("playerdisband");
+}
+function openplayer(index){
+	info.classList.add("appear");
+	container.classList.add("playerdisband");
+	playername.textContent = details[index].pname;
+	playerdetail.textContent = details[index].about;
+}
+
+
+</script>
+</body>
+</html>
