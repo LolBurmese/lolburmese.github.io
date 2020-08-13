@@ -156,6 +156,9 @@ function colorclick(){
 		bgcolor.style.backgroundImage = "";
 	}
 	else{
+                setTimeout(()=>{
+                bgcolor.style.backgroundColor = "";
+                },10);
 		bgcolor.style.backgroundColor = colorbox.value;
 		bgcolor.style.backgroundImage = "";
 	}
@@ -167,6 +170,7 @@ function colorclick(){
 function btnclick(){
 	mainbox.classList.toggle("appear");
 	colorbox.classList.toggle("textappear");
+        colorbox.value="";
 
 }
 
