@@ -2,181 +2,225 @@
 <html>
 <head>
 	<title>...</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<meta charset="utf-8">
-
+	<link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <style>
-body{
-	background-color: #ddd;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-        min-height:100vh;
-        transition:.5s;
+	body{
+	padding: 0;
+	margin:0;
+}
+.mainrdo,.mainbox{
+	background-color: #555;
+	padding: 10px;
+	transform: translateY(-3em);
+	visibility: hidden;
+	opacity: 0;
+}
+.mainbox{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	padding: 12px;
+}
+.tbox{
+	color: black;
+	padding: 4px;
+	outline: none;
+	border: none;
+	border-radius: 15px;
+	font-family: 'Monda', sans-serif;
+
 }
 
-.mainbox{
+.rdo{
+	position: relative;
+	-webkit-appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 15px;
+	outline: none;
+}
+.rdo:before{
+	font-size: 25px;
+	content: "✔";
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	color: #aaa;
+	display: none;
 }
-.colorbox{
-	border: none;
-	outline: none;
-	background-color: #001540;
-	padding: 15px;
-	color: white;
-	border-radius: 15px;
-	opacity: 0;
-	transition: .5s;
+.rdo:checked:before{
+	display: block;
 }
-.colorbox::placeholder{
-	color: gold;
+.rdo:nth-child(1){
+	background-color: black;
 }
-
-.btnchange{
+.rdo:nth-child(2){
+	background-color: indigo;
+}
+.rdo:nth-child(3){
+	background-color: red;
+}
+.rdo:nth-child(4){
+	background-color: orange;
+}
+.rdo:nth-child(5){
+	background-color: yellow;
+}
+.rdo:nth-child(6){
+	background-color: green;
+}
+.rdo:nth-child(7){
+	background-color: blue;
+}
+.rdo:nth-child(8){
+	background-color: violet;
+}
+.poem{
+	overflow: scroll;
+	height: 500px;
+}
+.poem::-webkit-scrollbar{
+	display: none;
+}
+.btns{
+	position: fixed;
+	width: 100%;
+	bottom: 10px;
+	/*left :50%;
+	transform: translate(-50%);*/
+}
+.btn{
 	-webkit-appearance: none;
-	border: none;
 	outline: none;
+	border: none;
+	background-color: red;
 	padding: 10px;
-	border-radius: 15px;
-	animation: kst 8s ease forwards infinite;
+	color: white;
 }
-.mainbox{
-	height: 120px;
-	overflow: hidden;		
-	transition: .3s;
+.poem{
+	font-family: 'Monda', sans-serif;
+
 }
-
-.label{
-	background: -webkit-linear-gradient(red,blue);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-
 .appear{
-	height: 185px;
-	overflow: hidden;
-}
-.textappear{
+	transform: translateY(0);
+	visibility: visible;
 	opacity: 1;
 }
 
-
-@keyframes kst{
-
-0%{
-	background-color: skyblue;
-	color: black;
-}
-
-30%{
-	background-color: blue;
-	color: white;
-}
-
-60%{
-	background-color: red;
-	color: white;
-}
-
-100%{
-	background-color: skyblue;
-	color: black;
-}
-
-
-
-
-
-
-}
 
 </style>
 </head>
 <body id="bgcolor">
 
-	<div class="mainbox" align="center">
 
-	<h1 class="label">COLOR</h1>
+<div class="mainrdo" align="center">
+<input class="rdo" value="black" type="radio" name="kst">	
+<input class="rdo"  value="indigo" type="radio" name="kst">	
+<input class="rdo"  value="red" type="radio" name="kst">	
+<input class="rdo"  value="orange" type="radio" name="kst">	
+<input class="rdo"  value="yellow" type="radio" name="kst">	
+<input class="rdo"  value="green" type="radio" name="kst">	
+<input class="rdo"  value="blue" type="radio" name="kst">	
+<input class="rdo"  value="violet" type="radio" name="kst">	
+</div>
 
-	<div><button class="btnchange" onclick="btnclick()">Let's change</button></div>
-	<br>
+<div class="mainbox" align="center">
+	<input class="tbox" type="text" placeholder="Type your fav color" oninput="tclick()">
+</div>
 
-	<input class="colorbox" type="text" placeholder="write your color" oninput="colorclick()">
-	</div>
+<div class="poem">
+<p align="center"><b>AyeMyatThu</b></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
 
-<script type="text/javascript">
-var bgcolor = document.getElementById("bgcolor");
-var colorbox = document.getElementsByClassName("colorbox")[0];
+<div class="btns" align="center">
+	<button class="tcbtn btn" onclick="btnclick()">Change Text Color</button>
+	<button class="bcbtn btn" onclick="btnclick1()">Change Background</button>
+</div>
+
+<script type="text/javascript"
+>
+var mainrdo = document.getElementsByClassName("mainrdo")[0];
+var tcbtn = document.getElementsByClassName("tcbtn")[0];
+var bcbtn = document.getElementsByClassName("bcbtn")[0];
 var mainbox = document.getElementsByClassName("mainbox")[0];
-function colorclick(){
-	if(colorbox.value === "အနီ"){
-		bgcolor.style.backgroundColor = "red";
-		bgcolor.style.backgroundImage = "";
-	}
-	else if(colorbox.value === "အပြာ"){
-		bgcolor.style.backgroundColor = "blue";
-		bgcolor.style.backgroundImage = "";
-	}
-	else if(colorbox.value === "nld"){
-		bgcolor.style.backgroundColor = "red";
-		bgcolor.style.backgroundImage = "";
-	}
-	else if(colorbox.value === "NLD"){
-		bgcolor.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_National_League_for_Democracy.svg/1200px-Flag_of_National_League_for_Democracy.svg.png')";
-	}
-	else if(colorbox.value === "usdp"){
-		bgcolor.style.backgroundColor = "green";
-		bgcolor.style.backgroundImage = "";
-	}
-	else if(colorbox.value === "USDP"){
-		bgcolor.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQP0GFYNR_4car13sxp9IzXbZAgnW34viZCUQ&usqp=CAU')";
-	}
-	else if(colorbox.value === "အဝါ"){
-		bgcolor.style.backgroundColor = "yellow";
-		bgcolor.style.backgroundImage = "";
-	}
-	else if(colorbox.value === "အစိမ်း"){
-		bgcolor.style.backgroundColor = "green";
-		bgcolor.style.backgroundImage = "";
-	}
-	else if(colorbox.value === "ခရမ်း"){
-		bgcolor.style.backgroundColor = "purple";
-		bgcolor.style.backgroundImage = "";
-	}
-	else if(colorbox.value === "လိမ္မော်"){
-		bgcolor.style.backgroundColor = "orange";
-		bgcolor.style.backgroundImage = "";
-	}
-	else if(colorbox.value === "အညို"){
-		bgcolor.style.backgroundColor = "brown";
-		bgcolor.style.backgroundImage = "";
-	}
-	else{
-                setTimeout(()=>{
-                bgcolor.style.backgroundColor = colorbox.value;
-                },10);
-		bgcolor.style.backgroundColor = "";
-		bgcolor.style.backgroundImage = "";
-	}
+var tbox = document.getElementsByClassName("tbox")[0];
+var poem = document.getElementsByClassName("poem")[0];
+var bgcolor = document.getElementById("bgcolor");
+var rdo = document.querySelectorAll(".rdo");
 
-	
-
-}
 
 function btnclick(){
+
+	mainrdo.classList.toggle("appear");
+	mainrdo.style.transition = ".4s";
+	mainbox.classList.remove("appear");
+}
+
+function btnclick1(){
 	mainbox.classList.toggle("appear");
-	colorbox.classList.toggle("textappear");
-        colorbox.value="";
+	mainbox.style.transition = ".4s";
+	mainrdo.classList.remove("appear");
+	tbox.value = "";
+}
+
+function tclick(){
+	bgcolor.style.backgroundColor = "";
+	bgcolor.style.backgroundColor = tbox.value; 
 
 }
 
+function rdoclick(index){
+	poem.style.color = rdo[index].value;
 
-
-</script>	
+}
+rdo.forEach(function(node,index){
+	node.setAttribute("oninput",`rdoclick(${index})`);
+});	
+</script>
 </body>
-
 </html>
