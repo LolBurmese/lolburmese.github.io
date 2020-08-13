@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>...</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta charset="utf-8">
+
+<style>
+body{
+	background-color: #ddd;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.mainbox{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.colorbox{
+	border: none;
+	outline: none;
+	background-color: #001540;
+	padding: 15px;
+	color: white;
+	border-radius: 15px;
+	opacity: 0;
+	transition: .5s;
+}
+.colorbox::placeholder{
+	color: gold;
+}
+
+.btnchange{
+	-webkit-appearance: none;
+	border: none;
+	outline: none;
+	padding: 10px;
+	border-radius: 15px;
+	animation: kst 8s ease forwards infinite;
+}
+.mainbox{
+	height: 120px;
+	overflow: hidden;		
+	transition: .3s;
+}
+
+.label{
+	background: -webkit-linear-gradient(red,blue);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+.appear{
+	height: 177px;
+	overflow: hidden;
+}
+.textappear{
+	opacity: 1;
+}
+
+
+@keyframes kst{
+
+0%{
+	background-color: skyblue;
+	color: black;
+}
+
+30%{
+	background-color: blue;
+	color: white;
+}
+
+60%{
+	background-color: red;
+	color: white;
+}
+
+100%{
+	background-color: skyblue;
+	color: black;
+}
+
+
+
+
+
+
+}
+
+</style>
+</head>
+<body id="bgcolor">
+
+	<div class="mainbox" align="center">
+
+	<h1 class="label">COLOR</h1>
+
+	<div><button class="btnchange" onclick="btnclick()">Let's change</button></div>
+	<br>
+
+	<input class="colorbox" type="text" placeholder="write your color" oninput="colorclick()">
+	</div>
+
+<script type="text/javascript">
+var bgcolor = document.getElementById("bgcolor");
+var colorbox = document.getElementsByClassName("colorbox")[0];
+var mainbox = document.getElementsByClassName("mainbox")[0];
+function colorclick(){
+	if(colorbox.value === "အနီ"){
+		bgcolor.style.backgroundColor = "red";
+		bgcolor.style.backgroundImage = "";
+	}
+	else if(colorbox.value === "အပြာ"){
+		bgcolor.style.backgroundColor = "blue";
+		bgcolor.style.backgroundImage = "";
+	}
+	else if(colorbox.value === "nld"){
+		bgcolor.style.backgroundColor = "red";
+		bgcolor.style.backgroundImage = "";
+	}
+	else if(colorbox.value === "NLD"){
+		bgcolor.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_National_League_for_Democracy.svg/1200px-Flag_of_National_League_for_Democracy.svg.png')";
+	}
+	else if(colorbox.value === "usdp"){
+		bgcolor.style.backgroundColor = "green";
+		bgcolor.style.backgroundImage = "";
+	}
+	else if(colorbox.value === "USDP"){
+		bgcolor.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQP0GFYNR_4car13sxp9IzXbZAgnW34viZCUQ&usqp=CAU')";
+	}
+	else if(colorbox.value === "အဝါ"){
+		bgcolor.style.backgroundColor = "yellow";
+		bgcolor.style.backgroundImage = "";
+	}
+	else if(colorbox.value === "အစိမ်း"){
+		bgcolor.style.backgroundColor = "green";
+		bgcolor.style.backgroundImage = "";
+	}
+	else if(colorbox.value === "ခရမ်း"){
+		bgcolor.style.backgroundColor = "purple";
+		bgcolor.style.backgroundImage = "";
+	}
+	else if(colorbox.value === "လိမ္မော်"){
+		bgcolor.style.backgroundColor = "orange";
+		bgcolor.style.backgroundImage = "";
+	}
+	else if(colorbox.value === "အညို"){
+		bgcolor.style.backgroundColor = "brown";
+		bgcolor.style.backgroundImage = "";
+	}
+	else{
+		bgcolor.style.backgroundColor = colorbox.value;
+		bgcolor.style.backgroundImage = "";
+	}
+
+	
+
+}
+
+function btnclick(){
+
+	colorbox.focus();
+	mainbox.classList.toggle("appear");
+	colorbox.classList.toggle("textappear");
+
+}
+
+
+
+</script>	
+</body>
+
+</html>
