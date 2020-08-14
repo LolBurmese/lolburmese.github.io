@@ -232,7 +232,7 @@ background-size: 20px 20px;
 },
 {
 	app : "file manager",
-	url : "https://google.com",
+	url : "https://myintkokooo.github.io/desktop.html",
 	icon : "https://data.apksum.com/af/com.creation.retrofilemanager/2.3/icon.png"
 },
 {
@@ -376,7 +376,10 @@ const ic_pack = document.querySelectorAll(".ic_pack");
 const app_click = (index) =>{
 	frameconsole.classList.add("appear");
 	yes.textContent = "YES";
-	frameconsole.src=applist[index].url;
+	frameconsole.src= "loading.html";
+	setTimeout(()=>{
+		frameconsole.src=applist[index].url;
+	},1500);
 }
 ic_pack.forEach((node,i)=>{
 	node.setAttribute("onclick",`app_click(${i})`);
