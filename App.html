@@ -30,10 +30,7 @@
 	padding: 5px;
 	border-radius: 25px;
 	transition: .3s;
-}
-.navibar button:hover{
-	background-color: #999;
-
+	outline: none;
 }
 .frameconsole{
 	position: absolute;
@@ -96,7 +93,16 @@ background-size: 20px 20px;
 
 	overflow: hidden;
 }
+@keyframes btnanimate{
+	from,to{
+		background-color: transparent;
+	}
+	50%{
+		background-color: #999;
+	}
+}
   </style>
+
 </head>
 <body>
 	<div id="firstpage" align="center"></div>
@@ -217,7 +223,7 @@ background-size: 20px 20px;
 },
 ];
 const firstpage = document.getElementById("firstpage");
-
+const navibtn = document.querySelectorAll(".navibar button");
 applist.map((apps,i)=>{
 	firstpage.innerHTML +=
 	`
@@ -227,6 +233,16 @@ applist.map((apps,i)=>{
 	</div>
 	`;
 })
+const naviclickanimate = (index) =>{
+	navibtn[index].style.animation = "";
+	setTimeout(()=>{
+		navibtn[index].style.animation = "btnanimate .1s ease forwards";
+	},1);
+	
+}
+navibtn.forEach((node,i)=>{
+	node.setAttribute("onclick",`naviclickanimate(${i})`)
+});
 
 
 
