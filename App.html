@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>...</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	 <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+  <style type="text/css">
+  	*{
+	margin : 0;
+	padding : 0;
+}
+body{
+	
+}
+.icons{
+	width : 60px;
+	height: 60px;
+	transition: .3s;
+}
+.main{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: scroll;
+	background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
+}
+.ic_pack{
+	display: inline-block;
+	/*padding : 10px;*/
+	/*background-color: blue;*/
+	width: 80px;
+	height: 80px;
+	font-size: 13px;
+	cursor : pointer;
+	transition: .3s;
+	color: white;
+	margin: 10px;
+}
+#firstpage{
+	position: absolute;
+	top: 50%;
+	transform: translate(0,-50%);
+}
+.icondiv{
+	background-color: white;
+	padding: 10px;
+	border-radius: 15px;
+	transition: .3s;
+}
+.ic_pack:hover .icons{
+	filter: grayscale(100%);
+	transform: scale(0.9);
+}
+.ic_pack:hover{
+	font-size: 12px;
+}
+  </style>
+</head>
+<body>
+	<div class="main">
+	<div id="firstpage" align="center"></div>
+</div>
+
+<script type="text/javascript">
+	const applist= [
+{
+	app : "Register",
+	icon : "register.png"
+},
+{
+	app : "Calculator",
+	icon : "https://images-na.ssl-images-amazon.com/images/I/317xoVSJ0UL.png"
+},
+{
+	app : "colorCode",
+	icon : "https://image.flaticon.com/icons/svg/1276/1276892.svg"
+},
+{
+	app : "Gallery",
+	icon : "https://purepng.com/public/uploads/medium/purepng.com-gallery-icon-galaxy-s6symbolsiconssamsungapp-iconsgalaxy-s6-icons-7215225974594jqmb.png"
+},
+{
+	app : "movie",
+	icon : "https://icons-for-free.com/iconfiles/png/512/movie+play+video+icon-1320168052202641080.png"
+},
+{
+	app : "Dictionary",
+	icon : "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/c8fcab6d-bfd2-464b-895c-b0731ff3ee9e/ddew09c-c2391277-0f26-454b-ba85-03ee53205bca.png"
+},
+{
+	app : "Terminal",
+	icon : "https://cdn0.iconfinder.com/data/icons/octicons/1024/terminal-512.png"
+},
+{
+	app : "file manager",
+	icon : "https://data.apksum.com/af/com.creation.retrofilemanager/2.3/icon.png"
+},
+{
+	app : "Todo",
+	icon : "https://i-cdn.phonearena.com/images/article/104012-image/Microsofts-To-Do-app-updated-as-they-phase-out-Wunderlist.jpg"
+},
+{
+	app : "Chrome",
+	icon : "https://cdn1.iconfinder.com/data/icons/logotypes/32/chrome-512.png"
+},
+{
+	app : "Setting",
+	icon : "https://cdn.pixabay.com/photo/2012/05/04/10/57/gear-47203_1280.png"
+},
+{
+	app : "Photo Editor",
+	icon : "https://icon-library.com/images/photo-editing-icon/photo-editing-icon-25.jpg"
+},
+{
+	app : "Porn",
+	icon : "https://img.apksum.com/b7/com.aggce.eigcw/5.1.0/icon.png"
+},
+{
+	app : "LԾL",
+	icon : "https://serving.photos.photobox.com/99336755ee8f1dcaa8806c8a5ad1d91b4c8658aa353009793fb233ff0d3c130ef0a26058.jpg"
+},
+{
+	app : "Music",
+	icon : "https://cdn0.iconfinder.com/data/icons/internet-2020/1080/Applemusicandroid-512.png"
+},
+{
+	app : "HOME",
+	icon : "https://seattledsa.org/wp-content/uploads/2017/01/icon-home-red.png"
+},
+{
+	app : "MLBB Guide",
+	icon : "https://img5.apk.tools/img/jTneWG8Wpur7RsDfnoJxH_jZTA622H8At3KH5JUsoJ1DCo-DvRUQuVgOVYDPvDrft_Rx=s300"
+},
+{
+	app : "Contact",
+	icon : "https://cdn.iconscout.com/icon/free/png-256/contacts-47-461709.png"
+},
+{
+	app : "Messages",
+	icon : "https://1001freedownloads.s3.amazonaws.com/icon/thumb/325153/Message-icon.png"
+},
+{
+	app : "Zone",
+	icon : "https://cdn4.iconfinder.com/data/icons/basic-ui-element-2-3-filled-outline/512/Basic_UI_Elements_-_2.3_-_Filled_Outline_-_44-32-512.png"
+},
+{
+	app : "Game",
+	icon : "https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Play-Games-icon.png"
+},
+{
+	app : "MX player",
+	icon : "https://archive.org/download/mx-player-icon/mx-player-icon.png"
+},
+{
+	app : "Themes",
+	icon : "https://imge.apk.tools/img/VlYh60Hdwdnq4nhbjczxwhqrDpGKxucK4O4URVre4VvLxOasOWIkrdq0wQGv_73kqrU=s300"
+},
+{
+	app : "Inventory",
+	icon : "https://cdn4.iconfinder.com/data/icons/business-cost-2/64/stock-shelves-cargo-inventory-store-512.png"
+},
+];
+const firstpage = document.getElementById("firstpage");
+
+applist.map((apps,i)=>{
+	firstpage.innerHTML +=
+	`
+	<div class='ic_pack' align='center'>
+	<div class='ic_label'>
+	<div class='icondiv'><img class='icons' src='${applist[i].icon}'></div>
+	<div class='labeldiv'>${applist[i].app}</div>
+	</div>
+	</div>
+	`;
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
