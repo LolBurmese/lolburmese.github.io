@@ -2,12 +2,14 @@
 <html>
 <head>
 	<title>...</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
 
 
 <style type="text/css">
 *{
 	user-select: none;
+	font-family: 'Heebo', sans-serif;
 }
 body{
 	padding: 0;
@@ -219,7 +221,7 @@ body{
 			<option value="gray">Gray (100M)</option>
 			<option value="white">White (1G)</option>
 			<option value="gold">Gold (0.1)</option>
-			<option value="sliver">Silver (0.01)</option>
+			<option value="silver">Silver (0.01)</option>
 		</select>
 	</div></div>
 
@@ -379,55 +381,72 @@ function mtinputcolor(){
 	else if(colorcode[2].value === "orange"){
 		band1span.style.display = "none";
 		band2span.style.display = "none";
-			multispan.style.display = "inline-block";
-		
+		multispan.style.display = "inline-block";
+		var multivalue = (band1span.textContent+band2span.textContent);
+		multispan.textContent = multivalue+"k";
 	}
 	else if(colorcode[2].value === "yellow"){
 		band1span.style.display = "none";
 		band2span.style.display = "none";
-			multispan.style.display = "inline-block";
+		multispan.style.display = "inline-block";
+		var multivalue = (band1span.textContent+band2span.textContent);
+		multispan.textContent = multivalue*10+"k";
 		
 	}
 	else if(colorcode[2].value === "green"){
 		band1span.style.display = "none";
 		band2span.style.display = "none";
-			multispan.style.display = "inline-block";
+		multispan.style.display = "inline-block";
+		var multivalue = (band1span.textContent+band2span.textContent);
+		multispan.textContent = multivalue/10+"M";
 		
 	}
 	else if(colorcode[2].value === "blue"){
 		band1span.style.display = "none";
 		band2span.style.display = "none";
-			multispan.style.display = "inline-block";
+		multispan.style.display = "inline-block";
+		var multivalue = (band1span.textContent+band2span.textContent);
+		multispan.textContent = multivalue+"M";
 		
 	}
 	else if(colorcode[2].value === "violet"){
 		band1span.style.display = "none";
 		band2span.style.display = "none";
-			multispan.style.display = "inline-block";
+		multispan.style.display = "inline-block";
+		var multivalue = (band1span.textContent+band2span.textContent);
+		multispan.textContent = multivalue*10+"M";
 		
 	}
 	else if(colorcode[2].value === "gray"){
 		band1span.style.display = "none";
 		band2span.style.display = "none";
-			multispan.style.display = "inline-block";
+		multispan.style.display = "inline-block";
+		var multivalue = (band1span.textContent+band2span.textContent);
+		multispan.textContent = multivalue/10+"G";
 		
 	}
 	else if(colorcode[2].value === "white"){
 		band1span.style.display = "none";
 		band2span.style.display = "none";
-			multispan.style.display = "inline-block";
+		multispan.style.display = "inline-block";
+		var multivalue = (band1span.textContent+band2span.textContent);
+		multispan.textContent = multivalue+"G";
 		
 	}
 	else if(colorcode[2].value === "gold"){
 		band1span.style.display = "none";
 		band2span.style.display = "none";
-			multispan.style.display = "inline-block";
+		multispan.style.display = "inline-block";
+		var multivalue = (band1span.textContent+band2span.textContent);
+		multispan.textContent = multivalue/10;
 		
 	}
 	else if(colorcode[2].value === "silver"){
 		band1span.style.display = "none";
 		band2span.style.display = "none";
 		multispan.style.display = "inline-block";
+		var multivalue = (band1span.textContent+band2span.textContent);
+		multispan.textContent = multivalue*0.01;
 		
 	}
 	else{
