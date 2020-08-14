@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>...</title>
+	<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+	<style type="text/css">
+		*{
+	box-sizing: border-box;
+	margin : 0;
+	padding : 0;
+}
+body{
+	background-image: url("https://cdn.dribbble.com/users/254977/screenshots/4482968/draguu.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size : cover;
+	overflow: hidden;
+	height: 100vh;
+}
+.container{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	top : 50%;
+	left : 50%;
+	transform: translate(-50%,-50%);
+	height : 130px;
+	font-family: 'Bangers', cursive;
+	letter-spacing: 2px;
+	font-size : 24px;
+	font-weight : bold;
+}
+.loader{
+	width : 100px;
+	height : 100px;
+
+}
+.loader div{
+	height : 100%;
+}
+.loader, .loader div{
+	border : 3px solid transparent;
+	border-radius : 50%;
+	padding : 1px;
+	animation: rotation 3s linear infinite;
+}
+/*.loader .loader *{
+	will-change: transform;
+}*/
+@keyframes rotation{
+	0%{
+		transform : rotate(0);
+		border-top-color : yellow;
+		/*border-bottom-color : yellow;*/
+	}
+	25%{
+		transform : rotate(90deg);
+		border-top-color : blue;
+		/*border-bottom-color : blue;*/
+	}
+	50%{
+		transform: rotate(180deg);
+		border-top-color: red;
+		/*border-bottom-color : red;*/
+	}
+	75%{
+		transform: rotate(270deg);
+		border-top-color: navy;
+		/*border-bottom-color : navy;*/
+	}
+	100%{
+		transform: rotate(360deg);
+		border-top-color: lightgreen;
+		/*border-bottom-color : lightgreen;*/
+	}
+
+}
+	.label{
+		font-size: 25px;
+		text-align: center;
+	}
+	.headlabel{
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		top : 8vh;
+		left : 50%;
+		transform: translate(-50%,-50%);
+		width : 80%;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="loader">
+			<div>
+				<div>
+					<div>
+						<div>
+							<div>
+								<div>
+									<div>
+										<div>
+											<div>
+											
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>Loading</div>
+	</div>
+
+</body>
+</html>
