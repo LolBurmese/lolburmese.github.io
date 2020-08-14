@@ -26,7 +26,7 @@
 .navibar button{
 	-webkit-appearance : none;
 	border : none;
-	background-color: transparent;
+	background-color: white;
 	padding: 5px;
 	border-radius: 25px;
 	transition: .3s;
@@ -93,11 +93,14 @@ background-size: 20px 20px;
 	overflow: hidden;
 }
 @keyframes btnanimate{
-	from{
+	0%{
+		background-color: white;
+	}
+	50%{
 		background-color: #555;
 	}
-	to{
-		background-color: transparent;
+	100%{
+		background-color: white;
 	}
 }
   </style>
