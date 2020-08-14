@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>...</title>
+
+<style type="text/css">
+*{
+	user-select: none;
+}
+body{
+	padding: 0;
+	margin: 0;
+	background-color: darkseagreen;
+}
+.container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #001540;
+	color: white;
+	padding: 10px;
+}
+.rcc{
+	display: flex;
+	align-items: center;
+}
+.menu{
+	cursor: pointer;
+}
+.menu div{
+	height: 6px;
+	width: 6px;
+	margin: 3px;
+	border-radius: 15px;
+	background-color: white;
+}
+.selbands{
+	border: none;
+	font-size: 15px;
+	background-color: transparent;
+	outline: none;
+}
+.bgpic{
+	width: 180px;
+	height: 50px;
+	background-color: beige ;
+	border-radius: 15px;
+	position: relative;
+	overflow: hidden;
+}
+.bgpic div{
+	display: inline-block;
+	width: 10px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+.bands,.colorview{
+	transition: .5s;
+}
+.oneband{
+	left: 10%;
+	background-color: black;
+}
+.twoband{
+	left: 25%;
+	background-color: black;
+}
+.multi{
+	left: 40%;
+	background-color: black;
+}
+.toler{
+	right: 10%;
+	background-color: black;
+}
+.colorview{
+	width: 50px;
+	height: 25px;
+	background-color: black;
+	border-radius: 5px;
+}
+.colorcode{
+	width: 110px;
+	border: none;
+	background-color: transparent;
+	outline: none;
+
+}
+.calculation{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 5px;
+	width: 60%;
+}
+.colorvalue{
+	display: flex;
+}
+.band1span,.band2span{
+	margin: -2px;
+	padding: 0;
+}
+</style>
+
+
+</head>
+<body>
+	<div class="container">
+		<div class="rcc">
+			<img src="https://cdn3.iconfinder.com/data/icons/electric-circuits-flat/2048/4093_-_Resistor_I-512.png" width="30" height="30">Resistor Color Code
+		</div>
+		<div class="menu">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<br>
+
+	<div align="center">
+	<select class="selbands">
+		<option value="band4">4 bands</option>
+		<option value="band5">5 bands</option>
+		<option value="band6">6 bands</option>
+	</select>
+</div>
+<br>
+
+<div align="center">
+	<div>
+		<div class="bgpic">
+		<div class="oneband bands"></div>
+		<div class="twoband bands"></div>
+		<div class="multi bands"></div>
+		<div class="toler bands"></div>
+		</div>
+	</div>
+	<br>
+	<div class="result">
+		<span class="band1span"></span>
+		<span class="band2span"></span>
+		<span class="multispan"></span>
+		<span class="tolerspan"></span>
+
+	</div>
+</div>
+<br>
+
+<div align="center">
+<div class="calculation">
+	<div>1st Band</div>
+	<div class="colorvalue">
+	<div class="colorview"></div>
+
+	<div>
+		<select class="colorcode" oninput="b1inputcolor()">
+			<option value="">-</option>
+			<option value="black">Black (0)</option>
+			<option value="brown">Brown (1)</option>
+			<option value="red">Red (2)</option>
+			<option value="orange">Orange (3)</option>
+			<option value="yellow">Yellow (4)</option>
+			<option value="green">Green (5)</option>
+			<option value="blue">Blue (6)</option>
+			<option value="violet">Violet (7)</option>
+			<option value="gray">Gray (8)</option>
+			<option value="white">White (9)</option>
+		</select>
+	</div>
+</div>
+
+</div>
+
+<div class="calculation">
+	<div>2nd Band</div>
+
+	<div class="colorvalue">
+	<div class="colorview"></div>
+
+	<div>
+		<select class="colorcode" oninput="b2inputcolor()">
+			<option value="">-</option>
+			<option value="black">Black (0)</option>
+			<option value="brown">Brown (1)</option>
+			<option value="red">Red (2)</option>
+			<option value="orange">Orange (3)</option>
+			<option value="yellow">Yellow (4)</option>
+			<option value="green">Green (5)</option>
+			<option value="blue">Blue (6)</option>
+			<option value="violet">Violet (7)</option>
+			<option value="gray">Gray (8)</option>
+			<option value="white">White (9)</option>
+		</select>
+	</div></div>
+
+
+</div>
+
+<div class="calculation">
+	<div>Multiplier</div>
+
+	<div class="colorvalue">
+	<div class="colorview"></div>
+
+	<div>
+		<select class="colorcode" oninput="mtinputcolor()">
+			<option value="">-</option>
+			<option value="black">Black (1)</option>
+			<option value="brown">Brown (10)</option>
+			<option value="red">Red (100)</option>
+			<option value="orange">Orange (1k)</option>
+			<option value="yellow">Yellow (10k)</option>
+			<option value="green">Green (100k)</option>
+			<option value="blue">Blue (1M)</option>
+			<option value="violet">Violet (10M)</option>
+			<option value="gray">Gray (100M)</option>
+			<option value="white">White (1G)</option>
+			<option value="gold">Gold (0.1)</option>
+			<option value="sliver">Silver (0.01)</option>
+		</select>
+	</div></div>
+
+
+</div>
+
+<div class="calculation">
+	<div>Tolerance</div>
+
+	<div class="colorvalue">
+	<div class="colorview"></div>
+
+	<div>
+		<select class="colorcode" oninput="toinputcolor()">
+			<option value="">-</option>
+			<option value="black">Black (±20%)</option>
+			<option value="brown">Brown (±1%)</option>
+			<option value="red">Red (±2%)</option>
+			<option value="orange">Orange (±0.05%)</option>
+			<option value="yellow">Yellow (±0.02)</option>
+			<option value="green">Green (±0.5%)</option>
+			<option value="blue">Blue (±0.25%)</option>
+			<option value="violet">Violet (±0.10%)</option>
+			<option value="gray">Gray (±0.01%)</option>
+			<option value="white">White (±10%)</option>
+			<option value="gold">Gold (±5%)</option>
+			<option value="silver">Silver (±10%)</option>
+		</select>
+	</div></div>
+
+
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+
+var tolerval=["Ω ±20%","Ω ±1%","Ω ±2%","Ω ±0.05%","Ω ±0.02%","Ω ±0.5%","Ω ±0.25%","Ω ±0.10%","Ω ±0.01%","Ω ±10%","Ω ±5%","Ω ±10%"];
+
+var band1val=["0","1","2","3","4","5","6","7","8","9"];
+
+var band2val=["0","1","2","3","4","5","6","7","8","9"];
+
+
+var bands = document.querySelectorAll(".bands");	
+var colorview = document.querySelectorAll(".colorview");
+var colorcode = document.querySelectorAll(".colorcode");
+var result = document.getElementsByClassName("result")[0];
+var band1span = document.getElementsByClassName("band1span")[0];
+var band2span = document.getElementsByClassName("band2span")[0];
+var tolerspan = document.getElementsByClassName("tolerspan")[0];
+var multispan = document.getElementsByClassName("multispan")[0];
+
+function b1inputcolor(){
+	bands[0].style.backgroundColor = colorcode[0].value;
+	colorview[0].style.backgroundColor = colorcode[0].value;
+	if(colorcode[0].value === "black"){
+		band1span.textContent = band1val[0];
+	}
+	if(colorcode[0].value === "brown"){
+		band1span.textContent = band1val[1];
+	}
+	if(colorcode[0].value === "red"){
+		band1span.textContent = band1val[2];
+	}
+	if(colorcode[0].value === "orange"){
+		band1span.textContent = band1val[3];
+	}
+	if(colorcode[0].value === "yellow"){
+		band1span.textContent = band1val[4];
+	}
+	if(colorcode[0].value === "green"){
+		band1span.textContent = band1val[5];
+	}
+	if(colorcode[0].value === "blue"){
+		band1span.textContent = band1val[6];
+	}
+	if(colorcode[0].value === "violet"){
+		band1span.textContent = band1val[7];
+	}
+	if(colorcode[0].value === "gray"){
+		band1span.textContent = band1val[8];
+	}
+	if(colorcode[0].value === "white"){
+		band1span.textContent = band1val[9];
+	}
+
+	
+}
+function b2inputcolor(){
+	bands[1].style.backgroundColor = colorcode[1].value;
+	colorview[1].style.backgroundColor = colorcode[1].value;
+	if(colorcode[1].value === "black"){
+		band2span.textContent = band2val[0];
+	}
+	if(colorcode[1].value === "brown"){
+		band2span.textContent = band2val[1];
+	}
+	if(colorcode[1].value === "red"){
+		band2span.textContent = band2val[2];
+	}
+	if(colorcode[1].value === "orange"){
+		band2span.textContent = band2val[3];
+	}
+	if(colorcode[1].value === "yellow"){
+		band2span.textContent = band2val[4];
+	}
+	if(colorcode[1].value === "green"){
+		band2span.textContent = band2val[5];
+	}
+	if(colorcode[1].value === "blue"){
+		band2span.textContent = band2val[6];
+	}
+	if(colorcode[1].value === "violet"){
+		band2span.textContent = band2val[7];
+	}
+	if(colorcode[1].value === "gray"){
+		band2span.textContent = band2val[8];
+	}
+	if(colorcode[1].value === "white"){
+		band2span.textContent = band2val[9];
+	}
+}
+function mtinputcolor(){
+	bands[2].style.backgroundColor = colorcode[2].value;
+	colorview[2].style.backgroundColor = colorcode[2].value;
+	if(colorcode[2].value === "black"){
+		band1span.style.display = "none";
+		band2span.style.display = "none";
+			multispan.style.display = "inline-block";
+		multispan.textContent = band1span.textContent+band2span.textContent*1;
+		
+	}
+	else if(colorcode[2].value === "brown"){
+		band1span.style.display = "none";
+		band2span.style.display = "none";
+			multispan.style.display = "inline-block";
+		multispan.textContent = band1span.textContent+band2span.textContent*10;
+	}
+	else if(colorcode[2].value === "red"){
+		band1span.style.display = "none";
+		band2span.style.display = "none";
+			multispan.style.display = "inline-block";
+			if(band1span.textContent === "0"){
+				var multivalue = band2span.textContent;
+				multispan.textContent = multivalue*100;
+			}
+			else{
+		var multivalue = (band1span.textContent+band2span.textContent);
+		multispan.textContent = multivalue/10+"k";
+		}
+
+		
+		
+	}
+	else if(colorcode[2].value === "orange"){
+		band1span.style.display = "none";
+		band2span.style.display = "none";
+			multispan.style.display = "inline-block";
+		
+	}
+	else if(colorcode[2].value === "yellow"){
+		band1span.style.display = "none";
+		band2span.style.display = "none";
+			multispan.style.display = "inline-block";
+		
+	}
+	else if(colorcode[2].value === "green"){
+		band1span.style.display = "none";
+		band2span.style.display = "none";
+			multispan.style.display = "inline-block";
+		
+	}
+	else if(colorcode[2].value === "blue"){
+		band1span.style.display = "none";
+		band2span.style.display = "none";
+			multispan.style.display = "inline-block";
+		
+	}
+	else if(colorcode[2].value === "violet"){
+		band1span.style.display = "none";
+		band2span.style.display = "none";
+			multispan.style.display = "inline-block";
+		
+	}
+	else if(colorcode[2].value === "gray"){
+		band1span.style.display = "none";
+		band2span.style.display = "none";
+			multispan.style.display = "inline-block";
+		
+	}
+	else if(colorcode[2].value === "white"){
+		band1span.style.display = "none";
+		band2span.style.display = "none";
+			multispan.style.display = "inline-block";
+		
+	}
+	else if(colorcode[2].value === "gold"){
+		band1span.style.display = "none";
+		band2span.style.display = "none";
+			multispan.style.display = "inline-block";
+		
+	}
+	else if(colorcode[2].value === "silver"){
+		band1span.style.display = "none";
+		band2span.style.display = "none";
+		multispan.style.display = "inline-block";
+		
+	}
+	else{
+		band1span.style.display = "inline-block";
+		band2span.style.display = "inline-block";
+		multispan.style.display = "none";
+	}
+
+}
+function toinputcolor(){
+	bands[3].style.backgroundColor = colorcode[3].value;
+	colorview[3].style.backgroundColor = colorcode[3].value;
+	if(colorcode[3].value === "black"){
+		tolerspan.textContent = tolerval[0];
+	}
+	if(colorcode[3].value === "brown"){
+		tolerspan.textContent = tolerval[1];
+	}
+	if(colorcode[3].value === "red"){
+		tolerspan.textContent = tolerval[2];
+	}
+	if(colorcode[3].value === "orange"){
+		tolerspan.textContent = tolerval[3];
+	}
+	if(colorcode[3].value === "yellow"){
+		tolerspan.textContent = tolerval[4];
+	}
+	if(colorcode[3].value === "green"){
+		tolerspan.textContent = tolerval[5];
+	}
+	if(colorcode[3].value === "blue"){
+		tolerspan.textContent = tolerval[6];
+	}
+	if(colorcode[3].value === "violet"){
+		tolerspan.textContent = tolerval[7];
+	}
+	if(colorcode[3].value === "gray"){
+		tolerspan.textContent = tolerval[8];
+	}
+	if(colorcode[3].value === "white"){
+		tolerspan.textContent = tolerval[9];
+	}
+	if(colorcode[3].value === "gold"){
+		tolerspan.textContent = tolerval[10];
+	}
+	if(colorcode[3].value === "silver"){
+		tolerspan.textContent = tolerval[11];
+	}
+
+	
+}
+
+
+</script>
+
+</body>
+</html>
