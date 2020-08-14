@@ -13,6 +13,52 @@
 	margin: 0;
 	padding: 0;
 }
+.confirmmain{
+	position: absolute;
+	top: 50%;
+	left : 50%;
+	transform: translate(-50%,-50%);
+	width: 200px;
+	height: 120px;
+	background-color: sandybrown;
+	border-radius: 25px;
+	z-index: -1;
+	visibility: hidden;
+	opacity: 0;
+	transition: .5s;
+	white-space: nowrap;
+}
+.boxappear{
+	z-index: 1;
+	width : 300px;
+	height : 220px;
+	opacity: 1;
+	visibility: visible;
+
+}
+.confirmbox{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.confirmbtn button{
+	-webkit-appearance : none;
+	border : none;
+	width: 50px;
+	height : 30px;
+	border-radius: 12px;
+	outline : none;
+}
+.confirmbtn button:nth-child(1){
+	background-color: red;
+	color: white;
+}
+.options{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
 .navibar{
 	height: 7%;
 	background-color: white;
@@ -34,9 +80,21 @@
 }
 .frameconsole{
 	position: absolute;
-	height : 300px;
-	width: 300px;
+	display: flex;
+	width: 50%;
+	height: 50%;
 	background-color: blue;
+	transition: .5s;
+	z-index: -1;
+	opacity: 0;
+	visibility: hidden;
+}
+.appear{
+	z-index: 1;
+	opacity: 1;
+	visibility: visible;
+	width: 100%;
+	height : 93%;
 }
 body{
 background:
@@ -108,18 +166,29 @@ background-size: 20px 20px;
 </head>
 <body>
 	<div id="firstpage" align="center"></div>
-<!-- <iframe class="frameconsole" src="" frameborder="0"></iframe> -->
+	<div class="framediv" align="center">
+<iframe class="frameconsole" src="" frameborder="0"></iframe>
+</div>
 <div class="navibar">
 	<button>
 	<img src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/menu-24-512.png" width="30" height="30">
 </button>
-<button>
+<button onclick="homeclick()">
 	<img src="https://image.flaticon.com/icons/png/512/69/69524.png" width="30" height="30">
 </button>
-<button>
+<button onclick="backclick()">
 	<img src="https://image.flaticon.com/icons/png/512/59/59098.png" width="30" height="30">
 </button>
 </div>
+<div class="confirmmain">
+<div class="confirmbox">
+	<div class="options">
+<div>Are you sure to exit?</div><br><br>
+<div class="confirmbtn" align="center">
+	<button class="yes">NO</button>
+	<button class="no">NO</button>
+</div></div>
+</div></div>
 
 
 
@@ -226,6 +295,25 @@ background-size: 20px 20px;
 ];
 const firstpage = document.getElementById("firstpage");
 const navibtn = document.querySelectorAll(".navibar button");
+const frameconsole = document.getElementsByClassName("frameconsole")[0];
+const confirmmain = document.getElementsByClassName("confirmmain")[0];
+const yes = document.getElementsByClassName("yes")[0];
+const no = document.getElementsByClassName("no")[0];
+
+const noclick = () =>{
+	confirmmain.classList.remove("boxappear");
+}
+const yesclick = () =>{
+	confirmmain.classList.remove("boxappear");
+	frameconsole.classList.remove("appear");
+	setTimeout(()=>{
+		yes.textContent = "NO";
+	},300);
+	
+}
+yes.addEventListener("click",yesclick);
+no.addEventListener("click",noclick);
+
 applist.map((apps,i)=>{
 	firstpage.innerHTML +=
 	`
@@ -235,17 +323,39 @@ applist.map((apps,i)=>{
 	</div>
 	`;
 })
-const naviclickanimate = (index) =>{
-	navibtn[index].style.animation = "";
+const homeclick = () =>{
+	navibtn[1].style.animation = "";
 	setTimeout(()=>{
-		navibtn[index].style.animation = "btnanimate .3s";
+		navibtn[1].style.animation = "btnanimate .3s";
 	},50);
+		frameconsole.classList.remove("appear");
+}
+const backclick = () =>{
+	navibtn[2].style.animation = "";
+	setTimeout(()=>{
+		navibtn[2].style.animation = "btnanimate .3s";
+	},50);
+	if(yes.textContent === "NO"){
+
+	}
+	else{
+		confirmmain.classList.toggle("boxappear");
+	}
 	
 }
-navibtn.forEach((node,i)=>{
-	node.setAttribute("onclick",`naviclickanimate(${i})`)
-});
 
+
+
+const ic_pack = document.querySelectorAll(".ic_pack");
+
+
+const app_click = (index) =>{
+	frameconsole.classList.add("appear");
+	yes.textContent = "YES";
+}
+ic_pack.forEach((node,i)=>{
+	node.setAttribute("onclick",`app_click(${i})`);
+});
 
 
 
