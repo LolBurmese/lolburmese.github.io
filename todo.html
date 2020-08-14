@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To do list</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="container">
+<div class="label">
+	<h2>-To do list-</h2>
+</div>
+
+
+
+<div class="infolist">
+<div class="info">
+	<p class="infop" onclick="infopclick(0)">Brakefast</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(0)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(1)">Lunch</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(1)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(2)">Play PES</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(2)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(3)">Write codes</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(3)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(4)">dinner</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(4)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(5)">Watch youtube</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(5)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(6)">Brakefast</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(6)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(7)">Lunch</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(7)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(8)">Play PES</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(8)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(9)">Write codes</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(9)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(10)">dinner</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(10)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(11)">Watch youtube</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(11)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(12)">Brakefast</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(12)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(13)">Lunch</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(13)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(14)">Play PES</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(14)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(15)">Write codes</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(15)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(16)">dinner</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(16)">
+</div>
+<hr align="center">
+<div class="info">
+	<p class="infop" onclick="infopclick(17)">Watch youtube</p>
+	<input class="ckbox" type="checkbox" name="" onclick="ckclick(17)">
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	
+	var ckbox=document.querySelectorAll(".info .ckbox");
+	var infop=document.querySelectorAll(".info .infop");
+
+		function ckclick(index){
+			if(ckbox[index].checked===true){
+				infop[index].classList.add("infopclick");
+			}
+			else{
+				infop[index].classList.remove("infopclick");
+			}
+		}
+
+		function infopclick(index){
+				if(ckbox[index].checked === false){
+					infop[index].classList.toggle("infopclick");
+					ckbox[index].checked = true;
+				}
+				else{
+					infop[index].classList.toggle("infopclick");
+					ckbox[index].checked = false;
+				}
+		}
+
+</script>
+</body>
+</html>
