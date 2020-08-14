@@ -102,13 +102,7 @@ background-size: 64px 128px;
 	height : 93%;
 }
 body{
-background:
-radial-gradient(black 15%, transparent 16%) 0 0,
-radial-gradient(black 15%, transparent 16%) 8px 8px,
-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-background-color:#282828;
-background-size:16px 16px;
+background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/01/903030/87786ac645ba2a2169a69f4d4553c024-700.jpg");
 }
 .icons{
 	width : 70%;
@@ -145,6 +139,18 @@ background-size:16px 16px;
 .ic_pack:hover{
 	font-size: 12px;
 }
+.resolution{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	/*display: none;*/
+}
 #firstpage{
 	position: absolute;
 	top:0;
@@ -164,6 +170,18 @@ background-size:16px 16px;
 		background-color: white;
 	}
 }
+@media screen and (max-width: 2048px){
+	body{
+		display: none;
+	}
+}
+@media screen and (max-width: 720px){
+	body{
+		display: block;
+	}
+}
+
+
   </style>
 
 </head>
@@ -193,6 +211,9 @@ background-size:16px 16px;
 </div></div>
 </div></div>
 
+<!-- <div class="resolution">
+	This is only for smart phones.
+</div> -->
 
 
 
