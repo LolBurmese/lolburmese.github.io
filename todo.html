@@ -3,8 +3,105 @@
 <head>
 	<title>To do list</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+	
+<style>
+
+body{
+	padding: 0;
+	margin: 0;
+	background-color: gray;
+	font-family: 'Raleway', sans-serif;
+}
+
+.container{
+	background-color: #ddd;
+	width: 350px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	user-select: none;
+	border-radius: 15px;
+	box-shadow: 0 0 17px;
+	overflow: hidden;
+}
+
+.info{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 40px;
+	cursor: pointer;
+
+}
+.infolist{
+	overflow: scroll;
+	height: 340px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.infolist::-webkit-scrollbar{
+	display: none;
+}
+.label{
+	text-decoration: underline;
+	text-decoration-color: white;
+	text-transform: uppercase;
+	background-color: blue;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.label h2{
+	font-size: 25px;
+	color: white;
+}
+.infop{
+	font-weight: bold;
+	transition: .4s;
+}
+input[type="checkbox"]{
+	position: relative;
+	-webkit-appearance: none;
+	border-radius: 50px;
+	width: 20px;
+	height: 20px;
+	outline: none;
+	background-color: #ddd;
+	border: 1px solid gray;
+	transition: .4s;
+}
+input[type="checkbox"]:before{
+	content: "\2713";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: gray;
+
+}
+input:checked[type="checkbox"]{
+	background-color: blue;
+}
+input:checked[type="checkbox"]:before{
+	color: white;
+}
+.infopclick{
+	color: gray;
+	text-decoration: line-through;
+}
+hr{
+	width: 92%;
+	border: 1px solid gray;
+}
+</style>
 </head>
 <body>
 
