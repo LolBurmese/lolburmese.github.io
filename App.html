@@ -83,7 +83,6 @@
 	display: flex;
 	width: 50%;
 	height: 50%;
-	background-color: blue;
 	transition: .5s;
 	z-index: -1;
 	opacity: 0;
@@ -167,7 +166,7 @@ background-size: 20px 20px;
 <body>
 	<div id="firstpage" align="center"></div>
 	<div class="framediv" align="center">
-<iframe class="frameconsole" src="calculator.html" frameborder="0"></iframe>
+<iframe class="frameconsole" src="" frameborder="0"></iframe>
 </div>
 <div class="navibar">
 	<button>
@@ -198,98 +197,122 @@ background-size: 20px 20px;
 	const applist= [
 {
 	app : "Register",
+	url : "register2.html",
 	icon : "register.png"
 },
 {
 	app : "Calculator",
+	url : "calculator.html",
 	icon : "https://images-na.ssl-images-amazon.com/images/I/317xoVSJ0UL.png"
 },
 {
 	app : "colorCode",
+	url : "resistorcode.html.html",
 	icon : "https://image.flaticon.com/icons/svg/1276/1276892.svg"
 },
 {
 	app : "Gallery",
+	url : "https://google.com",
 	icon : "https://purepng.com/public/uploads/medium/purepng.com-gallery-icon-galaxy-s6symbolsiconssamsungapp-iconsgalaxy-s6-icons-7215225974594jqmb.png"
 },
 {
 	app : "movie",
+	url : "https://google.com",
 	icon : "https://icons-for-free.com/iconfiles/png/512/movie+play+video+icon-1320168052202641080.png"
 },
 {
 	app : "Dictionary",
+	url : "https://google.com",
 	icon : "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/c8fcab6d-bfd2-464b-895c-b0731ff3ee9e/ddew09c-c2391277-0f26-454b-ba85-03ee53205bca.png"
 },
 {
 	app : "Terminal",
+	url : "https://google.com",
 	icon : "https://cdn0.iconfinder.com/data/icons/octicons/1024/terminal-512.png"
 },
 {
 	app : "file manager",
+	url : "https://google.com",
 	icon : "https://data.apksum.com/af/com.creation.retrofilemanager/2.3/icon.png"
 },
 {
 	app : "Todo",
+	url : "https://google.com",
 	icon : "https://i-cdn.phonearena.com/images/article/104012-image/Microsofts-To-Do-app-updated-as-they-phase-out-Wunderlist.jpg"
 },
 {
 	app : "Chrome",
+	url : "https://google.com",
 	icon : "https://cdn1.iconfinder.com/data/icons/logotypes/32/chrome-512.png"
 },
 {
 	app : "Setting",
+	url : "https://google.com",
 	icon : "https://cdn.pixabay.com/photo/2012/05/04/10/57/gear-47203_1280.png"
 },
 {
 	app : "Photo Editor",
+	url : "https://google.com",
 	icon : "https://icon-library.com/images/photo-editing-icon/photo-editing-icon-25.jpg"
 },
 {
 	app : "Porn",
+	url : "https://google.com",
 	icon : "https://img.apksum.com/b7/com.aggce.eigcw/5.1.0/icon.png"
 },
 {
 	app : "LԾL",
+	url : "index.html",
 	icon : "https://serving.photos.photobox.com/99336755ee8f1dcaa8806c8a5ad1d91b4c8658aa353009793fb233ff0d3c130ef0a26058.jpg"
 },
 {
 	app : "Music",
+	url : "music.html",
 	icon : "https://cdn0.iconfinder.com/data/icons/internet-2020/1080/Applemusicandroid-512.png"
 },
 {
 	app : "HOME",
+	url : "https://google.com",
 	icon : "https://seattledsa.org/wp-content/uploads/2017/01/icon-home-red.png"
 },
 {
 	app : "MLBB Guide",
+	url : "https://google.com",
 	icon : "https://img5.apk.tools/img/jTneWG8Wpur7RsDfnoJxH_jZTA622H8At3KH5JUsoJ1DCo-DvRUQuVgOVYDPvDrft_Rx=s300"
 },
 {
 	app : "Contact",
+	url : "friends.html",
 	icon : "https://cdn.iconscout.com/icon/free/png-256/contacts-47-461709.png"
 },
 {
 	app : "Messages",
+	url : "messenger.html.html",
 	icon : "https://1001freedownloads.s3.amazonaws.com/icon/thumb/325153/Message-icon.png"
 },
 {
 	app : "Zone",
+	url : "https://google.com",
 	icon : "https://cdn4.iconfinder.com/data/icons/basic-ui-element-2-3-filled-outline/512/Basic_UI_Elements_-_2.3_-_Filled_Outline_-_44-32-512.png"
 },
 {
 	app : "Game",
+	url : "https://google.com",
 	icon : "https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Play-Games-icon.png"
 },
 {
 	app : "MX player",
+	url : "https://google.com",
 	icon : "https://archive.org/download/mx-player-icon/mx-player-icon.png"
 },
 {
 	app : "Themes",
+	url : "https://google.com",
 	icon : "https://imge.apk.tools/img/VlYh60Hdwdnq4nhbjczxwhqrDpGKxucK4O4URVre4VvLxOasOWIkrdq0wQGv_73kqrU=s300"
 },
 {
 	app : "Inventory",
+	url : "https://google.com",
 	icon : "https://cdn4.iconfinder.com/data/icons/business-cost-2/64/stock-shelves-cargo-inventory-store-512.png"
 },
 ];
@@ -353,6 +376,7 @@ const ic_pack = document.querySelectorAll(".ic_pack");
 const app_click = (index) =>{
 	frameconsole.classList.add("appear");
 	yes.textContent = "YES";
+	frameconsole.src=applist[index].url;
 }
 ic_pack.forEach((node,i)=>{
 	node.setAttribute("onclick",`app_click(${i})`);
