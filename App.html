@@ -14,7 +14,7 @@
 	padding: 0;
 }
 .navibar{
-	height: 6%;
+	height: 7%;
 	background-color: white;
 	position: absolute;
 	bottom: 0;
@@ -90,12 +90,11 @@ background-size: 20px 20px;
 	bottom: 0;
 	left: 0;
 	right: 0;
-
 	overflow: hidden;
 }
 @keyframes btnanimate{
 	from{
-		background-color: #999;
+		background-color: #555;
 	}
 	to{
 		background-color: transparent;
@@ -236,8 +235,8 @@ applist.map((apps,i)=>{
 const naviclickanimate = (index) =>{
 	navibtn[index].style.animation = "";
 	setTimeout(()=>{
-		navibtn[index].style.animation = "btnanimate .5s ease forwards";
-	},1);
+		navibtn[index].style.animation = "btnanimate .2s ease forwards";
+	},0.1);
 	
 }
 navibtn.forEach((node,i)=>{
