@@ -94,11 +94,11 @@ background-size: 20px 20px;
 	overflow: hidden;
 }
 @keyframes btnanimate{
-	from,to{
-		background-color: transparent;
-	}
-	50%{
+	from{
 		background-color: #999;
+	}
+	to{
+		background-color: transparent;
 	}
 }
   </style>
@@ -236,7 +236,7 @@ applist.map((apps,i)=>{
 const naviclickanimate = (index) =>{
 	navibtn[index].style.animation = "";
 	setTimeout(()=>{
-		navibtn[index].style.animation = "btnanimate .1s ease forwards";
+		navibtn[index].style.animation = "btnanimate .5s ease forwards";
 	},1);
 	
 }
