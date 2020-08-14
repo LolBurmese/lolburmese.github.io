@@ -9,8 +9,13 @@
   />
   <style type="text/css">
   	*{
-	margin : 0;
-	padding : 0;
+	user-select: none;
+}
+.frameconsole{
+	position: absolute;
+	height : 300px;
+	width: 300px;
+	background-color: blue;
 }
 body{
 background:
@@ -24,45 +29,29 @@ background-color: #131313;
 background-size: 20px 20px;
 }
 .icons{
-	width : 60px;
-	height: 60px;
+	width : 70%;
+	height: 70%;
 	transition: .3s;
 }
 .ic_pack{
-	display: inline-block;
-	/*padding : 10px;*/
-	/*background-color: blue;*/
-	width: 80px;
-	height: 80px;
 	font-size: 13px;
 	cursor : pointer;
 	transition: .3s;
 	color: white;
-	margin: 10px;
+	margin-bottom: 25px;
+	/*background-color: blue;*/
+	display: inline-block;
+	width: 80px;
+	height: 80px;
 }
-.main{
-	position: absolute;
-	top: 0;
-	left : 0;
-	right: 0;
-	bottom: 0;
-	display: flex;
-	/*align-items: center;*/
-	overflow: scroll;
-	background:
-linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-background-color: #131313;
-background-size: 20px 20px;
 
-}
 .icondiv{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: white;
-	padding: 10px;
+	width: 80%;
+	height: 80%;
 	border-radius: 15px;
 	transition: .3s;
 }
@@ -73,13 +62,19 @@ background-size: 20px 20px;
 .ic_pack:hover{
 	font-size: 12px;
 }
+#firstpage{
+	position: absolute;
+	top:20px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+}
   </style>
 </head>
 <body>
-	<div class="main">
 	<div id="firstpage" align="center"></div>
-</div>
-
+<!-- <iframe class="frameconsole" src="" frameborder="0"></iframe> -->
 <script type="text/javascript">
 	const applist= [
 {
@@ -184,34 +179,12 @@ const firstpage = document.getElementById("firstpage");
 applist.map((apps,i)=>{
 	firstpage.innerHTML +=
 	`
-	<div class='ic_pack' align='center'>
-	<div class='ic_label'>
+	<div class='ic_pack'>
 	<div class='icondiv'><img class='icons' src='${applist[i].icon}'></div>
 	<div class='labeldiv'>${applist[i].app}</div>
 	</div>
-	</div>
 	`;
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
 </body>
 </html>
