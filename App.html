@@ -14,28 +14,12 @@
 }
 body{
 	
+background-color: #333;
 }
 .icons{
 	width : 60px;
 	height: 60px;
 	transition: .3s;
-}
-.main{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	overflow: scroll;
-	background:
-linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-background-color: #131313;
-background-size: 20px 20px;
 }
 .ic_pack{
 	display: inline-block;
@@ -49,10 +33,25 @@ background-size: 20px 20px;
 	color: white;
 	margin: 10px;
 }
-#firstpage{
+.main{
 	position: absolute;
-	top: 50%;
-	transform: translate(0,-50%);
+	top: 0;
+	left:0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	overflow: scroll;
+	background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
+
 }
 .icondiv{
 	background-color: white;
