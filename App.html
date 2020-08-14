@@ -13,6 +13,28 @@
 	margin: 0;
 	padding: 0;
 }
+.navibar{
+	height: 6%;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.navibar button{
+	-webkit-appearance : none;
+	border : none;
+	background-color: transparent;
+	padding: 5px;
+	border-radius: 25px;
+	transition: .3s;
+}
+.navibar button:hover{
+	background-color: #999;
+
+}
 .frameconsole{
 	position: absolute;
 	height : 300px;
@@ -79,6 +101,22 @@ background-size: 20px 20px;
 <body>
 	<div id="firstpage" align="center"></div>
 <!-- <iframe class="frameconsole" src="" frameborder="0"></iframe> -->
+<div class="navibar">
+	<button>
+	<img src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/menu-24-512.png" width="30" height="30">
+</button>
+<button>
+	<img src="https://image.flaticon.com/icons/png/512/69/69524.png" width="30" height="30">
+</button>
+<button>
+	<img src="https://image.flaticon.com/icons/png/512/59/59098.png" width="30" height="30">
+</button>
+</div>
+
+
+
+
+
 <script type="text/javascript">
 	const applist= [
 {
