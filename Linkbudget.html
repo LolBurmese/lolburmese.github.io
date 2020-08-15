@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>...</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<style type="text/css">
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-color: skyblue;
+}
+.titlediv{
+	background-color: #001540;
+	color: white;
+	padding: 10px;
+}
+.upordown{
+	border: none;
+	outline: none;
+	width: 130px;
+	padding: 10px;
+	border-radius: 15px;
+	background-color: #001540;
+	color: white;
+}
+.container{
+	background-color: skyblue;
+	overflow: scroll;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	top: 20%;
+}
+.container::-webkit-scrollbar{
+	display: none;
+}
+.oppowerdiv{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+.oppowervalue,.bolvalue,.bflvalue,.atvalue,.luvalue,.lpvalue,.gtevalue,.sbflvalue,.brvalue{
+	font-weight: bold;
+}
+.oppower,.bol,.bfl,.at,.lu,.lp,.gte,.sbfl,.br{
+	width: 200px;
+}
+
+.oppowerlabel, .bollabel, .bfllabel,.atlabel, .lulabel,.lplabel,.gtelabel,.sbfllabel,.brlabel{
+	padding : 10px;
+	color : #001540;
+}
+
+
+</style>
+</head>
+<body>
+
+
+	<div class="titlediv" align="center">
+		<h2>Link Budget for a Satellite</h2>
+	</div><br>
+
+	<div align="center">
+		<select class="upordown">
+			<option value="uplink">Uplink</option>
+			<option value="downlink">Downlink</option>
+		</select>
+	</div>
+	<br>
+
+
+
+
+
+<div class="container">
+		<h3 align="center" class="oppowerlabel">Earth Station transmitted output power</h3>
+		<div class="oppowerdiv">
+		<span style="font-weight: bold;">P<sub>t</sub> :</span>
+		<input class="oppower" type="range" name="" min="10" max="100" value="10" oninput="inputoppower()">
+		<span class="oppowervalue">10dBW</span>
+	</div>
+<br><br>
+		<h3 align="center" class="bollabel">Earth Station back-off loss</h3>
+		<div class="oppowerdiv">
+		<span style="font-weight: bold;">L<sub>bo</sub>:</span>
+		<input class="bol" type="range" name="" min="1" max="20" value="1" oninput="inputbol()">
+		<span class="bolvalue">1dB</span>
+	</div>
+<br><br>
+
+		<h3 align="center" class="bfllabel">Earth Station branching and feeder loss</h3>
+		<div class="oppowerdiv">
+		<span style="font-weight: bold;">L<sub>bf</sub>:</span>
+		<input class="bfl" type="range" name="" min="1" max="20" value="1" oninput="inputbfl()">
+		<span class="bflvalue">1dB</span>
+	</div>
+<br><br>
+
+		<h3 align="center" class="atlabel">Earth Station transmit antenna gain</h3>
+		<div class="oppowerdiv">
+		<span style="font-weight: bold;">A<sub>t</sub>:</span>
+		<input class="at" type="range" name="" min="10" max="100" value="10" oninput="inputat()">
+		<span class="atvalue">10dB</span>
+	</div>
+<br><br>
+
+		<h3 align="center" class="lulabel">Additional uplink atmospheric losses</h3>
+		<div class="oppowerdiv">
+		<span style="font-weight: bold;">L<sub>u</sub>:</span>
+		<input class="lu" type="range" name="" min="0" max="10" value="0" oninput="inputlu()">
+		<span class="luvalue">0.0dB</span>
+	</div>
+<br><br>
+
+		<h3 align="center" class="lplabel">Free space path loss</h3>
+		<div class="oppowerdiv">
+		<span style="font-weight: bold;">L<sub>p</sub>:</span>
+		<input class="lp" type="range" name="" min="50" max="500" value="50" oninput="inputlp()">
+		<span class="lpvalue">50dB</span>
+	</div>
+<br><br>
+		
+		<h3 align="center" class="gtelabel">satellite receiver</h3>
+		<div class="oppowerdiv">
+		<span style="font-weight: bold;">G/T<sub>e</sub>:</span>
+		<input class="gte" type="range" name="" min="-20" max="0" value="-20" oninput="inputgte()">
+		<span class="gtevalue">-20dBK<sup>-1</sup></span>
+	</div>
+<br><br>
+
+		<h3 align="center" class="sbfllabel">Satellite branching and feeder losses</h3>
+		<div class="oppowerdiv">
+		
+		<input class="sbfl" type="range" name="" min="0" max="0" value="0" oninput="inputsbfl()">
+		<span class="sbflvalue">0dB</span>
+	</div>
+<br><br>
+
+				<h3 align="center" class="brlabel">Bit rate</h3>
+		<div class="oppowerdiv">
+		<span style="font-weight: bold;">f<sub>b</sub>:</span>
+		<input class="br" type="range" name="" min="10" max="300" value="10" oninput="inputbr()">
+		<span class="brvalue">10Mbps</span>
+	</div>
+<br><br>
+
+</div>
+
+<script type="text/javascript">
+
+var oppower = document.getElementsByClassName("oppower")[0];
+var oppowervalue = document.getElementsByClassName("oppowervalue")[0];	
+var bol = document.getElementsByClassName("bol")[0];
+var bolvalue = document.getElementsByClassName("bolvalue")[0];
+var bfl = document.getElementsByClassName("bfl")[0];
+var bflvalue = document.getElementsByClassName("bflvalue")[0];
+var at = document.getElementsByClassName("at")[0];
+var atvalue = document.getElementsByClassName("atvalue")[0];
+var lu = document.getElementsByClassName("lu")[0];
+var luvalue = document.getElementsByClassName("luvalue")[0];
+var lp = document.getElementsByClassName("lp")[0];
+var lpvalue = document.getElementsByClassName("lpvalue")[0];
+var gte = document.getElementsByClassName("gte")[0];
+var gtevalue = document.getElementsByClassName("gtevalue")[0];
+var sbfl = document.getElementsByClassName("sbfl")[0];
+var sbflvalue = document.getElementsByClassName("sbflvalue")[0];
+var br = document.getElementsByClassName("br")[0];
+var brvalue = document.getElementsByClassName("brvalue")[0];
+
+
+
+function inputoppower(){
+	oppowervalue.textContent = oppower.value+"dBW";
+}
+
+function inputbol(){
+	bolvalue.textContent = bol.value+"dB"
+}
+
+function inputbfl(){
+	bflvalue.textContent = bfl.value+"dB"
+}
+function inputat(){
+	atvalue.textContent = at.value+"dB"
+}
+function inputlu(){
+	luvalue.textContent = lu.value/10+"dB"
+}
+function inputlp(){
+	lpvalue.textContent = lp.value+"dB"
+}
+function inputgte(){
+	gtevalue.textContent = gte.value+"dB"
+}
+function inputsbfl(){
+	sbflvalue.textContent = sbfl.value+"dB"
+}
+function inputbr(){
+	brvalue.textContent = br.value+"Mbps"
+}
+</script>
+</body>
+</html>
