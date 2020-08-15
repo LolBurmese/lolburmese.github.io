@@ -7,11 +7,13 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
   />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
   <style type="text/css">
   	*{
 	user-select: none;
 	margin: 0;
 	padding: 0;
+	font-family: 'Poppins', sans-serif;
 }
 .confirmmain{
 	position: absolute;
@@ -88,11 +90,12 @@
 	z-index: -1;
 	opacity: 0;
 	visibility: hidden;
-	background:
-linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
-linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
-background-color:#708090;
-background-size: 64px 128px;
+	background-image: url("https://cdn.dribbble.com/users/254977/screenshots/4482968/draguu.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size : cover;
+	overflow: hidden;
+	height: 100vh;
 }
 .appear{
 	z-index: 1;
@@ -191,7 +194,7 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 <iframe class="frameconsole" src="" frameborder="0"></iframe>
 </div>
 <div class="navibar">
-	<button>
+	<button onclick="menu_click()">
 	<img src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/menu-24-512.png" width="30" height="30">
 </button>
 <button onclick="homeclick()">
@@ -376,14 +379,15 @@ applist.map((apps,i)=>{
 })
 const homeclick = () =>{
 	navibtn[1].style.animation = "";
+	confirmmain.classList.remove("boxappear");
 	setTimeout(()=>{
 		navibtn[1].style.animation = "btnanimate .3s";
 	},50);
 		frameconsole.classList.remove("appear");
-		yes.textContent = "NO";
 		setTimeout(()=>{
 			frameconsole.src = "";
-		},1000);
+			yes.textContent = "NO";
+		},500);
 }
 const backclick = () =>{
 	navibtn[2].style.animation = "";
@@ -415,6 +419,13 @@ const app_click = (index) =>{
 ic_pack.forEach((node,i)=>{
 	node.setAttribute("onclick",`app_click(${i})`);
 });
+
+const menu_click = () =>{
+	navibtn[0].style.animation = "";
+	setTimeout(()=>{
+		navibtn[0].style.animation = "btnanimate .3s";
+	},50);
+}
 
 
 
