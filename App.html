@@ -251,10 +251,6 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 }
 .ic_pack:hover .icons{
 	filter: grayscale(100%);
-	transform: scale(0.9);
-}
-.ic_pack:hover{
-	font-size: 12px;
 }
 .resolution{
 	position: absolute;
@@ -297,9 +293,55 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 		display: block;
 	}
 }
+.themesetting{
+	position: absolute;
+	bottom: 7%;
+	width: 100%;
+	height: 0;
+	background-color: #eee;
+	transition: .5s;
+	display: none;
+	z-index: -1;
+	visibility: hidden;
+	opacity: 0;
+}
+.theme{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.themebtn{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	bottom: 5%;
+}
+.themebtn button{
+	width: 100px;
+	height: 50px;
+	-webkit-appearance : none;
+	border : none;
+	border-radius: 25px;
+	outline : none;
+}
+.themebtn button:nth-child(1){
+	margin-right : 10px;
+	background-color: blue;
+}
+.themebtn button:nth-child(2){
+	background-color: black;
+	color : white;
+}
 
-
+.themeappear{
+	visibility: visible;
+	z-index: 1;
+	height: 300px;
+	opacity: 1;
+}
   </style>
+
 
 </head>
 <body>
@@ -342,7 +384,28 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 	</div>
 </div>
 </div>
+<div class="themesetting">
+	<div class="theme">
+		<div class="themebtn">
+		<button class="cancelbtn" onclick="cancelclick()">Default</button>
+		<button class="savebtn" onclick="saveclick()">Save</button>
+	</div><br>
+	<div class="fontsizest" align="center">
+		<h2>Font Size</h2>
+		<input type="range" oninput="fsrange()" class="fs" name="" value="12" min="7" max="25">
+		<span class="fslabel" style="font-size: 20px;">12</span>
+	</div>
+	<div class="iconsizest" align="center">
+		<h2>Font Size</h2>
+		<input type="range" oninput="icrange()" class="ics" name="" value="83" min="5" max="200">
+		<span class="islabel" style="font-size: 20px;">83</span>
+	</div>
 
+
+
+
+	</div>
+</div>
 
 
 <script type="text/javascript">
@@ -468,6 +531,9 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 	icon : "https://cdn4.iconfinder.com/data/icons/business-cost-2/64/stock-shelves-cargo-inventory-store-512.png"
 }
 ];
+
+const ics = document.getElementsByClassName("ics")[0];
+const islabel = document.getElementsByClassName("islabel")[0];
 const firstpage = document.getElementById("firstpage");
 const navibtn = document.querySelectorAll(".navibar button");
 const frameconsole = document.getElementsByClassName("frameconsole")[0];
@@ -475,6 +541,11 @@ const confirmmain = document.getElementsByClassName("confirmmain")[0];
 const yes = document.getElementsByClassName("yes")[0];
 const no = document.getElementsByClassName("no")[0];
 const intronav = document.getElementsByClassName("intronav")[0];
+const themesetting = document.getElementsByClassName("themesetting")[0];
+const fs = document.getElementsByClassName("fs")[0];
+const fslabel = document.getElementsByClassName("fslabel")[0];
+
+
 
 const noclick = () =>{
 	confirmmain.classList.remove("boxappear");
@@ -531,16 +602,25 @@ const backclick = () =>{
 
 
 const ic_pack = document.querySelectorAll(".ic_pack");
-
+const icondiv = document.querySelectorAll(".icondiv");
 
 const app_click = (index) =>{
+	if(index === 22){
+		themesetting.style.display = "block";
+		setTimeout(()=>{
+			themesetting.classList.add("themeappear");
+		},100);
+		
+	}
+	else{
 	frameconsole.classList.add("appear");
 	yes.textContent = "YES";
 	frameconsole.src= "loading.html";
 	setTimeout(()=>{
 		frameconsole.src=applist[index].url;
 	},1500);
-}
+}//elseclose
+}//app_click()close
 ic_pack.forEach((node,i)=>{
 	node.setAttribute("onclick",`app_click(${i})`);
 });
@@ -557,8 +637,43 @@ const tipcloseclick = () =>{
 		node.style.opacity = "1";
 	});
 }
+const fsrange = () =>{
+	fslabel.textContent = fs.value;
+	ic_pack.forEach((node)=>{
+		node.style.fontSize = fs.value+"px";
+	});
+}
+const icrange = () =>{
+	islabel.textContent = ics.value;
+	icondiv.forEach((node)=>{
+		node.style.width = ics.value+"px";
+		node.style.height = ics.value+"px";
+	});
+}
+const saveclick = () =>{
+	themesetting.classList.remove("themeappear");
+	setTimeout(()=>{
+		themesetting.style.display = "none";
+	},500);
+}
 
-
+const cancelclick = () =>{
+	icondiv.forEach((node)=>{
+		node.style.width = "80%";
+		node.style.height = "80%";
+	});
+	ic_pack.forEach((node)=>{
+		node.style.fontSize = "12px";
+	});
+	themesetting.classList.remove("themeappear");
+	setTimeout(()=>{
+		themesetting.style.display = "none";
+	},500);
+	fs.value = "12";
+	ics.value = "83";
+	islabel.textContent = "83";
+	fslabel.textContent = "12";
+}
 
 
 
