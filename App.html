@@ -119,7 +119,7 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 	/*background-color: blue;*/
 	display: inline-block;
 	width: 22%;
-	height: 14%;
+	height: 13%;
 }
 
 .icondiv{
@@ -357,6 +357,9 @@ const yesclick = () =>{
 	setTimeout(()=>{
 		yes.textContent = "NO";
 	},300);
+	setTimeout(()=>{
+			frameconsole.src = "";
+		},300);
 	
 }
 yes.addEventListener("click",yesclick);
@@ -378,6 +381,9 @@ const homeclick = () =>{
 	},50);
 		frameconsole.classList.remove("appear");
 		yes.textContent = "NO";
+		setTimeout(()=>{
+			frameconsole.src = "";
+		},1000);
 }
 const backclick = () =>{
 	navibtn[2].style.animation = "";
