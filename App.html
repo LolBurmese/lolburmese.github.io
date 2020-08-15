@@ -237,6 +237,8 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 	width: 22.5%;
 	height: 12.5%;
 	opacity: 0;
+        z-index : -1;
+        visibility : hidden;
 }
 
 .icondiv{
@@ -635,6 +637,8 @@ const tipcloseclick = () =>{
 	intronav.style.animation = "tipboxclose .5s ease forwards";
 	ic_pack.forEach((node)=>{
 		node.style.opacity = "1";
+                node.style.zIndex = "1";
+                node.style.visibility = "visible";
 	});
 }
 const fsrange = () =>{
