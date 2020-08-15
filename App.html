@@ -356,59 +356,12 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 	height: 20px;
 	outline: none;
 }
-.fcolor:nth-child(1){
-	background-color: black;
-}
-.fcolor:nth-child(2){
-	background-color: indigo;
-}
-.fcolor:nth-child(3){
-	background-color: red;
-}
-.fcolor:nth-child(4){
-	background-color: orange;
-}
-.fcolor:nth-child(5){
-	background-color: yellow;
-}
-.fcolor:nth-child(6){
-	background-color: green;
-}
-.fcolor:nth-child(7){
-	background-color: blue;
-}
-.fcolor:nth-child(8){
-	background-color: violet;
-}
-.bcolor:nth-child(1){
-	background-color: black;
-}
-.bcolor:nth-child(2){
-	background-color: indigo;
-}
-.bcolor:nth-child(3){
-	background-color: red;
-}
-.bcolor:nth-child(4){
-	background-color: orange;
-}
-.bcolor:nth-child(5){
-	background-color: yellow;
-}
-.bcolor:nth-child(6){
-	background-color: green;
-}
-.bcolor:nth-child(7){
-	background-color: blue;
-}
-.bcolor:nth-child(8){
-	background-color: violet;
-}
+
 .fcolor:checked{
-	border : 5px solid black;
+	border : 5px solid navy;
 }
 .bcolor:checked{
-	border : 5px solid black;
+	border : 5px solid navy;
 }
 
 
@@ -486,14 +439,14 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 		<h2>Font Color</h2>
 		<div class="themepart">
 		<img src="https://icon-library.com/images/font-color-icon/font-color-icon-11.jpg" width="30" height="30">
-		<input type="radio" value="black" class="fcolor" name="color">
-		<input type="radio" value="indigo" class="fcolor" name="color">
-		<input type="radio" value="red" class="fcolor" name="color">
-		<input type="radio" value="orange" class="fcolor" name="color">
-		<input type="radio" value="yellow" class="fcolor" name="color">
-		<input type="radio" value="green" class="fcolor" name="color">
-		<input type="radio" value="blue" class="fcolor" name="color">
-		<input type="radio" value="violet" class="fcolor" name="color">
+		<input style="background-color: black" type="radio" value="black" class="fcolor" name="color">
+		<input style="background-color: indigo" type="radio" value="indigo" class="fcolor" name="color">
+		<input style="background-color: red" type="radio" value="red" class="fcolor" name="color">
+		<input style="background-color: orange" type="radio" value="orange" class="fcolor" name="color">
+		<input style="background-color: yellow" type="radio" value="yellow" class="fcolor" name="color">
+		<input style="background-color: green" type="radio" value="green" class="fcolor" name="color">
+		<input style="background-color: blue" type="radio" value="blue" class="fcolor" name="color">
+		<input style="background-color: violet" type="radio" value="violet" class="fcolor" name="color">
 	</div>
 	</div>
 
@@ -501,14 +454,14 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 		<h2>Background Color</h2>
 		<div class="themepart">
 		<img src="https://icon-library.com/images/color-icon/color-icon-9.jpg" width="30" height="30">
-		<input type="radio" value="black" class="bcolor" name="color">
-		<input type="radio" value="indigo" class="bcolor" name="color">
-		<input type="radio" value="red" class="bcolor" name="color">
-		<input type="radio" value="orange" class="bcolor" name="color">
-		<input type="radio" value="yellow" class="bcolor" name="color">
-		<input type="radio" value="green" class="bcolor" name="color">
-		<input type="radio" value="blue" class="bcolor" name="color">
-		<input type="radio" value="violet" class="bcolor" name="color">
+		<input style="background-color: black" type="radio" value="black" class="bcolor" name="color">
+		<input style="background-color: indigo" type="radio" value="indigo" class="bcolor" name="color">
+		<input style="background-color: red" type="radio" value="red" class="bcolor" name="color">
+		<input style="background-color: orange" type="radio" value="orange" class="bcolor" name="color">
+		<input style="background-color: yellow" type="radio" value="yellow" class="bcolor" name="color">
+		<input style="background-color: green" type="radio" value="green" class="bcolor" name="color">
+		<input style="background-color: blue" type="radio" value="blue" class="bcolor" name="color">
+		<input style="background-color: violet" type="radio" value="violet" class="bcolor" name="color">
 	</div>
 	</div>
 
@@ -826,7 +779,11 @@ bcolor.forEach((node,i)=>{
 	node.setAttribute("oninput",`bcolorinput(${i})`)
 });
 
-
+// const colorerror = () =>{
+// 	fcolor[0].style.backgroundColor = "black";
+// 	bcolor[0].style.backgroundColor = "black";
+// }
+// colorerror();
 
 
 
