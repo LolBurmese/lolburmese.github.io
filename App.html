@@ -7,6 +7,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
   />
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
   <style type="text/css">
   	*{
@@ -14,6 +15,97 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
+}
+.intronav{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 300px;
+	height: 0;
+	animation: tipbox .5s ease forwards .8s;
+	background-color: white;
+	border-radius: 15px;
+	transition: .5s;
+	overflow: hidden;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+}
+.intromain{
+	width: 100%;
+	height: 100%;
+	background-color: skyblue;
+	position: relative;
+}
+.tiptitle{
+	background-color: blue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	height: 15%;
+	color : white;
+	font-size: 21px;
+}
+.tipbtn{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 5%;
+	padding: 10px;
+	outline : none;
+	border-radius: 12px;
+	background-color: gold;
+	color : black;
+	-webkit-appearance : none;
+	border: none;
+	cursor: pointer;
+}
+.tip3{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+}
+.tip3 div{
+	display: flex;
+	padding : 10px;
+	align-items: center;
+}
+.tip3 div img{
+	margin-right: 20px;
+}
+@keyframes tipbox{
+	from{
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+	}
+	to{
+		height: 280px;
+		opacity: 1;
+		z-index: 1;
+		visibility: visible;
+	}
+}
+@keyframes tipboxclose{
+	from{
+		height: 280px;
+		opacity: 1;
+		z-index: 1;
+		visibility: visible;
+	}
+	to{
+		
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+	}
 }
 .confirmmain{
 	position: absolute;
@@ -217,7 +309,17 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 <!-- <div class="resolution">
 	This is only for smart phones.
 </div> -->
-
+<div class="intronav">
+<div class="intromain" align="center">
+	<div class="tiptitle"><img src="https://travellersdobby.com/images/icon/tips.png" width="30" height="30">Tips</div>
+	<button class="tipbtn" onclick="tipcloseclick()">I Got it!</button>
+	<div class="tip3">
+		<div><img src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/menu-24-512.png" width="30" height="30">"Menu" for more options</div>
+		<div><img src="https://image.flaticon.com/icons/png/512/69/69524.png" width="30" height="30">"Home" to quit instantly</div>
+		<div><img src="https://image.flaticon.com/icons/png/512/59/59098.png" width="30" height="30">"Back" to step back</div>
+	</div>
+</div>
+</div>
 
 
 
@@ -350,6 +452,7 @@ const frameconsole = document.getElementsByClassName("frameconsole")[0];
 const confirmmain = document.getElementsByClassName("confirmmain")[0];
 const yes = document.getElementsByClassName("yes")[0];
 const no = document.getElementsByClassName("no")[0];
+const intronav = document.getElementsByClassName("intronav")[0];
 
 const noclick = () =>{
 	confirmmain.classList.remove("boxappear");
@@ -426,7 +529,9 @@ const menu_click = () =>{
 		navibtn[0].style.animation = "btnanimate .3s";
 	},50);
 }
-
+const tipcloseclick = () =>{
+	intronav.style.animation = "tipboxclose .5s ease forwards";
+}
 
 
 
