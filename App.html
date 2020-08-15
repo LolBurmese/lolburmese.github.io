@@ -150,7 +150,7 @@
 	border :4px solid red;
 }
 .boxappear{
-	z-index: 1;
+	z-index: 2;
 	width : 300px;
 	height : 220px;
 	opacity: 1;
@@ -345,10 +345,76 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 .themeappear{
 	visibility: visible;
 	z-index: 1;
-	height: 300px;
+	height: 480px;
 	opacity: 1;
 }
+.fcolor, .bcolor{
+	margin: 5px;
+	cursor: pointer;
+	-webkit-appearance : none;
+	width: 20px;
+	height: 20px;
+	outline: none;
+}
+.fcolor:nth-child(1){
+	background-color: black;
+}
+.fcolor:nth-child(2){
+	background-color: indigo;
+}
+.fcolor:nth-child(3){
+	background-color: red;
+}
+.fcolor:nth-child(4){
+	background-color: orange;
+}
+.fcolor:nth-child(5){
+	background-color: yellow;
+}
+.fcolor:nth-child(6){
+	background-color: green;
+}
+.fcolor:nth-child(7){
+	background-color: blue;
+}
+.fcolor:nth-child(8){
+	background-color: violet;
+}
+.bcolor:nth-child(1){
+	background-color: black;
+}
+.bcolor:nth-child(2){
+	background-color: indigo;
+}
+.bcolor:nth-child(3){
+	background-color: red;
+}
+.bcolor:nth-child(4){
+	background-color: orange;
+}
+.bcolor:nth-child(5){
+	background-color: yellow;
+}
+.bcolor:nth-child(6){
+	background-color: green;
+}
+.bcolor:nth-child(7){
+	background-color: blue;
+}
+.bcolor:nth-child(8){
+	background-color: violet;
+}
+.fcolor:checked{
+	border : 5px solid black;
+}
+.bcolor:checked{
+	border : 5px solid black;
+}
+
+
   </style>
+
+
 
 
 </head>
@@ -371,7 +437,7 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 <div class="confirmmain">
 <div class="confirmbox">
 	<div class="options">
-<div>Are you sure to exit?</div><br><br>
+<div class="warninglabel">Are you sure to exit?</div><br><br>
 <div class="confirmbtn" align="center">
 	<button class="yes">NO</button>
 	<button class="no">NO</button>
@@ -406,12 +472,43 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 		<span class="fslabel" style="font-size: 20px;">12</span>
 	</div>
 	</div>
+
 	<div class="iconsizest" align="center">
 		<h2>Icon Size</h2>
 		<div class="themepart">
 		<img src="https://icons-for-free.com/iconfiles/png/512/ruler+icon-1320144734007708556.png" width="30" height="30">
 		<input type="range" oninput="icrange()" class="ics" name="" value="83" min="5" max="200">
 		<span class="islabel" style="font-size: 20px;">83</span>
+	</div>
+	</div>
+
+	<div class="fontcolorst" align="center">
+		<h2>Font Color</h2>
+		<div class="themepart">
+		<img src="https://icon-library.com/images/font-color-icon/font-color-icon-11.jpg" width="30" height="30">
+		<input type="radio" value="black" class="fcolor" name="color">
+		<input type="radio" value="indigo" class="fcolor" name="color">
+		<input type="radio" value="red" class="fcolor" name="color">
+		<input type="radio" value="orange" class="fcolor" name="color">
+		<input type="radio" value="yellow" class="fcolor" name="color">
+		<input type="radio" value="green" class="fcolor" name="color">
+		<input type="radio" value="blue" class="fcolor" name="color">
+		<input type="radio" value="violet" class="fcolor" name="color">
+	</div>
+	</div>
+
+	<div class="bgcolorst" align="center">
+		<h2>Background Color</h2>
+		<div class="themepart">
+		<img src="https://icon-library.com/images/color-icon/color-icon-9.jpg" width="30" height="30">
+		<input type="radio" value="black" class="bcolor" name="color">
+		<input type="radio" value="indigo" class="bcolor" name="color">
+		<input type="radio" value="red" class="bcolor" name="color">
+		<input type="radio" value="orange" class="bcolor" name="color">
+		<input type="radio" value="yellow" class="bcolor" name="color">
+		<input type="radio" value="green" class="bcolor" name="color">
+		<input type="radio" value="blue" class="bcolor" name="color">
+		<input type="radio" value="violet" class="bcolor" name="color">
 	</div>
 	</div>
 
@@ -558,13 +655,17 @@ const intronav = document.getElementsByClassName("intronav")[0];
 const themesetting = document.getElementsByClassName("themesetting")[0];
 const fs = document.getElementsByClassName("fs")[0];
 const fslabel = document.getElementsByClassName("fslabel")[0];
-
+const warninglabel = document.getElementsByClassName("warninglabel")[0];
+const fcolor = document.querySelectorAll(".fcolor");
+const bcolor = document.querySelectorAll(".bcolor");
+const body = document.getElementsByTagName("body")[0];
 
 
 const noclick = () =>{
 	confirmmain.classList.remove("boxappear");
 }
 const yesclick = () =>{
+	saveclick();
 	confirmmain.classList.remove("boxappear");
 	frameconsole.classList.remove("appear");
 	setTimeout(()=>{
@@ -598,6 +699,7 @@ const homeclick = () =>{
 			frameconsole.src = "";
 			yes.textContent = "NO";
 		},500);
+		saveclick();
 }
 const backclick = () =>{
 	navibtn[2].style.animation = "";
@@ -606,6 +708,11 @@ const backclick = () =>{
 	},50);
 	if(yes.textContent === "NO"){
 
+	}
+	else if(yes.textContent === "themesave"){
+		yes.textContent = "YES";
+		confirmmain.classList.toggle("boxappear");
+		warninglabel.textContent = "Changes will be saved!";
 	}
 	else{
 		confirmmain.classList.toggle("boxappear");
@@ -619,8 +726,10 @@ const ic_pack = document.querySelectorAll(".ic_pack");
 const icondiv = document.querySelectorAll(".icondiv");
 
 const app_click = (index) =>{
+	warninglabel.textContent = "Are you sure to exit?";
 	if(index === 22){
 		themesetting.style.display = "block";
+		yes.textContent = "themesave";
 		setTimeout(()=>{
 			themesetting.classList.add("themeappear");
 		},100);
@@ -690,8 +799,32 @@ const cancelclick = () =>{
 	ics.value = "83";
 	islabel.textContent = "83";
 	fslabel.textContent = "12";
+	ic_pack.forEach((node)=>{
+		node.style.color = "white";
+	});
+	body.style.backgroundImage = "url('https://www.wallpaperup.com/uploads/wallpapers/2016/03/01/903030/87786ac645ba2a2169a69f4d4553c024-700.jpg')";
+
 }
 
+
+const fcolorinput = (index) =>{
+	ic_pack.forEach((node)=>{
+		node.style.color = fcolor[index].value;
+	});
+}
+fcolor.forEach((node,i)=>{
+	node.setAttribute("oninput",`fcolorinput(${i})`)
+});
+
+
+
+const bcolorinput = (index) =>{
+		body.style.backgroundImage = "none";
+		body.style.backgroundColor = bcolor[index].value;
+}
+bcolor.forEach((node,i)=>{
+	node.setAttribute("oninput",`bcolorinput(${i})`)
+});
 
 
 
