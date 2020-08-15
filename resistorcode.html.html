@@ -309,7 +309,7 @@ function b1inputcolor(){
 	if(colorcode[0].value === "white"){
 		band1span.textContent = band1val[9];
 	}
-
+	mtinputcolor();
 	
 }
 function b2inputcolor(){
@@ -345,6 +345,7 @@ function b2inputcolor(){
 	if(colorcode[1].value === "white"){
 		band2span.textContent = band2val[9];
 	}
+	mtinputcolor();
 }
 function mtinputcolor(){
 	bands[2].style.backgroundColor = colorcode[2].value;
