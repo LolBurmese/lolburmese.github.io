@@ -181,7 +181,7 @@
 	transform: translate(-50%,-50%);
 }
 .navibar{
-	height: 6vh;
+	height: 7%;
 	background-color: white;
 	position: absolute;
 	bottom: 0;
@@ -221,7 +221,7 @@
 	opacity: 1;
 	visibility: visible;
 	width: 100%;
-	bottom : 6vh;
+	height: 93%;
 }
 body{
 background-image : url("https://papers.co/wallpaper/papers.co-af48-hi-i-am-bart-simpsons-minimal-cartoon-36-3840x2400-4k-wallpaper.jpg");
@@ -281,7 +281,7 @@ transition: .5s;
 #firstpage{
 	position: absolute;
 	top:0;
-	bottom: 6vh;
+	bottom: 7%;
 	left: 0;
 	right: 0;
 	overflow: scroll;
@@ -305,6 +305,17 @@ transition: .5s;
 @media screen and (max-width: 720px){
 	body{
 		display: block;
+	}
+}
+@media screen and (max-height: 400px){
+	.navibar{
+		display: none;
+	}
+	.appear{
+		height: 100%;
+	}
+	#firstpage{
+		bottom: 0;
 	}
 }
 .themesetting{
