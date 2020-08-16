@@ -228,6 +228,7 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 height: 100vh;
+transition: .5s;
 }
 .icons{
 	width : 70%;
@@ -235,7 +236,7 @@ height: 100vh;
 	transition: .3s;
 }
 .ic_pack{
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: bolder;
 	cursor : pointer;
 	transition: opacity 2s;
@@ -311,7 +312,7 @@ height: 100vh;
 	width: 100%;
 	height: 0;
 	color: white;
-	background-color: #333;
+	background-color: rgba(0,0,0,0.9);
 	transition: .5s;
 	display: none;
 	z-index: -1;
@@ -482,7 +483,7 @@ height: 100vh;
 		<h3>Font Size</h3>
 		<div class="themepart">
 		<img src="https://a4k2d2q5.rocketcdn.me/wp-content/uploads/2016/12/1-103.png" width="30" height="30">
-		<input type="range" oninput="fsrange()" class="fs" name="" value="12" min="7" max="25">
+		<input type="range" onmouseup="icrangemouseup()" oninput="fsrange()" class="fs" name="" value="12" min="7" max="25">
 		<span class="fslabel" style="font-size: 20px;">12</span>
 	</div>
 	</div><br>
@@ -491,7 +492,7 @@ height: 100vh;
 		<h3>Icon Size</h3>
 		<div class="themepart">
 		<img src="https://icons-for-free.com/iconfiles/png/512/ruler+icon-1320144734007708556.png" width="30" height="30">
-		<input type="range" oninput="icrange()" class="ics" name="" value="83" min="5" max="200">
+		<input type="range" onmouseup="icrangemouseup()" oninput="icrange()" class="ics" name="" value="83" min="5" max="200">
 		<span class="islabel" style="font-size: 20px;">83</span>
 	</div>
 	</div><br>
@@ -797,6 +798,7 @@ const fsrange = () =>{
 	ic_pack.forEach((node)=>{
 		node.style.fontSize = fs.value+"px";
 	});
+	themesetting.style.backgroundColor = "rgba(0,0,0,0.2)";
 }
 const icrange = () =>{
 	islabel.textContent = ics.value;
@@ -804,7 +806,12 @@ const icrange = () =>{
 		node.style.width = ics.value+"px";
 		node.style.height = ics.value+"px";
 	});
+	themesetting.style.backgroundColor = "rgba(0,0,0,0.2)";
 }
+const icrangemouseup = () =>{
+	themesetting.style.backgroundColor = "rgba(0,0,0,0.9)";
+}
+themesetting.style.backgroundColor = "rgba(0,0,0,0.9)";
 const saveclick = () =>{
 	themesetting.classList.remove("themeappear");
 	setTimeout(()=>{
