@@ -1,89 +1,656 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="pro.png">
-  <link href="https://fonts.googleapis.com/css?family=Dokdo&display=swap" rel="stylesheet">
-<style>
+	<title>...</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+<style type="text/css">
+*{
+	padding: 0;
+	margin: 0;
+}
 body{
-	background-color: white;
+	background-color: pink;
 }
-header{
-
-font-size:32px;
-font-family: "Dokdo", cursive;
-text-align: center;
+.viewimagebox{
+	position: absolute;
+	width: 0;
+	height: 0;
+	transition: .5s;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	overflow: hidden;
+	border-radius: 15px;
+	z-index: -1;
+		background-position: center;
+	background-size: cover;
+	background-color: black;
+}
+.viewimage{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.exitbtn{
+	-webkit-appearance : none;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0,0,0,0.6);
+	color : white;
+	font-weight: bolder;
+	border : none;
+	border-radius: 0 0 0 8px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	outline: none;
+	cursor: pointer;
+}
+.exitbtn:hover{
+	background-color: red;
+}
+.photo{
+	padding: 10px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 24px;
+}
+.photo h3{
+	margin-left: 15px;
+	letter-spacing: .5px;
 }
 
-.main{
-display : flex;
-flex-wrap : wrap;
-justify-content : center;
-align-items: center;
+.photobox{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	overflow: scroll;
+	position: absolute;
+	top : 10%;
+	bottom : 0;
+	background-color: rgba(255,0,0,0.4);
+
 }
+.photobox .imagesmain{
+	width: 90px;
+	height: 90px;
+	margin: 2px;
+	overflow: hidden;
+	transition: .6s;
+	cursor: pointer;
 
-.box{
-width : 170px;
-height : 225px;
-margin : 5px;
-overflow: hidden;
-border-radius: 5px;
 }
-
-img{
-width: 100%;
-transition : 0.8s;
+.hello{
+	visibility: visible;
+	opacity: 1;
+transform: translateY(0);
 }
-
-.box:hover img{
-transform: scale(1.2);
-border-radius: 12px;
+.photobox .imagesmain .images{
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	transition: .5s;
 }
-
-
-
-
-
-
-
-
+.photobox .imagesmain .images:hover{
+	transform: scale(1.2);
+}
+.disappear{
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(-2em);
+}
+.imageviewappear{
+	width: 320px;
+	height: 260px;
+	opacity: 1;
+	visibility: visible;
+	z-index: 1;
+}
 </style>
-
-
-
-
-
-
-
-<title>Gallary</title>
-
 </head>
 
-
-
 <body>
-<header>
-<h1>My Gallary</h1>
-<p>During quarantine, you shoud make your hobby. If not, you are just a lazy person.</p>
 
-</header>
-<hr>
+	<div class="photo">
+		<h3>Photos</h3>
+	</div>
+
+	<div class="photobox">
+		
+
+	</div>
+	<div class="viewimagebox">
+		<div class="viewimage">
+			<button class="exitbtn" onclick="btnclick()">X</button>
+		</div>
+	</div>
 
 
-<div class="main">
 
-<div class="box"><img src="img1.jpg"width="170" height="225">
+
+
+
+<script type="text/javascript">
+	
+var photobox = document.getElementsByClassName("photobox")[0];
+
+var gallery = [
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "https://robohash.org/4"
+},
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+},
+
+{
+	src: "amt1.jpg"
+}
+];
+
+
+
+gallery.map(function(src,i){
+
+photobox.innerHTML += `
+<div class='imagesmain hello'>
+<div class='images' style='background-image: url(${gallery[i].src});'></div>
 </div>
+`;
 
-<div class="box"><img src="alt1.jpg"width="170" height="225">
-</div>
+})
 
-<div class="box"><img src="alt2.jpg"width="170" height="225">
-</div>
+var images = document.querySelectorAll(".imagesmain");
+var viewimagebox = document.getElementsByClassName("viewimagebox")[0];
+var exitbtn = document.getElementsByClassName("exitbtn")[0];
 
-<div class="box"><img src="img1.jpg"width="170" height="225">
-</div>
+function photoclick(i){
 
-</div>
+	images.forEach(function(node){
+		node.classList.add("disappear");
+		node.classList.remove("hello");
+	});
+	viewimagebox.classList.add("imageviewappear");
+	viewimagebox.style.backgroundImage = "url("+gallery[i].src+")";
 
+}
+
+images.forEach(function(node,i){
+
+node.setAttribute('onclick',`photoclick(${i})`);
+
+});
+
+function btnclick(){
+	viewimagebox.classList.remove("imageviewappear");
+
+
+	images.forEach(function(node){
+		node.classList.remove("disappear");
+		node.classList.add("hello");
+	});
+
+}
+
+
+
+
+
+</script>
 </body>
 </html>
+ 
