@@ -224,6 +224,10 @@
 }
 body{
 background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/01/903030/87786ac645ba2a2169a69f4d4553c024-700.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
 }
 .icons{
 	width : 70%;
@@ -305,7 +309,8 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 	bottom: 7%;
 	width: 100%;
 	height: 0;
-	background-color: #eee;
+	color: white;
+	background-color: #333;
 	transition: .5s;
 	display: none;
 	z-index: -1;
@@ -345,25 +350,78 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 .themeappear{
 	visibility: visible;
 	z-index: 1;
-	height: 480px;
+	height: 520px;
 	opacity: 1;
 }
 .fcolor, .bcolor{
+	position: relative;
 	margin: 5px;
 	cursor: pointer;
 	-webkit-appearance : none;
 	width: 20px;
 	height: 20px;
 	outline: none;
+	border-radius : 50%;
 }
+.wallpaper{
+	position: relative;
+	margin: 5px;
+	cursor: pointer;
+	-webkit-appearance : none;
+	width: 40px;
+	height: 30px;
+	outline: none;
+	border-radius: 5px;
+	background-position: center;
+	background-size: cover;
+}
+.fcolor:before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color : transparent;
+	text-shadow: 0 0 0 white;
+	content : "✔️";
+	transition: .4s;
+	opacity: 0;
+	visibility: hidden;
 
-.fcolor:checked{
-	border : 5px solid navy;
 }
-.bcolor:checked{
-	border : 5px solid navy;
+.bcolor:before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color : transparent;
+	text-shadow: 0 0 0 white;
+	content : "✔️";
+	transition: .4s;
+	opacity: 0;
+	visibility: hidden;
 }
-
+.fcolor:checked:before{
+	visibility: visible;
+	opacity: 1;
+}
+.bcolor:checked:before{
+	visibility: visible;
+	opacity: 1;
+}
+.wallpaper:before{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color : transparent;
+	text-shadow: 0 0 0 black;
+	content : "✔️";
+	transition: .4s;
+	opacity: 0;
+	visibility: hidden;
+}
+.wallpaper:checked:before{
+	visibility: visible;
+	opacity: 1;
+}
 
   </style>
 
@@ -417,51 +475,67 @@ background-image : url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/0
 		<button class="cancelbtn" onclick="cancelclick()">Default</button>
 		<button class="savebtn" onclick="saveclick()">Save</button>
 	</div><br>
+
+
 	<div class="fontsizest" align="center">
-		<h2>Font Size</h2>
+		<h3>Font Size</h3>
 		<div class="themepart">
 		<img src="https://a4k2d2q5.rocketcdn.me/wp-content/uploads/2016/12/1-103.png" width="30" height="30">
 		<input type="range" oninput="fsrange()" class="fs" name="" value="12" min="7" max="25">
 		<span class="fslabel" style="font-size: 20px;">12</span>
 	</div>
-	</div>
+	</div><br>
 
 	<div class="iconsizest" align="center">
-		<h2>Icon Size</h2>
+		<h3>Icon Size</h3>
 		<div class="themepart">
 		<img src="https://icons-for-free.com/iconfiles/png/512/ruler+icon-1320144734007708556.png" width="30" height="30">
 		<input type="range" oninput="icrange()" class="ics" name="" value="83" min="5" max="200">
 		<span class="islabel" style="font-size: 20px;">83</span>
 	</div>
-	</div>
+	</div><br>
 
 	<div class="fontcolorst" align="center">
-		<h2>Font Color</h2>
+		<h3>Font Color</h3>
 		<div class="themepart">
 		<img src="https://icon-library.com/images/font-color-icon/font-color-icon-11.jpg" width="30" height="30">
-		<input style="background-color: black" type="radio" value="black" class="fcolor" name="color">
-		<input style="background-color: indigo" type="radio" value="indigo" class="fcolor" name="color">
-		<input style="background-color: red" type="radio" value="red" class="fcolor" name="color">
-		<input style="background-color: orange" type="radio" value="orange" class="fcolor" name="color">
-		<input style="background-color: yellow" type="radio" value="yellow" class="fcolor" name="color">
-		<input style="background-color: green" type="radio" value="green" class="fcolor" name="color">
-		<input style="background-color: blue" type="radio" value="blue" class="fcolor" name="color">
-		<input style="background-color: violet" type="radio" value="violet" class="fcolor" name="color">
+		<input style="background-color: black" type="radio" value="black" class="fcolor" name="fcolor">
+		<input style="background-color: indigo" type="radio" value="indigo" class="fcolor" name="fcolor">
+		<input style="background-color: red" type="radio" value="red" class="fcolor" name="fcolor">
+		<input style="background-color: orange" type="radio" value="orange" class="fcolor" name="fcolor">
+		<input style="background-color: yellow" type="radio" value="yellow" class="fcolor" name="fcolor">
+		<input style="background-color: green" type="radio" value="green" class="fcolor" name="fcolor">
+		<input style="background-color: blue" type="radio" value="blue" class="fcolor" name="fcolor">
+		<input style="background-color: violet" type="radio" value="violet" class="fcolor" name="fcolor">
 	</div>
-	</div>
+	</div><br>
 
 	<div class="bgcolorst" align="center">
-		<h2>Background Color</h2>
+		<h3>Background Color</h3>
 		<div class="themepart">
 		<img src="https://icon-library.com/images/color-icon/color-icon-9.jpg" width="30" height="30">
-		<input style="background-color: black" type="radio" value="black" class="bcolor" name="color">
-		<input style="background-color: indigo" type="radio" value="indigo" class="bcolor" name="color">
-		<input style="background-color: red" type="radio" value="red" class="bcolor" name="color">
-		<input style="background-color: orange" type="radio" value="orange" class="bcolor" name="color">
-		<input style="background-color: yellow" type="radio" value="yellow" class="bcolor" name="color">
-		<input style="background-color: green" type="radio" value="green" class="bcolor" name="color">
-		<input style="background-color: blue" type="radio" value="blue" class="bcolor" name="color">
-		<input style="background-color: violet" type="radio" value="violet" class="bcolor" name="color">
+		<input style="background-color: black" type="radio" value="black" class="bcolor" name="wallpaper">
+		<input style="background-color: indigo" type="radio" value="indigo" class="bcolor" name="wallpaper">
+		<input style="background-color: red" type="radio" value="red" class="bcolor" name="wallpaper">
+		<input style="background-color: orange" type="radio" value="orange" class="bcolor" name="wallpaper">
+		<input style="background-color: yellow" type="radio" value="yellow" class="bcolor" name="wallpaper">
+		<input style="background-color: green" type="radio" value="green" class="bcolor" name="wallpaper">
+		<input style="background-color: blue" type="radio" value="blue" class="bcolor" name="wallpaper">
+		<input style="background-color: violet" type="radio" value="violet" class="bcolor" name="wallpaper">
+	</div>
+	</div><br>
+
+	<div class="wallpaperst" align="center">
+		<h3>Wallpaper</h3>
+		<div class="themepart">
+		<input style="background-image: url(https://c4.wallpaperflare.com/wallpaper/246/739/689/digital-digital-art-artwork-illustration-abstract-hd-wallpaper-preview.jpg)" type="radio" value="https://c4.wallpaperflare.com/wallpaper/246/739/689/digital-digital-art-artwork-illustration-abstract-hd-wallpaper-preview.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-thumb.jpg)" type="radio" value="https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-thumb.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://i.pinimg.com/originals/f8/b6/9e/f8b69e6156999b84137f3f0a23701b75.jpg)" type="radio" value="https://i.pinimg.com/originals/f8/b6/9e/f8b69e6156999b84137f3f0a23701b75.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2015/05/09/682730/2ddcd218f46130ff0a7a596d5fc18512-700.jpg)" type="radio" value="https://www.wallpaperup.com/uploads/wallpapers/2015/05/09/682730/2ddcd218f46130ff0a7a596d5fc18512-700.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://static.techspot.com/images2/trivia/bigimage/2017/2017-03-19-image-46.jpg)" type="radio" value="https://static.techspot.com/images2/trivia/bigimage/2017/2017-03-19-image-46.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://addons-media.operacdn.com/media/CACHE/images/themes/45/25945/1.1-rev2/images/d8a15c32-5b9c-47d4-b6c9-2b1e1c4473ab/c566880c8bac652c7a3d8eb041c9f437.jpg)" type="radio" value="https://addons-media.operacdn.com/media/CACHE/images/themes/45/25945/1.1-rev2/images/d8a15c32-5b9c-47d4-b6c9-2b1e1c4473ab/c566880c8bac652c7a3d8eb041c9f437.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://cdn.statically.io/img/www.itl.cat/pngfile/big/236-2366806_minimalistic-landscape-wallpaper-1080p.jpg)" type="radio" value="https://cdn.statically.io/img/www.itl.cat/pngfile/big/236-2366806_minimalistic-landscape-wallpaper-1080p.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://wallpaperaccess.com/full/557178.jpg)" type="radio" value="https://wallpaperaccess.com/full/557178.jpg" class="wallpaper" name="wallpaper">
 	</div>
 	</div>
 
@@ -612,6 +686,7 @@ const warninglabel = document.getElementsByClassName("warninglabel")[0];
 const fcolor = document.querySelectorAll(".fcolor");
 const bcolor = document.querySelectorAll(".bcolor");
 const body = document.getElementsByTagName("body")[0];
+const wallpaper = document.querySelectorAll(".wallpaper");
 
 
 const noclick = () =>{
@@ -778,12 +853,14 @@ const bcolorinput = (index) =>{
 bcolor.forEach((node,i)=>{
 	node.setAttribute("oninput",`bcolorinput(${i})`)
 });
-
-// const colorerror = () =>{
-// 	fcolor[0].style.backgroundColor = "black";
-// 	bcolor[0].style.backgroundColor = "black";
-// }
-// colorerror();
+const wallpaperinput = (index) =>{
+	body.style.backgroundImage = "";
+	body.style.backgroundColor = "";
+	body.style.backgroundImage = `url('${wallpaper[index].value}')`;
+}
+wallpaper.forEach((node,i)=>{
+	node.setAttribute("oninput",`wallpaperinput(${i})`)
+});
 
 
 
