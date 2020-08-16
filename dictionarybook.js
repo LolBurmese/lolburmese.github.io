@@ -226,7 +226,3 @@ const exitclick = () =>{
 	result.classList.remove("resultappear");
 	dict_words.classList.remove("words_disappear");
 }
-const search_clear_click = () =>{
-	dict_search.value = "";
-	dict_words.innerHTML = "";
-}
