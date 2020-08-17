@@ -12,7 +12,7 @@ body{
 	padding: 0;
 	margin: 0;
 	user-select: none;
-	background: -webkit-linear-gradient(left, gold, skyblue);
+	background: #aaa;
 }
 
 .menu div{
@@ -100,13 +100,19 @@ body{
 	font-size: 24px;
 	color : navy;
 }
-.categorylabel{
-	background: -webkit-linear-gradient(left, gold, skyblue);
-	color: #001540;
+.categorylabel,.resultvalue{
+	background: -webkit-linear-gradient(left, red, skyblue);
+	color: black;
 	margin-top: 5px;
 	font-size: 20px;
 	padding: 10px;
+	margin-bottom: 5px;
 	font-family: 'Poppins', sans-serif;
+	align-items: center;
+	justify-content: space-between;
+}
+.categorylabel{
+	display: flex;
 }
 .marvelphotos,.actionphotos,.adventurephotos,.animationphotos{
 	display: inline-block;
@@ -115,6 +121,16 @@ body{
 	width: 100px;
 	height: 150px;
 }
+.actionbtn,.adventurebtn,.animationbtn,.marvelbtn{
+	-webkit-appearance : none;
+	outline : none;
+	padding: 0;
+	margin: 0;
+	border : 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
 .picture{
 	width: 100%;
 	height: 100%;
@@ -132,8 +148,9 @@ body{
 .marvel,.action,.adventure,.animation{
 	white-space: nowrap;
 	overflow: auto;
-	background: -webkit-linear-gradient(left, gold, skyblue);
+	background-color: transparent;
 	padding-left: 5px;
+	transition: .5s;
 }
 .action::-webkit-scrollbar{
 	display: none;
@@ -148,7 +165,7 @@ body{
 	display: none;
 }
 .resultView{
-	background : -webkit-linear-gradient(left,gold,skyblue);
+	background : transparent;
 	display: none;
 	margin-top: 10px;
 }
@@ -172,6 +189,9 @@ body{
 }
 .resultViewappear{
 	display: block;
+}
+.whitespace{
+	white-space: normal;
 }
 </style>
 
@@ -198,16 +218,16 @@ body{
 </div>
 
 <div class="container">
-<div class="categorylabel">Action</div>
+<div class="categorylabel">Action<button onclick="actionshowall()" class="actionbtn"><img src="https://icons-for-free.com/iconfiles/png/512/grid-1321215619689584902.png" width="30" height="30"></button></div>
 <div class="action" align="center"></div>
 
-<div class="categorylabel">Adventure</div>
+<div class="categorylabel">Adventure<button onclick="adventureshowall()" class="adventurebtn"><img src="https://icons-for-free.com/iconfiles/png/512/grid-1321215619689584902.png" width="30" height="30"></button></div>
 <div class="adventure" align="center"></div>
 
-<div class="categorylabel">Animation</div>
+<div class="categorylabel">Animation<button onclick="animationshowall()" class="animationbtn"><img src="https://icons-for-free.com/iconfiles/png/512/grid-1321215619689584902.png" width="30" height="30"></button></div>
 <div class="animation" align="center"></div>
 
-<div class="categorylabel">Marvel</div>
+<div class="categorylabel">Marvel<button onclick="marvelshowall()" class="marvelbtn"><img src="https://icons-for-free.com/iconfiles/png/512/grid-1321215619689584902.png" width="30" height="30"></button></div>
 <div class="marvel" align="center"></div>
 
 </div>
@@ -519,6 +539,10 @@ animationarray.map(function(user,i){
 
 var resultView = document.getElementsByClassName("resultView")[0];
 var container = document.getElementsByClassName("container")[0];
+
+
+
+
 function OninputSearch(){
 	var filteredMovies = allarray.filter(function(names){
 	return names.name.toLowerCase().includes(searchbar.value.toLowerCase());
@@ -530,7 +554,7 @@ function OninputSearch(){
 	else{
 		container.classList.add("containerdisappear");
 		resultView.classList.add("resultViewappear");
-		resultView.innerHTML = "";
+		resultView.innerHTML = `<div class='resultvalue' align="left">Result of "${searchbar.value}"</div>`;
 	filteredMovies.map(function(user,i){
 	resultView.innerHTML += `
 		<div class="resultMovie">
@@ -540,10 +564,19 @@ function OninputSearch(){
 	`;
 })//map_close
 	}
-	
-
-
 }//function_close
+const animationshowall = () =>{
+	animation.classList.toggle("whitespace");
+}
+const marvelshowall = () =>{
+	marvel.classList.toggle("whitespace");
+}
+const actionshowall = () =>{
+	action.classList.toggle("whitespace");
+}
+const adventureshowall = () =>{
+	adventure.classList.toggle("whitespace");
+}
 
 </script>
 </body>
