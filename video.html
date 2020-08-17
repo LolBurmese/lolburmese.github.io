@@ -110,6 +110,24 @@ body{
 }
 .marvelphotos,.actionphotos,.adventurephotos,.animationphotos{
 	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	width: 100px;
+	height: 150px;
+}
+.picture{
+	width: 100%;
+	height: 100%;
+}
+.piclabel{
+	position: absolute;
+	bottom: 0;
+	background-color: black;
+	color: white;
+	width: 100%;
+	text-align: center;
+	font-size: 11px;
+	font-family: 'Poppins', sans-serif;
 }
 .marvel,.action,.adventure,.animation{
 	white-space: nowrap;
@@ -136,6 +154,10 @@ body{
 }
 .resultMovie{
 	margin: 5px;
+	width: 100px;
+	height: 150px;
+	overflow: hidden;
+	position: relative;
 }
 @keyframes searchanimate{
 	from{
@@ -177,16 +199,16 @@ body{
 
 <div class="container">
 <div class="categorylabel">Action</div>
-<div class="action"></div>
+<div class="action" align="center"></div>
 
 <div class="categorylabel">Adventure</div>
-<div class="adventure"></div>
+<div class="adventure" align="center"></div>
 
 <div class="categorylabel">Animation</div>
-<div class="animation"></div>
+<div class="animation" align="center"></div>
 
 <div class="categorylabel">Marvel</div>
-<div class="marvel"></div>
+<div class="marvel" align="center"></div>
 
 </div>
 
@@ -455,7 +477,8 @@ marvelarray.map(function(user,i){
 
 	marvel.innerHTML += `
 		<div class="marvelphotos">
-			<img src="${marvelarray[i].thumbnail}" width="100" height="150">
+			<img class="picture" src="${marvelarray[i].thumbnail}">
+			<div class="piclabel">${marvelarray[i].name}</div>
 		</div>
 	`;
 
@@ -465,7 +488,8 @@ actionarray.map(function(user,i){
 
 	action.innerHTML += `
 		<div class="actionphotos">
-			<img src="${actionarray[i].thumbnail}" width="100" height="150">
+			<img class="picture" src="${actionarray[i].thumbnail}">
+			<div class="piclabel">${actionarray[i].name}</div>
 		</div>
 	`;
 
@@ -475,7 +499,8 @@ adventurearray.map(function(user,i){
 
 	adventure.innerHTML += `
 		<div class="adventurephotos">
-			<img src="${adventurearray[i].thumbnail}" width="100" height="150">
+			<img class="picture" src="${adventurearray[i].thumbnail}">
+			<div class="piclabel">${adventurearray[i].name}</div>
 		</div>
 	`;
 
@@ -485,7 +510,8 @@ animationarray.map(function(user,i){
 
 	animation.innerHTML += `
 		<div class="animationphotos">
-			<img src="${animationarray[i].thumbnail}" width="100" height="150">
+			<img class="picture" src="${animationarray[i].thumbnail}">
+			<div class="piclabel">${animationarray[i].name}</div>
 		</div>
 	`;
 
@@ -508,7 +534,8 @@ function OninputSearch(){
 	filteredMovies.map(function(user,i){
 	resultView.innerHTML += `
 		<div class="resultMovie">
-			<img src="${filteredMovies[i].thumbnail}" width="100" height="150">
+			<img class="picture" src="${filteredMovies[i].thumbnail}">
+			<div class="piclabel">${filteredMovies[i].name}</div>
 		</div>
 	`;
 })//map_close
