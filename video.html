@@ -76,6 +76,10 @@ body{
 	align-items: center;
 	padding: 10px;
 	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 555;
+
 }
 .label{
 	opacity: 1;
@@ -96,17 +100,6 @@ body{
 	font-size: 24px;
 	color : navy;
 }
-.container{
-	overflow: scroll;
-	height: 560px;
-	visibility: visible;
-	opacity: 1;
-	transition: .5s;
-	transform: translateY(0);
-}
-.container::-webkit-scrollbar{
-	display: none;
-}
 .categorylabel{
 	background: -webkit-linear-gradient(left, gold, skyblue);
 	color: #001540;
@@ -122,6 +115,7 @@ body{
 	white-space: nowrap;
 	overflow: auto;
 	background: -webkit-linear-gradient(left, gold, skyblue);
+	padding-left: 5px;
 }
 .action::-webkit-scrollbar{
 	display: none;
@@ -136,22 +130,9 @@ body{
 	display: none;
 }
 .resultView{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: 100%;
-	height: 450px;
-	overflow: scroll;
-	background : rgba(255,255,255,0.6);
-	visibility: hidden;
-	opacity: 0;
-	z-index: -1;
-	transition: .5s;
-	border-bottom: 4px solid black;
-}
-.resultView::-webkit-scrollbar{
+	background : -webkit-linear-gradient(left,gold,skyblue);
 	display: none;
+	margin-top: 10px;
 }
 .resultMovie{
 	margin: 5px;
@@ -165,14 +146,10 @@ body{
 	}
 }
 .containerdisappear{
-	visibility: hidden;
-	opacity: 0;
-	transform: translateY(-2em);
+	display: none;
 }
 .resultViewappear{
-	visibility: visible;
-	opacity: 1;
-	z-index: 1;
+	display: block;
 }
 </style>
 
