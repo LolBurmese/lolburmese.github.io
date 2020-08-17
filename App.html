@@ -28,7 +28,7 @@
 	transform: translate(-50%,-50%);
 	width: 300px;
 	height: 0;
-	animation: tipbox .5s ease forwards 2s;
+	animation: tipbox .5s ease forwards .5s;
 	background-color: white;
 	border-radius: 15px;
 	transition: .5s;
@@ -83,16 +83,20 @@
 	transform: translateX(-2em);
 }
 .tip3 div:nth-child(1){
-	animation: tiplabel .5s ease forwards 2.1s;
+	animation: tiplabel .5s ease forwards .6s;
 }
 .tip3 div:nth-child(2){
-	animation: tiplabel .5s ease forwards 2.2s;
+	animation: tiplabel .5s ease forwards .7s;
 }
 .tip3 div:nth-child(3){
-	animation: tiplabel .5s ease forwards 2.3s;
+	animation: tiplabel .5s ease forwards .8s;
 }
 .tip3 div img{
 	margin-right: 20px;
+}
+.webbtn:hover{
+	background-color: red;
+	color: white;
 }
 @keyframes tiplabel{
 	from{
@@ -597,7 +601,7 @@ transition: .5s;
 <div class="browser">
 	<div align="center" class="browsercomponent">
 		<input type="text" spellcheck="false" class="webtxtbox" name="" placeholder="Search or type web address">
-		<button class="webbtn">GO</button>
+		<button class="webbtn" onclick="gowebsite()">GO</button>
 	</div>
 </div>
 
@@ -933,6 +937,17 @@ wallpaper.forEach((node,i)=>{
 	node.setAttribute("oninput",`wallpaperinput(${i})`)
 });
 
+const webtxtbox = document.getElementsByClassName("webtxtbox")[0];
+
+const gowebsite = () =>{
+	if(webtxtbox.value.includes(".")){
+		window.location.assign(`https://${webtxtbox.value}`);
+	}
+	else{
+		window.location.assign(`https://www.google.com/search?q=${webtxtbox.value}`);
+	}
+	
+}
 
 
 
