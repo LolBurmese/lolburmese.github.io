@@ -549,11 +549,12 @@ var container = document.getElementsByClassName("container")[0];
 
 
 
-
+var sync;
 function OninputSearch(){
 	var filteredMovies = allarray.filter(function(names){
 	return names.name.toLowerCase().includes(searchbar.value.toLowerCase());
 })
+	sync = filteredMovies;
 	if (searchbar.value === "") {
 		container.classList.remove("containerdisappear");
 		resultView.classList.remove("resultViewappear");
@@ -561,7 +562,7 @@ function OninputSearch(){
 	else{
 		container.classList.add("containerdisappear");
 		resultView.classList.add("resultViewappear");
-		resultView.innerHTML = `<div class='resultvalue' align="left">Result of "${searchbar.value}"</div>`;
+		resultView.innerHTML = `<div class='resultvalue' align="left">${sync.length} Result(s) of "${searchbar.value}" found!</div>`;
 	filteredMovies.map(function(user,i){
 	resultView.innerHTML += `
 		<div class="resultMovie">
@@ -571,6 +572,7 @@ function OninputSearch(){
 	`;
 })//map_close
 	}
+
 }//function_close
 const animationshowall = () =>{
 	animation.classList.toggle("whitespace");
