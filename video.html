@@ -12,7 +12,7 @@ body{
 	padding: 0;
 	margin: 0;
 	user-select: none;
-	background-color: lightblue;
+	background: -webkit-linear-gradient(left, gold, skyblue);
 }
 
 .menu div{
@@ -22,7 +22,9 @@ body{
 	margin: 4px;
 	transition: .5s;
 }
-
+.resultMovie{
+	display: inline-block;
+}
 .searchbar{
 	outline: none;
 	border: none;
@@ -69,7 +71,7 @@ body{
 
 .nav{
 	display: flex;
-	background-color: skyblue;
+	background-color: #ddd;
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px;
@@ -94,12 +96,65 @@ body{
 	font-size: 24px;
 	color : navy;
 }
+.container{
+	overflow: scroll;
+	height: 560px;
+	visibility: visible;
+	opacity: 1;
+	transition: .5s;
+	transform: translateY(0);
+}
+.container::-webkit-scrollbar{
+	display: none;
+}
 .categorylabel{
-	background-color:  navy;
-	color: white;
+	background: -webkit-linear-gradient(left, gold, skyblue);
+	color: #001540;
 	margin-top: 5px;
+	font-size: 20px;
 	padding: 10px;
 	font-family: 'Poppins', sans-serif;
+}
+.marvelphotos,.actionphotos,.adventurephotos,.animationphotos{
+	display: inline-block;
+}
+.marvel,.action,.adventure,.animation{
+	white-space: nowrap;
+	overflow: auto;
+	background: -webkit-linear-gradient(left, gold, skyblue);
+}
+.action::-webkit-scrollbar{
+	display: none;
+}
+.adventure::-webkit-scrollbar{
+	display: none;
+}
+.animation::-webkit-scrollbar{
+	display: none;
+}
+.marvel::-webkit-scrollbar{
+	display: none;
+}
+.resultView{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	height: 450px;
+	overflow: scroll;
+	background : rgba(255,255,255,0.6);
+	visibility: hidden;
+	opacity: 0;
+	z-index: -1;
+	transition: .5s;
+	border-bottom: 4px solid black;
+}
+.resultView::-webkit-scrollbar{
+	display: none;
+}
+.resultMovie{
+	margin: 5px;
 }
 @keyframes searchanimate{
 	from{
@@ -108,6 +163,16 @@ body{
 	to{
 		background-color: navy;
 	}
+}
+.containerdisappear{
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(-2em);
+}
+.resultViewappear{
+	visibility: visible;
+	opacity: 1;
+	z-index: 1;
 }
 </style>
 
@@ -129,24 +194,33 @@ body{
 	</div>
 	<div class="search">
 		<img class="searchicon" src="https://image.flaticon.com/icons/png/512/321/321830.png" width="20" height="20" onclick="searchhover()">
-		<input  class="searchbar" type="text" placeholder="Search" name=""></div>
+		<input  class="searchbar" type="text" oninput="OninputSearch()" placeholder="Search" name=""></div>
 
 </div>
 
-
+<div class="container">
 <div class="categorylabel">Action</div>
-
+<div class="action"></div>
 
 <div class="categorylabel">Adventure</div>
+<div class="adventure"></div>
 
 <div class="categorylabel">Animation</div>
+<div class="animation"></div>
 
 <div class="categorylabel">Marvel</div>
+<div class="marvel"></div>
 
+</div>
 
+<div class="resultView" align="center">
+	
+</div>
 
 
 <script type="text/javascript">
+
+
 
 var search =document.getElementsByClassName("search")[0];
 var searchbar =document.getElementsByClassName("searchbar")[0];
@@ -164,6 +238,308 @@ function searchhover(){
 	searchbar.classList.toggle("searchappear");
 	label.classList.toggle("labeldisappear");
 }
+
+var actionarray = [
+
+{
+	name : "Wonder woman 84" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Wonder_Woman_1984_poster.jpg/220px-Wonder_Woman_1984_poster.jpg"
+},
+{
+	name : "Mulan" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Mulan_%282020_film%29_poster.jpg/220px-Mulan_%282020_film%29_poster.jpg"
+},
+
+{
+	name : "Bad boys for life" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/9/90/Bad_Boys_for_Life_poster.jpg"
+},
+
+{
+	name : "The king man" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/6/67/The_King%27s_Man.jpg"
+},
+
+{
+	name : "Bloodshot" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/4/45/Bloodshot_-_official_film_poster.jpeg"
+},
+
+{
+	name : "Greenland" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Greenland_poster.jpeg/220px-Greenland_poster.jpeg"
+},
+
+{
+	name : "My spy" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/My_Spy_poster.jpg/220px-My_Spy_poster.jpg"
+},
+
+{
+	name : "Underwater" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Underwater_poster.jpeg/220px-Underwater_poster.jpeg"
+},
+
+{
+	name : "Ava" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/9/99/Ava_poster.jpeg"
+},
+
+{
+	name : "Becky" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Becky_poster.jpg/220px-Becky_poster.jpg"
+}
+
+
+
+];
+
+
+
+var adventurearray = [
+
+{
+	name : "Jumanji the next level" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/3/3c/JumanjiTheNextLevelTeaserPoster.jpg"
+},
+{
+	name : "Jurassic world" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/6/6e/Jurassic_World_poster.jpg"
+},
+
+{
+	name : "Interstellar" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"
+},
+
+{
+	name : "Mary Poppins Returns" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/4/48/Mary_Poppins_Returns_%282018_film_poster%29.png"
+},
+
+{
+	name : "Mad Max fury road" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/6/6e/Mad_Max_Fury_Road.jpg"
+},
+
+{
+	name : "Life of pi" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/5/57/Life_of_Pi_2012_Poster.jpg"
+},
+
+{
+	name : "Back to the future" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Back_to_the_Future.jpg/220px-Back_to_the_Future.jpg"
+},
+
+{
+	name : "The dark knight" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/8/8a/Dark_Knight.jpg"
+},
+
+{
+	name : "The mummy" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/6/68/The_mummy.jpg/220px-The_mummy.jpg"
+},
+
+{
+	name : "Dolittle" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/1/1f/Dolittle_%282020_film_poster%29.png"
+}
+
+
+
+];
+
+var animationarray = [
+
+{
+	name : "Frozen 2" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Frozen_2_poster.jpg/220px-Frozen_2_poster.jpg"
+},
+{
+	name : "Onward" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/0/03/Onward_poster.jpg"
+},
+
+{
+	name : "Incredibles 2" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/2/27/The_Incredibles_2.jpg"
+},
+
+{
+	name : "Moana" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/2/26/Moana_Teaser_Poster.jpg"
+},
+
+{
+	name : "Zootopia" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/9/96/Zootopia_%28movie_poster%29.jpg"
+},
+
+{
+	name : "How to train your dragon 3" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/f/fd/How_to_Train_Your_Dragon_3_poster.png"
+},
+
+{
+	name : "Toy story 4" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/4/4c/Toy_Story_4_poster.jpg"
+},
+
+{
+	name : "Inside out" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/0/0a/Inside_Out_%282015_film%29_poster.jpg"
+},
+
+{
+	name : "The lego movie" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/1/10/The_Lego_Movie_poster.jpg"
+},
+
+{
+	name : "Your name" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Your_Name_poster.png/220px-Your_Name_poster.png"
+}
+
+
+
+];
+
+
+var marvelarray = [
+
+{
+	name : "Endgame" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg"
+},
+{
+	name : "Infinity War" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/4/4d/Avengers_Infinity_War_poster.jpg"
+},
+
+{
+	name : "Captain Marvel" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/8/85/Captain_Marvel_poster.jpg"
+},
+
+{
+	name : "Black Panther" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/d/d6/Black_Panther_%28film%29_poster.jpg"
+},
+
+{
+	name : "Spiderman (Homecoming)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_Homecoming_poster.jpg"
+},
+
+{
+	name : "Civil War" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/5/53/Captain_America_Civil_War_poster.jpg"
+},
+
+{
+	name : "Doctor Strange" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/c/c7/Doctor_Strange_poster.jpg"
+},
+
+{
+	name : "Age of Ultron" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/f/ff/Avengers_Age_of_Ultron_poster.jpg"
+},
+
+{
+	name : "Thor" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/f/fc/Thor_poster.jpg"
+},
+
+{
+	name : "Ironman" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/0/00/Iron_Man_poster.jpg"
+}
+
+
+
+];
+
+var action = document.getElementsByClassName("action")[0];
+var adventure = document.getElementsByClassName("adventure")[0];
+var animation = document.getElementsByClassName("animation")[0];
+var marvel = document.getElementsByClassName("marvel")[0];
+
+
+var action_adventure = actionarray.concat(adventurearray);
+var animation_marvel = animationarray.concat(marvelarray);
+
+var allarray = action_adventure.concat(animation_marvel);
+
+
+marvelarray.map(function(user,i){
+
+	marvel.innerHTML += `
+		<div class="marvelphotos">
+			<img src="${marvelarray[i].thumbnail}" width="100" height="150">
+		</div>
+	`;
+
+})
+
+actionarray.map(function(user,i){
+
+	action.innerHTML += `
+		<div class="actionphotos">
+			<img src="${actionarray[i].thumbnail}" width="100" height="150">
+		</div>
+	`;
+
+})
+
+adventurearray.map(function(user,i){
+
+	adventure.innerHTML += `
+		<div class="adventurephotos">
+			<img src="${adventurearray[i].thumbnail}" width="100" height="150">
+		</div>
+	`;
+
+})
+
+animationarray.map(function(user,i){
+
+	animation.innerHTML += `
+		<div class="animationphotos">
+			<img src="${animationarray[i].thumbnail}" width="100" height="150">
+		</div>
+	`;
+
+})
+
+var resultView = document.getElementsByClassName("resultView")[0];
+var container = document.getElementsByClassName("container")[0];
+function OninputSearch(){
+	var filteredMovies = allarray.filter(function(names){
+	return names.name.toLowerCase().includes(searchbar.value.toLowerCase());
+})
+	if (searchbar.value === "") {
+		container.classList.remove("containerdisappear");
+		resultView.classList.remove("resultViewappear");
+	}
+	else{
+		container.classList.add("containerdisappear");
+		resultView.classList.add("resultViewappear");
+		resultView.innerHTML = "";
+	filteredMovies.map(function(user,i){
+	resultView.innerHTML += `
+		<div class="resultMovie">
+			<img src="${filteredMovies[i].thumbnail}" width="100" height="150">
+		</div>
+	`;
+})//map_close
+	}
+	
+
+
+}//function_close
 
 </script>
 </body>
