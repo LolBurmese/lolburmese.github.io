@@ -940,13 +940,7 @@ wallpaper.forEach((node,i)=>{
 const webtxtbox = document.getElementsByClassName("webtxtbox")[0];
 
 const gowebsite = () =>{
-	if(webtxtbox.value.includes(".")){
-		window.location.assign(`https://${webtxtbox.value}`);
-	}
-	else{
-		window.location.assign(`https://www.google.com/search?q=${webtxtbox.value}`);
-	}
-	
+		window.location.assign(`https://www.google.com/search?q=${webtxtbox.value}`);	
 }
 
 
