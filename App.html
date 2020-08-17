@@ -332,13 +332,10 @@ transition: .5s;
 	overflow: scroll;
 }
 @keyframes btnanimate{
-	0%{
-		background-color: white;
-	}
-	50%{
+	from{
 		background-color: rgba(0,0,0,0.4);
 	}
-	100%{
+	to{
 		background-color: white;
 	}
 }
@@ -776,7 +773,7 @@ const homeclick = () =>{
 	navibtn[1].style.animation = "";
 	confirmmain.classList.remove("boxappear");
 	setTimeout(()=>{
-		navibtn[1].style.animation = "btnanimate .3s";
+		navibtn[1].style.animation = "btnanimate .2s";
 	},50);
 		frameconsole.classList.remove("appear");
                 browser.classList.remove("browserappear");
@@ -789,7 +786,7 @@ const homeclick = () =>{
 const backclick = () =>{
 	navibtn[2].style.animation = "";
 	setTimeout(()=>{
-		navibtn[2].style.animation = "btnanimate .3s";
+		navibtn[2].style.animation = "btnanimate .2s";
 	},50);
 	if(yes.textContent === "NO"){
 
@@ -844,7 +841,7 @@ ic_pack.forEach((node,i)=>{
 const menu_click = () =>{
 	navibtn[0].style.animation = "";
 	setTimeout(()=>{
-		navibtn[0].style.animation = "btnanimate .3s";
+		navibtn[0].style.animation = "btnanimate .2s";
 	},50);
 }
 const tipcloseclick = () =>{
