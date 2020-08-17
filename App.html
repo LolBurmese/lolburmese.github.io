@@ -340,20 +340,7 @@ transition: .5s;
 		background-color: white;
 	}
 }
-@media screen and (max-height: 500px){
-	.navibar{
-		height: 12%;
-	}
-	.appear{
-		height: 88%;
-	}
-	#firstpage{
-		height: 88%;
-	}
-	.browserappear{
-		height: 88%;
-	}
-}
+
 .themesetting{
 	position: absolute;
 	bottom: 7%;
@@ -364,7 +351,7 @@ transition: .5s;
 	transition: .5s;
 	display: none;
 	z-index: -1;
-	visibility: hidden;
+	visibility: scroll;
 	opacity: 0;
 }
 .theme{
@@ -472,7 +459,24 @@ transition: .5s;
 	visibility: visible;
 	opacity: 1;
 }
-
+@media screen and (max-height: 500px){
+	.navibar{
+		height: 12%;
+	}
+	.appear{
+		height: 88%;
+	}
+	#firstpage{
+		height: 88%;
+	}
+	.browserappear{
+		height: 88%;
+	}
+	.themeappear{
+		bottom: 12%;
+		/*height: 200px;*/
+	}
+}
   </style>
 
 
