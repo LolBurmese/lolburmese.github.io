@@ -16,10 +16,11 @@ body{
 }
 
 .menu div{
-	width: 20px;
-	height: 3px;
+	width: 25px;
+	height: 4px;
 	background-color: navy;
 	margin: 4px;
+	transition: .5s;
 }
 
 .searchbar{
@@ -28,10 +29,10 @@ body{
 	background-color: navy;
 	color: white;
 	padding: 8px;
-	border-radius: 15px;
+	border-radius: 50%;
 	width: 0;
-	padding-left: 25px;
-	transition: .5s;
+	padding-left: 27px;
+	transition: .4s;
 	font-family: 'Poppins', sans-serif;
 }
 .searchbar::placeholder{
@@ -39,6 +40,9 @@ body{
 }
 .search{
 	position: relative;
+}
+.menu:hover div{
+	background-color: red;
 }
 .searchicon{
 	position: absolute;
@@ -49,7 +53,9 @@ body{
 	cursor: pointer;
 }
 .searchappear{
-	width: 150px;
+	width: 200px;
+	border-radius: 15px;
+	padding-left: 35px;
 	background-color: navy;
 }
 
@@ -59,13 +65,26 @@ body{
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px;
+	position: relative;
 }
-
+.label{
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(0);
+	transition: .5s;
+}
+.labeldisappear{
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-2em);
+}
 .label h3{
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
 	letter-spacing: 1px;
+	font-size: 24px;
+	color : navy;
 }
 .categorylabel{
 	background-color:  navy;
@@ -74,7 +93,14 @@ body{
 	padding: 10px;
 	font-family: 'Poppins', sans-serif;
 }
-
+@keyframes searchanimate{
+	from{
+		background-color: snow;
+	}
+	to{
+		background-color: navy;
+	}
+}
 </style>
 
 
@@ -115,9 +141,15 @@ body{
 <script type="text/javascript">
 	
 var searchbar =document.getElementsByClassName("searchbar")[0];
-
+var label = document.getElementsByClassName("label")[0];
 function searchhover(){
+	searchbar.style.animation = "";
+	setTimeout(function(){
+		searchbar.style.animation = "searchanimate 1.5s";
+	},50);
+	
 	searchbar.classList.toggle("searchappear");
+	label.classList.toggle("labeldisappear");
 }
 
 </script>
