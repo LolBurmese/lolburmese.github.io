@@ -31,6 +31,7 @@ body{
 	padding: 8px;
 	border-radius: 50%;
 	width: 0;
+	visibility: hidden;
 	padding-left: 27px;
 	transition: .4s;
 	font-family: 'Poppins', sans-serif;
@@ -40,6 +41,12 @@ body{
 }
 .search{
 	position: relative;
+	background-color: navy;
+	border-radius: 50%;
+	transition: .5s;
+}
+.searchdivchange{
+	border-radius: 15px;
 }
 .menu:hover div{
 	background-color: red;
@@ -57,6 +64,7 @@ body{
 	border-radius: 15px;
 	padding-left: 35px;
 	background-color: navy;
+	visibility: visible;
 }
 
 .nav{
@@ -139,7 +147,8 @@ body{
 
 
 <script type="text/javascript">
-	
+
+var search =document.getElementsByClassName("search")[0];
 var searchbar =document.getElementsByClassName("searchbar")[0];
 var label = document.getElementsByClassName("label")[0];
 function searchhover(){
@@ -147,7 +156,11 @@ function searchhover(){
 	setTimeout(function(){
 		searchbar.style.animation = "searchanimate 1.5s";
 	},50);
-	
+	search.style.animation = "";
+	setTimeout(function(){
+		search.style.animation = "searchanimate 1.5s";
+	},50);
+	search.classList.toggle("searchdivchange");
 	searchbar.classList.toggle("searchappear");
 	label.classList.toggle("labeldisappear");
 }
