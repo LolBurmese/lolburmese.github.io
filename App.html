@@ -223,6 +223,53 @@
 	width: 100%;
 	height: 93%;
 }
+.browser{
+	position: absolute;
+	width: 100%;
+	/*top: 0;*/
+	height: 3%;
+	transition: .5s;
+	background-color: blue;
+	/*opacity: 0;*/
+	visibility: hidden;
+	overflow: hidden;
+	/*z-index: -1;*/
+}
+.browserappear{
+	height: 93%;
+	/*opacity: 1;*/
+	visibility: visible;
+	/*z-index: 1;*/
+}
+.browsercomponent{
+	width: 100%;
+	height: 100%;
+	background-color: #ddd;
+	position: relative;
+	/*padding-top: 15px;*/
+}
+.webtxtbox{
+	margin: 10px;
+	width: 240px;
+	padding: 15px;
+	outline: none;
+	-webkit-appearance : none;
+	border : none;
+	font-size: 14px;
+	font-weight: bolder;
+	letter-spacing: .5px;
+	border-radius: 15px;
+	
+}
+.webbtn{
+	margin-top: 10px;
+	-webkit-appearance : none;
+	border : none;
+	background-color: white;
+	padding: 15px;
+	outline : none;
+	border-radius: 50%;
+}
 body{
 background-image : url("https://papers.co/wallpaper/papers.co-af48-hi-i-am-bart-simpsons-minimal-cartoon-36-3840x2400-4k-wallpaper.jpg");
 background-position: center;
@@ -317,10 +364,13 @@ transition: .5s;
 	#firstpage{
 		bottom: 0;
 	}
+	.browserappear{
+		height: 100%;
+	}
 }
 .themesetting{
 	position: absolute;
-	bottom: 6vh;
+	bottom: 7%;
 	width: 100%;
 	height: 0;
 	color: white;
@@ -552,10 +602,13 @@ transition: .5s;
 		<input style="background-image: url(https://wallpaperaccess.com/full/557178.jpg)" type="radio" value="https://wallpaperaccess.com/full/557178.jpg" class="wallpaper" name="wallpaper">
 	</div>
 	</div>
+	</div>
+</div>
 
-
-
-
+<div class="browser">
+	<div align="center" class="browsercomponent">
+		<input type="text" spellcheck="false" class="webtxtbox" name="" placeholder="Search or type web address">
+		<button class="webbtn">GO</button>
 	</div>
 </div>
 
@@ -619,7 +672,7 @@ transition: .5s;
 },
 {
 	app : "Photo Editor",
-	url : "https://google.com",
+	url : "https://lolburmese.github.io/nav1.html",
 	icon : "https://icon-library.com/images/photo-editing-icon/photo-editing-icon-25.jpg"
 },
 {
@@ -668,14 +721,14 @@ transition: .5s;
 	icon : "https://cdn.iconscout.com/icon/free/png-512/manchester-united-569431.png"
 },
 {
-	app : "Link Budget",
-	url : "Linkbudget.html",
-	icon : "https://cdn0.iconfinder.com/data/icons/social-media-2219/50/19-512.png"
-},
-{
 	app : "Themes",
 	url : "https://google.com",
 	icon : "https://imge.apk.tools/img/VlYh60Hdwdnq4nhbjczxwhqrDpGKxucK4O4URVre4VvLxOasOWIkrdq0wQGv_73kqrU=s300"
+},
+{
+	app : "Link Budget",
+	url : "Linkbudget.html",
+	icon : "https://cdn0.iconfinder.com/data/icons/social-media-2219/50/19-512.png"
 },
 {
 	app : "Inventory",
@@ -701,7 +754,7 @@ const fcolor = document.querySelectorAll(".fcolor");
 const bcolor = document.querySelectorAll(".bcolor");
 const body = document.getElementsByTagName("body")[0];
 const wallpaper = document.querySelectorAll(".wallpaper");
-
+const browser = document.getElementsByClassName("browser")[0];
 
 const noclick = () =>{
 	confirmmain.classList.remove("boxappear");
@@ -709,6 +762,7 @@ const noclick = () =>{
 const yesclick = () =>{
 	saveclick();
 	confirmmain.classList.remove("boxappear");
+	browser.classList.remove("browserappear");
 	frameconsole.classList.remove("appear");
 	setTimeout(()=>{
 		yes.textContent = "NO";
@@ -756,6 +810,10 @@ const backclick = () =>{
 		confirmmain.classList.toggle("boxappear");
 		warninglabel.textContent = "Changes will be saved!";
 	}
+	else if(yes.textContent === "webbox"){
+		yes.textContent = "YES";
+		confirmmain.classList.toggle("boxappear");
+	}
 	else{
 		confirmmain.classList.toggle("boxappear");
 	}
@@ -769,13 +827,16 @@ const icondiv = document.querySelectorAll(".icondiv");
 
 const app_click = (index) =>{
 	warninglabel.textContent = "Are you sure to exit?";
-	if(index === 22){
+	if(applist[index].app === "Themes"){
 		themesetting.style.display = "block";
 		yes.textContent = "themesave";
 		setTimeout(()=>{
 			themesetting.classList.add("themeappear");
-		},100);
-		
+		},100);	
+	}
+	else if(applist[index].app === "Chrome"){
+		browser.classList.add("browserappear");
+		yes.textContent = "webbox";
 	}
 	else{
 	frameconsole.classList.add("appear");
