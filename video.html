@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>...</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+
+<style type="text/css">
+	
+body{
+	padding: 0;
+	margin: 0;
+	user-select: none;
+	background-color: lightblue;
+}
+
+.menu div{
+	width: 20px;
+	height: 3px;
+	background-color: navy;
+	margin: 4px;
+}
+
+.searchbar{
+	outline: none;
+	border: none;
+	background-color: navy;
+	color: white;
+	padding: 8px;
+	border-radius: 15px;
+	width: 0;
+	padding-left: 25px;
+	transition: .5s;
+	font-family: 'Poppins', sans-serif;
+}
+.searchbar::placeholder{
+	color: #ddd;
+}
+.search{
+	position: relative;
+}
+.searchicon{
+	position: absolute;
+	padding-left: 3px;
+	top: 50%;
+	left: 4px;
+	transform: translate(0,-50%);
+	cursor: pointer;
+}
+.searchappear{
+	width: 150px;
+	background-color: navy;
+}
+
+.nav{
+	display: flex;
+	background-color: skyblue;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+.label h3{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: 1px;
+}
+.categorylabel{
+	background-color:  navy;
+	color: white;
+	margin-top: 5px;
+	padding: 10px;
+	font-family: 'Poppins', sans-serif;
+}
+
+</style>
+
+
+
+
+</head>
+<body>
+
+
+<div class="nav">
+	<div class="menu">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="label">
+		<h3>MOVIE</h3>
+	</div>
+	<div class="search">
+		<img class="searchicon" src="https://image.flaticon.com/icons/png/512/321/321830.png" width="20" height="20" onclick="searchhover()">
+		<input  class="searchbar" type="text" placeholder="Search" name=""></div>
+
+</div>
+
+
+<div class="categorylabel">Action</div>
+
+
+<div class="categorylabel">Adventure</div>
+
+<div class="categorylabel">Animation</div>
+
+<div class="categorylabel">Marvel</div>
+
+
+
+
+<script type="text/javascript">
+	
+var searchbar =document.getElementsByClassName("searchbar")[0];
+
+function searchhover(){
+	searchbar.classList.toggle("searchappear");
+}
+
+</script>
+</body>
+</html>
