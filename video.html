@@ -246,7 +246,7 @@ body{
 .movie_about_link{
 	position: fixed;
 	width: 100%;
-	top:7.8vh;
+	top:7.7vh;
 	bottom: 0;
 	background-color: darkblue;
 	font-family: 'Poppins', sans-serif;
@@ -406,12 +406,12 @@ body{
 </div>
 <div class="movie_about_link">
 	<div class="relative_movie_about_link">
-	<div align="center" class="categorylabel movie_title">Hello</div>
+	<div align="center" class="categorylabel movie_title"><button class="movie_review_btn" onclick="exit_movie_review()">X</button></div>
 	<div align="center"><img class="movie_poster" src="https://robohash.org/1" width="120" height="180"></div>
 	<p class="movie_about">Lorem.</p>
 	<div class="movie_link movie_watch_link">Watch Link - </div>
 	<div class="movie_link">Download Link - <a class="movie_down_link" href="#">Mega</a></div>
-	<button class="movie_review_btn" onclick="exit_movie_review()">X</button>
+	
 </div>
 </div>
 
@@ -1037,7 +1037,7 @@ const exit_movie_review = () =>{
 }
 const open_movie_review = (index) =>{
 	movie_about_link.classList.add("movie_about_link_appear");
-	movie_title.textContent = allarray[index].name;
+	movie_title.innerHTML += allarray[index].name;
 	movie_poster.src = allarray[index].thumbnail;
 	movie_about.textContent = allarray[index].review;
 	movie_watch_link.textContent += allarray[index].watchlink;
@@ -1054,7 +1054,7 @@ node.setAttribute("onclick",`open_movie_review(${i})`);
 
 const open_result_movie_review = (index) =>{
 		movie_about_link.classList.add("movie_about_link_appear");
-	movie_title.textContent = sync[index].name;
+	movie_title.innerHTML += sync[index].name;
 	movie_poster.src = sync[index].thumbnail;
 	movie_about.textContent = sync[index].review;
 	movie_watch_link.textContent += sync[index].watchlink;
