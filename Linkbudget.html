@@ -45,10 +45,10 @@ body{
 	align-items: center;
 	padding: 10px;
 }
-.oppowervalue,.bolvalue,.bflvalue,.atvalue,.luvalue,.lpvalue,.gtevalue,.sbflvalue,.brvalue, .moduvalue{
+.oppowervalue,.bolvalue,.bflvalue,.atvalue,.luvalue,.lpvalue,.gtevalue,.sbflvalue,.brvalue,.br1value, .moduvalue{
 	font-weight: bold;
 }
-.oppower,.bol,.bfl,.at,.lu,.lp,.gte,.sbfl,.br{
+.oppower,.bol,.bfl,.at,.lu,.lp,.gte,.sbfl,.br,.br1{
 	width: 200px;
 }
 .modu{
@@ -58,7 +58,7 @@ body{
 	background-color: #001540;
 	color: white;
 }
-.oppowerlabel, .bollabel, .bfllabel,.atlabel, .lulabel,.lplabel,.gtelabel,.sbfllabel,.brlabel,.modulabel{
+.oppowerlabel, .bollabel, .bfllabel,.atlabel, .lulabel,.lplabel,.gtelabel,.sbfllabel,.brlabel,.br1label,.modulabel{
 	padding : 10px;
 	color : #001540;
 }
@@ -182,6 +182,7 @@ font-weight: bold;
 		<div class="oppowerdiv">
 		
 		<select class="modu" oninput="inputmodu()">
+			<option value=""></option>
 			<option value="PSK">PSK</option>
 			<option value="BPSK">BPSK</option>
 			<option value="QPSK">QPSK</option>
@@ -189,6 +190,14 @@ font-weight: bold;
 			<option value="16PSK">16PSK</option>
 		</select>
 		
+	</div>
+<br><br>
+
+		<h3 align="center" class="br1label">Bit rate by Modulation Scheme</h3>
+		<div class="oppowerdiv">
+		<span style="font-weight: bold;">f<sub>b</sub>:</span>
+		<input class="br1" type="range" name="" min="10" max="300" value="10" oninput="inputbr1()">
+		<span class="br1value">10Mbps</span>
 	</div>
 <br><br>
 
@@ -221,6 +230,9 @@ var sbflvalue = document.getElementsByClassName("sbflvalue")[0];
 var br = document.getElementsByClassName("br")[0];
 var brvalue = document.getElementsByClassName("brvalue")[0];
 var modu = document.getElementsByClassName("modu")[0];
+
+var br1 = document.getElementsByClassName("br1")[0];
+var br1value = document.getElementsByClassName("br1value")[0];
 
 var eirpspan = document.getElementsByClassName("eirpspan")[0];
 var cnospan = document.getElementsByClassName("cnospan")[0];
@@ -275,7 +287,37 @@ function inputsbfl(){
 function inputbr(){
 	brvalue.textContent = br.value+"Mbps";
 }
+function inputbr1(){
+	br1value.textContent = br1.value+"Mbps";
+	
+}
 
+function inputmodu(){
+	if(modu.value === "PSK"){
+		br1.value  = br1.value;
+		inputbr1();
+	}
+	else if(modu.value === "BPSK"){
+		br1.value  = br1.value;
+		inputbr1();
+	}
+	else if(modu.value === "QPSK"){
+		br1.value  = br1.value/2;
+		inputbr1();
+	}
+	else if(modu.value === "8PSK"){
+		br1.value  = br1.value/3;
+		inputbr1();
+	}
+	else if(modu.value === "16PSK"){
+		br1.value  = br1.value/4;
+		inputbr1();
+	}
+	else{
+		
+	}
+
+}
 
 
 
