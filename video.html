@@ -938,6 +938,7 @@ var tab = document.querySelectorAll(".tab");
 
 function tabclick(i){
 	con_result_close();
+	exit_movie_review();
 	closemenu();
 	tab.forEach(function(node){
 			node.style.display = "none";
@@ -963,6 +964,7 @@ function all_close(){
 function homeclick(){
 	closemenu();
 	all_close();
+	exit_movie_review();
 	container.style.display = "block";
 }
 
