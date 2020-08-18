@@ -81,7 +81,8 @@ body{
 	background-color: #ddd;
 	justify-content: space-between;
 	align-items: center;
-	height: 7.5vh;
+	padding: 10px;
+	height: 5vh;
 	position: relative;
 	position: sticky;
 	top: 0;
@@ -124,7 +125,7 @@ body{
 .resultvalue{
 	z-index: 1;
 	position: sticky;
-	top : 7.5vh;
+	top : 7.8vh;
 }
 .marvelphotos,.actionphotos,.adventurephotos,.animationphotos{
 	display: inline-block;
@@ -325,10 +326,15 @@ var search =document.getElementsByClassName("search")[0];
 var searchbar =document.getElementsByClassName("searchbar")[0];
 var label = document.getElementsByClassName("label")[0];
 function searchhover(){
+	;
+	closemenu();
 	searchbar.style.animation = "";
 	setTimeout(function(){
 		searchbar.style.animation = "searchanimate 1.5s";
 	},50);
+	setTimeout(function(){
+		searchbar.focus();
+	},60);
 	search.style.animation = "";
 	setTimeout(function(){
 		search.style.animation = "searchanimate 1.5s";
