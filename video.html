@@ -22,7 +22,7 @@ body{
 .menu div{
 	width: 25px;
 	height: 4px;
-	background-color: navy;
+	background-color: darkblue;
 	margin: 4px;
 	transition: .5s;
 }
@@ -58,7 +58,7 @@ body{
 	border-radius: 15px;
 }
 .menu:hover div{
-	background-color: red;
+	background-color: blue;
 }
 .searchicon{
 	position: absolute;
@@ -131,8 +131,8 @@ body{
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
-	width: 100px;
-	height: 150px;
+	width: 120px;
+	height: 180px;
 	margin-left: 1px;
 }
 .actionbtn,.adventurebtn,.animationbtn,.marvelbtn{
@@ -191,9 +191,9 @@ body{
 }
 .menulist{
 	list-style-type: none;
-	background: -webkit-linear-gradient(skyblue, white);
+	background: -webkit-linear-gradient(blue, darkblue);
 	position: absolute;
-	top: 7.7vh;
+	top: 8.4vh;
 	width: 45%;
 	left: 0;
 	display: flex;
@@ -215,9 +215,13 @@ body{
 	font-family: 'Poppins', sans-serif;
 	transition: .5s;
 	font-size: 16px;
+	color: white;
+}
+.menulist::-webkit-scrollbar{
+	display: none;
 }
 .menulist li:hover{
-	background-color: rgba(255,0,0,0.5);
+	background-color: rgba(255,255,255,0.5);
 	color: black;
 }
 .darkside{
@@ -238,7 +242,7 @@ body{
 		background-color: snow;
 	}
 	to{
-		background-color: navy;
+		background-color: darkblue;
 	}
 }
 .containerdisappear{
@@ -282,13 +286,13 @@ body{
 		<input  class="searchbar" type="text" oninput="OninputSearch()" placeholder="Search" name=""></div>
 
 		<ul class="menulist">
-			<li>HOME</li>
-			<li>ANIME</li>
-			<li>DC</li>
-			<li>MARVEL</li>
-			<li>ADVENTURE</li>
-			<li>ACTION</li>
-			<li>ABOUT</li>
+			<li onclick="homeclick()">HOME</li>
+			<li onclick="tabclick(0)">ACTION</li>
+			<li onclick="tabclick(1)">ADVENTURE</li>
+			<li onclick="tabclick(2)">ANIMATION</li>
+			<li onclick="tabclick(3)">MARVEL</li>
+			<li onclick="tabclick(4)">DC</li>
+			<li onclick="tabclick(5)">ABOUT</li>
 		</ul>
 
 </div>
@@ -316,6 +320,33 @@ body{
 <div class="resultView" align="center">
 	
 </div>
+
+<div class="tab" align="center">
+	<div class="categorylabel">ACTION</div>
+</div>
+
+<div class="tab" align="center">
+	<div class="categorylabel">ADVENTURE</div>
+</div>
+
+<div class="tab" align="center">
+	<div class="categorylabel">ANIMATION</div>
+</div>
+
+<div class="tab" align="center">
+	<div class="categorylabel">MARVEL</div>
+</div>
+
+<div class="tab" align="center">
+	<div class="categorylabel">DC</div>
+</div>
+
+<div class="tab" align="center">
+	<div class="categorylabel">ABOUT</div>
+</div>
+
+
+
 
 
 <script type="text/javascript">
@@ -629,15 +660,22 @@ var container = document.getElementsByClassName("container")[0];
 
 var sync;
 function OninputSearch(){
+	tab.forEach(function(node){
+			node.style.display = "none";
+	});
 	var filteredMovies = allarray.filter(function(names){
 	return names.name.toLowerCase().includes(searchbar.value.toLowerCase());
 })
 	sync = filteredMovies;
 	if (searchbar.value === "") {
+		resultView.style.display = "none";
+		container.style.display = "block";
 		container.classList.remove("containerdisappear");
 		resultView.classList.remove("resultViewappear");
 	}
 	else{
+		resultView.style.display = "block";
+		container.style.display = "none";
 		container.classList.add("containerdisappear");
 		resultView.classList.add("resultViewappear");
 		resultView.innerHTML = `<div class='resultvalue' align="left">${sync.length} Result(s) of "${searchbar.value}" found!</div>`;
@@ -688,6 +726,89 @@ const closemenu = () =>{
 	darkside.classList.remove("darksideappear");
 	menulist.classList.remove("menulistappear");
 }
+
+
+
+var tab = document.querySelectorAll(".tab");
+
+function tabclick(i){
+	con_result_close();
+	closemenu();
+	tab.forEach(function(node){
+			node.style.display = "none";
+	});
+	tab[i].style.display = "block";
+
+
+}
+
+
+function con_result_close(){
+	container.style.display = "none";
+	resultView.style.display = "none";
+}
+
+function all_close(){
+	tab.forEach(function(node){
+			node.style.display = "none";
+	});
+	resultView.style.display = "none";
+}
+
+function homeclick(){
+	closemenu();
+	all_close();
+	container.style.display = "block";
+}
+
+
+actionarray.map(function(user,i){
+
+	tab[0].innerHTML += `
+		<div class="actionphotos">
+			<img class="picture" src="${actionarray[i].thumbnail}">
+			<div class="piclabel">${actionarray[i].name}</div>
+		</div>
+	`;
+
+})
+
+adventurearray.map(function(user,i){
+
+	tab[1].innerHTML += `
+		<div class="adventurephotos">
+			<img class="picture" src="${adventurearray[i].thumbnail}">
+			<div class="piclabel">${adventurearray[i].name}</div>
+		</div>
+	`;
+
+})
+
+
+animationarray.map(function(user,i){
+
+	tab[2].innerHTML += `
+		<div class="animationphotos">
+			<img class="picture" src="${animationarray[i].thumbnail}">
+			<div class="piclabel">${animationarray[i].name}</div>
+		</div>
+	`;
+
+})
+
+
+marvelarray.map(function(user,i){
+
+	tab[3].innerHTML += `
+		<div class="marvelphotos">
+			<img class="picture" src="${marvelarray[i].thumbnail}">
+			<div class="piclabel">${marvelarray[i].name}</div>
+		</div>
+	`;
+
+})
+
+
 
 
 </script>
