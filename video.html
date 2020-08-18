@@ -19,7 +19,13 @@ body{
 	background: darkblue;
 	overflow-x: hidden;
 }
-
+.container{
+	position: fixed;
+	top: 7.7vh;
+	width: 100%;
+	bottom: 0;
+	overflow: scroll;
+}
 .menu div{
 	width: 25px;
 	height: 4px;
@@ -123,11 +129,11 @@ body{
 .categorylabel{
 	display: flex;
 }
-.resultvalue, .tablabel{
+/*.resultvalue, .tablabel{
 	z-index: 1;
 	position: sticky;
 	top : 7.8vh;
-}
+}*/
 .movie_title{
 	position: sticky;
 	top : 0;
@@ -139,6 +145,7 @@ body{
 	width: 120px;
 	height: 180px;
 	margin-left: 1px;
+	cursor: pointer;
 }
 .actionbtn,.adventurebtn,.animationbtn,.marvelbtn{
 	-webkit-appearance : none;
@@ -186,6 +193,11 @@ body{
 .resultView{
 	background : transparent;
 	display: none;
+	position: fixed;
+	width: 100%;
+	top:7.7vh;
+	overflow: scroll;
+	bottom: 0;
 }
 .resultMovie{
 	margin: 5px;
@@ -193,6 +205,7 @@ body{
 	height: 150px;
 	overflow: hidden;
 	position: relative;
+	cursor: pointer;
 }
 .menulist{
 	list-style-type: none;
@@ -267,6 +280,7 @@ body{
 }
 .movie_title{
 	justify-content: center;
+	position: relative;
 }
 @keyframes searchanimate{
 	from{
