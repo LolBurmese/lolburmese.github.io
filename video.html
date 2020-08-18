@@ -410,7 +410,7 @@ body{
 	<div align="center"><img class="movie_poster" src="https://robohash.org/1" width="120" height="180"></div>
 	<p class="movie_about">Lorem.</p>
 	<div class="movie_link movie_watch_link">Watch Link - </div>
-	<div class="movie_link movie_down_link">Download Link - </div>
+	<div class="movie_link">Download Link - <a class="movie_down_link" href="#">Mega</a></div>
 	<button class="movie_review_btn" onclick="exit_movie_review()">X</button>
 </div>
 </div>
@@ -447,7 +447,7 @@ var actionarray = [
 
 {
 	review : "Bad Boys ရုပ်ရှင်တွေကို ရုပ်ရှင်ချစ်သူအတော်များများ သိကြမှာပါ။ ကျွန်တော်တို့ ငယ်ငယ်ကတည်းက ကြိုက်ခဲ့ရတဲ့အက်ရှင်ခပ်မြူးမြူးတွေပါပဲ။ အခုလည်း ဆရာကြီးနှစ်ယောက် အသက်ကြီးမှ တကြော့ပြန်လာပါပြီး။ အခုချိန်မှာဆိုမားကတ်စ်ကလည်း အဘိုးဖြစ်လာပြီး အငြိမ်းစားယူဖို့ဆုံးဖြတ်လိုက်ပါပြီ။ မိုက်ခ် (ဝယ်လ်စမစ်) တော့ လူပျိုကြီးအဖြစ်သေတဲ့အထိ လူဆိုးဖမ်းချင်နေတုန်းပါပဲ။ ဒါပေမယ့် သူတို့ရဲ့အတိတ်က ရန်ငြိုးက သူတို့ကို အေးအေးဆေးဆေးအနားယူခွင့်မပေးလာပါဘူး။ မိုက်ခ် နဲ့အတူ တရားသူကြီး၊ရှေ့နေ၊သတင်းပေး၊ ရဲအရာရှိ စတဲ့သူတွေအကုန် လုပ်ကြံခံလာရပါတယ်။ ဒီတော့ နောက်ဆုံးမှာ Bad Boys ကြီးနှစ်ယောက် နောက်ဆုံးအကြိမ်အဖြစ် ဆိုးကြ ကြမ်းကြပါတော့တယ်။ဇာတ်လမ်းရယ် အက်ရှင်တွေရယ် အကုန်အဆင်ပြေတာမို့ ကြည့်ရတာ ကျေနပ်ကြမှာပါ။",
-	downloadlink : "",
+	downloadlink : "",	
 	watchlink : "",
 	name : "Bad boys for life" ,
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/9/90/Bad_Boys_for_Life_poster.jpg"
@@ -542,7 +542,7 @@ var adventurearray = [
 },
 {
 	review : "",
-	downloadlink : "",
+	downloadlink : "https://www.thecmpage.com/?r=aHR0cDovL3RpbnlsaW5rLnJ1bi9OOUlCb1BGRA==",
 	watchlink : "",
 	name : "Jurassic world" ,
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/6/6e/Jurassic_World_poster.jpg"
@@ -1001,7 +1001,7 @@ marvelarray.map(function(user,i){
 const movie_about_link = document.getElementsByClassName("movie_about_link")[0];
 const movie_about = document.getElementsByClassName("movie_about")[0];
 const movie_title = document.getElementsByClassName("movie_title")[0];
-const movie_down_link = document.getElementsByClassName("movie_down_link")[0];
+var movie_down_link = document.getElementsByClassName("movie_down_link")[0];
 const movie_watch_link = document.getElementsByClassName("movie_watch_link")[0];
 var movie_poster = document.getElementsByClassName("movie_poster")[0];
 var adventurephotos = document.querySelectorAll(".adventurephotos");
@@ -1041,7 +1041,7 @@ const open_movie_review = (index) =>{
 	movie_poster.src = allarray[index].thumbnail;
 	movie_about.textContent = allarray[index].review;
 	movie_watch_link.textContent += allarray[index].watchlink;
-	movie_down_link.textContent += allarray[index].downloadlink;
+	movie_down_link.href = allarray[index].downloadlink;
 
 }
 allphotos.forEach((node,i)=>{
@@ -1058,7 +1058,7 @@ const open_result_movie_review = (index) =>{
 	movie_poster.src = sync[index].thumbnail;
 	movie_about.textContent = sync[index].review;
 	movie_watch_link.textContent += sync[index].watchlink;
-	movie_down_link.textContent += sync[index].downloadlink;
+	movie_down_link.href = sync[index].downloadlink;
 }
 
 </script>
