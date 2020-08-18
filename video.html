@@ -332,9 +332,6 @@ function searchhover(){
 	setTimeout(function(){
 		searchbar.style.animation = "searchanimate 1.5s";
 	},50);
-	// setTimeout(function(){
-	// 	searchbar.focus();
-	// },60);
 	search.style.animation = "";
 	setTimeout(function(){
 		search.style.animation = "searchanimate 1.5s";
@@ -673,6 +670,19 @@ const menulist = document.getElementsByClassName("menulist")[0];
 const openmenu = () =>{
 	darkside.classList.toggle("darksideappear");
 	menulist.classList.toggle("menulistappear");
+	searchbar.style.animation = "";
+	setTimeout(function(){
+		searchbar.style.animation = "searchanimate 1.5s";
+	},50);
+	search.style.animation = "";
+	setTimeout(function(){
+		search.style.animation = "searchanimate 1.5s";
+	},50);
+	search.classList.remove("searchdivchange");
+	searchbar.classList.remove("searchappear");
+	label.classList.remove("labeldisappear");
+	searchbar.value = "";
+	OninputSearch();
 }
 const closemenu = () =>{
 	darkside.classList.remove("darksideappear");
