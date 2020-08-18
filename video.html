@@ -275,9 +275,10 @@ body{
 	padding-right: 15px;
 	margin-top: 15px;
 }
-.movie_down_link{
-	margin-bottom: 10px;
-}
+/*.movie_down_link{
+	background-color: white;
+	margin-bottom: 30px;
+}*/
 .movie_title{
 	justify-content: center;
 	position: relative;
@@ -421,11 +422,11 @@ body{
 <div class="movie_about_link">
 	<div class="relative_movie_about_link">
 	<div align="center" class="categorylabel movie_title"><button class="movie_review_btn" onclick="exit_movie_review()">X</button></div>
-	<div align="center"><img class="movie_poster" src="https://robohash.org/1" width="120" height="180"></div>
+	<div align="center"><img class="movie_poster" src="https://robohash.org/1" width="200" height="300"></div>
 	<p class="movie_about">Lorem.</p>
 	<div class="movie_link movie_watch_link">Watch Link - </div>
 	<div class="movie_link">Download Link - <a class="movie_down_link" href="#">Mega</a></div>
-	
+	<br><br>
 </div>
 </div>
 
@@ -1048,6 +1049,7 @@ var allphotos_filter = action_adventure_photos_filter.concat(animation_marvel_ph
 
 const exit_movie_review = () =>{
 	movie_about_link.classList.remove("movie_about_link_appear");
+	movie_title.innerHTML = `<button class="movie_review_btn" onclick="exit_movie_review()">X</button>`;
 }
 const open_movie_review = (index) =>{
 	movie_about_link.classList.add("movie_about_link_appear");
