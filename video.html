@@ -1053,7 +1053,7 @@ const exit_movie_review = () =>{
 }
 const open_movie_review = (index) =>{
 	movie_about_link.classList.add("movie_about_link_appear");
-	movie_title.innerHTML += allarray[index].name;
+	movie_title.innerHTML += `-${allarray[index].name}-`;
 	movie_poster.src = allarray[index].thumbnail;
 	movie_about.textContent = allarray[index].review;
 	movie_watch_link.textContent += allarray[index].watchlink;
@@ -1070,7 +1070,7 @@ node.setAttribute("onclick",`open_movie_review(${i})`);
 
 const open_result_movie_review = (index) =>{
 		movie_about_link.classList.add("movie_about_link_appear");
-	movie_title.innerHTML += sync[index].name;
+	movie_title.innerHTML += `-${sync[index].name}-`;
 	movie_poster.src = sync[index].thumbnail;
 	movie_about.textContent = sync[index].review;
 	movie_watch_link.textContent += sync[index].watchlink;
