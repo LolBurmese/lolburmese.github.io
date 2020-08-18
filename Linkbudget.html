@@ -30,9 +30,10 @@ body{
 .container{
 	background-color: skyblue;
 	overflow: scroll;
+	box-shadow: inset 0 0 17px;
 	position: absolute;
 	width: 100%;
-	bottom: 0;
+	bottom: 20%;
 	top: 20%;
 }
 .container::-webkit-scrollbar{
@@ -44,16 +45,43 @@ body{
 	align-items: center;
 	padding: 10px;
 }
-.oppowervalue,.bolvalue,.bflvalue,.atvalue,.luvalue,.lpvalue,.gtevalue,.sbflvalue,.brvalue{
+.oppowervalue,.bolvalue,.bflvalue,.atvalue,.luvalue,.lpvalue,.gtevalue,.sbflvalue,.brvalue, .moduvalue{
 	font-weight: bold;
 }
 .oppower,.bol,.bfl,.at,.lu,.lp,.gte,.sbfl,.br{
 	width: 200px;
 }
-
-.oppowerlabel, .bollabel, .bfllabel,.atlabel, .lulabel,.lplabel,.gtelabel,.sbfllabel,.brlabel{
+.modu{
+	width: 150px;
+	border: none;
+	outline: none;
+	background-color: #001540;
+	color: white;
+}
+.oppowerlabel, .bollabel, .bfllabel,.atlabel, .lulabel,.lplabel,.gtelabel,.sbfllabel,.brlabel,.modulabel{
 	padding : 10px;
 	color : #001540;
+}
+.result{
+background-color: skyblue;
+box-shadow: 0 0 17px;
+position: absolute;
+bottom: 0;
+height: 20%;
+width: 97%;
+padding: 10px;
+justify-content: center;
+align-items: center;
+}
+
+.eirpspan,.cnospan{
+color: #001540;
+font-size: 17px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 5px;
+font-weight: bold;
 }
 
 
@@ -121,7 +149,7 @@ body{
 		<h3 align="center" class="lplabel">Free space path loss</h3>
 		<div class="oppowerdiv">
 		<span style="font-weight: bold;">L<sub>p</sub>:</span>
-		<input class="lp" type="range" name="" min="50" max="500" value="50" oninput="inputlp()">
+		<input class="lp" type="range" name="" min="2000" max="2090" value="2000" oninput="inputlp()">
 		<span class="lpvalue">50dB</span>
 	</div>
 <br><br>
@@ -129,7 +157,7 @@ body{
 		<h3 align="center" class="gtelabel">satellite receiver</h3>
 		<div class="oppowerdiv">
 		<span style="font-weight: bold;">G/T<sub>e</sub>:</span>
-		<input class="gte" type="range" name="" min="-20" max="0" value="-20" oninput="inputgte()">
+		<input class="gte" type="range" name="" min="-200" max="0" value="-200" oninput="inputgte()">
 		<span class="gtevalue">-20dBK<sup>-1</sup></span>
 	</div>
 <br><br>
@@ -137,18 +165,38 @@ body{
 		<h3 align="center" class="sbfllabel">Satellite branching and feeder losses</h3>
 		<div class="oppowerdiv">
 		
-		<input class="sbfl" type="range" name="" min="0" max="0" value="0" oninput="inputsbfl()">
+		<input class="sbfl" type="range" name="" min="0" max="10" value="0" oninput="inputsbfl()">
 		<span class="sbflvalue">0dB</span>
 	</div>
 <br><br>
 
-				<h3 align="center" class="brlabel">Bit rate</h3>
+		<h3 align="center" class="brlabel">Bit rate</h3>
 		<div class="oppowerdiv">
 		<span style="font-weight: bold;">f<sub>b</sub>:</span>
 		<input class="br" type="range" name="" min="10" max="300" value="10" oninput="inputbr()">
 		<span class="brvalue">10Mbps</span>
 	</div>
 <br><br>
+
+		<h3 align="center" class="modulabel">Modulation scheme</h3>
+		<div class="oppowerdiv">
+		
+		<select class="modu" oninput="inputmodu()">
+			<option value="PSK">PSK</option>
+			<option value="BPSK">BPSK</option>
+			<option value="QPSK">QPSK</option>
+			<option value="8PSK">8PSK</option>
+			<option value="16PSK">16PSK</option>
+		</select>
+		
+	</div>
+<br><br>
+
+</div>
+
+<div class="result" align="center">
+	<span class="eirpspan">Effective Isotropic Radiated Power</span>
+	<span class="cnospan">C/N<sub>o</sub>=Carrier to Noise Ratio</span>
 
 </div>
 
@@ -172,38 +220,79 @@ var sbfl = document.getElementsByClassName("sbfl")[0];
 var sbflvalue = document.getElementsByClassName("sbflvalue")[0];
 var br = document.getElementsByClassName("br")[0];
 var brvalue = document.getElementsByClassName("brvalue")[0];
+var modu = document.getElementsByClassName("modu")[0];
 
+var eirpspan = document.getElementsByClassName("eirpspan")[0];
+var cnospan = document.getElementsByClassName("cnospan")[0];
 
 
 function inputoppower(){
 	oppowervalue.textContent = oppower.value+"dBW";
+	eirpinput();
+	cnoinput();
+
 }
 
 function inputbol(){
-	bolvalue.textContent = bol.value+"dB"
+	bolvalue.textContent = bol.value+"dB";
+	eirpinput();
+	cnoinput();
 }
 
 function inputbfl(){
-	bflvalue.textContent = bfl.value+"dB"
+	bflvalue.textContent = bfl.value+"dB";
+	eirpinput();
+	cnoinput();
 }
+
 function inputat(){
-	atvalue.textContent = at.value+"dB"
+	atvalue.textContent = at.value+"dB";
+	eirpinput();
+	cnoinput();
 }
+
 function inputlu(){
-	luvalue.textContent = lu.value/10+"dB"
+	luvalue.textContent = lu.value/10+"dB";
+	cnoinput();
+	
 }
+
 function inputlp(){
-	lpvalue.textContent = lp.value+"dB"
+	lpvalue.textContent = lp.value/10+"dB";
+	cnoinput();
+	
+	
 }
 function inputgte(){
-	gtevalue.textContent = gte.value+"dB"
+	gtevalue.textContent = gte.value/10+"dB";
+	cnoinput();
+	
+	
 }
 function inputsbfl(){
-	sbflvalue.textContent = sbfl.value+"dB"
+	sbflvalue.textContent = sbfl.value+"dB";
 }
 function inputbr(){
-	brvalue.textContent = br.value+"Mbps"
+	brvalue.textContent = br.value+"Mbps";
 }
+
+
+
+
+function eirpinput(){
+eirpspan.textContent = Number(oppower.value)-Number(bol.value)-Number(bfl.value)+Number(at.value)+"dBW";
+kaung = Number(oppower.value)-Number(bol.value)-Number(bfl.value)+Number(at.value);
+}
+
+function cnoinput(){
+	
+cnospan.textContent = Number(kaung)+Number(gte.value/10)-Number(lp.value/10)-Number(lu.value/10)+228.6+"dB";
+si =  Number(kaung)+Number(gte.value/10)-Number(lp.value/10)-Number(lu.value/10)+228.6;
+}
+
+
+
+
 </script>
 </body>
 </html>
