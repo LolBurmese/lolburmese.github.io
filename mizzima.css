@@ -334,3 +334,10 @@ body{
 	z-index: 1;
 	cursor: pointer;
 }
+.about_detail{
+	color: white;
+	padding : 15px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+
+}

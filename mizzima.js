@@ -417,10 +417,18 @@ var marvelarray = [
 	name : "Ironman 3" ,
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/0/00/Iron_Man_poster.jpg"
 }
+];
 
-
+var aboutarray = [
+{
+	detail : "This is a movie app. You can download Movies and directly watch from the app.Enjoy our app by exploring lastest movies."
+}
 
 ];
+
+
+
+
 
 var action = document.getElementsByClassName("action")[0];
 var adventure = document.getElementsByClassName("adventure")[0];
@@ -635,6 +643,13 @@ marvelarray.map(function(user,i){
 	`;
 
 })
+ tab[5].innerHTML += `
+ 	<div><img src="https://i.dlpng.com/static/png/1648041-118-best-logo-creation-images-on-pinterest-logo-creation-logo-google-and-logo-branding-movie-reel-png-275_161_preview.png" width="350" height="200"></div>
+ 	<div class="about_detail">
+ 	${aboutarray[0].detail}
+ 	</div>
+ `;
+
 
 const movie_about_link = document.getElementsByClassName("movie_about_link")[0];
 const movie_about = document.getElementsByClassName("movie_about")[0];
