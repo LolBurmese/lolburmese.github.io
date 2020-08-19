@@ -19,6 +19,7 @@ function searchhover(){
 	OninputSearch();
 }
 
+
 var actionarray = [
 
 {
@@ -87,8 +88,8 @@ var actionarray = [
 
 {
 	review : "စနိုက်ပါဇာတ်လမ်း၊ အက်ရှင်ဇာတ်လမ်းကြိုက်သူတွေအတွက် တင်ပေးထားပါတယ်။ဇာတ်လမ်းအကျဉ်းကတော့ အမေရိကန် နိုင်ငံမှာအခြားနိုင်ငံက ဝန်ကြီးတစ်ယောက်စနိုက်ပါနဲ့ အပစ်ခံလိုက်ရပါတယ်။အဲဒီ ပစ်တဲ့သူဘယ်သူလဲဆိုတာ သဲလွန်စတွေအရစုံစမ်းတော့ ဘက်ကက် ဆိုတဲ့ လက်ဖြောင့်တပ်သားတပ်ကြပ်ကြီး တစ်ယောက် ဖြစ်နေတာကိုတွေ့ရတာပါပဲ။ဒါပေမယ့် ဘက်ကက်က ချောက်တွန်းခံရတာဖြစ်ပြီး သူ့ကိုဖမ်းထားတုန်းမှာပဲ နှုတ်ပိတ်ဖို့ကြိုးစားလာပါတယ်။ဒီတော့ သူ့အဖေရယ်၊ ထောက်လှမ်းရေး အေးဂျင့်တစ်ယောက်ရယ်အကူအညီနဲ့ တရားခံအစစ်ကိုလိုက်ရှာပြီး အမှန်ကိုပေါ်လာအောင် ကြိုးစားရပါတော့တယ်။",
-	downloadlink : "https://myintkokooo.github.io/boomerang.mp4",
-	watchlink : "https://myintkokooo.github.io/boomerang.mp4",
+	downloadlink : "https://lolburmese.github.io/ml1.mp4",
+	watchlink : "ml1.mp4",
 	name : "Sniper: Assassin’s End" ,
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Sniper-_Assassin%27s_End_poster.jpg/220px-Sniper-_Assassin%27s_End_poster.jpg"
 },
@@ -184,7 +185,7 @@ var adventurearray = [
 
 {
 	review : "2014 Novemberမှာ ထွက်ရှိခဲ့ပြီး…IMDbရဲ့Rating အများဆုံးဇာတ်ကားများထဲမှာလည်း တစ်ကားအပါအဝင်ပါ…ဒါရိုက်တာကလည်း Christopher Nolanဆိုမှတော့ အထွေအထူးညွှန်းနေစရာတောင် လိုမယ်မထင်မိပါဘူး…Visual Effectsyပိုင်းမှာ အော်စကာရရှိခဲ့ပြီး  အခြားဆု ၄၄ဆုနဲ့ ဆန်ကာတင် ၁၄၄ဆုစာရင်းဝင်ခဲ့ပါတယ်… 2014ရဲ့အကောင်းဆုံး ၁၀ကားထဲမှာ စာရင်းဝင်ခဲ့ပါတယ်…(Background musicတွေလည်း နားထောင်လို့ကောင်းလို့ နားထဲတောင်စွဲနေပါလိမ့်မယ်…ဇာတ်လမ်းနည်းနည်း ပြောပြရမယ်ဆိုရင်တော့…21ရာစု လယ် လောက်မှာ ကမ္ဘာပျက်ကိန်း ဆိုက်လုပြီ ဖြစ်တဲ့အတွက် နာဆာ ပိုင်းလော့ဟောင်း ကူးပါး ခမျာခြံစိုက်နေရာကနေ လူတွေအတွက်နေစရာ ဂြိုဟ်အသစ် ရှာဖွေရေး စစ်ဆင်ရေးထဲ ပါဝင်လိုက်ရရှာတယ်…၁၀နှစ်အရွယ် သမီးလေး မာ့ဖ် ကို တစ်နေ့ ပြန်လာပါ့မယ် ကတိအထပ်ထပ်ပေးရင်းပေါ့…ဒီလိုနဲ့ ပေးအပ်လိုက်တဲ့တာဝန်တွေကို ထမ်းဆောင်ရင်း…အာကာသ ကြီးရဲ့ လှည့်ကွက် အမျိုးမျိုးကိုအန်တုရင်းကူးပါးတစ်ယောက် မာ့ဖ်ဆီပြန်လာနိုင်ပါ့မလား…ကမ္ဘာကြီးကိုရော ကယ်တင်နိုင်ပါ့မလား…ဆိုတာကို…Visual Effectsကောင်းကောင်း ရှုစားကြရမှာဖြစ်ပါတယ်....ဒီကားအတွက်အညွှန်းတောင်ရေးမတင်သင့်ပါဘူး...ခမ်းနားလွန်းတဲ့ ဇာတ်ကားကြီးအတွက် ဝါကျတည်ဆောက်ပုံခပ်ညံညံအောက်မှာ  ဘောင်ကွပ်လိုက်သလိုဖြစ်သွားမှာစိုးရိမ်မိလို့ပါ..",
-	downloadlink : "",
+	downloadlink : "ktulogo.png",
 	watchlink : "",
 	name : "Interstellar" ,
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"
@@ -254,11 +255,158 @@ var adventurearray = [
 var animationarray = [
 
 {
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Nausicaa of the Valley of the Wind (1984)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/b/bc/Nausicaaposter.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Kiki's Delivery Service (1989)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Princess Mononoke (1997)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/8/8c/Princess_Mononoke_Japanese_poster.png"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Howl's Moving Castle (2004)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Howls-moving-castleposter.jpg/220px-Howls-moving-castleposter.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Spirited Away (2001)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Spirited_Away_Japanese_poster.png/220px-Spirited_Away_Japanese_poster.png"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "My Neighbor Totoro (1988)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/0/02/My_Neighbor_Totoro_-_Tonari_no_Totoro_%28Movie_Poster%29.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Tales from Earthsea (2006)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Gedo6sn.jpg/220px-Gedo6sn.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Ponyo (2008)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/Ponyo_%282008%29.png/220px-Ponyo_%282008%29.png"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "The Wind Rises (2013)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/a/a3/Kaze_Tachinu_poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "From Up on Poppy Hill (2011)",
+	thumbnail : "https://vignette.wikia.nocookie.net/studio-ghibli/images/b/bb/From_Up_on_Poppy_Hill.jpg/revision/latest/scale-to-width-down/350?cb=20200318180952"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Whisper of the Heart (1995)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/9/93/Whisper_of_the_Heart_%28Movie_Poster%29.jpg/220px-Whisper_of_the_Heart_%28Movie_Poster%29.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "When Marnie Was There (2014)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/When_Marnie_Was_There.png/220px-When_Marnie_Was_There.png"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Porco Rosso (1992)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Porco_Rosso_%28Movie_Poster%29.jpg/220px-Porco_Rosso_%28Movie_Poster%29.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Ocean Waves (1993)",
+	thumbnail : "https://vignette.wikia.nocookie.net/nicthic/images/9/9d/Ocean_Waves_2008_English_Poster.png/revision/latest/scale-to-width-down/310?cb=20180119002654"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "The Secret World of Arrietty (2010)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/Karigurashi_no_Arrietty_poster.png/220px-Karigurashi_no_Arrietty_poster.png"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "The Cat Returns (2002)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Cat_Returns.jpg/220px-Cat_Returns.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Grave of the Fireflies (1988)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/a/a5/Grave_of_the_Fireflies_Japanese_poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Pom Poko (1994)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/6/68/Pompokoposter.jpg/220px-Pompokoposter.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "The Tale of Princess Kaguya (2013)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/6/68/The_Tale_of_the_Princess_Kaguya_%28poster%29.jpg/220px-The_Tale_of_the_Princess_Kaguya_%28poster%29.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Only Yesterday (1991)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/4/46/OYpost.jpg/220px-OYpost.jpg"
+},
+{
 	review : "အယ်လ်ဆာနဲ့ အန်နာတို့ ညီအစ်မ ဟာအယ်ရန်ဒဲတိုင်းပြည်မှာ ပျော်ပျော်ရွှင်ရွှင်အတူနေထိုင်ကြပေမယ့် ကံဆိုးတဲ့တစ်နေ့ကိုရောက်လာပါတော့တယ်။အယ်လ်ဆာရဲ့ မိဘတွေတုန်းကရင်ဆိုင်ခဲ့ရတဲ့ မှော်ဝင်တောအုပ်ထဲကဝိညာဉ်တွေ၊ အယ်လ်ဆာပဲ ကြားနေရတဲ့ခေါ်သံတွေနဲ့အတူ သူတို့တိုင်းပြည်အန္တရာယ်ကျရောက်လာချိန်မှာ အန်နာတို့လည်းခရစ္စတော့ဖ်၊အိုလက်ဖ်၊ ဆဗန်တို့နဲ့အတူအတိတ်က အမှန်တရားကို ရှာဖွေရပါတော့တယ်။",
 	downloadlink : "",
 	watchlink : "",
 	name : "Frozen 2" ,
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Frozen_2_poster.jpg/220px-Frozen_2_poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Castle in the Sky (1986)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Castle_in_the_Sky_%281986%29.png/220px-Castle_in_the_Sky_%281986%29.png"
 },
 {
 	review : "ကာတွန်းရုပ်ရှင်ကား ကောင်းကောင်းလေးတစ်ကားလောက် ကြည့်ရအောင်။ရုံတင်ကတည်းက လူကြိုက်များခဲ့တဲ့ ရုပ်ရှင်လေးပါပဲ။ဇာတ်လမ်းအကျဉ်း….ဟိုးရှေးရှေးတုန်းက ကမ္ဘာပေါ်မှာ မှော်ပညာ တည်ရှိခဲ့ပေမယ့်အချိန်ကြာလာတာနဲ့အမျှ လူတွေ၊နတ်သူငယ်တွေ၊ မှော်ဝင်သတ္တဝါတွေဟာခေတ်မီလာကြပြီး မှော်ပညာကို မေ့ပျောက်သွားပါတော့တယ်။အီယန် နဲ့ ဘာလေ ဆိုတဲ့ နတ်သူငယ် ညီအစ်ကိုနှစ်ယောက်ဟာလည်းငယ်ငယ်ကတည်းက အဖေဆုံးသွားလို့မိခင်နဲ့ပဲ အတူနေကြတဲ့ သူတွေပါ။ညီဖြစ်သူ အီယန်၁၆ နှစ်ပြည့်မွေးနေ့မှာတော့ သူတို့အဖေထားခဲ့တဲ့မှော်တောင်ဝှေးနဲ့ ဂါထာတစ်ခုကို တွေ့ရှိသွားပါတယ်။ဂါထာရဲ့ အစွမ်းကတော့ သေဆုံးသွားတဲ့ အဖေဖြစ်သူကို တစ်ရက်တိတိပြန်ရှင်သန်လာစေပြီး တွေ့ခွင့်ရမှာပါပဲ။ဒါပေမယ့် ဒီဂါထာကိုသုံးဖို့ စွမ်းအားကြီးတဲ့ ရတနာတစ်ခုလိုအပ်ပြီးအဲဒီရတနာ မလုံလောက်တာကြောင့် သူတို့အဖေဟာခန္ဓာကိုယ် အောက်ပိုင်းပဲ ကွက်ပြီး ရှင်လာခဲ့တယ်။ဒီလိုနဲ့ပဲ ညီအစ်ကို ၂ ယောက်ဟာ သူ့တို့အဖေရဲ့ခန္ဓာကိုယ်အောက်ပိုင်းကို သယ်ပြီး တစ်ရက်မပြည့်ခင်အဖေကို နောက်ဆုံးတွေ့နိုင်ဖို့မှော်ဝင်ရတနာကို အရှာထွက်ရပါတော့တယ်….ဒစ္စနေးရဲ့ ထုံးစံအတိုင်း ပျော်စရာတွေ ရယ်စရာတွေနဲ့ဝမ်းနည်းစရာတွေ ခံစားမှုတွေကို ရောယှက်ပေးထားမယ့်ကာတွန်းရုပ်ရှင်အသစ်မို့ ကြည့်တဲ့သူတွေသဘောကျကြမယ်ထင်ပါတယ်။",
