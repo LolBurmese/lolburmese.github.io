@@ -147,6 +147,7 @@ body{
 	cursor: pointer;
 }
 
+
 .picture{
 	width: 100%;
 	height: 100%;
@@ -306,6 +307,8 @@ body{
 }
 .whitespace{
 	white-space: normal;
+	overflow: scroll;
+	height : 250px;
 }
 .darksideappear{
 	opacity: 1;
