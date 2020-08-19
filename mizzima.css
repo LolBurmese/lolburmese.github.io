@@ -261,7 +261,7 @@ body{
 	overflow: scroll;
 	visibility: hidden;
 }
-.movie_about, .movie_link{
+.movie_about{
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-top: 15px;
@@ -281,6 +281,9 @@ body{
 .movie_title{
 	justify-content: center;
 	position: relative;
+}
+.link_table td{
+	height: 50px;
 }
 @keyframes searchanimate{
 	from{

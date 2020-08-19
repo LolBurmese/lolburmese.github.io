@@ -87,7 +87,7 @@ var actionarray = [
 
 {
 	review : "စနိုက်ပါဇာတ်လမ်း၊ အက်ရှင်ဇာတ်လမ်းကြိုက်သူတွေအတွက် တင်ပေးထားပါတယ်။ဇာတ်လမ်းအကျဉ်းကတော့ အမေရိကန် နိုင်ငံမှာအခြားနိုင်ငံက ဝန်ကြီးတစ်ယောက်စနိုက်ပါနဲ့ အပစ်ခံလိုက်ရပါတယ်။အဲဒီ ပစ်တဲ့သူဘယ်သူလဲဆိုတာ သဲလွန်စတွေအရစုံစမ်းတော့ ဘက်ကက် ဆိုတဲ့ လက်ဖြောင့်တပ်သားတပ်ကြပ်ကြီး တစ်ယောက် ဖြစ်နေတာကိုတွေ့ရတာပါပဲ။ဒါပေမယ့် ဘက်ကက်က ချောက်တွန်းခံရတာဖြစ်ပြီး သူ့ကိုဖမ်းထားတုန်းမှာပဲ နှုတ်ပိတ်ဖို့ကြိုးစားလာပါတယ်။ဒီတော့ သူ့အဖေရယ်၊ ထောက်လှမ်းရေး အေးဂျင့်တစ်ယောက်ရယ်အကူအညီနဲ့ တရားခံအစစ်ကိုလိုက်ရှာပြီး အမှန်ကိုပေါ်လာအောင် ကြိုးစားရပါတော့တယ်။",
-	downloadlink : "",
+	downloadlink : "https://myintkokooo.github.io/boomerang.mp4",
 	watchlink : "https://myintkokooo.github.io/boomerang.mp4",
 	name : "Sniper: Assassin’s End" ,
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Sniper-_Assassin%27s_End_poster.jpg/220px-Sniper-_Assassin%27s_End_poster.jpg"
@@ -696,6 +696,7 @@ const open_movie_review = (index) =>{
 	movie_about.textContent = allarray[index].review;
 	movie_watch_link.href = allarray[index].watchlink;
 	movie_down_link.href = allarray[index].downloadlink;
+	movie_down_link.download = allarray[index].watchlink;
 
 }
 allphotos.forEach((node,i)=>{
@@ -713,4 +714,5 @@ const open_result_movie_review = (index) =>{
 	movie_about.textContent = sync[index].review;
 	movie_watch_link.href = sync[index].watchlink;
 	movie_down_link.href = sync[index].downloadlink;
+	movie_down_link.download = sync[index].watchlink;
 }
