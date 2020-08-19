@@ -643,7 +643,7 @@ marvelarray.map(function(user,i){
 	`;
 
 })
- tab[5].innerHTML += `
+ tab[4].innerHTML += `
  	<div><img src="https://i.dlpng.com/static/png/1648041-118-best-logo-creation-images-on-pinterest-logo-creation-logo-google-and-logo-branding-movie-reel-png-275_161_preview.png" width="350" height="200"></div>
  	<div class="about_detail">
  	${aboutarray[0].detail}
