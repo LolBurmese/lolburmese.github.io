@@ -851,7 +851,7 @@ node.setAttribute("onclick",`open_movie_review(${i})`);
 });
 
 allphotos_filter.forEach((node,i)=>{
-node.setAttribute("onclick",`open_result_movie_review(${i})`);
+node.setAttribute("onclick",`open_movie_review(${i})`);
 });
 
 const open_result_movie_review = (index) =>{
