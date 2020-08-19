@@ -696,7 +696,6 @@ const open_movie_review = (index) =>{
 	movie_about.textContent = allarray[index].review;
 	movie_watch_link.href = allarray[index].watchlink;
 	movie_down_link.href = allarray[index].downloadlink;
-	movie_down_link.download = allarray[index].watchlink;
 
 }
 allphotos.forEach((node,i)=>{
@@ -704,7 +703,7 @@ node.setAttribute("onclick",`open_movie_review(${i})`);
 });
 
 allphotos_filter.forEach((node,i)=>{
-node.setAttribute("onclick",`open_movie_review(${i})`);
+node.setAttribute("onclick",`open_result_movie_review(${i})`);
 });
 
 const open_result_movie_review = (index) =>{
@@ -714,5 +713,4 @@ const open_result_movie_review = (index) =>{
 	movie_about.textContent = sync[index].review;
 	movie_watch_link.href = sync[index].watchlink;
 	movie_down_link.href = sync[index].downloadlink;
-	movie_down_link.download = sync[index].watchlink;
 }

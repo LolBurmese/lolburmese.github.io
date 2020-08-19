@@ -273,11 +273,17 @@ body{
 	padding: 3px;
 	border-radius: 6px;
 	font-weight: bold;
+	transition: .5s;
 }
-/*.movie_down_link{
-	background-color: white;
-	margin-bottom: 30px;
-}*/
+.movie_down_link:hover{
+	background-color: red;
+	color: white;
+}
+.movie_watch_link:hover{
+	background-color: red;
+	color: white;
+}
+
 .movie_title{
 	justify-content: center;
 	position: relative;
