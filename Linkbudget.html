@@ -70,16 +70,33 @@ bottom: 0;
 height: 20%;
 width: 97%;
 padding: 10px;
-justify-content: center;
-align-items: center;
+display: flex;
+justify-content: space-between;
+
 }
 
-.eirpspan,.cnospan{
-color: #001540;
-font-size: 17px;
+.finalresult{
+
+background-color: #001540;
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 15%;
 display: flex;
 justify-content: center;
 align-items: center;
+}
+.cnratio{
+	color: white;
+	font-size: 22px;
+	font-weight: bolder;
+}
+
+
+.eirpspan,.cnospan,.ebnospan,#todbid,#todb1id,{
+color: #001540;
+font-size: 17px;
+display: flex;
 padding: 5px;
 font-weight: bold;
 }
@@ -204,10 +221,23 @@ font-weight: bold;
 </div>
 
 <div class="result" align="center">
-	<span class="eirpspan">Effective Isotropic Radiated Power</span>
-	<span class="cnospan">C/N<sub>o</sub>=Carrier to Noise Ratio</span>
-
+	<span class="eirpspan">EIRP(dBW)</span>
+	<span class="cnospan">C/No(dB)</span>
+	<span id="todbid">10logfb</span>
+	<span class="ebnospan">Eb/No(dB)</span>
+	<span id="todb1id">10log(B/fb)</span>
 </div>
+
+
+
+<div class="finalresult" align="center">
+	<span class="cnratio">C/N</span>
+</div>
+
+
+
+
+
 
 <script type="text/javascript">
 
@@ -236,6 +266,10 @@ var br1value = document.getElementsByClassName("br1value")[0];
 
 var eirpspan = document.getElementsByClassName("eirpspan")[0];
 var cnospan = document.getElementsByClassName("cnospan")[0];
+var ebnospan = document.getElementsByClassName("ebnospan")[0];
+var todbid = document.getElementById("todbid");
+var todb1id = document.getElementById("todb1id");
+var cnratio = document.getElementsByClassName("cnratio")[0];
 
 
 function inputoppower(){
@@ -286,11 +320,50 @@ function inputsbfl(){
 }
 function inputbr(){
 	brvalue.textContent = br.value+"Mbps";
+		todb();
+
+
+		bfb(0);
+	
+	
+
 }
+
+
+function eirpinput(){
+eirpspan.textContent = Number(oppower.value)-Number(bol.value)-Number(bfl.value)+Number(at.value);
+}
+
+function cnoinput(){
+	
+cnospan.textContent = Number(eirpspan.textContent)+Number(gte.value/10)-Number(lp.value/10)-Number(lu.value/10)+228.6;
+ ebnoinput();
+}
+
+function todb(){
+	todbid.textContent = 10*Math.log(br.value*1000000)/2.303;
+	ebnoinput();
+}
+
+
+function ebnoinput(){
+	ebnospan.textContent = cnospan.textContent - todbid.textContent;
+
+
+
+	cninput();
+}
+
+
+
 function inputbr1(){
 	br1value.textContent = br1.value+"Mbps";
+	bfb();
+	
 	
 }
+
+
 
 function inputmodu(){
 	if(modu.value === "PSK"){
@@ -318,20 +391,30 @@ function inputmodu(){
 	}
 
 }
+function bfb(){
+	todb1id.textContent = 10*Math.log(br1.value/br.value)/2.303;
 
-
-
-function eirpinput(){
-eirpspan.textContent = Number(oppower.value)-Number(bol.value)-Number(bfl.value)+Number(at.value)+"dBW";
-kaung = Number(oppower.value)-Number(bol.value)-Number(bfl.value)+Number(at.value);
-}
-
-function cnoinput(){
+	cninput();
 	
-cnospan.textContent = Number(kaung)+Number(gte.value/10)-Number(lp.value/10)-Number(lu.value/10)+228.6+"dB";
-si =  Number(kaung)+Number(gte.value/10)-Number(lp.value/10)-Number(lu.value/10)+228.6;
 }
 
+
+
+// function todb1(){
+// 	todb1id.textContent = 10*Math.log(bfbvalue)/2.303;
+
+
+
+// 	cninput();
+	
+// }
+
+
+function cninput(){
+
+	cnratio.textContent = ebnospan.textContent - todb1id.textContent+"dB";
+
+}
 
 
 
