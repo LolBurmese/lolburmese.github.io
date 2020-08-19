@@ -256,7 +256,7 @@ body{
 	width: 100%;
 	top:7.7vh;
 	bottom: 0;
-	background-color: darkblue;
+	background-color: rgb(5,34,63);
 	font-family: 'Poppins', sans-serif;
 	transition: .5s;
 	z-index: -1;
@@ -282,6 +282,9 @@ body{
 .movie_down_link:hover{
 	background-color: red;
 	color: white;
+}
+.movie_poster{
+	border-radius: 0 15px 0 15px;
 }
 .movie_watch_link:hover{
 	background-color: red;
