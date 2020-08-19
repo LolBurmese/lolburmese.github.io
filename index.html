@@ -1,1209 +1,963 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="colpanel.css">
-	<link rel="icon" type="image/jpg" href="https://serving.photos.photobox.com/99336755ee8f1dcaa8806c8a5ad1d91b4c8658aa353009793fb233ff0d3c130ef0a26058.jpg">
+	<title>...</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<title>-Layer Of Legends-</title>
-	<style type="text/css">
-		html{
-			scroll-behavior: smooth;
-		}
-		::-webkit-scrollbar{
-			width : 13px;
-		}
-		::-webkit-scrollbar-track{
-			box-shadow: inset 0 0 5px #333;
-			border-radius: 10px;
-			background-color: #ddd;
-		}
-		::-webkit-scrollbar-thumb{
-			background-color: red;
-			border-radius: 10px;
-		}
-		#corename{
-			position: sticky;
-			top : 0;
-			z-index: 1;
-			}
-		.darker{
-			background-color: rgb(36,37,38);
-		}
-		.mainoptionap{
-			z-index: 3;
-			opacity: 1;
-			transform: translateY(0);
-			transform : translateX(-2em);
-			
-		}
-		.mainoption{
-			position: sticky;
-			bottom : 28vh;
-			display: flex;
-			width: 100%;
+	 <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
 
-		}
-		.mainoption{
-			display: none;
-		}
-		.option_floatshit{
-			background-color : skyblue;
-		}
-		.colorss{
-			background-color: grey;
-		}
-		.option_float{
-			padding: 8px;
-			display: flex;
-			justify-content: flex-end;
-			flex-direction: column;
-			position: absolute;
-			right : 0;
-			border-radius: 10px;
-			cursor: pointer;
-			transition: .5s;
-		}
-		.option_float div{
-			margin : 3px;
-			width : 25px;
-			height: 3px;
-			background-color: black;
-		}
-		.table_shitshit{
-			z-index: -1;
-			opacity: 0;
-			transform: translateY(5em);
-		}
-		.table_div{
-			transition: .5s;
-			display: flex;
-			justify-content: flex-end;
-			flex-direction: column;
-			position: sticky;
-			bottom : 30vh;
-			width : 100%;
-			right : 0;
-		}
-		.table_div{
-			display: none;
-		}
-		#sidebar_tool{
-			background-color: grey;
-			padding: 5px;
-			border-radius: 25px;
-			position: absolute;
-			right : 0;
-
-		}
-		.tool_label{
-			display: flex;
-			align-items: center;
-		}
-		body{
-	padding: 0;
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <style type="text/css">
+  	*{
+	user-select: none;
 	margin: 0;
-	box-sizing: border-box;
-	/*background-color: rgb(25,5,40);*/
-	background-color : rgb(5,56,56);
-	overflow-x: hidden;
-}
-.switch1{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	color : white;
-	background-color: darkcyan;
-	transition: 1s;
-}
-input[type="checkbox"]{
-	position: relative;
-	height : 25px;
-	width: 50px;
-	-webkit-appearance : none;
-	background : #C9C9C9;
-	border-radius: 25px;
-	outline: none;
-	transition : .5s;
-	box-shadow: inset 0 0 5px black;
-}
-input:checked[type="checkbox"]{
-	background : #03a9f4;
-}
-input[type="checkbox"]::before{
-	position: absolute;
-	top : 0;
-	left: 0;
-	content: "";
-	height : 25px;
-	width: 25px;
-	background-color: #fff;
-	border-radius: 25px;
-	/*transform : scale(1.1);*/
-	transition: .5s;
-	box-shadow: 0 2px 5px black;
-}
-input:checked[type="checkbox"]::before{
-	left : 25px;
-}
-
-
-.para1, .para2, .para3, .para4, .para5, .para6, .para7, .para8{
-	height : 0;
-	overflow: scroll;
-	transition: 0.5s;
-}
-.sizefix{
-	height : 250px;
-}
-.imgfix{
-	height : 80px;
-	width: 80px;
-}
-.fbpagemain{
-				display: flex;
-                                background-color : black;
-				align-items: center;
-				justify-content: center;
-				text-decoration: none;
-				color: white;
-				letter-spacing: 2px;
-				}
-.fbpage:hover{
-				font-size: 20px;
-}
-.fbpage{
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				text-decoration: none;
-				color: white;
-				letter-spacing: 2px;
-				transition: .5s;
-				}
-				
-.hrcolor{
-				border : 1px solid rgba(255,255,255,0.3);
-				}
-.names{
-				line-height: 250%;
-				background-color: rgba(0,0,0,0.6);
-				overflow:hidden;
-				}
-.bgname{
-				background-image: url("https://image.freepik.com/free-vector/abstract-dynamic-pattern-wallpaper-vector_53876-59131.jpg");
-				background-position: center;
-				height: 0px;
-				overflow: scroll;
-				transition: .5s;
-				}
-.names a{
-				text-decoration: none;
-				color: white;	
-				letter-spacing: 3px;
-			}
-			.names a:hover{
-							color: red;
-							}
-
-.person{
-				
-				padding : 20px;
-				transition: .5s;
-				/*box-shadow: 0 0 17px darkcyan;*/
-				}
-				
-			.person2{
-			
-				padding : 20px;
-				transition: .5s;
-				/*box-shadow: 0 0 17px skyblue;*/
-				}
-				
-				.person3{
-				
-				padding : 20px;
-				transition: .5s;
-				/*box-shadow: 0 0 17px skyblue;*/
-				}
-				
-			.person4{
-				
-				padding : 20px;
-				transition: .5s;
-				/*box-shadow: 0 0 17px skyblue;*/
-				}
-				
-					
-				.person5{
-				
-				padding : 20px;
-				transition: .5s;
-				/*box-shadow: 0 0 17px skyblue;*/
-				}
-				
-				.person6{
-			
-				padding : 20px;
-				transition: .5s;
-				/*box-shadow: 0 0 17px skyblue;*/
-				}
-				
-				.person7{
-			
-				padding : 20px;
-				transition: .5s;
-				/*box-shadow: 0 0 17px skyblue;*/
-				}
-				
-			.person8{
-				
-				padding : 20px;
-				transition: .5s;
-				/*box-shadow: 0 0 17px skyblue;*/
-				}	
-				.perper{
-					background-color : #ddd;
-				}
-				
-				.toplink{
-								text-decoration: none;
-								color: green;
-								}
-				
-				
-				
-				
-.profileimg{
-				border-radius :150px;
-				}
-				.profileimgmini1, .profileimgmini2, .profileimgmini3, .profileimgmini4, .profileimgmini5, .profileimgmini6, .profileimgmini7{
-				border-radius :100px;
-				}
-nav{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height : 10vh;
-	background-color: rgb(27,0,56);
-	color : white;
-}
-.logopart{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	margin-left: 9px;
-}
-.logopart .icon_label{
-	margin-left : 20px;
-	font-family: 'Tenali Ramakrishna', sans-serif;
-	font-size : 30px;
-}
-.logopart .iconmain .logo{
-	margin-left: 5px;
-	border-radius: 50px;
-}
-.link_container{
-	display: flex;
-	justify-content: space-around;
-	width : 60%;
-}
-.link_container li a{
-	text-decoration: none;
-	color : white;
-	letter-spacing: 2px;
-	font-size : 15px;
+	padding: 0;
 	font-family: 'Poppins', sans-serif;
-	transition: .5s;
-	text-transform: uppercase;
 }
-.link_container li a:hover{
-	color : red;
-	transition: all .5s;
+.themepart{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.bgsize{
-	height: 360px;
-}
-.link_container li{
-	list-style-type: none;
-}
-.burger div{
-	margin : 5px;
-	height : 3px;
-	width : 25px;
-	background-color: white;
-}
-.burger{
+.intronav{
 	position: absolute;
-	display: none;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 300px;
+	height: 0;
+	animation: tipbox .5s ease forwards .5s;
+	background-color: white;
+	border-radius: 15px;
+	transition: .5s;
+	overflow: hidden;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+}
+.intromain{
+	width: 100%;
+	height: 100%;
+	background-color: skyblue;
+	position: relative;
+}
+.tiptitle{
+	background-color: blue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	height: 15%;
+	color : white;
+	font-size: 21px;
+}
+.tipbtn{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 5%;
+	padding: 10px;
+	outline : none;
+	border-radius: 12px;
+	background-color: gold;
+	color : black;
+	-webkit-appearance : none;
+	border: none;
 	cursor: pointer;
 }
-.line1, .line2, .line3{
-	opacity: 1;
+.tip3{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+}
+.tip3 div{
+	display: flex;
+	padding : 10px;
+	align-items: center;
+	opacity: 0;
+	transform: translateX(-2em);
+}
+.tip3 div:nth-child(1){
+	animation: tiplabel .5s ease forwards .6s;
+}
+.tip3 div:nth-child(2){
+	animation: tiplabel .5s ease forwards .7s;
+}
+.tip3 div:nth-child(3){
+	animation: tiplabel .5s ease forwards .8s;
+}
+.tip3 div img{
+	margin-right: 20px;
+}
+.webbtn:hover{
+	background-color: red;
+	color: white;
+}
+@keyframes tiplabel{
+	from{
+		opacity: 0;
+		transform: translateX(-2em);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes tipbox{
+	from{
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+	}
+	to{
+		height: 280px;
+		opacity: 1;
+		z-index: 1;
+		visibility: visible;
+	}
+}
+@keyframes tipboxclose{
+	from{
+		height: 280px;
+		opacity: 1;
+		z-index: 1;
+		visibility: visible;
+	}
+	to{
+		
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+	}
+}
+.confirmmain{
+	position: absolute;
+	top: 50%;
+	left : 50%;
+	transform: translate(-50%,-50%);
+	width: 200px;
+	height: 120px;
+	background-color: yellow;
+	border-radius: 25px;
+	z-index: -1;
+	visibility: hidden;
+	opacity: 0;
 	transition: .5s;
+	white-space: nowrap;
+	border: 1px solid black;
 }
-.line1{
-	transform: rotate(0);
+.boxappear{
+	z-index: 2;
+	width : 300px;
+	height : 220px;
+	opacity: 1;
+	visibility: visible;
+
 }
-.line3{
-	transform: rotate(0);
+.confirmbox{
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
-.line1tran{
-	transform : rotate(43deg) translate(13px,-1px);
+.confirmbtn button{
+	-webkit-appearance : none;
+	border : none;
+	width: 50px;
+	height : 30px;
+	border-radius: 12px;
+	outline : none;
 }
-.line2tran{
-	transform : rotate(-49deg) translate(13px,3px);
+.confirmbtn button:nth-child(1){
+	background-color: red;
+	color: white;
 }
-.bgdark{
-	background-color: rgb(24,25,26);
+.options{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
-.bobo{
+.navibar{
+	height: 7%;
+	background-color: white;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.navibar button{
+	-webkit-appearance : none;
+	border : none;
+	background-color: transparent;
+	padding: 1px;
+	width: 30%;
+	transition: .3s;
+	outline: none;
+	height: 100%;
+}
+.frameconsole{
+	position: absolute;
+	display: flex;
+	width: 50%;
+	height: 50%;
+	transition: .5s;
+	z-index: -1;
+	opacity: 0;
+	visibility: hidden;
+	background-image: url("https://cdn.dribbble.com/users/254977/screenshots/4482968/draguu.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size : cover;
+	overflow: hidden;
+	height: 100vh;
+}
+.appear{
+	z-index: 1;
+	opacity: 1;
+	visibility: visible;
+	width: 100%;
+	height: 93%;
+}
+.browser{
+	position: absolute;
+	width: 100%;
+	/*top: 0;*/
+	height: 3%;
+	transition: .5s;
+	background-color: blue;
+	/*opacity: 0;*/
+	visibility: hidden;
+	overflow: hidden;
+	/*z-index: -1;*/
+}
+.browserappear{
+	height: 93%;
+	/*opacity: 1;*/
+	visibility: visible;
+	/*z-index: 1;*/
+}
+.browsercomponent{
+	width: 100%;
+	height: 100%;
+	background-color: #ddd;
+	position: relative;
+	/*padding-top: 15px;*/
+}
+.webtxtbox{
+	margin: 10px;
+	width: 240px;
+	padding: 15px;
+	outline: none;
+	-webkit-appearance : none;
+	border : none;
+	font-size: 14px;
+	font-weight: bolder;
+	letter-spacing: .5px;
+	border-radius: 15px;
+	
+}
+.webbtn{
+	margin-top: 10px;
+	-webkit-appearance : none;
+	border : none;
+	background-color: white;
+	padding: 15px;
+	outline : none;
+	border-radius: 50%;
+}
+body{
+/*background-image : url("https://papers.co/wallpaper/papers.co-af48-hi-i-am-bart-simpsons-minimal-cartoon-36-3840x2400-4k-wallpaper.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-origin: 
+/*background-height: 100vh;*/
+transition: .5s;*/
+}
+.icons{
+	width : 70%;
+	height: 70%;
+	transition: .3s;
+}
+.ic_pack{
+	margin-top : 10px;
+	font-size: 12px;
+	font-weight: bolder;
+	cursor : pointer;
+	transition: opacity 2s;
+	color: black;
+	/*margin: 0.5%;*/
+	/*margin-bottom: 25px;*/
+	/*background-color: blue;*/
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+	opacity: 0;
+        z-index : -1;
+        visibility : hidden;
+}
+
+.icondiv{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	width: 73px;
+	height: 73px;
+	border-radius: 15px;
+}
+.ic_pack:hover .icons{
+	filter: grayscale(100%);
+}
+.resolution{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	/*display: none;*/
+}
+#firstpage{
+	top: 0;
+	position: fixed;
+	width: 100%;
+	bottom: 7%;
+	background-image: url("https://papers.co/wallpaper/papers.co-af48-hi-i-am-bart-simpsons-minimal-cartoon-36-3840x2400-4k-wallpaper.jpg");
+	overflow: scroll;
+	background-position: center;
+background-size: cover;
+}
+@keyframes btnanimate{
+	from{
+		background-color: rgba(0,0,0,0.4);
+	}
+	to{
+		background-color: white;
+	}
+}
+
+.themesetting{
+	position: absolute;
+	bottom: 7%;
+	width: 100%;
+	height: 0;
+	color: white;
+	background-color: rgba(0,0,0,0.9);
+	transition: .5s;
+	display: none;
+	z-index: -1;
+	visibility: hidden;
+	opacity: 0;
+}
+.theme{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.themebtn{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	bottom: 5%;
+}
+.themebtn button{
+	width: 100px;
+	height: 50px;
+	-webkit-appearance : none;
+	border : none;
+	border-radius: 25px;
+	outline : none;
+}
+.themebtn button:nth-child(1){
+	margin-right : 10px;
+	background-color: blue;
+	color:white;
+}
+.themebtn button:nth-child(2){
+	background-color: red;
 	color : white;
 }
-@media screen and (max-width : 1080px){
-	body{
-		overflow-x: hidden;
+
+.themeappear{
+	visibility: visible;
+	z-index: 1;
+	height: 520px;
+	opacity: 1;
+}
+.fcolor, .bcolor{
+	position: relative;
+	margin: 5px;
+	cursor: pointer;
+	-webkit-appearance : none;
+	width: 20px;
+	height: 20px;
+	outline: none;
+	border-radius : 50%;
+}
+.wallpaper{
+	position: relative;
+	margin: 5px;
+	cursor: pointer;
+	-webkit-appearance : none;
+	width: 40px;
+	height: 30px;
+	outline: none;
+	border-radius: 5px;
+	background-position: center;
+	background-size: cover;
+}
+.fcolor:before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color : transparent;
+	text-shadow: 0 0 0 white;
+	content : "✔️";
+	transition: .4s;
+	opacity: 0;
+	visibility: hidden;
+
+}
+.bcolor:before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color : transparent;
+	text-shadow: 0 0 0 white;
+	content : "✔️";
+	transition: .4s;
+	opacity: 0;
+	visibility: hidden;
+}
+.fcolor:checked:before{
+	visibility: visible;
+	opacity: 1;
+}
+.bcolor:checked:before{
+	visibility: visible;
+	opacity: 1;
+}
+.wallpaper:before{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color : transparent;
+	text-shadow: 0 0 0 black;
+	content : "✔️";
+	transition: .4s;
+	opacity: 0;
+	visibility: hidden;
+}
+.wallpaper:checked:before{
+	visibility: visible;
+	opacity: 1;
+}
+@media screen and (max-height: 500px){
+	.navibar{
+		height: 12%;
 	}
-	.link_container{
-		width :90%;
+	.appear{
+		height: 88%;
 	}
-	.icon_label{
-		display: none;
+	#firstpage{
+		height: 88%;
+	}
+	.browserappear{
+		height: 88%;
+	}
+	.themeappear{
+		bottom: 12%;
 	}
 }
-@media screen and (max-width: 720px){
-	body{
-		overflow-x: hidden;
-	}
-	.icon_label{
-		display: block;
-	}
-	.link_container li a{
-		color : yellow;
-		font-size : 16px;
-		font-weight : bold;
-	}
-	.link_container li a:hover{
-		color : red;
-	}
-	.burger{
-		display: block;
-		left : 0;
-		z-index: 2;
-	}
-	.link_container{
-		position: absolute;
-		min-height : 65vh;
-		top : 9vh;
-		background-color: rgba(0, 0, 0,0.8);
-		left : 9px;
-		display: flex;
-		flex-direction: column;
-		align-items: left;
-		width : 50%;
-		transition: .5s;
-		transform : translateX(-110%);
-		border-radius: 25px;
-	}
-	.logopart{
-		width : 100%;
-		z-index: 1;
-		justify-content: center;
-	}
-}
-.linksave{
-	transform: translateX(0);
-}
+  </style>
 
 
-	</style>
+
 
 </head>
-<body id="bodyhate">
-	<!-- <div id="corename"> -->
-<nav id="mainnames">
-	<div class="logopart">
-		<div class="iconmain">
-		<img class="logo" src="https://serving.photos.photobox.com/99336755ee8f1dcaa8806c8a5ad1d91b4c8658aa353009793fb233ff0d3c130ef0a26058.jpg" width="50" height="50"></div>
-		<div class="icon_label">
-			<span class="lp1">LAYER OF LEGENDS -</span>
-			<span class="lp2"> LԾL </span>
-		</div>
-	</div>
-	<ul class="link_container">
-		<li><a href="satsu.html">satsu</a></li>
-		<li><a href="gallery.html">gallery</a></li>
-		<li><a href="register2.html">register</a></li>
-		<li><a href="calculator.html">calculator</a></li>
-		<li><a href="#">videos</a></li>
-		<li><a href="contact.html">contact</a></li>
-                <li><a href="kshop.html">Shop</a></li>
-		<li><a href="nav1.html">EC Team</a></li>
-		<li><a href="friends.html">My Friends</a></li>
-		<li><a href="messenger.html.html">Chatting</a></li>
-		<li><a href="music.html">Music</a></li>
-		<li><a href="https://myintkokooo.github.io/desktop.html">Desktop</a></li>
-		<li><a href="manutd.html">ManUtd</a></li>
-
-
-	</ul>
-	<div class="burger">
-		<div class="line1"> </div>
-		<div class="line2"> </div>
-		<div class="line3"> </div>
-	</div>
-</nav>
-
-<div class="switch1">
-	Squad member names<input id="askswitch" onclick="ask()" type="checkbox" name="">
+<body>
+	<div id="firstpage" align="center"></div>
+	<div class="framediv" align="center">
+<iframe class="frameconsole" src="" frameborder="0"></iframe>
 </div>
-<div class="bgname">
-<div class="names" align="center"> <br>
-  <a href="#pigbenis">Pig Benis</a> <br> 
-  <a href="#kanieloutis">KANIEL OUTIS</a> <br>
-  <a href="#shika">SHIKA</a> <br>
-  <a href="#eric">E R I C</a> <br>
-  <a href="#legolas">Legolas</a> <br>
-  <a href="#appleshampoo">AppleShampoo</a> <br>
-  <a href="#kobain">Ko Bain</a> <br>
-  <a href="#anoe">San Linn</a><br>
+<div class="navibar">
+	<button onclick="menu_click()">
+	<img src="https://www.clipartmax.com/png/full/248-2485394_menu-icon-png-red.png" width="20" height="20">
+</button>
+<button onclick="homeclick()">
+	<img src="https://pngimage.net/wp-content/uploads/2018/06/red-home-icon-png-3.png" width="20" height="20">
+</button>
+<button onclick="backclick()">
+	<img src="https://www.cocsit.org.in/assets/back_cri.png" width="25" height="25">
+</button>
+</div>
+<div class="confirmmain">
+<div class="confirmbox">
+	<div class="options">
+<div class="warninglabel">Are you sure to exit?</div><br><br>
+<div class="confirmbtn" align="center">
+	<button class="yes">NO</button>
+	<button class="no">NO</button>
 </div></div>
-<!-- </div> -->
+</div></div>
 
-<div id="pigbenis" class="person perper" align="center">
-<img class="profileimg" src="pigbenis.jpg" width="250"
-height="250"> <br>
-<h2>Pig Benis</h2>
-<h4>Tank/Support Player(Leader)</h4>
-<a class="fbpage" href="https://www.facebook.com/kaungsithu1999"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Kaung Si Thu</h5></a>
-
-<p class="para1">
-Squad ရဲ့ leader - Pig Benis ပဲ ဖြစ်ပါတယ်။
-
-marksman/assassin role ကလွဲပြီး
-ကျန် role တွေကို အကောင်းဆုံးဆော့ပေးနိုင်တဲ့သူပဲ ဖြစ်ပါတယ်၊
-Squad မှာ လိုအပ်တဲ့ roleကို ဖြည့်ကိုင်ပေးနေပြီး favorite roleကတော့ ဂိမ်းရဲ့အသက် တွေဖြစ်တဲ့ tank/support role ဖြစ်ပါတယ်၊ ဒီ season မှာ Atlas ကို ပိုမိုဦးစားပေးကိုင်ခဲ့ပေမယ့်လဲ လိုအပ်တဲ့အခါ
-Jawhead, silvana တို့နဲ့ offlane ဆော့ပေးနိုင်ပါသေးတယ်။
-
-Support ဆော့တဲ့အခါမှာဆိုရင်လဲ mmကို တစ်ဖက်ရန်သူတွေ ဝင်မနှိုက်နိုင်အောင်
-back up ပေးနိုင်သူလဲဖြစ်ပါတယ်။ 
-Popol and Kupa, Valir တို့နဲ့ enemy ကို နှောင့်နိုင်တဲ့အပြင် မိမိသေချင်သေပါစေ
-mm ကိုအသက်မပေးရအောင် ကြိုးစားပေးခဲ့တာလဲ အကြိမ်ကြိမ်ပါ။
-
-Hyper flowမှာ အဓိကကျ တဲ့ role ဖြစ်တဲ့အလျောက် squad မှာပါ leaderဖြစ်နေတဲ့အတွက် training ကိုလဲ ညဆယ်နာရီတိုင်းမှာ လုပ်ဆောင်‌စေလျက်ရှိပါတယ်။ 
-
-အသင်းရှုံးရင် တစ်ခါတစ်လေစိတ်ကောက်တတ်ပြီး base မှာ ရပ်နေတာတို့၊ AFK လုပ်ပစ်တာတို့ကတော့ မကောင်းတဲ့အချက်ပါပဲ၊
-အဲ့အကျင့်တွေကို ပယ်ဖျောက်ပြီးတော့
-လာမယ့် season သစ်မှာ Squad power တက်အောင် member တွေနဲ့ အတူတူ ကြိုးစားဖို့ အဆင်သင့်ဖြစ်နေပါပြီ။
-</p>
-<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br>
-
-
-<div id="kanieloutis" class="person2 perper" align="center">
-<img class="profileimgmini1" src="ksw.jpg" width="200"
-height="200"> <br>
-<h2>KANIEL OUTIS</h2>
-<h4>Tank Player</h4>
-<a class="fbpage" href="https://web.facebook.com/kaung.kaung.7792"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Kyaw Swar Win</h5></a>
-<p class="para2">
-ဟိုးအရင် Season 3 ကတည်းက ဆော့ခဲ့တဲ့ KANIEL OUTIS ဖြစ်ပါတယ်ခင်ဗျ။
-
-အရင်ကတော့ Yi Sun Shin ကို proဆန်စွာဆော့ခဲ့ပေမယ့်လဲ အခု squad မှာ လိုအပ်နေတဲ့ Tank roleကို ဖြည့်ကိုင်ပေးနေပါတယ်။ Tank ကို leader လောက် မကိုင်တတ်‌သေးပေမယ့်လဲ marksman ကို
-back upပေးတဲ့နေရာမှာတော့ ဆရာတစ်ဆူပါပဲ။
-
-Favorite heroကတော့ francoပါ၊
-hookကတော့ ဆယ်ခါဆွဲရင် တစ်ခါတော့
-ကျိန်းသေပေါက်မိပါတယ်၊ တစ်ဖက်က
-Damage အထွက်ဆုံး hero ကို battleမှာ
-ဝင်ဝင်ရိုက်ပေးရင်း အသက်ပေးရတာလဲ
-ခဏခဏပါပဲ၊ ဒါပေမယ့် စိတ်မဆိုးပါဘူး၊
-သူသေ လဲ Savage for marksmam ပါ။
-
-တစ်ခါတစ်လေ Pro live တွေကြည့်ပြီး
-Yss, kagura တို့ကို support လိုဆော့ပါသေးတယ်၊ hero pool ကျယ်ပေမယ့်
-Mythicမရောက်ဖူးသေးပါဘူး၊ 
-
-</p>
-<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br>
-
-<div id="shika" class="person3 perper" align="center">
-<img class="profileimgmini2" src="shika.jpg" width="200"
-height="200"> <br>
-<h2>SHIKA</h2>
-<h4>Fighter Player</h4>
-<a class="fbpage" href="https://web.facebook.com/profile.php?id=100014823156764"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Aung Kyaw Phyo</h5></a>
-<p class="para3">
-Fighter role ကို တာဝန်ယူဆော့မယ့် SHIKA ဖြစ်ပါတယ်။
-
-SHIKAရဲ့ favorite heroကတော့ ၊Badang ပါ၊ Squadမရောက်ခင် လက်ရည်စမ်းတဲ့ပွဲမှာ Leader ကြီးရဲ့ Khufra ကို ချောကလက်ရစေခဲ့တဲ့ Minsitthar အား Support ပုံစံနဲ့
-ထုတ်ပြခဲ့ပါတယ်၊ ရံဖန်ရံခါ Selenaကိုင်ပီး 
-ဆေးထိုးတတ်ပါတယ်၊ hero pools ကျယ်ပြီး လက်ရှိ Mythic မှာပါ၊ 
-နောက် season မှာတော့ Gloryတက်ဖို့ စိတ်ကူးထားတဲ့သူပါ။
-
-ကိုယ့် lane ကို အကောင်းဆုံးထိန်းနိုင်ပြီး
-Battleမှာ enemy marksmanကို targetထားပြီး ဒဲ့ဝင်ကြုံးတာကတော့
-SHIKAရဲ့ အထာပေါ့၊ Trio Training ကာလမှာ 
-X Borg, Tharmuz တို့ကို 
-ထပ်မံ trainထားပါသေးတယ်၊ လိုအပ်ရင် လိုအပ်သလို တခြား role တွေကိုလဲ
-ဆော့ပေးနိုင်ပါတယ်၊ full party မကစားရသေးပေမယ့် Squad power မြှင့်တင်ပေးဖို့အတွက် အခုကတည်းက တာဆူနေသောသူ ဖြစ်ပါတယ်။
-
-Assassin metaဖြစ်တဲ့အလျောက် fighterတွေဟာ tank/support လို ဆော့ရတဲ့ အချိန်မှာ multiple role ပိုင်နိုင်တဲ့
-SHIKA လို playerတစ်ယောက် ရရှိတာဟာ Squad အတွက် အားတက်စရာပဲဖြစ်ပါတယ်။
-
-</p>
-<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br>
-
-<div id="eric" class="person4 perper" align="center">
-<img class="profileimgmini3" src="eric.jpg" width="200"
-height="200"> <br>
-<h2>E R I C</h2>
-<h4>Marksman Player</h4>
-<a class="fbpage" href="https://web.facebook.com/minthwin.khant666"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Min Thwin Khant</h5></a>
-<p class="para4">သူကတော့ E R I C ဖြစ်ပါတယ်ခင်ဗျ။
-
-BG က တရုတ်ကြီးတော့ မဟုတ်ပါဘူး၊ ကျွန်တော်တို့ Squad ရဲ့ တရုတ်ကြီးပါ။
-Marksman role ကို အဓိကထားဆော့ပြီး
-လက်ရှိ Meta heroတွေနဲ့ မဆော့ပဲ Old heroတွေဖြစ်တဲ့ Clint, Hanabiနဲ့ အသင်းကို အကောင်းဆုံး carryပေးနေတာပဲဖြစ်ပါတယ်။ Granger pro
- Ko Bain ရှိခဲ့စဉ်အခါက Leomord, Alucard, Chouတို့ ကိုင်ပြီး
-Offlane role ဆော့ပေးခဲ့ပါသေးတယ်။
-
-hero pools ကတော့ သူ့အတွက်အများကြီးလိုသေးပေမယ့်လဲ 
-Leaderရဲ့ တောင်းဆိုမှုအရ Claudeနဲ့ Kimmyကို grandmaster accountမှာ trainနေရင်းနဲ့ legendရောက်သွားခဲ့ပါသေးတယ်။
-
-Early ပိုင်းမှာ သွေးအေးတတ်ပြီး
-late gameမှာ Savageကတော့ သူ့အတွက်ပါပဲ။
-တစ်ခါတစ်ရံ Savageဖြတ်လုခံရရင်တော့ တစ်ဖက် tower ထဲ ပြေးပြေးဝင်တတ်တဲ့ ကစားသမားပါ။
-
-Mlကို အပျော်ဆော့တဲ့ E R I C ဟာ accountပေါင်းများစွာရှိ‌ခဲ့ပါသေးတယ်၊ 
-မှတ်မိသလောက်ကတော့ koopl, lord bully, Dr.acula, May be Hope တို့ပဲဖြစ်ပါတယ်၊ ဒါပေမယ့်လဲ LOL Squadထဲရောက်မှ Mythic ရောက်ဖူးသူပါခင်ဗျ။
-
-</p>
-<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br>
-
-<div id="legolas" class="person5 perper" align="center">
-<img class="profileimgmini4" src="swh.jpg" width="200"
-height="200"> <br>
-<h2>Legolas</h2>
-<h4>Mage Player</h4>
-<a class="fbpage" href="https://web.facebook.com/ohsoewinhtun/"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Soe Win Htun</h5></a>
-<p class="para5">
-Mid-laner မကောင်းရင် ပွဲရှုံးဖို့က 65%ကျော် သေချာသလောက်ရှိနေပါပြီ၊ ဒီပြဿနာကို
-ဖြေရှင်းဖို့အတွက် Legolas ရှိပါတယ်။
-
-Legolas ပါရင် Marksman က free farming
-ပါပဲ၊အပေါ်အောက်တင်မက jungle တွေထဲပါ roam တတ်တဲ့ mid-laner တစ်ယောက်ကတော့ Legolasပဲ ဖြစ်ပါတယ်။
-
-Mage role မှာ အစုံကိုင်တတ်သူဖြစ်ပြီးတော့၊ 1-3-1 (hyper) အတွက် pure mage တွေကို Supportလို ဆော့တတ်တဲ့
-Playerတစ်ယောက်လဲဖြစ်ပါတယ်၊  
-1-2-2 အတွက်လဲ Chang'e, Pharsa, lunox, Lylia, Harley စသဖြင့် ကိုင်လေ့ရှိပါတယ်၊
-
-Squadမရောက်ခင် (Epic) မှာ ကျင်လည်ခဲ့စဉ်ကတည်းက Odette နဲ့ savage ခဏခဏယူခဲ့သူပါ၊ Coverပေးရင် ပေးသလောက် performance ထွက်တဲ့သူလဲဖြစ်ပါတယ်။ Memberတွေနဲ့ training တော့ မလုပ်ရသေးပေမယ့်လဲ solo lifeမှာတင် experience ကောင်းကောင်းရရှိထားသူဖြစ်တဲ့အတွက်
-Full partyမှာ အဆင်ပြေမယ့်သူဖြစ်ပါတယ်။
-
-</p>
-<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br>
-
-<div id="appleshampoo" class="person6 perper" align="center">
-<img class="profileimgmini5" src="appleshampoo.jpg" width="200"
-height="200"> <br>
-<h2>AppleShampoo</h2>
-<h4>Assassin Player</h4>
-<a class="fbpage" href="https://web.facebook.com/profile.php?id=100012108916305"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Aung Thurein Htun</h5></a>
-<p class="para6">သူကတော့
-AppleShampooပဲ ဖြစ်ပါတယ်။
-
-Assassin playerဖြစ်ပြီး သူ့ရဲ့ favorite heroကတော့ Hayabusa ပါ။
-ဘယ်လောက်ထိ Hayabusa ကို proကျသလဲဆိုရင်တော့ counter hero (Helcurt) ကိုတောင် By one တွေ ခဏခဏမေးတတ်တဲ့ထိပါခင်ဗျ။
-
-Earlyသာရင်တော့ သူ့အတွက် mage/marksmanတွေက သားကောင်လေးတွေလိုပါပဲ၊ Early မသာပြန်ရင်လဲ lane creep အကောင်းဆုံးရှင်းပေးပြီး laneသာအောင်လုပ်ပေးနိုင်သလို၊အရေးကြီးတဲ့ Tower လဲ push နိုင်ပါတယ်ခင်ဗျ၊ 
-တစ်ခါကတော့ Tower ခိုးချိုးရင်း
-Baseမှာဝိုင်းဖြုတ်ခံလိုက်ရတာ‌တော့
-အမှတ်တရ Defeat ပေါ့။
-ဒါပေမယ့်လဲ ရှုံးလဲအတူတူ၊နိုင်လဲအတူတူပါပဲခင်ဗျာ။
- 
-တစ်ခါတစ်ရံ squadလိုအပ်ချက်အရ Aurora ကို Support ဆော့ပေးပါတယ်၊
-ဘာကိုင်ကိုင်သူ့မျက်လုံးထဲမြင်တာကတော့
-Enemy marksmanပါ။
-
-AppleShampooပါရင် enemy marksmanတွေ ဖင်တုန်အောင်ကြောက်နေရတာ Map hack လို့ပြောခံရတဲ့ထိပါပဲ။
-
-Ulti ခဏခဏလွဲပစ်တတ်တာတော့ သူ့အားနည်းချက်ပါ၊
-PUBGလဲပစ်တတ်ပါတယ်၊ Mlbbမှာတော့ Haya pro ပေါ့။
-</p>
-<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br>
-
-<div id="kobain" class="person7 perper" align="center">
-<img class="profileimgmini6" src="kobain.jpg" width="200"
-height="200"> <br>
-<h2>Ko Bain</h2>
-<h4>Support Player</h4>
-<a class="fbpage" href="https://web.facebook.com/kyaw.htake.92"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Kyaw Htake Tin Maung</h5></a>
-<p class="para7"></p>
-<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br>
-
-<div id="anoe" class="person8 perper" align="center">
-<img class="profileimgmini7" src="https://i.pinimg.com/originals/af/8d/63/af8d63a477078732b79ff9d9fc60873f.jpg" width="200"
-height="200"> <br>
-<h2>အေနိုး</h2>
-<h4>Manager/Coach</h4>
-<a class="fbpage" href="https://web.facebook.com/komaeda.nagito.3"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="25"><h5 style="color: black;">Sann Linn</h5></a>
-<p class="para8"></p>
-<a class="toplink"href="#mainnames">Go Top ☝️😍</a>
-</div><br>
-<div class="thisbox perper">
-
-		<div>
-			<h1 align="center">News</h1>
-			<br>
-	<div class="container"> <!--  container start -->
-		<div class="tabbtn">
-			<button onclick="showPanel(0,'rgba(0,0,0,0.8)','#bbb')">NMA</button>
-			<button onclick="showPanel(1,'skyblue','red')">PUBG</button>
-			<button onclick="showPanel(2,'lightgreen','')">PES20</button>
-			<button onclick="showPanel(3,'sandybrown','purple')">COC</button>
-		</div>
-
-		<div class="tabcontentbox tabno">
-		<div class="tabcontent">
-			<h3 align="center">Nyein Myat Thu</h3>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</div>
-		<div class="tabcontent">
-			<h3 align="center">PUBG</h3>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</div>
-		<div class="tabcontent">
-			<h3 align="center">PES - 2020</h3>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</div>
-		<div class="tabcontent">
-			<h3 align="center">Clash of Clans</h3>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</div>
+<!-- <div class="resolution">
+	This is only for smart phones.
+</div> -->
+<div class="intronav">
+<div class="intromain" align="center">
+	<div class="tiptitle"><img src="https://travellersdobby.com/images/icon/tips.png" width="30" height="30">Tips</div>
+	<button class="tipbtn" onclick="tipcloseclick()">I Got it!</button>
+	<div class="tip3">
+		<div><img src="https://www.clipartmax.com/png/full/248-2485394_menu-icon-png-red.png" width="30" height="30">"Menu" for more options</div>
+		<div><img src="https://pngimage.net/wp-content/uploads/2018/06/red-home-icon-png-3.png" width="30" height="30">"Home" to quit instantly</div>
+		<div><img src="https://www.cocsit.org.in/assets/back_cri.png" width="35" height="35">"Back" to step back</div>
 	</div>
-		</div> <!--  container end -->
-		<div align="center"><br><button id="closebtn" onclick="removeall()">close</button></div>
-	<br></div></div>
-<a class="fbpagemain" href="https://www.facebook.com/lolmandalay/"><img src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19751.png" width="30" height="30"><h5>LAYER OF LEGENDS - LԾL</h5></a>
-
-<div class="table_div table_shitshit">
-<table id="sidebar_tool">
-	<tr>
-		<td class="tool_label"><img src="https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/moon_dark_mode_night-2-512.png" width="30" height="30">Dark mode</td>
-		<td><input type="checkbox" name="" id="darkmode1" onclick="darkworld()"></td>
-	</tr>
-	<tr>
-		<td class="tool_label"><img src="https://www.pngarts.com/files/3/Letter-T-PNG-Download-Image.png" width="30" height="30">Change text color</td>
-			<td><input type="checkbox" name="" id="textchange" onclick="txtfun()"></td>
-	</tr>
-</table></div>
-<div class="mainoption">
-<div class="option_float colorss" onclick="clickfloat()">
-	<div></div>
-	<div></div>
-	<div></div>
 </div>
 </div>
+<div class="themesetting">
+	<div class="theme">
+		<div class="themebtn">
+		<button class="cancelbtn" onclick="cancelclick()">Default</button>
+		<button class="savebtn" onclick="saveclick()">Save</button>
+	</div><br>
 
 
+	<div class="fontsizest" align="center">
+		<h3>Font Size</h3>
+		<div class="themepart">
+		<img src="https://a4k2d2q5.rocketcdn.me/wp-content/uploads/2016/12/1-103.png" width="30" height="30">
+		<input type="range" onmouseup="icrangemouseup()" oninput="fsrange()" class="fs" name="" value="12" min="7" max="25">
+		<span class="fslabel" style="font-size: 20px;">12</span>
+	</div>
+	</div><br>
 
+	<div class="iconsizest" align="center">
+		<h3>Icon Size</h3>
+		<div class="themepart">
+		<img src="https://icons-for-free.com/iconfiles/png/512/ruler+icon-1320144734007708556.png" width="30" height="30">
+		<input type="range" onmouseup="icrangemouseup()" oninput="icrange()" class="ics" name="" value="73" min="5" max="200">
+		<span class="islabel" style="font-size: 20px;">73</span>
+	</div>
+	</div><br>
 
+	<div class="fontcolorst" align="center">
+		<h3>Font Color</h3>
+		<div class="themepart">
+		<img src="https://icon-library.com/images/font-color-icon/font-color-icon-11.jpg" width="30" height="30">
+		<input style="background-color: black" type="radio" value="black" class="fcolor" name="fcolor">
+		<input style="background-color: indigo" type="radio" value="indigo" class="fcolor" name="fcolor">
+		<input style="background-color: red" type="radio" value="red" class="fcolor" name="fcolor">
+		<input style="background-color: orange" type="radio" value="orange" class="fcolor" name="fcolor">
+		<input style="background-color: yellow" type="radio" value="yellow" class="fcolor" name="fcolor">
+		<input style="background-color: green" type="radio" value="green" class="fcolor" name="fcolor">
+		<input style="background-color: blue" type="radio" value="blue" class="fcolor" name="fcolor">
+		<input style="background-color: white" type="radio" value="white" class="fcolor" name="fcolor">
+	</div>
+	</div><br>
 
+	<div class="bgcolorst" align="center">
+		<h3>Background Color</h3>
+		<div class="themepart">
+		<img src="https://icon-library.com/images/color-icon/color-icon-9.jpg" width="30" height="30">
+		<input style="background-color: black" type="radio" value="black" class="bcolor" name="wallpaper">
+		<input style="background-color: indigo" type="radio" value="indigo" class="bcolor" name="wallpaper">
+		<input style="background-color: red" type="radio" value="red" class="bcolor" name="wallpaper">
+		<input style="background-color: orange" type="radio" value="orange" class="bcolor" name="wallpaper">
+		<input style="background-color: yellow" type="radio" value="yellow" class="bcolor" name="wallpaper">
+		<input style="background-color: green" type="radio" value="green" class="bcolor" name="wallpaper">
+		<input style="background-color: blue" type="radio" value="blue" class="bcolor" name="wallpaper">
+		<input style="background-color: violet" type="radio" value="violet" class="bcolor" name="wallpaper">
+	</div>
+	</div><br>
 
+	<div class="wallpaperst" align="center">
+		<h3>Wallpaper</h3>
+		<div class="themepart">
+		<input style="background-image: url(https://c4.wallpaperflare.com/wallpaper/246/739/689/digital-digital-art-artwork-illustration-abstract-hd-wallpaper-preview.jpg)" type="radio" value="https://c4.wallpaperflare.com/wallpaper/246/739/689/digital-digital-art-artwork-illustration-abstract-hd-wallpaper-preview.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-thumb.jpg)" type="radio" value="https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-thumb.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://i.pinimg.com/originals/f8/b6/9e/f8b69e6156999b84137f3f0a23701b75.jpg)" type="radio" value="https://i.pinimg.com/originals/f8/b6/9e/f8b69e6156999b84137f3f0a23701b75.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2015/05/09/682730/2ddcd218f46130ff0a7a596d5fc18512-700.jpg)" type="radio" value="https://www.wallpaperup.com/uploads/wallpapers/2015/05/09/682730/2ddcd218f46130ff0a7a596d5fc18512-700.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://static.techspot.com/images2/trivia/bigimage/2017/2017-03-19-image-46.jpg)" type="radio" value="https://static.techspot.com/images2/trivia/bigimage/2017/2017-03-19-image-46.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://addons-media.operacdn.com/media/CACHE/images/themes/45/25945/1.1-rev2/images/d8a15c32-5b9c-47d4-b6c9-2b1e1c4473ab/c566880c8bac652c7a3d8eb041c9f437.jpg)" type="radio" value="https://addons-media.operacdn.com/media/CACHE/images/themes/45/25945/1.1-rev2/images/d8a15c32-5b9c-47d4-b6c9-2b1e1c4473ab/c566880c8bac652c7a3d8eb041c9f437.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://cdn.statically.io/img/www.itl.cat/pngfile/big/236-2366806_minimalistic-landscape-wallpaper-1080p.jpg)" type="radio" value="https://cdn.statically.io/img/www.itl.cat/pngfile/big/236-2366806_minimalistic-landscape-wallpaper-1080p.jpg" class="wallpaper" name="wallpaper">
+		<input style="background-image: url(https://wallpaperaccess.com/full/557178.jpg)" type="radio" value="https://wallpaperaccess.com/full/557178.jpg" class="wallpaper" name="wallpaper">
+	</div>
+	</div>
+	</div>
+</div>
 
-
+<div class="browser">
+	<div align="center" class="browsercomponent">
+		<input type="text" spellcheck="false" class="webtxtbox" name="" placeholder="Search or type web address">
+		<button class="webbtn" onclick="gowebsite()">GO</button>
+	</div>
+</div>
 
 
 <script type="text/javascript">
-	const line1 = document.querySelector(".line1");
-const line2 = document.querySelector(".line2");
-const line3 = document.querySelector(".line3");
-const burger = document.getElementsByClassName("burger")[0];
-const linkblah = document.querySelector(".link_container");
-let menuopen = false;
-
-const clickfun = () =>{
-	
-	if(!menuopen){
-		line2.style.opacity = "0";
-		line1.classList.add("line1tran");
-		line3.classList.add("line2tran");
-		linkblah.classList.toggle("linksave");
-		menuopen = true;
-	}
-	else{
-		line2.style.opacity = "1";
-		line1.classList.remove("line1tran");
-		line3.classList.remove("line2tran");
-		linkblah.classList.toggle("linksave");
-		menuopen = false;
-	}	
+	const applist= [
+{
+	app : "Register",
+	url : "register2.html",
+	icon : "register.png"
+},
+{
+	app : "Calculator",
+	url : "calculator.html",
+	icon : "https://images-na.ssl-images-amazon.com/images/I/317xoVSJ0UL.png"
+},
+{
+	app : "ColorCode",
+	url : "resistorcode.html.html",
+	icon : "https://image.flaticon.com/icons/svg/1276/1276892.svg"
+},
+{
+	app : "Gallery",
+	url : "gallery.html",
+	icon : "https://purepng.com/public/uploads/medium/purepng.com-gallery-icon-galaxy-s6symbolsiconssamsungapp-iconsgalaxy-s6-icons-7215225974594jqmb.png"
+},
+{
+	app : "Movie",
+	url : "video.html",
+	icon : "https://icons-for-free.com/iconfiles/png/512/movie+play+video+icon-1320168052202641080.png"
+},
+{
+	app : "Dictionary",
+	url : "dictionary.html",
+	icon : "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/c8fcab6d-bfd2-464b-895c-b0731ff3ee9e/ddew09c-c2391277-0f26-454b-ba85-03ee53205bca.png"
+},
+{
+	app : "Terminal",
+	url : "https://google.com",
+	icon : "https://cdn0.iconfinder.com/data/icons/octicons/1024/terminal-512.png"
+},
+{
+	app : "file manager",
+	url : "https://google.com",
+	icon : "https://data.apksum.com/af/com.creation.retrofilemanager/2.3/icon.png"
+},
+{
+	app : "Todo",
+	url : "todo.html",
+	icon : "https://i-cdn.phonearena.com/images/article/104012-image/Microsofts-To-Do-app-updated-as-they-phase-out-Wunderlist.jpg"
+},
+{
+	app : "Chrome",
+	url : "https://google.com",
+	icon : "https://cdn1.iconfinder.com/data/icons/logotypes/32/chrome-512.png"
+},
+{
+	app : "Setting",
+	url : "https://myintkokooo.github.io/setting.html",
+	icon : "https://cdn.pixabay.com/photo/2012/05/04/10/57/gear-47203_1280.png"
+},
+{
+	app : "Photo Editor",
+	url : "https://google.com",
+	icon : "https://icon-library.com/images/photo-editing-icon/photo-editing-icon-25.jpg"
+},
+{
+	app : "Store",
+	url : "https://myintkokooo.github.io/shop.html",
+	icon : "https://i.pinimg.com/originals/27/bb/a2/27bba208a1f0a54544aed6a66e5e3331.png"
+},
+{
+	app : "KN3H",
+	url : "https://khaingnini.github.io",
+	icon : "https://serving.photos.photobox.com/99336755ee8f1dcaa8806c8a5ad1d91b4c8658aa353009793fb233ff0d3c130ef0a26058.jpg"
+},
+{
+	app : "Music",
+	url : "music.html",
+	icon : "https://cdn0.iconfinder.com/data/icons/internet-2020/1080/Applemusicandroid-512.png"
+},
+{
+	app : "Keyboard",
+	url : "https://myintkokooo.github.io/keyboard.html",
+	icon : "https://cdn.iconscout.com/icon/free/png-256/keyboard-1356362-1235306.png"
+},
+{
+	app : "MLBB Guide",
+	url : "https://google.com",
+	icon : "https://img5.apk.tools/img/jTneWG8Wpur7RsDfnoJxH_jZTA622H8At3KH5JUsoJ1DCo-DvRUQuVgOVYDPvDrft_Rx=s300"
+},
+{
+	app : "Contact",
+	url : "https://google.com",
+	icon : "https://cdn.iconscout.com/icon/free/png-256/contacts-47-461709.png"
+},
+{
+	app : "Messages",
+	url : "messenger.html.html",
+	icon : "https://1001freedownloads.s3.amazonaws.com/icon/thumb/325153/Message-icon.png"
+},
+{
+	app : "Zone",
+	url : "https://google.com",
+	icon : "https://cdn4.iconfinder.com/data/icons/basic-ui-element-2-3-filled-outline/512/Basic_UI_Elements_-_2.3_-_Filled_Outline_-_44-32-512.png"
+},
+{
+	app : "MANUTD",
+	url : "manutd.html",
+	icon : "https://cdn.iconscout.com/icon/free/png-512/manchester-united-569431.png"
+},
+{
+	app : "Themes",
+	url : "https://google.com",
+	icon : "https://imge.apk.tools/img/VlYh60Hdwdnq4nhbjczxwhqrDpGKxucK4O4URVre4VvLxOasOWIkrdq0wQGv_73kqrU=s300"
+},
+{
+	app : "Link Budget",
+	url : "Linkbudget.html",
+	icon : "https://cdn0.iconfinder.com/data/icons/social-media-2219/50/19-512.png"
+},
+{
+	app : "Inventory",
+	url : "https://myintkokooo.github.io/desktop.html",
+	icon : "https://cdn4.iconfinder.com/data/icons/business-cost-2/64/stock-shelves-cargo-inventory-store-512.png"
 }
-burger.addEventListener("click",clickfun);
+];
 
+const ics = document.getElementsByClassName("ics")[0];
+const islabel = document.getElementsByClassName("islabel")[0];
+const firstpage = document.getElementById("firstpage");
+const navibtn = document.querySelectorAll(".navibar button");
+const frameconsole = document.getElementsByClassName("frameconsole")[0];
+const confirmmain = document.getElementsByClassName("confirmmain")[0];
+const yes = document.getElementsByClassName("yes")[0];
+const no = document.getElementsByClassName("no")[0];
+const intronav = document.getElementsByClassName("intronav")[0];
+const themesetting = document.getElementsByClassName("themesetting")[0];
+const fs = document.getElementsByClassName("fs")[0];
+const fslabel = document.getElementsByClassName("fslabel")[0];
+const warninglabel = document.getElementsByClassName("warninglabel")[0];
+const fcolor = document.querySelectorAll(".fcolor");
+const bcolor = document.querySelectorAll(".bcolor");
+const body = document.getElementsByTagName("body")[0];
+const wallpaper = document.querySelectorAll(".wallpaper");
+const browser = document.getElementsByClassName("browser")[0];
 
-
-const para1 = document.getElementsByClassName("para1")[0];
-const para2 = document.getElementsByClassName("para2")[0];
-const para3 = document.getElementsByClassName("para3")[0];
-const para4 = document.getElementsByClassName("para4")[0];
-const para5 = document.getElementsByClassName("para5")[0];
-const para6 = document.getElementsByClassName("para6")[0];
-const para7 = document.getElementsByClassName("para7")[0];
-const para8 = document.getElementsByClassName("para8")[0];
-const profileimg = document.getElementsByClassName("profileimg")[0];
-const profileimgmini1 = document.getElementsByClassName("profileimgmini1")[0];
-const profileimgmini2 = document.getElementsByClassName("profileimgmini2")[0];
-const profileimgmini3 = document.getElementsByClassName("profileimgmini3")[0];
-const profileimgmini4 = document.getElementsByClassName("profileimgmini4")[0];
-const profileimgmini5 = document.getElementsByClassName("profileimgmini5")[0];
-const profileimgmini6 = document.getElementsByClassName("profileimgmini6")[0];
-const profileimgmini7 = document.getElementsByClassName("profileimgmini7")[0];
-
-
-
-
-const shit1 = () =>{
-	profileimg.style.transition = "0.5s";
-
-	profileimgmini1.classList.remove("imgfix");
-	profileimgmini2.classList.remove("imgfix");
-	profileimgmini3.classList.remove("imgfix");
-	profileimgmini4.classList.remove("imgfix");
-	profileimgmini5.classList.remove("imgfix");
-	profileimgmini6.classList.remove("imgfix");
-	profileimgmini7.classList.remove("imgfix");
-
-		profileimg.classList.toggle("imgfix");
-		para1.classList.toggle("sizefix");
-
-
-	para2.classList.remove("sizefix");
-	para3.classList.remove("sizefix");
-	para4.classList.remove("sizefix");
-	para5.classList.remove("sizefix");
-	para6.classList.remove("sizefix");
-	para7.classList.remove("sizefix");
-	para8.classList.remove("sizefix");
+const noclick = () =>{
+	confirmmain.classList.remove("boxappear");
 }
-
-
-const shit2 = () =>{
-	profileimgmini1.style.transition = "0.5s";
-
-	
-		profileimgmini1.classList.toggle("imgfix");
-		para2.classList.toggle("sizefix");
-	
-
-	profileimg.classList.remove("imgfix");
-
-	profileimgmini2.classList.remove("imgfix");
-	profileimgmini3.classList.remove("imgfix");
-	profileimgmini4.classList.remove("imgfix");
-	profileimgmini5.classList.remove("imgfix");
-	profileimgmini6.classList.remove("imgfix");
-	profileimgmini7.classList.remove("imgfix");
-	para1.classList.remove("sizefix");
-	para3.classList.remove("sizefix");
-	para4.classList.remove("sizefix");
-	para5.classList.remove("sizefix");
-	para6.classList.remove("sizefix");
-	para7.classList.remove("sizefix");
-	para8.classList.remove("sizefix");
-}
-
-
-const shit3 = () =>{
-	profileimgmini2.style.transition = "0.5s";
-
-	
-
-		profileimgmini2.classList.toggle("imgfix");
-		para3.classList.toggle("sizefix");
-	
-
-
-	profileimg.classList.remove("imgfix");
-	profileimgmini1.classList.remove("imgfix");
-	profileimgmini3.classList.remove("imgfix");
-	profileimgmini4.classList.remove("imgfix");
-	profileimgmini5.classList.remove("imgfix");
-	profileimgmini6.classList.remove("imgfix");
-	profileimgmini7.classList.remove("imgfix");
-	para1.classList.remove("sizefix");
-	para2.classList.remove("sizefix");
-	para4.classList.remove("sizefix");
-	para5.classList.remove("sizefix");
-	para6.classList.remove("sizefix");
-	para7.classList.remove("sizefix");
-	para8.classList.remove("sizefix");
-}
-
-
-const shit4 = () =>{
-	profileimgmini3.style.transition = "0.5s";
-
-	
-
-		profileimgmini3.classList.toggle("imgfix");
-		para4.classList.toggle("sizefix");
-		
-
-
-	profileimg.classList.remove("imgfix");
-	profileimgmini1.classList.remove("imgfix");
-	profileimgmini2.classList.remove("imgfix");
-	profileimgmini4.classList.remove("imgfix");
-	profileimgmini5.classList.remove("imgfix");
-	profileimgmini6.classList.remove("imgfix");
-	profileimgmini7.classList.remove("imgfix");
-	para1.classList.remove("sizefix");
-	para2.classList.remove("sizefix");
-	para3.classList.remove("sizefix");
-	para5.classList.remove("sizefix");
-	para6.classList.remove("sizefix");
-	para7.classList.remove("sizefix");
-	para8.classList.remove("sizefix");
-
-}
-
-
-const shit5 = () =>{
-	profileimgmini4.style.transition = "0.5s";
-
-	
-
-		profileimgmini4.classList.toggle("imgfix");
-		para5.classList.toggle("sizefix");
-		
-
-	
-	profileimg.classList.remove("imgfix");
-	profileimgmini1.classList.remove("imgfix");
-	profileimgmini2.classList.remove("imgfix");
-	profileimgmini3.classList.remove("imgfix");
-	profileimgmini5.classList.remove("imgfix");
-	profileimgmini6.classList.remove("imgfix");
-	profileimgmini7.classList.remove("imgfix");
-	para1.classList.remove("sizefix");
-	para2.classList.remove("sizefix");
-	para3.classList.remove("sizefix");
-	para4.classList.remove("sizefix");
-	para6.classList.remove("sizefix");
-	para7.classList.remove("sizefix");
-	para8.classList.remove("sizefix");
-}
-
-
-const shit6 = () =>{
-	profileimgmini5.style.transition = "0.5s";
-
-	
-	
-		profileimgmini5.classList.toggle("imgfix");
-		para6.classList.toggle("sizefix");
-		
-
-
-	profileimg.classList.remove("imgfix");
-	profileimgmini1.classList.remove("imgfix");
-	profileimgmini2.classList.remove("imgfix");
-	profileimgmini3.classList.remove("imgfix");
-	profileimgmini4.classList.remove("imgfix");
-	profileimgmini6.classList.remove("imgfix");
-	profileimgmini7.classList.remove("imgfix");
-	para1.classList.remove("sizefix");
-	para2.classList.remove("sizefix");
-	para3.classList.remove("sizefix");
-	para5.classList.remove("sizefix");
-	para4.classList.remove("sizefix");
-	para7.classList.remove("sizefix");
-	para8.classList.remove("sizefix");
-
-}
-
-
-const shit7 = () =>{
-	profileimgmini6.style.transition = "0.5s";
-
-	
-
-		profileimgmini6.classList.toggle("imgfix");
-		para7.classList.toggle("sizefix");
-	
-
-
-	profileimg.classList.remove("imgfix");
-	profileimgmini1.classList.remove("imgfix");
-	profileimgmini2.classList.remove("imgfix");
-	profileimgmini3.classList.remove("imgfix");
-	profileimgmini4.classList.remove("imgfix");
-	profileimgmini5.classList.remove("imgfix");
-	profileimgmini7.classList.remove("imgfix");
-	para1.classList.remove("sizefix");
-	para2.classList.remove("sizefix");
-	para3.classList.remove("sizefix");
-	para5.classList.remove("sizefix");
-	para4.classList.remove("sizefix");
-	para6.classList.remove("sizefix");
-		para8.classList.remove("sizefix");
-}
-
-
-const shit8 = () =>{
-	profileimgmini7.style.transition = "0.5s";
-
-	
-
-		profileimgmini7.classList.toggle("imgfix");
-		para8.classList.toggle("sizefix");
-		
-
-	
-	profileimg.classList.remove("imgfix");
-	profileimgmini1.classList.remove("imgfix");
-	profileimgmini2.classList.remove("imgfix");
-	profileimgmini3.classList.remove("imgfix");
-	profileimgmini4.classList.remove("imgfix");
-	profileimgmini5.classList.remove("imgfix");
-	profileimgmini6.classList.remove("imgfix");
-	para1.classList.remove("sizefix");
-	para2.classList.remove("sizefix");
-	para3.classList.remove("sizefix");
-	para5.classList.remove("sizefix");
-	para4.classList.remove("sizefix");
-	para6.classList.remove("sizefix");
-		para7.classList.remove("sizefix");
-}
-
-
-profileimg.addEventListener("click",shit1);
-profileimgmini1.addEventListener("click",shit2);
-profileimgmini2.addEventListener("click",shit3);
-profileimgmini3.addEventListener("click",shit4);
-profileimgmini4.addEventListener("click",shit5);
-profileimgmini5.addEventListener("click",shit6);
-profileimgmini6.addEventListener("click",shit7);
-profileimgmini7.addEventListener("click",shit8);
-
-const askswitch = document.getElementById("askswitch");
-const bgname = document.getElementsByClassName("bgname")[0];
-const switch1 = document.getElementsByClassName("switch1")[0];
-const bodyhate = document.getElementById("bodyhate");
-const ask = () =>{
-if(askswitch.checked == true){
-	bgname.classList.toggle("bgsize");
-	switch1.style.backgroundColor = "#ddd";
-	switch1.style.color = "black";
+const yesclick = () =>{
+	saveclick();
+	confirmmain.classList.remove("boxappear");
+	browser.classList.remove("browserappear");
+	frameconsole.classList.remove("appear");
 	setTimeout(()=>{
-		bgname.classList.remove("bgsize");
-		askswitch.checked = false;
-		switch1.style.backgroundColor = "darkcyan";
-		switch1.style.color = "white";
-	},7000);
-}
-else{
-	bgname.classList.remove("bgsize");
-	switch1.style.backgroundColor = "darkcyan";
-	switch1.style.color = "white";
-}
-}
-const person = document.getElementsByClassName("person")[0];
-const person2 = document.getElementsByClassName("person2")[0];
-const person3 = document.getElementsByClassName("person3")[0];
-const person4 = document.getElementsByClassName("person4")[0];
-const person5 = document.getElementsByClassName("person5")[0];
-const person6 = document.getElementsByClassName("person6")[0];
-const person7 = document.getElementsByClassName("person7")[0];
-const person8 = document.getElementsByClassName("person8")[0];
-const tablediv = document.getElementsByClassName("table_div")[0];
-const optionfloat = document.getElementsByClassName("option_float")[0];
-const thisbox = document.getElementsByClassName("thisbox")[0];
-const clickfloat = () =>{
-	tablediv.classList.toggle("mainoptionap");
-	tablediv.classList.toggle("table_shitshit");
-	optionfloat.classList.toggle("option_floatshit");
-	optionfloat.classList.toggle("colorss");
-}
-const darkbtn = document.getElementById("darkmode1");
-const darkworld = () =>{
-	if(darkbtn.checked === true){
-		textchange.checked = true;
-		thisbox.classList.toggle("darker");
-		thisbox.classList.toggle("perper");
-                
-		person.classList.toggle("darker");
-		person.classList.toggle("perper");
-
-		person2.classList.toggle("darker");
-		person2.classList.toggle("perper");
-		
-		person3.classList.toggle("darker");
-		person3.classList.toggle("perper");
-		
-		person4.classList.toggle("darker");
-		person4.classList.toggle("perper");
-		
-		person5.classList.toggle("darker");
-		person5.classList.toggle("perper");
-		
-		person6.classList.toggle("darker");
-		person6.classList.toggle("perper");
-		
-		person7.classList.toggle("darker");
-		person7.classList.toggle("perper");
-		
-		person8.classList.toggle("darker");
-		person8.classList.toggle("perper");
-		
-		bodyhate.classList.toggle("bgdark");
-	}
-	else{
-        textchange.checked = false;
-
-        thisbox.classList.toggle("darker");
-		thisbox.classList.toggle("perper");
-
-		person.classList.toggle("darker");
-		person.classList.toggle("perper");
-
-		person2.classList.toggle("darker");
-		person2.classList.toggle("perper");
-		
-		person3.classList.toggle("darker");
-		person3.classList.toggle("perper");
-		
-		person4.classList.toggle("darker");
-		person4.classList.toggle("perper");
-		
-		person5.classList.toggle("darker");
-		person5.classList.toggle("perper");
-		
-		person6.classList.toggle("darker");
-		person6.classList.toggle("perper");
-		
-		person7.classList.toggle("darker");
-		person7.classList.toggle("perper");
-		
-		person8.classList.toggle("darker");
-		person8.classList.toggle("perper");
-		
-		bodyhate.classList.toggle("bgdark");
-
-	}
-	if(textchange.checked === true){
-               
-		bodyhate.classList.toggle("bobo");
-	}
-	else{
-		bodyhate.classList.toggle("bobo");
-	}
-}
-const textchange = document.getElementById("textchange");
-const txtfun = () =>{
+		yes.textContent = "NO";
+	},300);
+	setTimeout(()=>{
+			frameconsole.src = "";
+		},300);
 	
-	if(textchange.checked === true){
-        darkbtn.checked = true;
-		bodyhate.classList.toggle("bobo");
-	}
-	else{
-		darkbtn.checked = false;
-		bodyhate.classList.toggle("bobo");
-	}
-	if(darkbtn.checked === true){
-		thisbox.classList.toggle("darker");
-		thisbox.classList.toggle("perper");
-                
-		person.classList.toggle("darker");
-		person.classList.toggle("perper");
-
-		person2.classList.toggle("darker");
-		person2.classList.toggle("perper");
-		
-		person3.classList.toggle("darker");
-		person3.classList.toggle("perper");
-		
-		person4.classList.toggle("darker");
-		person4.classList.toggle("perper");
-		
-		person5.classList.toggle("darker");
-		person5.classList.toggle("perper");
-		
-		person6.classList.toggle("darker");
-		person6.classList.toggle("perper");
-		
-		person7.classList.toggle("darker");
-		person7.classList.toggle("perper");
-		
-		person8.classList.toggle("darker");
-		person8.classList.toggle("perper");
-		
-		bodyhate.classList.toggle("bgdark");
-	}
-	else{
-
-		thisbox.classList.toggle("darker");
-		thisbox.classList.toggle("perper");
-
-		person.classList.toggle("darker");
-		person.classList.toggle("perper");
-
-		person2.classList.toggle("darker");
-		person2.classList.toggle("perper");
-		
-		person3.classList.toggle("darker");
-		person3.classList.toggle("perper");
-		
-		person4.classList.toggle("darker");
-		person4.classList.toggle("perper");
-		
-		person5.classList.toggle("darker");
-		person5.classList.toggle("perper");
-		
-		person6.classList.toggle("darker");
-		person6.classList.toggle("perper");
-		
-		person7.classList.toggle("darker");
-		person7.classList.toggle("perper");
-		
-		person8.classList.toggle("darker");
-		person8.classList.toggle("perper");
-		
-		bodyhate.classList.toggle("bgdark");
-
-	}
 }
+yes.addEventListener("click",yesclick);
+no.addEventListener("click",noclick);
+
+applist.map((apps,i)=>{
+	firstpage.innerHTML +=
+	`
+	<div class='ic_pack'>
+	<div class='icondiv'><img class='icons' src='${applist[i].icon}'></div>
+	<div class='labeldiv'>${applist[i].app}</div>
+	</div>
+	`;
+})
+const homeclick = () =>{
+	navibtn[1].style.animation = "";
+	confirmmain.classList.remove("boxappear");
+	setTimeout(()=>{
+		navibtn[1].style.animation = "btnanimate .2s";
+	},50);
+		frameconsole.classList.remove("appear");
+                browser.classList.remove("browserappear");
+		setTimeout(()=>{
+			frameconsole.src = "";
+			yes.textContent = "NO";
+		},500);
+		saveclick();
+}
+const backclick = () =>{
+	navibtn[2].style.animation = "";
+	setTimeout(()=>{
+		navibtn[2].style.animation = "btnanimate .2s";
+	},50);
+	if(yes.textContent === "NO"){
+
+	}
+	else if(yes.textContent === "themesave"){
+		yes.textContent = "YES";
+		confirmmain.classList.toggle("boxappear");
+		warninglabel.textContent = "Changes will be saved!";
+	}
+	else if(yes.textContent === "webbox"){
+		yes.textContent = "YES";
+		confirmmain.classList.toggle("boxappear");
+	}
+	else{
+		confirmmain.classList.toggle("boxappear");
+	}
+	
+}
+
+
+
+const ic_pack = document.querySelectorAll(".ic_pack");
+const icondiv = document.querySelectorAll(".icondiv");
+
+const app_click = (index) =>{
+	warninglabel.textContent = "Are you sure to exit?";
+	if(applist[index].app === "Themes"){
+		themesetting.style.display = "block";
+		yes.textContent = "themesave";
+		setTimeout(()=>{
+			themesetting.classList.add("themeappear");
+		},100);	
+	}
+	else if(applist[index].app === "Chrome"){
+		browser.classList.add("browserappear");
+		yes.textContent = "webbox";
+	}
+	else{
+	frameconsole.classList.add("appear");
+	yes.textContent = "YES";
+	saveclick();
+	frameconsole.src= "loading.html";
+	setTimeout(()=>{
+		frameconsole.src=applist[index].url;
+	},1500);
+}//elseclose
+}//app_click()close
+ic_pack.forEach((node,i)=>{
+	node.setAttribute("onclick",`app_click(${i})`);
+});
+
+const menu_click = () =>{
+	navibtn[0].style.animation = "";
+	setTimeout(()=>{
+		navibtn[0].style.animation = "btnanimate .2s";
+	},50);
+}
+const tipcloseclick = () =>{
+	intronav.style.animation = "tipboxclose .5s ease forwards";
+	ic_pack.forEach((node)=>{
+		node.style.opacity = "1";
+                node.style.zIndex = "1";
+                node.style.visibility = "visible";
+	});
+}
+const fsrange = () =>{
+	fslabel.textContent = fs.value;
+	ic_pack.forEach((node)=>{
+		node.style.fontSize = fs.value+"px";
+	});
+	themesetting.style.backgroundColor = "rgba(0,0,0,0.9)";
+}
+const icrange = () =>{
+	islabel.textContent = ics.value;
+	icondiv.forEach((node)=>{
+		node.style.width = ics.value+"px";
+		node.style.height = ics.value+"px";
+	});
+	themesetting.style.backgroundColor = "rgba(0,0,0,0.9)";
+}
+const icrangemouseup = () =>{
+	themesetting.style.backgroundColor = "rgba(0,0,0,0.9)";
+}
+themesetting.style.backgroundColor = "rgba(0,0,0,0.9)";
+const saveclick = () =>{
+	themesetting.classList.remove("themeappear");
+	setTimeout(()=>{
+		themesetting.style.display = "none";
+	},500);
+}
+
+const cancelclick = () =>{
+	icondiv.forEach((node)=>{
+		node.style.width = "73px";
+		node.style.height = "73px";
+	});
+	ic_pack.forEach((node)=>{
+		node.style.fontSize = "12px";
+	});
+	themesetting.classList.remove("themeappear");
+	setTimeout(()=>{
+		themesetting.style.display = "none";
+	},500);
+	fs.value = "12";
+	ics.value = "83";
+	islabel.textContent = "83";
+	fslabel.textContent = "12";
+	ic_pack.forEach((node)=>{
+		node.style.color = "black";
+	});
+	body.style.backgroundImage = "url('https://papers.co/wallpaper/papers.co-af48-hi-i-am-bart-simpsons-minimal-cartoon-36-3840x2400-4k-wallpaper.jpg')";
+
+}
+
+
+const fcolorinput = (index) =>{
+	ic_pack.forEach((node)=>{
+		node.style.color = fcolor[index].value;
+	});
+}
+fcolor.forEach((node,i)=>{
+	node.setAttribute("oninput",`fcolorinput(${i})`)
+});
+
+
+
+const bcolorinput = (index) =>{
+		firstpage.style.backgroundImage = "none";
+		firstpage.style.backgroundColor = bcolor[index].value;
+}
+bcolor.forEach((node,i)=>{
+	node.setAttribute("oninput",`bcolorinput(${i})`)
+});
+const wallpaperinput = (index) =>{
+	firstpage.style.backgroundImage = "";
+	firstpage.style.backgroundColor = "";
+	firstpage.style.backgroundImage = `url('${wallpaper[index].value}')`;
+}
+wallpaper.forEach((node,i)=>{
+	node.setAttribute("oninput",`wallpaperinput(${i})`)
+});
+
+const webtxtbox = document.getElementsByClassName("webtxtbox")[0];
+
+const gowebsite = () =>{
+		window.location.assign(`https://www.google.com/search?q=${webtxtbox.value}`);	
+}
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
-<script type="text/javascript" src="colpanel.js"></script>
 </body>
 </html>
