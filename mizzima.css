@@ -146,7 +146,7 @@ body{
 	background-color: transparent;
 	cursor: pointer;
 }
-.marvelphotos:hover .piclabel,.actionphotos:hover .piclabel,.adventurephotos:hover .piclabel,.animationphotos:hover .piclabel,.marvelphotos_filter:hover .piclabel,.actionphotos_filter:hover .piclabel,.adventurephotos_filter:hover .piclabel,.animationphotos_filter:hover .piclabel{
+.marvelphotos:hover .piclabel,.actionphotos:hover .piclabel,.adventurephotos:hover .piclabel,.animationphotos:hover .piclabel,.marvelphotos_filter:hover .piclabel,.actionphotos_filter:hover .piclabel,.adventurephotos_filter:hover .piclabel,.animationphotos_filter:hover .piclabel, .resultMovie:hover .piclabel{
 	background-color: black;
 	color: white;
 }
@@ -156,7 +156,7 @@ body{
 	height: 100%;
 }
 .piclabel{
-	transition: .5s;
+	transition: .3s;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
