@@ -1,0 +1,332 @@
+*{
+	margin: 0;
+	padding: 0;
+}	
+body{
+	padding: 0;
+	margin: 0;
+	user-select: none;
+	background: darkblue;
+	overflow-x: hidden;
+}
+.container{
+	position: fixed;
+	top: 7.7vh;
+	width: 100%;
+	bottom: 0;
+	overflow: scroll;
+}
+.menu div{
+	width: 25px;
+	height: 4px;
+	background-color: darkblue;
+	margin: 4px;
+	transition: .5s;
+}
+.menu{
+	cursor: pointer;
+}
+.resultMovie{
+	display: inline-block;
+}
+.searchbar{
+	outline: none;
+	border: none;
+	background-color: navy;
+	color: white;
+	padding: 8px;
+	border-radius: 50%;
+	width: 0;
+	visibility: hidden;
+	padding-left: 27px;
+	transition: .4s;
+	font-family: 'Poppins', sans-serif;
+}
+.searchbar::placeholder{
+	color: #ddd;
+}
+.search{
+	position: relative;
+	background-color: navy;
+	border-radius: 50%;
+	transition: .5s;
+}
+.searchdivchange{
+	border-radius: 15px;
+}
+.menu:hover div{
+	background-color: blue;
+}
+.searchicon{
+	position: absolute;
+	padding-left: 3px;
+	top: 50%;
+	left: 4px;
+	transform: translate(0,-50%);
+	cursor: pointer;
+}
+.searchappear{
+	width: 200px;
+	border-radius: 15px;
+	padding-left: 35px;
+	background-color: navy;
+	visibility: visible;
+}
+
+.nav{
+	display: flex;
+	background-color: #ddd;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	height: 5vh;
+	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 555;
+
+}
+.label{
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(0);
+	transition: .5s;
+}
+.labeldisappear{
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-2em);
+}
+.label h3{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: 1px;
+	font-size: 24px;
+	color : navy;
+}
+.categorylabel,.resultvalue{
+	background: -webkit-linear-gradient(left,skyblue, blue);
+	color: black;
+	/*margin-top: 5px;*/
+	font-size: 20px;
+	padding: 10px;
+	margin-bottom: 5px;
+	font-family: 'Poppins', sans-serif;
+	align-items: center;
+	justify-content: space-between;
+}
+.categorylabel{
+	display: flex;
+}
+/*.resultvalue, .tablabel{
+	z-index: 1;
+	position: sticky;
+	top : 7.8vh;
+}*/
+.movie_title{
+	position: sticky;
+	top : 0;
+}
+.marvelphotos,.actionphotos,.adventurephotos,.animationphotos,.marvelphotos_filter,.actionphotos_filter,.adventurephotos_filter,.animationphotos_filter{
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	width: 120px;
+	height: 180px;
+	margin-left: 1px;
+	cursor: pointer;
+}
+.actionbtn,.adventurebtn,.animationbtn,.marvelbtn{
+	-webkit-appearance : none;
+	outline : none;
+	padding: 0;
+	margin: 0;
+	border : 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.picture{
+	width: 100%;
+	height: 100%;
+}
+.piclabel{
+	position: absolute;
+	bottom: 0;
+	background-color: black;
+	color: white;
+	width: 100%;
+	text-align: center;
+	font-size: 11px;
+	font-family: 'Poppins', sans-serif;
+}
+.marvel,.action,.adventure,.animation{
+	white-space: nowrap;
+	overflow: auto;
+	background-color: transparent;
+	padding-left: 5px;
+	transition: .5s;
+}
+.action::-webkit-scrollbar{
+	display: none;
+}
+.adventure::-webkit-scrollbar{
+	display: none;
+}
+.animation::-webkit-scrollbar{
+	display: none;
+}
+.marvel::-webkit-scrollbar{
+	display: none;
+}
+.resultView{
+	background : transparent;
+	display: none;
+	position: fixed;
+	width: 100%;
+	top:7.7vh;
+	overflow: scroll;
+	bottom: 0;
+}
+.resultMovie{
+	margin: 5px;
+	width: 100px;
+	height: 150px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+.menulist{
+	list-style-type: none;
+	background: -webkit-linear-gradient(blue, darkblue);
+	position: absolute;
+	top: 8.4vh;
+	width: 45%;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	transition: .5s;
+	visibility: hidden;
+	opacity: 0;
+	transform: translateX(-100%);
+}
+.menulist li{
+	background-color: transparent;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	cursor: pointer;
+	font-family: 'Poppins', sans-serif;
+	transition: .5s;
+	font-size: 16px;
+	color: white;
+}
+.menulist::-webkit-scrollbar{
+	display: none;
+}
+.menulist li:hover{
+	background-color: rgba(255,255,255,0.5);
+	color: black;
+}
+.darkside{
+	position: fixed;
+	width: 100%;
+	top: 7.7vh;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 10;
+	cursor: pointer;
+	opacity: 0;
+
+	visibility: hidden;
+	transition: .5s;
+
+}
+.movie_about_link{
+	position: fixed;
+	width: 100%;
+	top:7.7vh;
+	bottom: 0;
+	background-color: darkblue;
+	font-family: 'Poppins', sans-serif;
+	transition: .5s;
+	z-index: -1;
+	opacity: 0;
+	color: white;
+	overflow: scroll;
+	visibility: hidden;
+}
+.movie_about, .movie_link{
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: 15px;
+}
+.movie_watch_link, .movie_down_link{
+	text-decoration: none;
+	color: red;
+}
+/*.movie_down_link{
+	background-color: white;
+	margin-bottom: 30px;
+}*/
+.movie_title{
+	justify-content: center;
+	position: relative;
+}
+@keyframes searchanimate{
+	from{
+		background-color: snow;
+	}
+	to{
+		background-color: darkblue;
+	}
+}
+.movie_about_link_appear{
+	z-index: 1;
+	opacity: 1;
+	visibility: visible;
+	width: 100%;
+}
+.relative_movie_about_link{
+	position: relative;
+}
+.containerdisappear{
+	display: none;
+}
+.resultViewappear{
+	display: block;
+}
+.whitespace{
+	white-space: normal;
+}
+.darksideappear{
+	opacity: 1;
+	visibility: visible;
+}
+.menulistappear{
+	visibility: visible;
+	opacity: 1;
+	transform: translateX(0);
+}
+.tab{
+	display: none;
+}
+.movie_review_btn{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	-webkit-appearance : none;
+	border : none;
+	background-color: yellow;
+	outline: none;
+	color: red;
+	font-weight: bold;
+	top : 10px;
+	right: 10px;
+	z-index: 1;
+	cursor: pointer;
+}
