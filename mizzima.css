@@ -265,9 +265,13 @@ body{
 	padding-right: 15px;
 	margin-top: 15px;
 }
-.movie_watch_link, .movie_down_link{
+.movie_watch_link,.movie_down_link{
 	text-decoration: none;
-	color: red;
+	color: black;
+	background-color: gold;
+	padding: 3px;
+	border-radius: 6px;
+	font-weight: bold;
 }
 /*.movie_down_link{
 	background-color: white;
