@@ -190,7 +190,7 @@ body{
 	display: none;
 	position: fixed;
 	width: 100%;
-	top:7.5vh;
+	top:7.7vh;
 	overflow: scroll;
 	bottom: 0;
 }
@@ -337,6 +337,12 @@ body{
 }
 .tab{
 	display: none;
+        top: 7.7vh;
+	width: 100%;
+	bottom: 0;
+	overflow: scroll;
+
+
 }
 .movie_review_btn{
 	position: absolute;
