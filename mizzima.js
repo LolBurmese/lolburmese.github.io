@@ -161,8 +161,8 @@ effect တွေကောင်းတယ် ကျန်တဲ့ကျန်တ
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "Vivarium (2019" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/1/11/Vivarium_film_theatrical_poster.jpg"
 },
 
 
@@ -171,8 +171,8 @@ effect တွေကောင်းတယ် ကျန်တဲ့ကျန်တ
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "The First Man (2018)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/First_Man_%28film%29.png/220px-First_Man_%28film%29.png"
 },
 
 
@@ -180,197 +180,286 @@ effect တွေကောင်းတယ် ကျန်တဲ့ကျန်တ
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "alice in wonderland (2010)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/Alice-In-Wonderland-Theatrical-Poster.jpg/220px-Alice-In-Wonderland-Theatrical-Poster.jpg"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "Findingin Neverland (2004)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/Findingneverlandposter.jpg/220px-Findingneverlandposter.jpg"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "The Pursuit of Happiness" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/8/81/Poster-pursuithappyness.jpg/220px-Poster-pursuithappyness.jpg"
 },
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
-},
-
-{
-	review : "",
-	downloadlink : "",
-	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "Lady Bird (2017)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/6/61/Lady_Bird_poster.jpeg"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "Little Women (2019)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/9/9d/Little_Women_%282019_film%29.jpeg"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "The Danish Girl (2015)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/The_Danish_Girl_%28film%29_poster.jpg/220px-The_Danish_Girl_%28film%29_poster.jpg"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "The Favorite (2018)" ,
+	thumbnail : "https://m.media-amazon.com/images/M/MV5BMTg1NzQwMDQxNV5BMl5BanBnXkFtZTgwNDg2NDYyNjM@._V1_SY1000_CR0,0,670,1000_AL_.jpg"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "Pride and Prejuduce (2005)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Prideandprejudiceposter.jpg/220px-Prideandprejudiceposter.jpg"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "Fight Club (1999)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "Fantastic Beasts 2 (2018)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Fantastic_Beasts_-_The_Crimes_of_Grindelwald_Poster.png/220px-Fantastic_Beasts_-_The_Crimes_of_Grindelwald_Poster.png"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
-},
-{
-	review : "",
-	downloadlink : "",
-	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "A Man Who Invented Christmas (2017)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/8/8a/The_Man_Who_Invented_Christmas.png"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "Charlie and the Chocolate Factory (2005)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/4/46/Charlie_and_the_chocolate_factory_poster2.jpg/220px-Charlie_and_the_chocolate_factory_poster2.jpg"
+},
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "Harry Potter and the Deathly Hallows - part 2 (2011)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/d/df/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2.jpg"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "JoJo Rabit (2019)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/a/a2/Jojo_Rabbit_%282019%29_poster.jpg"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "The lovely bones (2009)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Lovely_bones_ver2.jpg/220px-Lovely_bones_ver2.jpg"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "The Silence of the Lambs (1991)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/8/86/The_Silence_of_the_Lambs_poster.jpg"
 },
 
 {
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "" ,
-	thumbnail : ""
+	name : "The shape of water (2017)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/3/37/The_Shape_of_Water_%28film%29.png"
+},
+
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "Flipped (2010)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Flipped_poster.jpg/220px-Flipped_poster.jpg"
+},
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "Notting Hill (1999)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/3/38/NottingHillRobertsGrant.jpg/220px-NottingHillRobertsGrant.jpg"
+},
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "A Walk To Remember (2002)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/d/dc/A_Walk_to_Remember_Poster.jpg"
+},
+
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "10 Things I Hate About You (1999)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/9/95/10_Things_I_Hate_About_You_film.jpg/220px-10_Things_I_Hate_About_You_film.jpg"
+},
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "Midnight Sun (2018)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/6/65/Midnight_Sun_2017.jpg/220px-Midnight_Sun_2017.jpg"
+},
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "Love, Simon ()" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/b/bc/Love%2C_Simon_poster.png"
+},
+
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "There's Something About Mary (1998)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/There%27s_Something_About_Mary_POSTER.jpg/220px-There%27s_Something_About_Mary_POSTER.jpg"
+},
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "The Lord of the Rings 3 (2003)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/b/be/The_Lord_of_the_Rings_-_The_Return_of_the_King_%282003%29.jpg"
+},
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "The Hobbit 3(2014)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/0/0e/The_Hobbit_-_The_Battle_of_the_Five_Armies.jpg"
+},
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "A Rainy Day in New York (2019)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/A_Rainy_Day_in_New_York_poster.jpg/220px-A_Rainy_Day_in_New_York_poster.jpg"
+},
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "Love Actually (2003)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/e/eb/Love_Actually_movie.jpg"
+},
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "50 First Dates (2004)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/9/9d/50FirstDates.jpg"
+},
+
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "Definitely, May Be (2008)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Definitely_Maybe_poster.jpg/220px-Definitely_Maybe_poster.jpg"
+},
+
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "Clueless (1995)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/5/5a/Clueless_film_poster.png"
+},
+
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "12 Monkeys (1995)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Twelve_monkeysmp.jpg/220px-Twelve_monkeysmp.jpg"
+},
+
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "Skyscraper (2018)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/6/6e/Skyscraper_%282018%29_film_poster.png"
+},
+
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "Blockers (2018)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Blockers_%28film%29.png/220px-Blockers_%28film%29.png"
+},
+
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "Scout Guide t0 the Zombies (2015)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/7/73/ScoutsGuideZombieApocalypse_poster.jpg/220px-ScoutsGuideZombieApocalypse_poster.jpg"
+},
+
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "Zombieland (2009)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Zombieland-poster.jpg/220px-Zombieland-poster.jpg"
+},
+
+{
+	review : "",
+	downloadlink : "",
+	watchlink : "",
+	name : "World War Z (2013)" ,
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/World_War_Z_poster.jpg/220px-World_War_Z_poster.jpg"
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ];
 
