@@ -836,6 +836,11 @@ var allphotos_filter = action_adventure_photos_filter.concat(animation_marvel_ph
 const exit_movie_review = () =>{
 	movie_about_link.classList.remove("movie_about_link_appear");
 	movie_title.innerHTML = `<button class="movie_review_btn" onclick="exit_movie_review()">X</button>`;
+	container.style.visibility = "visible";
+	tab.forEach(function(node){
+			node.style.visibility = "visible";
+	});
+	resultView.style.visibility = "visible";
 }
 const open_movie_review = (index) =>{
 	movie_about_link.classList.add("movie_about_link_appear");
@@ -844,6 +849,12 @@ const open_movie_review = (index) =>{
 	movie_about.textContent = allarray[index].review;
 	movie_watch_link.href = allarray[index].watchlink;
 	movie_down_link.href = allarray[index].downloadlink;
+	container.style.visibility = "hidden";
+	tab.forEach(function(node){
+			node.style.visibility = "hidden";
+	});
+	resultView.style.visibility = "hidden";
+
 
 }
 allphotos.forEach((node,i)=>{
@@ -861,4 +872,9 @@ const open_result_movie_review = (index) =>{
 	movie_about.textContent = sync[index].review;
 	movie_watch_link.href = sync[index].watchlink;
 	movie_down_link.href = sync[index].downloadlink;
+	container.style.visibility = "hidden";
+	tab.forEach(function(node){
+			node.style.visibility = "hidden";
+	});
+	resultView.style.visibility = "hidden";
 }
