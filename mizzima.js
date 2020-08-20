@@ -161,7 +161,7 @@ effect တွေကောင်းတယ် ကျန်တဲ့ကျန်တ
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "Vivarium (2019" ,
+	name : "Vivarium (2019)" ,
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/1/11/Vivarium_film_theatrical_poster.jpg"
 },
 
@@ -196,7 +196,7 @@ effect တွေကောင်းတယ် ကျန်တဲ့ကျန်တ
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "The Pursuit of Happiness" ,
+	name : "The Pursuit of Happiness (2006)" ,
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/8/81/Poster-pursuithappyness.jpg/220px-Poster-pursuithappyness.jpg"
 },
 {
@@ -282,7 +282,7 @@ effect တွေကောင်းတယ် ကျန်တဲ့ကျန်တ
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "JoJo Rabit (2019)" ,
+	name : "JoJo Rabbit (2019)" ,
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/a/a2/Jojo_Rabbit_%282019%29_poster.jpg"
 },
 
@@ -718,7 +718,7 @@ var animationarray = [
 	review : ``,
 	downloadlink : "",
 	watchlink : "",
-	name : "Monstes Inc (2001)r",
+	name : "Monstes Inc (2001)",
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/6/63/Monsters_Inc.JPG"
 },
 {
