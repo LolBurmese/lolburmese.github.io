@@ -258,6 +258,271 @@ var animationarray = [
 	review : ``,
 	downloadlink : "",
 	watchlink : "",
+	name : "Rio (2011)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Rio2011Poster.jpg/220px-Rio2011Poster.jpg"
+},
+
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Bolt (2008)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/4/44/Bolt_ver2.jpg/220px-Bolt_ver2.jpg"
+},
+
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Abominable (2019)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/1/10/Abominable_%282019_poster%29.png/220px-Abominable_%282019_poster%29.png"
+},
+
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Happy Feet (2006)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Happy_Feet_Poster.jpg/220px-Happy_Feet_Poster.jpg"
+},
+
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Big Foot (2017)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/The_Son_of_Bigfoot_Poster.jpg/220px-The_Son_of_Bigfoot_Poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Rataouille (2007)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/5/50/RatatouillePoster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Turbo (2013)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Turbo_%28film%29_poster.jpg/220px-Turbo_%28film%29_poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Secret Life of Pets 2 (2019) ",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/The_Secret_Life_of_Pets_2_%282019%29_Final_Poster.jpg/220px-The_Secret_Life_of_Pets_2_%282019%29_Final_Poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Coco (2017)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/9/98/Coco_%282017_film%29_poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Free birds (2013)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Free_Birds_poster.jpg/220px-Free_Birds_poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Snow White and the Red Shoe (2019)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/8/89/Red_Shoes_and_the_Seven_Dwarfs_poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Ralph's Break the Internet (2018)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Ralph_Breaks_the_Internet_%282018_film_poster%29.png/220px-Ralph_Breaks_the_Internet_%282018_film_poster%29.png"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "The Polar Express (2004)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/The_Polar_Express_%282004%29_poster.jpg/220px-The_Polar_Express_%282004%29_poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "The Corpse Bride (2005)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Corpse_Bride_film_poster.jpg/220px-Corpse_Bride_film_poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Nightmare Before Christmas (1993)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/The_nightmare_before_christmas_poster.jpg/220px-The_nightmare_before_christmas_poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Rise of the Gurdian (2012)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Rise_of_the_Guardians_poster.jpg/220px-Rise_of_the_Guardians_poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Up (2009)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Up_%282009_film%29.jpg/220px-Up_%282009_film%29.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Coraline (2009)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Coraline_poster.jpg/220px-Coraline_poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Spies in Disguise (2019)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/Spies_in_Disguise_Final_Poster.jpeg/220px-Spies_in_Disguise_Final_Poster.jpeg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Monsters vs Alien (2009)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Monsters-vs-aliens-poster.jpg/220px-Monsters-vs-aliens-poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Nemo (2003)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Finding_Nemo.jpg/220px-Finding_Nemo.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Finding Dory (2016)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Finding_Dory.jpg/220px-Finding_Dory.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Monstes Inc (2001)r",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/6/63/Monsters_Inc.JPG"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Monsters University (2013)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Monsters_University_poster_3.jpg/220px-Monsters_University_poster_3.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Megamind (2010)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Megamind2010Poster.jpg/220px-Megamind2010Poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Chicken Little (2005)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/a/a5/Chickenlittlemcgiposter.jpg/220px-Chickenlittlemcgiposter.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Lady and the Tramp (2019)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/LadyandtheTramp2019OfficialPoster.jpg/220px-LadyandtheTramp2019OfficialPoster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Scooby Doo: The Movie (2002)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Scooby-Doo_poster.jpg/220px-Scooby-Doo_poster.jpg"
+},
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Tom and Jerry: The Movie (1992)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/b/b4/Tom_and_Jerry_-_The_Movie_Poster.png"
+},
+
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Big Hero 6 (2014)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Big_Hero_6_%28film%29_poster.jpg/220px-Big_Hero_6_%28film%29_poster.jpg"
+},
+
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Minions (2015)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/3/3d/Minions_poster.jpg"
+},
+
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Hotel Transylvania 3 (2018)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Hotel_Transylvania_3_%282018%29_Poster.jpg/220px-Hotel_Transylvania_3_%282018%29_Poster.jpg"
+},
+
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Trolls (2016)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/a/ad/Trolls_%28film%29_logo.png"
+},
+
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Ice Age 5 (2016)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/Ice_age_collision_course.jpg/220px-Ice_age_collision_course.jpg"
+},
+
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Sing (2016)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/b/bb/Sing_%282016_film%29_poster.jpg"
+},
+
+
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "Boss Baby (2017)",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/0/0e/The_Boss_Baby_poster.jpg"
+},
+
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
 	name : "Nausicaa of the Valley of the Wind (1984)",
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/b/bc/Nausicaaposter.jpg"
 },
