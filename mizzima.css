@@ -324,7 +324,7 @@ body{
 .whitespace{
 	white-space: normal;
 	overflow: scroll;
-	height : 250px;
+	height : 400px;
 }
 .darksideappear{
 	opacity: 1;
