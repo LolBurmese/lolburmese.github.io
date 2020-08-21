@@ -21,7 +21,13 @@ function searchhover(){
 
 
 var actionarray = [
-
+{
+	review : ``,
+	downloadlink : "",
+	watchlink : "",
+	name : "City of Bones",
+	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/City_of_Bones.jpg/220px-City_of_Bones.jpg"
+},
 {
 	review : "Bad Boys ရုပ်ရှင်တွေကို ရုပ်ရှင်ချစ်သူအတော်များများ သိကြမှာပါ။ ကျွန်တော်တို့ ငယ်ငယ်ကတည်းက ကြိုက်ခဲ့ရတဲ့အက်ရှင်ခပ်မြူးမြူးတွေပါပဲ။ အခုလည်း ဆရာကြီးနှစ်ယောက် အသက်ကြီးမှ တကြော့ပြန်လာပါပြီး။ အခုချိန်မှာဆိုမားကတ်စ်ကလည်း အဘိုးဖြစ်လာပြီး အငြိမ်းစားယူဖို့ဆုံးဖြတ်လိုက်ပါပြီ။ မိုက်ခ် (ဝယ်လ်စမစ်) တော့ လူပျိုကြီးအဖြစ်သေတဲ့အထိ လူဆိုးဖမ်းချင်နေတုန်းပါပဲ။ ဒါပေမယ့် သူတို့ရဲ့အတိတ်က ရန်ငြိုးက သူတို့ကို အေးအေးဆေးဆေးအနားယူခွင့်မပေးလာပါဘူး။ မိုက်ခ် နဲ့အတူ တရားသူကြီး၊ရှေ့နေ၊သတင်းပေး၊ ရဲအရာရှိ စတဲ့သူတွေအကုန် လုပ်ကြံခံလာရပါတယ်။ ဒီတော့ နောက်ဆုံးမှာ Bad Boys ကြီးနှစ်ယောက် နောက်ဆုံးအကြိမ်အဖြစ် ဆိုးကြ ကြမ်းကြပါတော့တယ်။ဇာတ်လမ်းရယ် အက်ရှင်တွေရယ် အကုန်အဆင်ပြေတာမို့ ကြည့်ရတာ ကျေနပ်ကြမှာပါ။",
 	downloadlink : "",	
@@ -161,7 +167,7 @@ effect တွေကောင်းတယ် ကျန်တဲ့ကျန်တ
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "Vivarium (2019" ,
+	name : "Vivarium (2019)" ,
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/1/11/Vivarium_film_theatrical_poster.jpg"
 },
 
@@ -196,7 +202,7 @@ effect တွေကောင်းတယ် ကျန်တဲ့ကျန်တ
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "The Pursuit of Happiness" ,
+	name : "The Pursuit of Happiness (2006)" ,
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/thumb/8/81/Poster-pursuithappyness.jpg/220px-Poster-pursuithappyness.jpg"
 },
 {
@@ -282,7 +288,7 @@ effect တွေကောင်းတယ် ကျန်တဲ့ကျန်တ
 	review : "",
 	downloadlink : "",
 	watchlink : "",
-	name : "JoJo Rabit (2019)" ,
+	name : "JoJo Rabbit (2019)" ,
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/a/a2/Jojo_Rabbit_%282019%29_poster.jpg"
 },
 
@@ -718,7 +724,7 @@ var animationarray = [
 	review : ``,
 	downloadlink : "",
 	watchlink : "",
-	name : "Monstes Inc (2001)r",
+	name : "Monstes Inc (2001)",
 	thumbnail : "https://upload.wikimedia.org/wikipedia/en/6/63/Monsters_Inc.JPG"
 },
 {
@@ -1136,9 +1142,8 @@ var marvelarray = [
 
 var aboutarray = [
 {
-	detail : "This is a movie app. You can download Movies and directly watch from the app.Enjoy our app by exploring lastest movies."
+	detail : "This is a movie app. You can download Movies and watch directly from the app.Enjoy our app by exploring lastest movies."
 }
-
 ];
 
 
