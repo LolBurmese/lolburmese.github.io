@@ -11,12 +11,24 @@
 	margin: 0;
 }
 body{
-	background-color: skyblue;
+	background: -webkit-linear-gradient(left,white,#001540);
+	user-select: none;
 }
 .titlediv{
 	background-color: #001540;
 	color: white;
 	padding: 10px;
+}
+.cnratio{
+	opacity: 0;
+	transition: 1s;
+	visibility: hidden;
+	transform: translateX(-5em);
+}
+.cnratioappear{
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(0);
 }
 .upordown{
 	border: none;
@@ -26,15 +38,17 @@ body{
 	border-radius: 15px;
 	background-color: #001540;
 	color: white;
+	margin: 0;
 }
 .container{
-	background-color: skyblue;
+	background-color: transparent;
 	overflow: scroll;
-	box-shadow: inset 0 0 17px;
-	position: absolute;
+	color: #001540;
+	position: fixed;
 	width: 100%;
-	bottom: 20%;
-	top: 20%;
+	bottom: 900px;
+	top: 120px;
+	transition: .5s;
 }
 .container::-webkit-scrollbar{
 	display: none;
@@ -63,15 +77,22 @@ body{
 	color : #001540;
 }
 .result{
-background-color: skyblue;
+background-color: #001540;
+color: white;
 box-shadow: 0 0 17px;
+border-radius: 0 15px 0 0;
 position: absolute;
-bottom: 0;
+bottom: 50px;
 height: 20%;
-width: 97%;
-padding: 10px;
+font-weight: bold;
+width: 26%;
 display: flex;
-justify-content: space-between;
+flex-direction: column;
+justify-content: space-around;
+transition: .5s;
+transform: translateY(-3em);
+opacity: 0;
+visibility: hidden;
 
 }
 
@@ -81,7 +102,7 @@ background-color: #001540;
 position: absolute;
 bottom: 0;
 width: 100%;
-height: 15%;
+height: 50px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -100,7 +121,11 @@ display: flex;
 padding: 5px;
 font-weight: bold;
 }
-
+.resultappear{
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0);
+}
 
 </style>
 </head>
@@ -111,8 +136,9 @@ font-weight: bold;
 		<h2>Link Budget for a Satellite</h2>
 	</div><br>
 
-	<div align="center">
-		<select class="upordown">
+	<div align="center" class="upordowndiv">
+		<select class="upordown" oninput="up_down_move()">
+			<option value="empty">-</option>
 			<option value="uplink">Uplink</option>
 			<option value="downlink">Downlink</option>
 		</select>
@@ -195,6 +221,14 @@ font-weight: bold;
 	</div>
 <br><br>
 
+		<h3 align="center" class="br1label">Bit rate by Modulation Scheme</h3>
+		<div class="oppowerdiv">
+		<span style="font-weight: bold;">f<sub>b</sub>:</span>
+		<input class="br1" type="range" name="" min="10" max="300" value="10" oninput="inputbr1()">
+		<span class="br1value">10Mbps</span>
+	</div>
+<br><br>
+	
 		<h3 align="center" class="modulabel">Modulation scheme</h3>
 		<div class="oppowerdiv">
 		
@@ -210,22 +244,31 @@ font-weight: bold;
 	</div>
 <br><br>
 
-		<h3 align="center" class="br1label">Bit rate by Modulation Scheme</h3>
-		<div class="oppowerdiv">
-		<span style="font-weight: bold;">f<sub>b</sub>:</span>
-		<input class="br1" type="range" name="" min="10" max="300" value="10" oninput="inputbr1()">
-		<span class="br1value">10Mbps</span>
-	</div>
-<br><br>
-
 </div>
 
 <div class="result" align="center">
-	<span class="eirpspan">EIRP(dBW)</span>
-	<span class="cnospan">C/No(dB)</span>
-	<span id="todbid">10logfb</span>
-	<span class="ebnospan">Eb/No(dB)</span>
-	<span id="todb1id">10log(B/fb)</span>
+	<table>
+		<tr>
+			<td>EIRP (dBW)</td>
+			<td><span class="eirpspan">-</span></td>
+		</tr>
+		<tr>
+			<td>C/No (dB)</td>
+			<td><span class="cnospan">-</span></td>
+		</tr>
+		<tr>
+			<td>10logfb</td>
+			<td><span id="todbid">-</span></td>
+		</tr>
+		<tr>
+			<td>Eb/No (dB)</td>
+			<td><span class="ebnospan">-</span></td>
+		</tr>
+		<tr>
+			<td>10log(B/fb)</td>
+			<td><span id="todb1id">-</span></td>
+		</tr>
+	</table>	
 </div>
 
 
@@ -270,10 +313,12 @@ var ebnospan = document.getElementsByClassName("ebnospan")[0];
 var todbid = document.getElementById("todbid");
 var todb1id = document.getElementById("todb1id");
 var cnratio = document.getElementsByClassName("cnratio")[0];
-
+var container = document.getElementsByClassName("container")[0];
+var upordown = document.getElementsByClassName("upordown")[0];
 
 function inputoppower(){
 	oppowervalue.textContent = oppower.value+"dBW";
+	var ptvalue = oppower.value;
 	eirpinput();
 	cnoinput();
 
@@ -281,54 +326,83 @@ function inputoppower(){
 
 function inputbol(){
 	bolvalue.textContent = bol.value+"dB";
+	var lbovalue = bol.value;
 	eirpinput();
 	cnoinput();
 }
 
 function inputbfl(){
 	bflvalue.textContent = bfl.value+"dB";
+	var lbfvalue = bfl.value;
 	eirpinput();
 	cnoinput();
 }
 
 function inputat(){
 	atvalue.textContent = at.value+"dB";
+	var atatvalue = at.value;
 	eirpinput();
 	cnoinput();
 }
 
 function inputlu(){
 	luvalue.textContent = lu.value/10+"dB";
+	var luluvalue = lu.value/10;
 	cnoinput();
 	
 }
 
 function inputlp(){
 	lpvalue.textContent = lp.value/10+"dB";
+	var lplpvalue = lp.value/10;
 	cnoinput();
 	
 	
 }
 function inputgte(){
 	gtevalue.textContent = gte.value/10+"dB";
+	gtegtevalue = gte.value/10;
 	cnoinput();
 	
 	
 }
 function inputsbfl(){
 	sbflvalue.textContent = sbfl.value+"dB";
+	var sbflsbflvalue = sbfl.value;
 }
 function inputbr(){
 	brvalue.textContent = br.value+"Mbps";
+	var brbrvalue = br.value;
 		todb();
-
-
-		bfb(0);
-	
-	
-
+		bfb();
 }
+var result = document.getElementsByClassName("result")[0];
+function up_down_move ()
+{
+	if(upordown.value === "uplink"){
+		container.style.bottom = "50px";
+		result.classList.add("resultappear");
+	}
+	else if(upordown.value === "downlink"){
+		result.classList.remove("resultappear");
+		container.style.bottom = "900px";
+		setTimeout(function(){
+			alert("This is under development!");
+		},500);
+		cnratio.classList.remove("cnratioappear");
+		
 
+	}
+	else{
+		cnratio.classList.remove("cnratioappear");
+		container.style.bottom = "900px";
+		result.classList.remove("resultappear");
+		setTimeout(function(){
+			alert("Choose one!");
+		},500);
+		
+	}
+}
 
 function eirpinput(){
 eirpspan.textContent = Number(oppower.value)-Number(bol.value)-Number(bfl.value)+Number(at.value);
@@ -336,18 +410,23 @@ eirpspan.textContent = Number(oppower.value)-Number(bol.value)-Number(bfl.value)
 
 function cnoinput(){
 	
-cnospan.textContent = Number(eirpspan.textContent)+Number(gte.value/10)-Number(lp.value/10)-Number(lu.value/10)+228.6;
+var cnovalue = Number(eirpspan.textContent)+Number(gte.value/10)-Number(lp.value/10)-Number(lu.value/10)+228.6;
+
+cnospan.textContent = cnovalue.toPrecision(5);
+
  ebnoinput();
 }
 
 function todb(){
-	todbid.textContent = 10*Math.log(br.value*1000000)/2.303;
+	var todbvalue = 10*Math.log(br.value*1000000)/2.303;
+	todbid.textContent = todbvalue.toPrecision(5);
 	ebnoinput();
 }
 
 
 function ebnoinput(){
-	ebnospan.textContent = cnospan.textContent - todbid.textContent;
+	var ebnovalue = cnospan.textContent - todbid.textContent;
+	ebnospan.textContent = ebnovalue.toPrecision(5);
 
 
 
@@ -358,6 +437,7 @@ function ebnoinput(){
 
 function inputbr1(){
 	br1value.textContent = br1.value+"Mbps";
+	var br1br1value = br1.value;
 	bfb();
 	
 	
@@ -366,6 +446,7 @@ function inputbr1(){
 
 
 function inputmodu(){
+	cnratio.classList.add("cnratioappear");
 	if(modu.value === "PSK"){
 		br1.value  = br1.value;
 		inputbr1();
@@ -392,28 +473,17 @@ function inputmodu(){
 
 }
 function bfb(){
-	todb1id.textContent = 10*Math.log(br1.value/br.value)/2.303;
+	var todb1idvalue = 10*Math.log(br1.value/br.value)/2.303;
+	todb1id.textContent = todb1idvalue.toPrecision(5);
 
 	cninput();
 	
 }
 
 
-
-// function todb1(){
-// 	todb1id.textContent = 10*Math.log(bfbvalue)/2.303;
-
-
-
-// 	cninput();
-	
-// }
-
-
 function cninput(){
-
-	cnratio.textContent = ebnospan.textContent - todb1id.textContent+"dB";
-
+	var resultvalue = ebnospan.textContent - todb1id.textContent;
+	cnratio.textContent= "ANSWER : "+resultvalue.toPrecision(5)+"dB";
 }
 
 
