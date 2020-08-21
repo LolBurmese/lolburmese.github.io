@@ -1142,9 +1142,8 @@ var marvelarray = [
 
 var aboutarray = [
 {
-	detail : "This is a movie app. You can download Movies and directly watch from the app.Enjoy our app by exploring lastest movies."
+	detail : "This is a movie app. You can download Movies and watch directly from the app.Enjoy our app by exploring lastest movies."
 }
-
 ];
 
 
