@@ -91,6 +91,7 @@ var textbox = document.getElementsByClassName("textbox")[0];
 
 /* This is sendbtn function   */
 const send_click = () =>{
+		textbox.focus();
 	if(textbox.value.length >0){
 	var usertextdiv = document.createElement("div");
 	usertextdiv.setAttribute("class","usertextdiv");
@@ -132,6 +133,7 @@ const send_click = () =>{
 /* This is enterkey function   */
 const key_click = (event) =>{
 	if(event.which === 13 && textbox.value.length >0){
+		textbox.focus();
 	var usertextdiv = document.createElement("div");
 	usertextdiv.setAttribute("class","usertextdiv");
 	var usertext = document.createElement("div");
