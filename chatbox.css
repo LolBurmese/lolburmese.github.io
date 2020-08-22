@@ -60,6 +60,7 @@ body{
 	background-color: blue;
 	padding: 10px;
 	margin: 5px;
+	color: white;
 	margin-right: 15px;
 	text-align: right;
 	border-radius: 15px;
@@ -85,6 +86,8 @@ body{
 }
 .fdot,.sdot,.tdot{
 	transform: translateY(0);
+	font-size: 14px;
+	font-weight: bold;
 }
 .fdot{
 	animation: dotrun 1s infinite .1s;
