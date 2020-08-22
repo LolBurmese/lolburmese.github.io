@@ -8,6 +8,22 @@ var user_bot = [
 	bot : ""
 },
 {
+	user : "wtf",
+	bot : "Hey wtf man, what happend to you bro?"
+},
+{
+	user : "omg",
+	bot : "Don't call the god, I'm scared"
+},
+{
+	user : "what the fuck",
+	bot : "Hey wtf man, what happend to you bro?"
+},
+{
+	user : "oh my god",
+	bot : "Don't call the god, I'm scared"
+},
+{
 	user : "ပျင်းတယ်",
 	bot : "ပျင်းရင် ဂိမ်းဆော့လေ၊ ဇာတ်ကားအပိုင်းတွဲတစ်ခုခုကြည့်ကြည့်ပေါ့ အပျင်းပြေတာပျောက်သွားလိမ့်မယ်"
 },
