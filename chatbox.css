@@ -11,7 +11,7 @@ body{
 	position: absolute;
 	top: 0;
 	width: 100%;
-	height: 10%;
+	height: 7%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,10 +20,12 @@ body{
 .chat_text{
 	background-color: #333;
 	position: absolute;
-	top: 10%;
+	top: 7%;
 	width: 100%;
-	height: 82%;
+	height: 85%;
 	overflow: scroll;
+	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
 }
 
 .chat_text::-webkit-scrollbar{
@@ -64,6 +66,9 @@ body{
 	margin-right: 15px;
 	text-align: right;
 	border-radius: 15px;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(2em);
 }
 
 .bottext{
@@ -72,6 +77,9 @@ body{
 	margin: 5px;
 	margin-left: 15px;
 	border-radius: 15px;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(2em);
 }
 .dot3{
 	display: flex;
@@ -86,7 +94,6 @@ body{
 }
 .fdot,.sdot,.tdot{
 	transform: translateY(0);
-	font-size: 14px;
 	font-weight: bold;
 }
 .fdot{
@@ -106,6 +113,18 @@ body{
 		transform: translateY(-4px);
 	}
 	100%{
+		transform: translateY(0);
+	}
+}
+@keyframes popuptext{
+	from{
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(2em);
+	}
+	to{
+		opacity: 1;
+		visibility: visible;
 		transform: translateY(0);
 	}
 }
