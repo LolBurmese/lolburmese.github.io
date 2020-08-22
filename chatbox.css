@@ -60,6 +60,7 @@ body{
 	background-color: blue;
 	padding: 10px;
 	margin: 5px;
+	margin-right: 15px;
 	text-align: right;
 	border-radius: 15px;
 }
@@ -68,7 +69,11 @@ body{
 	background-color: #ddd;
 	padding: 10px;
 	margin: 5px;
+	margin-left: 15px;
 	border-radius: 15px;
+}
+.dot3{
+	display: flex;
 }
 .usertextdiv{
 	display: flex;
@@ -77,4 +82,27 @@ body{
 .bottextdiv{
 	display: flex;
 	justify-content: flex-start;
+}
+.fdot,.sdot,.tdot{
+	transform: translateY(0);
+}
+.fdot{
+	animation: dotrun 1s infinite .1s;
+}
+.sdot{
+	animation: dotrun 1s infinite .25s;
+}
+.tdot{
+	animation: dotrun 1s infinite .4s;
+}
+@keyframes dotrun{
+	0%{
+		transform: translateY(0);
+	}
+	50%{
+		transform: translateY(-4px);
+	}
+	100%{
+		transform: translateY(0);
+	}
 }
