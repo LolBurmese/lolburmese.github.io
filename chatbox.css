@@ -129,7 +129,7 @@ body{
 		transform: translateY(0);
 	}
 }
-@media screen and (max-width: 450px){
+@media screen and (max-width: 400px){
 	.chat_text{
 		top: 10%;
 		height: 80%;
