@@ -9,7 +9,7 @@ var user_bot = [
 },
 {
 	user : "about",
-	bot : `"Chat Bot" Inc.<br>Developed by Kaung Si Thu (GTC, KyaukSe)`
+	bot : `"Chat Bot" Web App.<br>Developed by Kaung Si Thu (GTC, KyaukSe)`
 },
 {
 	user : "wtf",
