@@ -8,6 +8,10 @@ var user_bot = [
 	bot : ""
 },
 {
+	user : "about",
+	bot : `"Chat Bot" Inc.<br>Developed by Kaung Si Thu (GTC, KyaukSe)`
+},
+{
 	user : "wtf",
 	bot : "Hey wtf man, what happend to you bro?"
 },
