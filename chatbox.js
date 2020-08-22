@@ -8,6 +8,26 @@ var user_bot = [
 	bot : ""
 },
 {
+	user : "ဘာကွ",
+	bot : "ဘာကွ ညာကွနဲ့ လီးတွေဖြစ်?"
+},
+{
+	user : "ဘာလို့လဲ",
+	bot : "ဘာလို့လဲ မသိဘူးလေ"
+},
+{
+	user : "ဘာလို့",
+	bot : "ဘာလို့တုန်း ဘာမှမဖြစ်ဘူးရယ်"
+},
+{
+	user : "ဘာလို့တုန်း",
+	bot : "ဘာမှမဟုတ်ပါဘူး ဒီအတိုင်းပဲရယ်"
+},
+{
+	user : "ဘာတုန်း",
+	bot : "ဘာကွ"
+},
+{
 	user : "about",
 	bot : `"Chat Bot" Web App.<br>Developed by Kaung Si Thu (GTC, KyaukSe)`
 },
@@ -279,7 +299,7 @@ const key_click = (event) =>{
 	bottext.innerHTML = "<div class='dot3'><div class='fdot'>.</div><div class='sdot'>.</div><div class='tdot'>.</div></div>";
 	chat_text.appendChild(bottextdiv);
 	setTimeout(()=>{
-		bottext.innerHTML = "I don't understand";
+		bottext.innerHTML = `I don't understand`;
 		user_bot.forEach((node)=>{
 			if(node.user.replace(/\s+/g,"").toLowerCase() === textboxvalue.toLowerCase()){
 				return bottext.innerHTML = node.bot;
