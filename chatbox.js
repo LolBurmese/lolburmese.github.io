@@ -4,7 +4,10 @@ var user_bot = [
 	user : "hello",
 	bot : "hey"
 },
-
+{
+	user : "hi",
+	bot : "လီးဟိုင်း"
+},
 {
 	user : "how are you",
 	bot : "I'm fine, and you?"
@@ -19,8 +22,6 @@ var user_bot = [
 	user : "lee",
 	bot : "South Foke!"
 }
-
-
 ];
 
 var chat_text = document.getElementsByClassName("chat_text")[0];
@@ -28,6 +29,7 @@ var textbox = document.getElementsByClassName("textbox")[0];
 
 /* This is sendbtn function   */
 const send_click = () =>{
+	if(textbox.value.length >0){
 	var usertextdiv = document.createElement("div");
 	usertextdiv.setAttribute("class","usertextdiv");
 	var usertext = document.createElement("div");
@@ -47,7 +49,7 @@ const send_click = () =>{
 	chat_text.appendChild(bottextdiv);
 	setTimeout(()=>{
 		user_bot.forEach((node)=>{
-			if(node.user === textboxvalue){
+			if(node.user.toLowerCase() === textboxvalue.toLowerCase()){
 				return bottext.innerHTML = node.bot;
 			}
 		});
@@ -61,10 +63,11 @@ const send_click = () =>{
 		bottext.style.animation = "popuptext .5s ease forwards .5s";
 	},50);
 }
+}
 
 /* This is enterkey function   */
 const key_click = (event) =>{
-	if(event.which === 13){
+	if(event.which === 13 && textbox.value.length >0){
 	var usertextdiv = document.createElement("div");
 	usertextdiv.setAttribute("class","usertextdiv");
 	var usertext = document.createElement("div");
@@ -84,7 +87,7 @@ const key_click = (event) =>{
 	chat_text.appendChild(bottextdiv);
 	setTimeout(()=>{
 		user_bot.forEach((node)=>{
-			if(node.user === textboxvalue){
+			if(node.user.toLowerCase() === textboxvalue.toLowerCase()){
 				return bottext.innerHTML = node.bot;
 			}
 		});
