@@ -22,7 +22,7 @@ body{
 	position: absolute;
 	top: 7%;
 	width: 100%;
-	height: 85%;
+	height: 86%;
 	overflow: scroll;
 	font-size: 15px;
 	font-family: 'Poppins', sans-serif;
@@ -34,10 +34,10 @@ body{
 .chat_text_box{
 	display: flex;
 	position: absolute;
-	top: 92%;
+	top: 93%;
+	height: 7%;
 	background-color: gold;
 	width: 100%;
-	height: 8%;
 	overflow: hidden;
 }
 .textbox{
@@ -129,7 +129,8 @@ body{
 		transform: translateY(0);
 	}
 }
-@media screen and (max-width: 400px){
+
+@media screen and (max-width: 350px){
 	.chat_text{
 		top: 10%;
 		height: 80%;

@@ -247,7 +247,7 @@ const send_click = () =>{
 	usertextdiv.appendChild(usertext);
 	usertext.textContent = textbox.value;
 	chat_text.appendChild(usertextdiv);
-	var textboxvalue = textbox.value.replace(/\s+/g,"");
+	var textboxvalue = textbox.value;
 	textbox.value= "";
 
 	var bottextdiv = document.createElement("div");
@@ -258,9 +258,9 @@ const send_click = () =>{
 	bottext.innerHTML = "<div class='dot3'><div class='fdot'>.</div><div class='sdot'>.</div><div class='tdot'>.</div></div>";
 	chat_text.appendChild(bottextdiv);
 	setTimeout(()=>{
-		bottext.innerHTML = "I don't understand";
+		bottext.innerHTML = `I don't understand"${textboxvalue}"`;
 		user_bot.forEach((node)=>{
-			if(node.user.replace(/\s+/g,"").toLowerCase() === textboxvalue.toLowerCase()){
+			if(node.user.replace(/\s+/g,"").toLowerCase() === textboxvalue.replace(/\s+/g,"").toLowerCase()){
 				return bottext.innerHTML = node.bot;
 			}
 		});
