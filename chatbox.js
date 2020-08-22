@@ -99,7 +99,7 @@ const send_click = () =>{
 	usertextdiv.appendChild(usertext);
 	usertext.textContent = textbox.value;
 	chat_text.appendChild(usertextdiv);
-	var textboxvalue = textbox.value;
+	var textboxvalue = textbox.value.replace(/\s+/g,"");
 	textbox.value= "";
 
 	var bottextdiv = document.createElement("div");
@@ -110,8 +110,9 @@ const send_click = () =>{
 	bottext.innerHTML = "<div class='dot3'><div class='fdot'>.</div><div class='sdot'>.</div><div class='tdot'>.</div></div>";
 	chat_text.appendChild(bottextdiv);
 	setTimeout(()=>{
+		bottext.innerHTML = "I don't understand";
 		user_bot.forEach((node)=>{
-			if(node.user.toLowerCase() === textboxvalue.toLowerCase()){
+			if(node.user.replace(/\s+/g,"").toLowerCase() === textboxvalue.toLowerCase()){
 				return bottext.innerHTML = node.bot;
 			}
 		});
@@ -121,6 +122,7 @@ const send_click = () =>{
 	usertext.style.animation = "";
 	bottext.style.animation = "";
 	setTimeout(()=>{
+			chat_text.scrollTo(0,chat_text.scrollHeight);
 		usertext.style.animation = "popuptext .5s ease forwards";
 		bottext.style.animation = "popuptext .5s ease forwards .5s";
 	},50);
@@ -137,7 +139,7 @@ const key_click = (event) =>{
 	usertextdiv.appendChild(usertext);
 	usertext.textContent = textbox.value;
 	chat_text.appendChild(usertextdiv);
-	var textboxvalue = textbox.value;
+	var textboxvalue = textbox.value.replace(/\s+/g,"");
 	textbox.value= "";
 
 	var bottextdiv = document.createElement("div");
@@ -148,18 +150,22 @@ const key_click = (event) =>{
 	bottext.innerHTML = "<div class='dot3'><div class='fdot'>.</div><div class='sdot'>.</div><div class='tdot'>.</div></div>";
 	chat_text.appendChild(bottextdiv);
 	setTimeout(()=>{
+		bottext.innerHTML = "I don't understand";
 		user_bot.forEach((node)=>{
-			if(node.user.toLowerCase() === textboxvalue.toLowerCase()){
+			if(node.user.replace(/\s+/g,"").toLowerCase() === textboxvalue.toLowerCase()){
 				return bottext.innerHTML = node.bot;
 			}
 		});
+		
 	},1500);
 	usertext.style.animation = "";
 	bottext.style.animation = "";
 	setTimeout(()=>{
+
 		usertext.style.animation = "popuptext .5s ease forwards";
 		bottext.style.animation = "popuptext .5s ease forwards .5s";
 	},50);
+	chat_text.scrollTo(0,chat_text.scrollHeight);
 }
 }
 
