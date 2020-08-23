@@ -3,9 +3,126 @@ var user_bot = [
 	user : "လီးလား",
 	bot : "မမိုက်ရိုင်းနဲ့ ငါလိုးမသား"
 },
+
 {
 	user : "",
 	bot : ""
+},
+{
+	user : "What are you doing",
+	bot : "I'm talking with you"
+},
+{
+	user : "Burmese Ghouls",
+	bot : "The champion of myanmar and world top 3 team"
+},
+{
+	user : "claw",
+	bot : "Claw admin komaykoloe"
+},
+{
+	user : "chelsea",
+	bot : "London gay team"
+},
+{
+	user : "iceice",
+	bot : "He is my idol"
+},
+{
+	user : "ace",
+	bot : "The best mobile legends player in Myanmar"
+},
+{
+	user : "man u",
+	bot : "How do you know my favourate team?"
+},
+{
+	user : "how are you doing",
+	bot : "Writing codes"
+},
+{
+	user : "suck my dick",
+	bot : "no, i will fuck your ass"
+},
+{
+	user : "mother fucker",
+	bot : "I'm gay and your father fuck my ass"
+},
+{
+	user : "what the hell",
+	bot : "This is paradise"
+},
+{
+	user : "do you have a girlfriend",
+	bot : "No,can I be your boyfriend?"
+},
+{
+	user : "ec",
+	bot : "Electronics, it's awesome"
+},
+{
+	user : "gtc",
+	bot : "I only know GTA-5!"
+},
+{
+	user : "covid19 ",
+	bot : "Yes, he is my friend."
+},
+{
+	user : "covid",
+	bot : "Yes, he is my friend."
+},
+{
+	user : "aids",
+	bot : "I'm a robot and I don't have penis"
+},
+{
+	user : "oh no",
+	bot : "why?"
+},
+{
+	user : "lee lar",
+	bot : "Lee bae"
+},
+{
+	user : "may loe",
+	bot : "Fay Loe Ma"
+},
+{
+	user : "lol",
+	bot : "Layer of legends?"
+},
+{
+	user : "ခင်နန္ဒာအောင်",
+	bot : "သူက အရူးမလေ"
+},
+{
+	user : "bro",
+	bot : "Hi sis"
+},
+{
+	user : "hi bro",
+	bot : "hi sis"
+},
+{
+	user : "hey bro",
+	bot : "hey sis"
+},
+{
+	user : "sex chat လား",
+	bot : "yes, 1 hour 3000ks."
+},
+{
+	user : "ဟာကွာ",
+	bot : "လီးတွေဖြစ်?"
+},
+{
+	user : "ဟုတ်",
+	bot : "အွန်းပါ"
+},
+{
+	user : "အင်း",
+	bot : "အွန်း"
 },
 {
 	user : "ဘာကွ",
