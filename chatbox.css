@@ -130,16 +130,16 @@ body{
 	}
 }
 
-@media screen and (max-height: 400px){
+@media screen and (max-height: 500px){
 	.chat_text{
-		top: 10%;
-		height: 78%;
+		top: 12%;
+		height: 76%;
 	}
 	.chat_text_box{
 		top: 88%;
 		height: 12%;
 	}
 	.contitle{
-		height: 10%;
+		height: 12%;
 	}
 }
