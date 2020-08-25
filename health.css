@@ -1,0 +1,173 @@
+*{
+	padding: 0;
+	margin: 0;
+	user-select: none;
+}
+
+body{
+	background-color: #ccc;
+}
+
+
+nav{
+	background-color: #ccc;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	padding-top: 5px;
+	
+}
+
+.navbtn{
+	-webkit-appearance: none;
+	outline: none;
+	border: none;
+	background-color: transparent;
+
+}
+.navbtn img{
+	padding: 10px;
+	border-radius: 17px 17px 0 0;
+	transition: .5s;
+}
+.navbtn img:hover{
+	background-color: white;
+}
+
+.profilee{
+	position: fixed;
+	top: 0;
+	height: 55%;
+	width: 100%;
+	background: -webkit-linear-gradient(blue,darkblue);
+}
+
+.infodiv{
+	background-color: transparent;
+	position: fixed;
+	z-index: 1;
+	top: 48%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.duradiv{
+	background-color: white;
+	width: 70%;
+	margin-bottom: 20px;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	border-radius: 15px;
+}
+
+.percentdiv{
+	background-color: white;
+	width: 70%;
+	height:  35px;
+	display: flex;
+	align-items: center;
+	border-radius: 15px;
+	transition: .5s;
+	position: relative;
+	overflow: hidden;
+}
+
+.percentvalue{
+	position: absolute;
+	font-family: 'Poppins', sans-serif;
+	right: 20px;
+	color: darkgreen;
+	font-weight: bolder;
+	font-size: 14px;
+	z-index: 1;
+}
+
+.percentline{
+	position: absolute;
+	background: -webkit-linear-gradient(right, lightgreen, darkgreen);
+	left: 0;
+	width: 60%;
+	height: 100%;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	overflow: hidden;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+	font-size: 14px;
+	animation: runningline 2s;
+
+}
+.label{
+	padding-left: 10px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.profile{
+	background: -webkit-linear-gradient(#aaa, #ddd);
+	padding: 10px;
+	border-radius: 50%;
+	margin-top: 30px;
+}
+.profilename{
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	margin-top: 20px;
+}
+
+.foodpics{
+	margin-top: 10px;
+}
+.foodpics img{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin: 8px;
+}
+
+.active{
+	background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes runningline{
+
+from{
+	width: 0%;
+}
+
+to{
+	width: 60%;
+}
+
+
+
+}
