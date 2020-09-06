@@ -11,6 +11,7 @@
 *{
 	padding: 0;
 	margin: 0;
+	user-select: none;
 }
 body{
 	background-color: #ddd;
@@ -247,11 +248,11 @@ to{
 
 <table>
 	<tr>
-		<td><input type="radio" name="q1"></td>
+		<td><input class="q1" type="radio" oninput="q1fun(0)" name="q1" value="a"></td>
 		<td>Using phone</td>
 	</tr>
 	<tr>
-		<td><input type="radio" name="q1"></td>
+		<td><input class="q1"  oninput="q1fun(1)" value="b" type="radio" name="q1"></td>
 		<td>Going to toilet</td>
 	</tr>
 
@@ -267,11 +268,11 @@ to{
 
 <table>
 	<tr>
-		<td><input type="radio" name="q2"></td>
+		<td><input class="q2" type="radio" name="q2" oninput="q2fun(0)" value="a"></td>
 		<td>Playing games</td>
 	</tr>
 	<tr>
-		<td><input type="radio" name="q2"></td>
+		<td><input class="q2" type="radio" name="q2" oninput="q2fun(1)" value="b"></td>
 		<td>Reading</td>
 	</tr>
 
@@ -287,11 +288,11 @@ to{
 
 <table>
 	<tr>
-		<td><input type="radio" name="q3"></td>
+		<td><input class="q3" type="radio" name="q3" oninput="q3fun(0)" value="a"></td>
 		<td>I will use my salary</td>
 	</tr>
 	<tr>
-		<td><input type="radio" name="q3"></td>
+		<td><input class="q3" type="radio" name="q3" oninput="q3fun(1)" value="b"></td>
 		<td>I will spend my salary</td>
 	</tr>
 
@@ -307,11 +308,11 @@ to{
 
 <table>
 	<tr>
-		<td><input type="radio" name="q4"></td>
+		<td><input class="q4" type="radio" name="q4" oninput="q4fun(0)" value="a"></td>
 		<td>I play as tank/support role</td>
 	</tr>
 	<tr>
-		<td><input type="radio" name="q4"></td>
+		<td><input class="q4" type="radio" name="q4" oninput="q4fun(1)" value="b"></td>
 		<td>I play as hyper role</td>
 	</tr>
 
@@ -327,11 +328,11 @@ to{
 
 <table>
 	<tr>
-		<td><input type="radio" name="q5"></td>
+		<td><input class="q5" type="radio" name="q5" oninput="q5fun(0)" value="a"></td>
 		<td>I like Focker</td>
 	</tr>
 	<tr>
-		<td><input type="radio" name="q5"></td>
+		<td><input class="q5" type="radio" name="q5" oninput="q5fun(1)" value="b"></td>
 		<td>I like Htoo Eain Thin</td>
 	</tr>
 
@@ -347,11 +348,11 @@ to{
 
 <table>
 	<tr>
-		<td><input type="radio" name="q6"></td>
+		<td><input class="q6" type="radio" name="q6" oninput="q6fun(0)" value="a"></td>
 		<td>Lionel Messi</td>
 	</tr>
 	<tr>
-		<td><input type="radio" name="q6"></td>
+		<td><input class="q6" type="radio" name="q6" oninput="q6fun(1)" value="b"></td>
 		<td>Christiano Ronaldo</td>
 	</tr>
 
@@ -363,15 +364,15 @@ to{
 
 <div class="question" align="center">
 	
-<h4>Your choice</h4><br>
+<h4>Choose wisely</h4><br>
 
 <table>
 	<tr>
-		<td><input type="radio" name="q7"></td>
+		<td><input class="q7" type="radio" name="q7" oninput="q7fun(0)" value="a"></td>
 		<td>Hot pot</td>
 	</tr>
 	<tr>
-		<td><input type="radio" name="q7"></td>
+		<td><input class="q7" type="radio" name="q7" oninput="q7fun(1)" value="b"></td>
 		<td>Beer</td>
 	</tr>
 
@@ -387,11 +388,11 @@ to{
 
 <table>
 	<tr>
-		<td><input type="radio" name="q8"></td>
+		<td><input class="q8" type="radio" name="q8" oninput="q8fun(0)" value="a"></td>
 		<td>DC</td>
 	</tr>
 	<tr>
-		<td><input type="radio" name="q8"></td>
+		<td><input class="q8" type="radio" name="q8" oninput="q8fun(1)" value="b"></td>
 		<td>Marvel</td>
 	</tr>
 
@@ -407,11 +408,11 @@ to{
 
 <table>
 	<tr>
-		<td><input type="radio" name="q9"></td>
+		<td><input class="q9" type="radio" name="q9" oninput="q9fun(0)" value="a"></td>
 		<td>She is over acting</td>
 	</tr>
 	<tr>
-		<td><input type="radio" name="q9"></td>
+		<td><input class="q9" type="radio" name="q9" oninput="q9fun(1)" value="b"></td>
 		<td>she has simple life</td>
 	</tr>
 
@@ -427,11 +428,11 @@ to{
 
 <table>
 	<tr>
-		<td><input type="radio" name="q10"></td>
+		<td><input class="q10" type="radio" name="q10" oninput="q10fun(0)" value="a"></td>
 		<td>Leee kong</td>
 	</tr>
 	<tr>
-		<td><input type="radio" name="q10"></td>
+		<td><input class="q10" type="radio" name="q10" oninput="q10fun(1)" value="b"></td>
 		<td>very good in love songs</td>
 	</tr>
 
@@ -476,9 +477,20 @@ to{
 
 var que1 = document.getElementsByClassName("que1")[0];
 var question = document.querySelectorAll(".question");
+var q1 = document.querySelectorAll(".q1");
+var q2 = document.querySelectorAll(".q2");
+var q3 = document.querySelectorAll(".q3");
+var q4 = document.querySelectorAll(".q4");
+var q5 = document.querySelectorAll(".q5");
+var q6 = document.querySelectorAll(".q6");
+var q7 = document.querySelectorAll(".q7");
+var q8 = document.querySelectorAll(".q8");
+var q9 = document.querySelectorAll(".q9");
+var q10 = document.querySelectorAll(".q10");
 var typegyi = document.getElementsByClassName("typegyi")[0];
 var result = document.getElementsByClassName("result")[0];
 var loading = document.getElementsByClassName("loading")[0];
+var c1, c2, c3, c4, c5, c6, c7, c8, c9, c10;
 
 
 question.forEach(function(node){
@@ -517,6 +529,77 @@ function resultclick(){
 		result.style.display="block";
 		loading.style.display="none";
 	},1500);
+
+	if (c2==='a'&&c3==='a'&&c4==='a'&&c9==='a' || c2==='a'&&c3==='a'&&c4==='b'&&c9==='a'){
+	typegyi.innerHTML = "a good man but you are alittle selfish.";
+	}
+	else if (c2==='a'&&c3==='a'&&c4==='a'&&c9==='b' || c2==='a'&&c3==='a'&&c4==='b'&&c9==='b'){
+	typegyi.innerHTML = "a great guy with a kind heart.";
+	}
+	else if (c2==='a'&&c3==='b'&&c4==='a'&&c9==='a' || c2==='a'&&c3==='b'&&c4==='b'&&c9==='a'){
+	typegyi.innerHTML = "a useless person.";
+	}
+	else if (c2==='a'&&c3==='b'&&c4==='a'&&c9==='b' || c2==='a'&&c3==='b'&&c4==='b'&&c9==='b'){
+	typegyi.innerHTML = "great.you adapt to any society. But, you have no future.";
+	}
+	else if (c2==='b'&&c3==='a'&&c4==='a'&&c9==='a' || c2==='b'&&c3==='a'&&c4==='b'&&c9==='a'){
+	typegyi.innerHTML = "clever. You have full knowledge but lack in society.";
+	}
+	else if (c2==='b'&&c3==='a'&&c4==='a'&&c9==='b' || c2==='b'&&c3==='a'&&c4==='b'&&c9==='b'){
+	typegyi.innerHTML = "smart. You can get true friends because of your pure spirit.";
+	}
+	else if (c2==='b'&&c3==='b'&&c4==='a'&&c9==='a' || c2==='b'&&c3==='b'&&c4==='b'&&c9==='a'){
+	typegyi.innerHTML = "just normal. you have cleverness but can't apply your knowledge in the real world.";
+	}
+	else if (c2==='b'&&c3==='b'&&c4==='a'&&c9==='b' || c2==='b'&&c3==='b'&&c4==='b'&&c9==='b'){
+	typegyi.innerHTML = "good. But you need one PYAR to fullfill one KYAT.";
+	}
+
+
+
+
+	}
+
+
+function q1fun(index){
+	c1 = q1[index].value;
+}
+
+function q2fun(index){
+	c2 = q2[index].value;
+}
+
+function q3fun(index){
+	c3 = q3[index].value;
+}
+
+function q4fun(index){
+	c4 = q4[index].value;
+}
+
+function q5fun(index){
+	c5 = q5[index].value;
+}
+
+
+function q6fun(index){
+	c6 = q6[index].value;
+}
+
+function q7fun(index){
+	c7 = q7[index].value;
+}
+
+function q8fun(index){
+	c8 = q8[index].value;
+}
+
+function q9fun(index){
+	c9 = q9[index].value;
+}
+
+function q10fun(index){
+	c10 = q10[index].value;
 }
 
 
