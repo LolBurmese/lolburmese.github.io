@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head><title>...</title>
+	<mrta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scaleble=0">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+	
+
+
+<style type="text/css">
+	
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-color: #ddd;
+	overflow-x: hidden;
+}
+.btn{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.btn p{
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: 5px;
+	animation: kaung 1s ease forwards;
+	white-space: nowrap;
+}
+
+.testbtn{
+	outline: 1px solid black;
+	border: none;
+	padding: 10px;
+	margin-top: 20px;
+	font-family: 'Poppins', sans-serif;
+}
+.testbtn:hover{
+	background-color: skyblue;
+}
+.about{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+.about a{
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+	color: black;
+	font-size: 13px;
+}
+.info{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+.info a{
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+	color: black;
+	font-size: 13px;
+	padding: 10px;
+}
+
+
+.que1{
+	background-color: #ddd;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: .5s;
+}
+.question,.loadi{
+	background-color: #ddd;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 20px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.nextbtn{
+	outline: none;
+	border: none;
+	background-color: #ddd;
+	-webkit-appearance: none;
+	padding: 5px;
+	border-radius: 15px;
+	box-shadow: 0 0 5px;
+}
+
+.nextbtn:hover{
+	background-color: skyblue;
+}
+
+.result{
+	background-color: #ddd;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-family: 'Poppins', sans-serif;
+	display: none;
+}
+.loadi{
+	display: flex;
+	align-items: center;
+	font-size: 30px;
+}
+
+.firstspot{
+	animation: load 1s infinite;
+}
+.secondspot{
+	animation: load 1s infinite .2s;
+}
+.thirdspot{
+ 	animation: load 1s infinite .3s;
+}
+
+.appear1{
+	visibility: visible;
+	opacity: 1;
+}
+
+.loading{
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes kaung{
+
+from{
+ letter-spacing: 5px;
+}
+
+
+to{
+ letter-spacing: 1px;
+}
+
+
+}
+
+
+@keyframes load{
+0%{
+	transform: translateY(0);
+}
+
+50%{
+	transform: translateY(-8px);
+}
+
+100%{
+	transform: translateY(0);
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+<div class="about">
+	<a href="">About</a>
+	<a href="">Share</a>
+</div><hr>
+
+<div class="btn">
+	<p>Discover your creative personality</p>
+	<button class="testbtn" onclick="clickbtn()">Start Test</button>
+</div>
+
+
+<div class="info">
+	<a href="types.html">The Types</a>
+	<a href="">by KaungSithu</a>
+</div>
+
+
+
+
+<div class="que1">
+	<div class="about">
+	<a href="choose.html">Creative Types</a>
+	<a href="">Shares</a>
+	</div>
+	<hr>
+</div>
+
+
+
+<div class="question" align="center">
+	
+<h4>In the morning, you firstly do</h4>
+<br>
+
+<table>
+	<tr>
+		<td><input type="radio" name="q1"></td>
+		<td>Using phone</td>
+	</tr>
+	<tr>
+		<td><input type="radio" name="q1"></td>
+		<td>Going to toilet</td>
+	</tr>
+
+</table>
+<br>
+<button class="nextbtn" onclick="nextclick(1)">NEXT</button>
+
+</div>
+
+<div class="question" align="center">
+	
+<h4>what's your hobby</h4><br>
+
+<table>
+	<tr>
+		<td><input type="radio" name="q2"></td>
+		<td>Playing games</td>
+	</tr>
+	<tr>
+		<td><input type="radio" name="q2"></td>
+		<td>Reading</td>
+	</tr>
+
+</table>
+<br>
+<button class="nextbtn" onclick="nextclick(2)">NEXT</button>
+
+</div>
+
+<div class="question" align="center">
+	
+<h4>With your salary</h4><br>
+
+<table>
+	<tr>
+		<td><input type="radio" name="q3"></td>
+		<td>I will use my salary</td>
+	</tr>
+	<tr>
+		<td><input type="radio" name="q3"></td>
+		<td>I will spend my salary</td>
+	</tr>
+
+</table>
+<br>
+<button class="nextbtn" onclick="nextclick(3)">NEXT</button>
+
+</div>
+
+<div class="question" align="center">
+	
+<h4>When you play mobile legends</h4><br>
+
+<table>
+	<tr>
+		<td><input type="radio" name="q4"></td>
+		<td>I play as tank/support role</td>
+	</tr>
+	<tr>
+		<td><input type="radio" name="q4"></td>
+		<td>I play as hyper role</td>
+	</tr>
+
+</table>
+<br>
+<button class="nextbtn" onclick="nextclick(4)">NEXT</button>
+
+</div>
+
+<div class="question" align="center">
+	
+<h4>When you listen music</h4><br>
+
+<table>
+	<tr>
+		<td><input type="radio" name="q5"></td>
+		<td>I like Focker</td>
+	</tr>
+	<tr>
+		<td><input type="radio" name="q5"></td>
+		<td>I like Htoo Eain Thin</td>
+	</tr>
+
+</table>
+<br>
+<button class="nextbtn" onclick="nextclick(5)">NEXT</button>
+
+</div>
+
+<div class="question" align="center">
+	
+<h4>Your favuoutie</h4><br>
+
+<table>
+	<tr>
+		<td><input type="radio" name="q6"></td>
+		<td>Lionel Messi</td>
+	</tr>
+	<tr>
+		<td><input type="radio" name="q6"></td>
+		<td>Christiano Ronaldo</td>
+	</tr>
+
+</table>
+<br>
+<button class="nextbtn" onclick="nextclick(6)">NEXT</button>
+
+</div>
+
+<div class="question" align="center">
+	
+<h4>Your choice</h4><br>
+
+<table>
+	<tr>
+		<td><input type="radio" name="q7"></td>
+		<td>Hot pot</td>
+	</tr>
+	<tr>
+		<td><input type="radio" name="q7"></td>
+		<td>Beer</td>
+	</tr>
+
+</table>
+<br>
+<button class="nextbtn" onclick="nextclick(7)">NEXT</button>
+
+</div>
+
+<div class="question" align="center">
+	
+<h4>Your universe</h4><br>
+
+<table>
+	<tr>
+		<td><input type="radio" name="q8"></td>
+		<td>DC</td>
+	</tr>
+	<tr>
+		<td><input type="radio" name="q8"></td>
+		<td>Marvel</td>
+	</tr>
+
+</table>
+<br>
+<button class="nextbtn" onclick="nextclick(8)">NEXT</button>
+
+</div>
+
+<div class="question" align="center">
+	
+<h4>What do you think about Phyu Phyu Htwe</h4><br>
+
+<table>
+	<tr>
+		<td><input type="radio" name="q9"></td>
+		<td>She is over acting</td>
+	</tr>
+	<tr>
+		<td><input type="radio" name="q9"></td>
+		<td>she has simple life</td>
+	</tr>
+
+</table>
+<br>
+<button class="nextbtn" onclick="nextclick(9)">NEXT</button>
+
+</div>
+
+<div class="question" align="center">
+	
+<h4>Sai Sai Kham Leng is</h4><br>
+
+<table>
+	<tr>
+		<td><input type="radio" name="q10"></td>
+		<td>Leee kong</td>
+	</tr>
+	<tr>
+		<td><input type="radio" name="q10"></td>
+		<td>very good in love songs</td>
+	</tr>
+
+</table>
+<br>
+<button class="nextbtn" onclick="resultclick()">Show Result</button>
+
+</div>
+
+<div class="result" align="center">
+	
+	<h4>You are</h4>
+	<div class="typegyi">
+		
+	</div>
+
+</div>
+
+<div class="loading">
+	<div class="loadi">
+	Loading
+	<div class="firstspot">.</div>
+	<div class="secondspot">.</div>
+	<div class="thirdspot">.</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+var que1 = document.getElementsByClassName("que1")[0];
+var question = document.querySelectorAll(".question");
+var typegyi = document.getElementsByClassName("typegyi")[0];
+var result = document.getElementsByClassName("result")[0];
+var loading = document.getElementsByClassName("loading")[0];
+
+
+question.forEach(function(node){
+		node.style.display="none";
+	})
+
+function clickbtn(){
+	que1.classList.add("appear1");
+	question.forEach(function(node){
+		node.style.display="none";
+	})
+	loading.style.display="block";
+	setTimeout(function(){
+		question[0].style.display="block";
+		loading.style.display="none";
+	},1500);
+
+}
+function nextclick(qnum){
+	question.forEach(function(node){
+		node.style.display="none";
+	})
+	loading.style.display="block";
+	setTimeout(function(){
+		question[qnum].style.display="block";
+		loading.style.display="none";
+	},1500);
+}
+
+function resultclick(){
+	loading.style.display="block";
+	question.forEach(function(node){
+		node.style.display="none";
+	})
+	setTimeout(function(){
+		result.style.display="block";
+		loading.style.display="none";
+	},1500);
+}
+
+
+
+
+</script>
+</body>
+</html>
